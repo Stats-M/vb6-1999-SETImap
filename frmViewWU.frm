@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form frmViewWU 
    AutoRedraw      =   -1  'True
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Параметры текущего блока"
+   Caption         =   "РџР°СЂР°РјРµС‚СЂС‹ С‚РµРєСѓС‰РµРіРѕ Р±Р»РѕРєР°"
    ClientHeight    =   7545
    ClientLeft      =   45
    ClientTop       =   330
@@ -15,7 +15,7 @@ Begin VB.Form frmViewWU
    ScaleWidth      =   14850
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton Command4 
-      Caption         =   "Калибровка..."
+      Caption         =   "РљР°Р»РёР±СЂРѕРІРєР°..."
       Height          =   345
       Left            =   9450
       TabIndex        =   56
@@ -34,7 +34,7 @@ Begin VB.Form frmViewWU
       Width           =   6150
    End
    Begin VB.Frame Frame5 
-      Caption         =   "Триплеты"
+      Caption         =   "РўСЂРёРїР»РµС‚С‹"
       Height          =   2535
       Left            =   7560
       TabIndex        =   37
@@ -114,7 +114,7 @@ Begin VB.Form frmViewWU
          Width           =   960
       End
       Begin VB.Label Label42 
-         Caption         =   "Смещение (Гц/сек)"
+         Caption         =   "РЎРјРµС‰РµРЅРёРµ (Р“С†/СЃРµРє)"
          Height          =   225
          Left            =   105
          TabIndex        =   52
@@ -149,7 +149,7 @@ Begin VB.Form frmViewWU
          Width           =   960
       End
       Begin VB.Label Label36 
-         Caption         =   "Праметр формы сигнала (score)"
+         Caption         =   "РџСЂР°РјРµС‚СЂ С„РѕСЂРјС‹ СЃРёРіРЅР°Р»Р° (score)"
          Height          =   225
          Left            =   105
          TabIndex        =   46
@@ -157,7 +157,7 @@ Begin VB.Form frmViewWU
          Width           =   2535
       End
       Begin VB.Label Label35 
-         Caption         =   "Период (period), сек"
+         Caption         =   "РџРµСЂРёРѕРґ (period), СЃРµРє"
          Height          =   225
          Left            =   105
          TabIndex        =   45
@@ -165,7 +165,7 @@ Begin VB.Form frmViewWU
          Width           =   2535
       End
       Begin VB.Label Label34 
-         Caption         =   "Лучший триплет (triplet power)"
+         Caption         =   "Р›СѓС‡С€РёР№ С‚СЂРёРїР»РµС‚ (triplet power)"
          Height          =   225
          Left            =   105
          TabIndex        =   44
@@ -174,7 +174,7 @@ Begin VB.Form frmViewWU
       End
    End
    Begin VB.Frame Frame4 
-      Caption         =   "Импульсы"
+      Caption         =   "РРјРїСѓР»СЊСЃС‹"
       Height          =   2535
       Left            =   7560
       TabIndex        =   36
@@ -254,7 +254,7 @@ Begin VB.Form frmViewWU
          Width           =   960
       End
       Begin VB.Label Label40 
-         Caption         =   "Смещение (Гц/сек)"
+         Caption         =   "РЎРјРµС‰РµРЅРёРµ (Р“С†/СЃРµРє)"
          Height          =   225
          Left            =   105
          TabIndex        =   50
@@ -289,7 +289,7 @@ Begin VB.Form frmViewWU
          Width           =   960
       End
       Begin VB.Label Label30 
-         Caption         =   "Праметр формы сигнала (score)"
+         Caption         =   "РџСЂР°РјРµС‚СЂ С„РѕСЂРјС‹ СЃРёРіРЅР°Р»Р° (score)"
          Height          =   225
          Left            =   105
          TabIndex        =   40
@@ -297,7 +297,7 @@ Begin VB.Form frmViewWU
          Width           =   2745
       End
       Begin VB.Label Label29 
-         Caption         =   "Период (period), сек"
+         Caption         =   "РџРµСЂРёРѕРґ (period), СЃРµРє"
          Height          =   225
          Left            =   105
          TabIndex        =   39
@@ -305,7 +305,7 @@ Begin VB.Form frmViewWU
          Width           =   2745
       End
       Begin VB.Label Label28 
-         Caption         =   "Лучший импульс (pulse power)"
+         Caption         =   "Р›СѓС‡С€РёР№ РёРјРїСѓР»СЊСЃ (pulse power)"
          Height          =   225
          Left            =   105
          TabIndex        =   38
@@ -319,7 +319,7 @@ Begin VB.Form frmViewWU
       Top             =   2940
    End
    Begin VB.CommandButton Command3 
-      Caption         =   "Краткий отчет"
+      Caption         =   "РљСЂР°С‚РєРёР№ РѕС‚С‡РµС‚"
       Height          =   345
       Left            =   11235
       TabIndex        =   35
@@ -327,7 +327,7 @@ Begin VB.Form frmViewWU
       Width           =   1575
    End
    Begin VB.CommandButton Command2 
-      Caption         =   "Обновить"
+      Caption         =   "РћР±РЅРѕРІРёС‚СЊ"
       Height          =   345
       Left            =   7770
       TabIndex        =   27
@@ -335,7 +335,7 @@ Begin VB.Form frmViewWU
       Width           =   1467
    End
    Begin VB.Frame Frame3 
-      Caption         =   "Пики и гауссианы"
+      Caption         =   "РџРёРєРё Рё РіР°СѓСЃСЃРёР°РЅС‹"
       Height          =   3375
       Left            =   210
       TabIndex        =   6
@@ -456,7 +456,7 @@ Begin VB.Form frmViewWU
          Width           =   1485
       End
       Begin VB.Label Label24 
-         Caption         =   "Смещение для лучшей гауссианы (Гц/сек)"
+         Caption         =   "РЎРјРµС‰РµРЅРёРµ РґР»СЏ Р»СѓС‡С€РµР№ РіР°СѓСЃСЃРёР°РЅС‹ (Р“С†/СЃРµРє)"
          Height          =   225
          Left            =   420
          TabIndex        =   31
@@ -464,7 +464,7 @@ Begin VB.Form frmViewWU
          Width           =   3375
       End
       Begin VB.Label Label23 
-         Caption         =   "Смещение для лучшего пикового сигнала (Гц/сек)"
+         Caption         =   "РЎРјРµС‰РµРЅРёРµ РґР»СЏ Р»СѓС‡С€РµРіРѕ РїРёРєРѕРІРѕРіРѕ СЃРёРіРЅР°Р»Р° (Р“С†/СЃРµРє)"
          Height          =   225
          Left            =   420
          TabIndex        =   30
@@ -472,7 +472,7 @@ Begin VB.Form frmViewWU
          Width           =   3900
       End
       Begin VB.Label Label4 
-         Caption         =   "Интегральный показатель"
+         Caption         =   "РРЅС‚РµРіСЂР°Р»СЊРЅС‹Р№ РїРѕРєР°Р·Р°С‚РµР»СЊ"
          Height          =   225
          Left            =   210
          TabIndex        =   14
@@ -572,7 +572,7 @@ Begin VB.Form frmViewWU
          Width           =   960
       End
       Begin VB.Label Label3 
-         Caption         =   "Параметр формы сигнала (gaussian fit)"
+         Caption         =   "РџР°СЂР°РјРµС‚СЂ С„РѕСЂРјС‹ СЃРёРіРЅР°Р»Р° (gaussian fit)"
          Height          =   225
          Left            =   210
          TabIndex        =   9
@@ -580,7 +580,7 @@ Begin VB.Form frmViewWU
          Width           =   2955
       End
       Begin VB.Label Label2 
-         Caption         =   "Лучшая гауссиана (gaussian power)"
+         Caption         =   "Р›СѓС‡С€Р°СЏ РіР°СѓСЃСЃРёР°РЅР° (gaussian power)"
          Height          =   225
          Left            =   210
          TabIndex        =   8
@@ -588,7 +588,7 @@ Begin VB.Form frmViewWU
          Width           =   2955
       End
       Begin VB.Label Label1 
-         Caption         =   "Лучший пиковый сигнал (spike power)"
+         Caption         =   "Р›СѓС‡С€РёР№ РїРёРєРѕРІС‹Р№ СЃРёРіРЅР°Р» (spike power)"
          Height          =   225
          Left            =   210
          TabIndex        =   7
@@ -597,7 +597,7 @@ Begin VB.Form frmViewWU
       End
    End
    Begin VB.Frame Frame2 
-      Caption         =   "Общая информация о блоке"
+      Caption         =   "РћР±С‰Р°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р±Р»РѕРєРµ"
       Height          =   2745
       Left            =   210
       TabIndex        =   5
@@ -637,7 +637,7 @@ Begin VB.Form frmViewWU
          Width           =   3480
       End
       Begin VB.Label Label21 
-         Caption         =   "Источник"
+         Caption         =   "РСЃС‚РѕС‡РЅРёРє"
          Height          =   225
          Left            =   210
          TabIndex        =   25
@@ -655,7 +655,7 @@ Begin VB.Form frmViewWU
          Width           =   3480
       End
       Begin VB.Label Label17 
-         Caption         =   "Прогресс обработки"
+         Caption         =   "РџСЂРѕРіСЂРµСЃСЃ РѕР±СЂР°Р±РѕС‚РєРё"
          Height          =   225
          Left            =   210
          TabIndex        =   23
@@ -671,7 +671,7 @@ Begin VB.Form frmViewWU
          Width           =   3060
       End
       Begin VB.Label Label15 
-         Caption         =   "Частота, Гц"
+         Caption         =   "Р§Р°СЃС‚РѕС‚Р°, Р“С†"
          Height          =   225
          Left            =   210
          TabIndex        =   21
@@ -687,7 +687,7 @@ Begin VB.Form frmViewWU
          Width           =   3165
       End
       Begin VB.Label Label13 
-         Caption         =   "Дата записи"
+         Caption         =   "Р”Р°С‚Р° Р·Р°РїРёСЃРё"
          Height          =   225
          Left            =   210
          TabIndex        =   19
@@ -703,7 +703,7 @@ Begin VB.Form frmViewWU
          Width           =   2850
       End
       Begin VB.Label Label11 
-         Caption         =   "Координаты"
+         Caption         =   "РљРѕРѕСЂРґРёРЅР°С‚С‹"
          Height          =   225
          Left            =   210
          TabIndex        =   17
@@ -720,7 +720,7 @@ Begin VB.Form frmViewWU
       End
       Begin VB.Label Label9 
          Alignment       =   1  'Right Justify
-         Caption         =   "Индекс SETImap"
+         Caption         =   "РРЅРґРµРєСЃ SETImap"
          Height          =   225
          Left            =   1680
          TabIndex        =   15
@@ -729,7 +729,7 @@ Begin VB.Form frmViewWU
       End
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Закрыть"
+      Caption         =   "Р—Р°РєСЂС‹С‚СЊ"
       Default         =   -1  'True
       Height          =   345
       Left            =   13020
@@ -738,7 +738,7 @@ Begin VB.Form frmViewWU
       Width           =   1467
    End
    Begin VB.Frame Frame1 
-      Caption         =   "Выбор блока"
+      Caption         =   "Р’С‹Р±РѕСЂ Р±Р»РѕРєР°"
       Height          =   750
       Left            =   210
       TabIndex        =   0
@@ -748,12 +748,12 @@ Begin VB.Form frmViewWU
          Height          =   315
          Left            =   3570
          TabIndex        =   3
-         Text            =   "Linux в C:\setilin"
+         Text            =   "Linux РІ C:\setilin"
          Top             =   315
          Width           =   3270
       End
       Begin VB.OptionButton Option1 
-         Caption         =   "Другой"
+         Caption         =   "Р”СЂСѓРіРѕР№"
          Height          =   330
          Index           =   1
          Left            =   2625
@@ -762,7 +762,7 @@ Begin VB.Form frmViewWU
          Width           =   960
       End
       Begin VB.OptionButton Option1 
-         Caption         =   "Клиент для Windows"
+         Caption         =   "РљР»РёРµРЅС‚ РґР»СЏ Windows"
          Height          =   330
          Index           =   0
          Left            =   210
@@ -773,7 +773,7 @@ Begin VB.Form frmViewWU
       End
    End
    Begin VB.Label Label44 
-      Caption         =   "На графике импульсы показаны желтым цветом, триплеты - красным"
+      Caption         =   "РќР° РіСЂР°С„РёРєРµ РёРјРїСѓР»СЊСЃС‹ РїРѕРєР°Р·Р°РЅС‹ Р¶РµР»С‚С‹Рј С†РІРµС‚РѕРј, С‚СЂРёРїР»РµС‚С‹ - РєСЂР°СЃРЅС‹Рј"
       Height          =   225
       Left            =   8295
       TabIndex        =   55
@@ -786,7 +786,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Option Explicit        ' 0   1   2   3   4  стерерть этот комментарий потом
+Option Explicit        ' 0   1   2   3   4  СЃС‚РµСЂРµСЂС‚СЊ СЌС‚РѕС‚ РєРѕРјРјРµРЅС‚Р°СЂРёР№ РїРѕС‚РѕРј
 Dim Indy(7, 4) As Long 'Min Max End Cur Direction position for indicators
 
 Private Sub Command1_Click()
@@ -804,13 +804,13 @@ Dim hFile As Long
 
     hFile = FreeFile
     If UseDefaultRF = 1 Then
-        'Используем файл по-умолчанию
+        'РСЃРїРѕР»СЊР·СѓРµРј С„Р°Р№Р» РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
         Open (App.path & BackSlash & ReportFile) For Output As hFile
-        Result = MsgBox("Краткий отчет записан в файл по-умолчанию " + ReportFile + vbCrLf + "расположенный в папке программы SETImap." + vbCrLf + "Изменить имя файла можно в главном меню" + vbCrLf + "(пункт Вид / Настройки...)", vbInformation + vbOKOnly, "Краткий отчет")
+        Result = MsgBox("РљСЂР°С‚РєРёР№ РѕС‚С‡РµС‚ Р·Р°РїРёСЃР°РЅ РІ С„Р°Р№Р» РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ " + ReportFile + vbCrLf + "СЂР°СЃРїРѕР»РѕР¶РµРЅРЅС‹Р№ РІ РїР°РїРєРµ РїСЂРѕРіСЂР°РјРјС‹ SETImap." + vbCrLf + "РР·РјРµРЅРёС‚СЊ РёРјСЏ С„Р°Р№Р»Р° РјРѕР¶РЅРѕ РІ РіР»Р°РІРЅРѕРј РјРµРЅСЋ" + vbCrLf + "(РїСѓРЅРєС‚ Р’РёРґ / РќР°СЃС‚СЂРѕР№РєРё...)", vbInformation + vbOKOnly, "РљСЂР°С‚РєРёР№ РѕС‚С‡РµС‚")
     Else
-        'Используем настройки
+        'РСЃРїРѕР»СЊР·СѓРµРј РЅР°СЃС‚СЂРѕР№РєРё
         Open ReportFileReg For Output As hFile
-        Result = MsgBox("Краткий отчет записан в файл" + vbCrLf + ReportFileReg + vbCrLf + "Изменить имя файла можно в главном меню" + vbCrLf + "(пункт Вид / Настройки...)", vbInformation + vbOKOnly, "Краткий отчет")
+        Result = MsgBox("РљСЂР°С‚РєРёР№ РѕС‚С‡РµС‚ Р·Р°РїРёСЃР°РЅ РІ С„Р°Р№Р»" + vbCrLf + ReportFileReg + vbCrLf + "РР·РјРµРЅРёС‚СЊ РёРјСЏ С„Р°Р№Р»Р° РјРѕР¶РЅРѕ РІ РіР»Р°РІРЅРѕРј РјРµРЅСЋ" + vbCrLf + "(РїСѓРЅРєС‚ Р’РёРґ / РќР°СЃС‚СЂРѕР№РєРё...)", vbInformation + vbOKOnly, "РљСЂР°С‚РєРёР№ РѕС‚С‡РµС‚")
     End If
     If Option1(0).Value Then
         Write #hFile, "WINDOWS CLIENT ID", WinID
@@ -858,8 +858,8 @@ End Sub
 
 Private Sub Autorange()
 Dim TMPvalue As Long
-Dim Changes As Boolean  'Если были изменения, то, если разрешено в настройках,
-                        'сохранить изменения в реестре.
+Dim Changes As Boolean  'Р•СЃР»Рё Р±С‹Р»Рё РёР·РјРµРЅРµРЅРёСЏ, С‚Рѕ, РµСЃР»Рё СЂР°Р·СЂРµС€РµРЅРѕ РІ РЅР°СЃС‚СЂРѕР№РєР°С…,
+                        'СЃРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ РІ СЂРµРµСЃС‚СЂРµ.
 Dim strErrText As String
     On Error GoTo AutorangeErr
     
@@ -868,7 +868,7 @@ Dim strErrText As String
 strErrText = "Spike->power: autorange"
     TMPvalue = Trunc(CDbl(State.bs_power * 10000))
     If TMPvalue > MaxSpower Then
-        Result = MsgBox("Параметр Spike->power превысил предполагаемое максимальное значение." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 10000) + vbCrLf + "Текущее граничное значение: " & Str(MaxSpower / 10000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+        Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Spike->power РїСЂРµРІС‹СЃРёР» РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 10000) + vbCrLf + "РўРµРєСѓС‰РµРµ РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxSpower / 10000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
         If Result = vbYes Then
             MaxSpower = TMPvalue
             Changes = True
@@ -878,7 +878,7 @@ strErrText = "Spike->power: autorange"
 strErrText = "Gaussian->power: autorange"
     TMPvalue = Trunc(CDbl(State.bg_power * 100000))
     If TMPvalue > MaxGpower Then
-        Result = MsgBox("Параметр Gaussian->power превысил предполагаемое максимальное значение." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 100000) + vbCrLf + "Текущее граничное значение: " & Str(MaxGpower / 100000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+        Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Gaussian->power РїСЂРµРІС‹СЃРёР» РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 100000) + vbCrLf + "РўРµРєСѓС‰РµРµ РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxGpower / 100000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
         If Result = vbYes Then
             MaxGpower = TMPvalue
             Changes = True
@@ -888,9 +888,9 @@ strErrText = "Gaussian->power: autorange"
 strErrText = "Gaussian->fit: autorange"
     TMPvalue = Trunc(CDbl(State.bg_chisq * 100000))
     If Not (TMPvalue = 0) Then
-        'Если =0, то просто значение отсутствует! Не сравнивать дальше!
+        'Р•СЃР»Рё =0, С‚Рѕ РїСЂРѕСЃС‚Рѕ Р·РЅР°С‡РµРЅРёРµ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚! РќРµ СЃСЂР°РІРЅРёРІР°С‚СЊ РґР°Р»СЊС€Рµ!
         If TMPvalue < MaxGfit Then
-            Result = MsgBox("Параметр Gaussian->fit лучше предельного предполагаемого значения." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 100000) + vbCrLf + "Текущее  граничное значение: " & Str(MaxGfit / 100000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+            Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Gaussian->fit Р»СѓС‡С€Рµ РїСЂРµРґРµР»СЊРЅРѕРіРѕ РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 100000) + vbCrLf + "РўРµРєСѓС‰РµРµ  РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxGfit / 100000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
             If Result = vbYes Then
                 MaxGfit = TMPvalue
                 Changes = True
@@ -900,12 +900,12 @@ strErrText = "Gaussian->fit: autorange"
     'Gaussian -> integral
 strErrText = "Gaussian->integral: autorange"
     If Not (State.bg_chisq = 0) Then
-        'Исключить деление на ноль!!!
+        'РСЃРєР»СЋС‡РёС‚СЊ РґРµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ!!!
         TMPvalue = Trunc(CDbl((State.bg_power * 100000) / State.bg_chisq))
         If Not (TMPvalue = 0) Then
-        'Если =0, то просто значение отсутствует! Не сравнивать дальше!
+        'Р•СЃР»Рё =0, С‚Рѕ РїСЂРѕСЃС‚Рѕ Р·РЅР°С‡РµРЅРёРµ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚! РќРµ СЃСЂР°РІРЅРёРІР°С‚СЊ РґР°Р»СЊС€Рµ!
             If TMPvalue > MaxGintegr Then
-                Result = MsgBox("Параметр Gaussian->intergal parameter превысил предполагаемое максимальное значение." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 100000) + vbCrLf + "Текущее граничное значение: " & Str(MaxGintegr / 100000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+                Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Gaussian->intergal parameter РїСЂРµРІС‹СЃРёР» РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 100000) + vbCrLf + "РўРµРєСѓС‰РµРµ РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxGintegr / 100000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
                 If Result = vbYes Then
                     MaxGintegr = TMPvalue
                     Changes = True
@@ -917,7 +917,7 @@ strErrText = "Gaussian->integral: autorange"
 strErrText = "Pulse->power: autorange"
     TMPvalue = Trunc(CDbl(State.bp_power * 100000))
     If TMPvalue > MaxPpower Then
-        Result = MsgBox("Параметр Pulse->power превысил предполагаемое максимальное значение." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 100000) + vbCrLf + "Текущее граничное значение: " & Str(MaxPpower / 100000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+        Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Pulse->power РїСЂРµРІС‹СЃРёР» РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 100000) + vbCrLf + "РўРµРєСѓС‰РµРµ РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxPpower / 100000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
         If Result = vbYes Then
             MaxPpower = TMPvalue
             Changes = True
@@ -927,7 +927,7 @@ strErrText = "Pulse->power: autorange"
 strErrText = "Pulse->Score: autorange"
     TMPvalue = Trunc(CDbl(State.bp_score * 100000))
     If TMPvalue > MaxPscore Then
-        Result = MsgBox("Параметр Pulse->score превысил предполагаемое максимальное значение." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 100000) + vbCrLf + "Текущее граничное значение: " & Str(MaxPscore / 100000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+        Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Pulse->score РїСЂРµРІС‹СЃРёР» РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 100000) + vbCrLf + "РўРµРєСѓС‰РµРµ РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxPscore / 100000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
         If Result = vbYes Then
             MaxPscore = TMPvalue
             Changes = True
@@ -937,7 +937,7 @@ strErrText = "Pulse->Score: autorange"
 strErrText = "Triplet->power: autorange"
     TMPvalue = Trunc(CDbl(State.bt_power * 100000))
     If TMPvalue > MaxTpower Then
-        Result = MsgBox("Параметр Triplet->power превысил предполагаемое максимальное значение." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 100000) + vbCrLf + "Текущее граничное значение: " & Str(MaxTpower / 100000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+        Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Triplet->power РїСЂРµРІС‹СЃРёР» РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 100000) + vbCrLf + "РўРµРєСѓС‰РµРµ РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxTpower / 100000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
         If Result = vbYes Then
             MaxTpower = TMPvalue
             Changes = True
@@ -947,17 +947,17 @@ strErrText = "Triplet->power: autorange"
 strErrText = "Triplet->score: autorange"
     TMPvalue = Trunc(CDbl(State.bt_score * 100000))
     If TMPvalue > MaxTscore Then
-        Result = MsgBox("Параметр Triplet->score превысил предполагаемое максимальное значение." + vbCrLf + "Новое расчетное значение: " & Str(TMPvalue / 100000) + vbCrLf + "Текущее граничное значение: " & Str(MaxTscore / 100000) + vbCrLf + "Провести корректировку?", vbExclamation + vbYesNo, "Автокалибровка")
+        Result = MsgBox("РџР°СЂР°РјРµС‚СЂ Triplet->score РїСЂРµРІС‹СЃРёР» РїСЂРµРґРїРѕР»Р°РіР°РµРјРѕРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ." + vbCrLf + "РќРѕРІРѕРµ СЂР°СЃС‡РµС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(TMPvalue / 100000) + vbCrLf + "РўРµРєСѓС‰РµРµ РіСЂР°РЅРёС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " & Str(MaxTscore / 100000) + vbCrLf + "РџСЂРѕРІРµСЃС‚Рё РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ?", vbExclamation + vbYesNo, "РђРІС‚РѕРєР°Р»РёР±СЂРѕРІРєР°")
         If Result = vbYes Then
             MaxTscore = TMPvalue
             Changes = True
         End If
     End If
     If Changes Then
-    'Изменения произошли!
+    'РР·РјРµРЅРµРЅРёСЏ РїСЂРѕРёР·РѕС€Р»Рё!
 strErrText = "Was changes: autorange"
         If EnableRegSave Then
-        'Настройки разрешают запись в реестр
+        'РќР°СЃС‚СЂРѕР№РєРё СЂР°Р·СЂРµС€Р°СЋС‚ Р·Р°РїРёСЃСЊ РІ СЂРµРµСЃС‚СЂ
 strErrText = "Saving autorange parameters: autorange"
             SaveSetting App.Title, "AutoRange", "MaxPscore", MaxPscore
             SaveSetting App.Title, "AutoRange", "MaxPpower", MaxPpower
@@ -994,7 +994,7 @@ Private Sub Form_Load()
 End Sub
 
 '**********************************
-'* Загружает рисунки по-умолчанию *
+'* Р—Р°РіСЂСѓР¶Р°РµС‚ СЂРёСЃСѓРЅРєРё РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ *
 '**********************************
 Private Sub ClearGraph()
 Dim i As Long
@@ -1008,8 +1008,8 @@ Dim i As Long
 End Sub
 
 '***********************************************
-'*  Подготавливает переменные для определения  *
-'*  длины анимационной последовательности      *
+'*  РџРѕРґРіРѕС‚Р°РІР»РёРІР°РµС‚ РїРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ  *
+'*  РґР»РёРЅС‹ Р°РЅРёРјР°С†РёРѕРЅРЅРѕР№ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё      *
 '***********************************************
 Private Sub InitAnimation()
 Dim i As Long
@@ -1022,8 +1022,8 @@ Dim i As Long
         If Indy(i, 1) > 16 Then
             Indy(i, 1) = 16
         End If
-        Indy(i, 3) = 0  'исходное значение
-        Indy(i, 4) = 1  'возрастает
+        Indy(i, 3) = 0  'РёСЃС…РѕРґРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+        Indy(i, 4) = 1  'РІРѕР·СЂР°СЃС‚Р°РµС‚
     Next i
 End Sub
 
@@ -1035,27 +1035,27 @@ End Sub
 Private Sub DisplayInfo()
 Dim MathResult As Long
 Dim i As Long
-Dim Success As Boolean 'Признак успешного чтения данных
-Dim FileMode As Long    'Необходимо для правильной работы cWU, хранит значение режима
-                        '(Win/Lin) и передает его в cWU.GetFilePath...
+Dim Success As Boolean 'РџСЂРёР·РЅР°Рє СѓСЃРїРµС€РЅРѕРіРѕ С‡С‚РµРЅРёСЏ РґР°РЅРЅС‹С…
+Dim FileMode As Long    'РќРµРѕР±С…РѕРґРёРјРѕ РґР»СЏ РїСЂР°РІРёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ cWU, С…СЂР°РЅРёС‚ Р·РЅР°С‡РµРЅРёРµ СЂРµР¶РёРјР°
+                        '(Win/Lin) Рё РїРµСЂРµРґР°РµС‚ РµРіРѕ РІ cWU.GetFilePath...
 Dim strErrText As String
     On Error GoTo DisplayInfoErr
 
     Success = False
     MathResult = 0
     If Option1(0).Value Then
-    'Выбран клиент под Windows
+    'Р’С‹Р±СЂР°РЅ РєР»РёРµРЅС‚ РїРѕРґ Windows
         FileMode = 1
         If State.CheckFile(0) Then
-        'Файл State.sah существует
+        'Р¤Р°Р№Р» State.sah СЃСѓС‰РµСЃС‚РІСѓРµС‚
             If State.DecodeState(State.ReadFile(0)) Then
-            'Успешное декодирование - производим вывод на экран
+            'РЈСЃРїРµС€РЅРѕРµ РґРµРєРѕРґРёСЂРѕРІР°РЅРёРµ - РїСЂРѕРёР·РІРѕРґРёРј РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
                 Success = True
                 If Not (UpdateOnStartup = 1) Then
-        'Сохранение текущих параметров. Можно включить, т.к. обычно
-        'сохранение идет только при вызове этого окна. Если оно показывается
-        'достаточно долгое время, то возможна потеря информации.
-        'Недостаток: частая перезапись информации.
+        'РЎРѕС…СЂР°РЅРµРЅРёРµ С‚РµРєСѓС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ. РњРѕР¶РЅРѕ РІРєР»СЋС‡РёС‚СЊ, С‚.Рє. РѕР±С‹С‡РЅРѕ
+        'СЃРѕС…СЂР°РЅРµРЅРёРµ РёРґРµС‚ С‚РѕР»СЊРєРѕ РїСЂРё РІС‹Р·РѕРІРµ СЌС‚РѕРіРѕ РѕРєРЅР°. Р•СЃР»Рё РѕРЅРѕ РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ
+        'РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕР»РіРѕРµ РІСЂРµРјСЏ, С‚Рѕ РІРѕР·РјРѕР¶РЅР° РїРѕС‚РµСЂСЏ РёРЅС„РѕСЂРјР°С†РёРё.
+        'РќРµРґРѕСЃС‚Р°С‚РѕРє: С‡Р°СЃС‚Р°СЏ РїРµСЂРµР·Р°РїРёСЃСЊ РёРЅС„РѕСЂРјР°С†РёРё.
                     State.Interchange 0
                     If State.EncodeHistory Then
                         bResult = State.WriteHistory(1, WinID)
@@ -1065,20 +1065,20 @@ Dim strErrText As String
         End If
         Label10.Caption = WinID
     Else
-    'Выбран клиент под Linux или что похлеще...
+    'Р’С‹Р±СЂР°РЅ РєР»РёРµРЅС‚ РїРѕРґ Linux РёР»Рё С‡С‚Рѕ РїРѕС…Р»РµС‰Рµ...
     'TO DO
-    'Здесь нужно будет сделать проверку: какой именно пункт из Combo1 выбран...
+    'Р—РґРµСЃСЊ РЅСѓР¶РЅРѕ Р±СѓРґРµС‚ СЃРґРµР»Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ: РєР°РєРѕР№ РёРјРµРЅРЅРѕ РїСѓРЅРєС‚ РёР· Combo1 РІС‹Р±СЂР°РЅ...
         FileMode = 2
         If State.CheckFile(1) Then
-        'Файл State.sah существует
+        'Р¤Р°Р№Р» State.sah СЃСѓС‰РµСЃС‚РІСѓРµС‚
             If State.DecodeState(State.ReadFile(1)) Then
-            'Успешное декодирование - производим вывод на экран
+            'РЈСЃРїРµС€РЅРѕРµ РґРµРєРѕРґРёСЂРѕРІР°РЅРёРµ - РїСЂРѕРёР·РІРѕРґРёРј РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
                 Success = True
                 If Not (UpdateOnStartup = 1) Then
-        'Сохранение текущих параметров. Можно включить, т.к. обычно
-        'сохранение идет только при вызове этого окна. Если оно показывается
-        'достаточно долгое время, то возможна потеря информации.
-        'Недостаток: частая перезапись информации.
+        'РЎРѕС…СЂР°РЅРµРЅРёРµ С‚РµРєСѓС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ. РњРѕР¶РЅРѕ РІРєР»СЋС‡РёС‚СЊ, С‚.Рє. РѕР±С‹С‡РЅРѕ
+        'СЃРѕС…СЂР°РЅРµРЅРёРµ РёРґРµС‚ С‚РѕР»СЊРєРѕ РїСЂРё РІС‹Р·РѕРІРµ СЌС‚РѕРіРѕ РѕРєРЅР°. Р•СЃР»Рё РѕРЅРѕ РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ
+        'РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРѕР»РіРѕРµ РІСЂРµРјСЏ, С‚Рѕ РІРѕР·РјРѕР¶РЅР° РїРѕС‚РµСЂСЏ РёРЅС„РѕСЂРјР°С†РёРё.
+        'РќРµРґРѕСЃС‚Р°С‚РѕРє: С‡Р°СЃС‚Р°СЏ РїРµСЂРµР·Р°РїРёСЃСЊ РёРЅС„РѕСЂРјР°С†РёРё.
                     State.Interchange 1
                     If State.EncodeHistory Then
                         bResult = State.WriteHistory(1, LinID)
@@ -1088,12 +1088,12 @@ Dim strErrText As String
         End If
         Label10.Caption = LinID
     End If
-'ПАРАМЕТРЫ ПРОЧИТАНЫ ИЗ ФАЙЛОВ - ПРОИЗВОДИМ ВЫВОД НА ЭКРАН
+'РџРђР РђРњР•РўР Р« РџР РћР§РРўРђРќР« РР— Р¤РђР™Р›РћР’ - РџР РћРР—Р’РћР”РРњ Р’Р«Р’РћР” РќРђ Р­РљР РђРќ
     If Success Then
-        'Провести автокалибровку
+        'РџСЂРѕРІРµСЃС‚Рё Р°РІС‚РѕРєР°Р»РёР±СЂРѕРІРєСѓ
         Call Autorange
         
-        'Изменение индикатора прогресса: красный неподвижен, а зеленый увеличивается
+        'РР·РјРµРЅРµРЅРёРµ РёРЅРґРёРєР°С‚РѕСЂР° РїСЂРѕРіСЂРµСЃСЃР°: РєСЂР°СЃРЅС‹Р№ РЅРµРїРѕРґРІРёР¶РµРЅ, Р° Р·РµР»РµРЅС‹Р№ СѓРІРµР»РёС‡РёРІР°РµС‚СЃСЏ
 strErrText = "Progress bar evaluating"
         Label18.Width = Trunc(Label20.Width * (CRtoPercent(State.cr) / 100))
         Label19.Width = Label20.Width - Label18.Width
@@ -1106,7 +1106,7 @@ strErrText = "Progress bar evaluating"
             Label20.Caption = "PROCESSING"
         End If
         
-        'Аналоговые индикаторы и цифровые значения соответствующих параметров
+        'РђРЅР°Р»РѕРіРѕРІС‹Рµ РёРЅРґРёРєР°С‚РѕСЂС‹ Рё С†РёС„СЂРѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ
         'SPIKE power
 '''        MathResult = CDbl(State.bs_power) \ 20
 '''        If MathResult > 15 Then
@@ -1118,7 +1118,7 @@ strErrText = "Progress bar evaluating"
 '''        Image1(0).Picture = LoadResPicture(110 + MathResult, vbResBitmap)
 strErrText = "State->power bar evaluating"
         If State.bs_power < 250 Then
-        'Экпотенциальная зависимость
+        'Р­РєРїРѕС‚РµРЅС†РёР°Р»СЊРЅР°СЏ Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ
             MathResult = Trunc(CDbl((State.bs_power * 12 * 10000) / 2300000))
         Else
             MathResult = Trunc(CDbl(12 + ((State.bs_power - 230) * 5 * 10000) / (MaxSpower - 230)))
@@ -1145,9 +1145,9 @@ strErrText = "Gaussian->power bar evaluating"
         Indy(1, 2) = MathResult
         
         'GAUSSIAN fit
-        'Выбираем картинку ВРУЧНУЮ!!!
-        'Формула не очень-то получилась. Трудности связаны с неизвестным максимумом,
-        'нелинейность параметра в (0;1) и (5;inf)
+        'Р’С‹Р±РёСЂР°РµРј РєР°СЂС‚РёРЅРєСѓ Р’Р РЈР§РќРЈР®!!!
+        'Р¤РѕСЂРјСѓР»Р° РЅРµ РѕС‡РµРЅСЊ-С‚Рѕ РїРѕР»СѓС‡РёР»Р°СЃСЊ. РўСЂСѓРґРЅРѕСЃС‚Рё СЃРІСЏР·Р°РЅС‹ СЃ РЅРµРёР·РІРµСЃС‚РЅС‹Рј РјР°РєСЃРёРјСѓРјРѕРј,
+        'РЅРµР»РёРЅРµР№РЅРѕСЃС‚СЊ РїР°СЂР°РјРµС‚СЂР° РІ (0;1) Рё (5;inf)
 strErrText = "Gaussian->fit bar evaluating"
         MathResult = Trunc(CDbl(State.bg_chisq)) * 10
         If MathResult > 250 Then
@@ -1182,7 +1182,7 @@ strErrText = "Gaussian->fit bar evaluating"
             MathResult = 2
         ElseIf MathResult > 1 Then
             MathResult = 1
-        ElseIf MathResult = 0 Then  'Это спецслучай, когда гауссианы отсутствуют.
+        ElseIf MathResult = 0 Then  'Р­С‚Рѕ СЃРїРµС†СЃР»СѓС‡Р°Р№, РєРѕРіРґР° РіР°СѓСЃСЃРёР°РЅС‹ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚.
             MathResult = 16
         Else
             MathResult = 0
@@ -1197,7 +1197,7 @@ strErrText = "Gaussian->fit bar evaluating"
 '''            MathResult = Trunc((State.bg_power / State.bg_chisq) * 100)
 '''            Label8.Caption = Str(State.bg_power / State.bg_chisq)
 '''        Else
-'''        'Исключить деление на ноль!!!
+'''        'РСЃРєР»СЋС‡РёС‚СЊ РґРµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ!!!
 '''            MathResult = 0
 '''            Label8.Caption = 0
 '''        End If
@@ -1216,14 +1216,14 @@ strErrText = "Gaussian->fit bar evaluating"
 strErrText = "Gaussian->integral bar evaluating"
         If Not (State.bg_chisq = 0) Then
             If Trunc(CDbl(State.bg_power / State.bg_chisq)) < 1 Then
-            'Экпотенциальная зависимость
+            'Р­РєРїРѕС‚РµРЅС†РёР°Р»СЊРЅР°СЏ Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ
                 MathResult = Trunc(CDbl(((State.bg_power / State.bg_chisq) * 12 * 100000) / 100000))
             Else
                 MathResult = Trunc(CDbl(12 + (((State.bg_power / State.bg_chisq) - 1) * 4 * 100000) / MaxGintegr - 100000))
             End If
             Label8.Caption = Str(State.bg_power / State.bg_chisq)
         Else
-        'Исключить деление на ноль!!!
+        'РСЃРєР»СЋС‡РёС‚СЊ РґРµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ!!!
             MathResult = 0
             Label8.Caption = 0
         End If
@@ -1234,11 +1234,11 @@ strErrText = "Gaussian->integral bar evaluating"
         If Not (State.bg_chisq = 0) Then
             Label8.Caption = Str(State.bg_power / State.bg_chisq)
         Else
-        'Исключить деление на ноль!!!
+        'РСЃРєР»СЋС‡РёС‚СЊ РґРµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ!!!
             Label8.Caption = 0
         End If
         
-        'Импульс - мощность
+        'РРјРїСѓР»СЊСЃ - РјРѕС‰РЅРѕСЃС‚СЊ
 '''        MathResult = Trunc(CDbl(State.bp_power / 0.2))
 '''        If MathResult > 16 Then
 '''            MathResult = 16
@@ -1250,7 +1250,7 @@ strErrText = "Pulse->power bar evaluating"
 '''        Image1(4).Picture = LoadResPicture(110 + MathResult, vbResBitmap)
         Indy(4, 2) = MathResult
         
-        'Импульс - показатель
+        'РРјРїСѓР»СЊСЃ - РїРѕРєР°Р·Р°С‚РµР»СЊ
 '''        MathResult = Trunc((CDbl(State.bp_score) * 16) / 1.2)
 '''        If MathResult > 16 Then
 '''            MathResult = 16
@@ -1262,7 +1262,7 @@ strErrText = "Pulse->score bar evaluating"
 '''        Image1(5).Picture = LoadResPicture(110 + MathResult, vbResBitmap)
         Indy(5, 2) = MathResult
         
-        'Триплет - мощность
+        'РўСЂРёРїР»РµС‚ - РјРѕС‰РЅРѕСЃС‚СЊ
 '''        MathResult = Trunc(CDbl(State.bt_power / 0.2))
 '''        If MathResult > 16 Then
 '''            MathResult = 16
@@ -1274,7 +1274,7 @@ strErrText = "Triplet->power bar evaluating"
 '''        Image1(6).Picture = LoadResPicture(110 + MathResult, vbResBitmap)
         Indy(6, 2) = MathResult
         
-        'Триплет - показатель
+        'РўСЂРёРїР»РµС‚ - РїРѕРєР°Р·Р°С‚РµР»СЊ
 '''        MathResult = Trunc((CDbl(State.bt_score) * 16) / 1.2)
 '''        If MathResult > 16 Then
 '''            MathResult = 16
@@ -1287,19 +1287,19 @@ strErrText = "Triplet->score bar evaluating"
         Indy(7, 2) = MathResult
         
 strErrText = "Doppler shift bars evaluating"
-        'Сдвиги Допплера для всех главных параметров
+        'РЎРґРІРёРіРё Р”РѕРїРїР»РµСЂР° РґР»СЏ РІСЃРµС… РіР»Р°РІРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ
         Label25.Caption = Str(State.bs_rate)
         Label26.Caption = Str(State.bg_rate)
         Label41.Caption = Str(State.bp_chirp_rate)
         Label43.Caption = Str(State.bt_chirp_rate)
         
 strErrText = "Others bar evaluating"
-        'Другая информация о главных параметрах
+        'Р”СЂСѓРіР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РіР»Р°РІРЅС‹С… РїР°СЂР°РјРµС‚СЂР°С…
         Label32.Caption = Str(State.bp_period)
         Label38.Caption = Str(State.bt_period)
         
-        'Заполнение информационных полей - может занять некоторое время
-        'Проверка блока
+        'Р—Р°РїРѕР»РЅРµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹С… РїРѕР»РµР№ - РјРѕР¶РµС‚ Р·Р°РЅСЏС‚СЊ РЅРµРєРѕС‚РѕСЂРѕРµ РІСЂРµРјСЏ
+        'РџСЂРѕРІРµСЂРєР° Р±Р»РѕРєР°
         If (Dir(WU.GetFilePath(FileMode), vbNormal) <> "") Then
             WU.DecodeWU (WU.ReadFile(FileMode))
             Label12.Caption = " " & DecodeRA(CDbl(Val(WU.StartRA))) & " RA"
@@ -1314,32 +1314,32 @@ strErrText = "Others bar evaluating"
         End If
         
 strErrText = "Calling DisplayGraph"
-        'Рисование импульсов / триплетов
+        'Р РёСЃРѕРІР°РЅРёРµ РёРјРїСѓР»СЊСЃРѕРІ / С‚СЂРёРїР»РµС‚РѕРІ
         DisplayGraph
         
         If AllowAnim Then
 strErrText = "Start animation sequence"
-            'Вычисление фаз анимаций на основе полученных результатов
+            'Р’С‹С‡РёСЃР»РµРЅРёРµ С„Р°Р· Р°РЅРёРјР°С†РёР№ РЅР° РѕСЃРЅРѕРІРµ РїРѕР»СѓС‡РµРЅРЅС‹С… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
             Call InitAnimation
-            'Пуск таймера
+            'РџСѓСЃРє С‚Р°Р№РјРµСЂР°
             Call Animate
         Else
 strErrText = "No animation"
-            'Произвести обычный вывод на экран
+            'РџСЂРѕРёР·РІРµСЃС‚Рё РѕР±С‹С‡РЅС‹Р№ РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
             For i = 0 To 7
                 Image2(i).Picture = LoadResPicture(130 + Indy(i, 2), vbResBitmap)
                 Image1(i).Picture = LoadResPicture(110 + Indy(i, 2), vbResBitmap)
             Next i
         End If
         
-        StatusStr.Caption = "Просмотр сведений об обнаруженных в текущем блоке сигналах."
+        StatusStr.Caption = "РџСЂРѕСЃРјРѕС‚СЂ СЃРІРµРґРµРЅРёР№ РѕР± РѕР±РЅР°СЂСѓР¶РµРЅРЅС‹С… РІ С‚РµРєСѓС‰РµРј Р±Р»РѕРєРµ СЃРёРіРЅР°Р»Р°С…."
     Else
 strErrText = "No STATE.SAH file founded"
-        'Нет файла State.sah! Попробуем найти Result.sah
-        ClearGraph  'Очистим графику - это ЧУЖИЕ значения
+        'РќРµС‚ С„Р°Р№Р»Р° State.sah! РџРѕРїСЂРѕР±СѓРµРј РЅР°Р№С‚Рё Result.sah
+        ClearGraph  'РћС‡РёСЃС‚РёРј РіСЂР°С„РёРєСѓ - СЌС‚Рѕ Р§РЈР–РР• Р·РЅР°С‡РµРЅРёСЏ
         If Option1(0).Value Then
             If OutResult.CheckFile(0, 1) Then
-            'Выбран клиент под Windows
+            'Р’С‹Р±СЂР°РЅ РєР»РёРµРЅС‚ РїРѕРґ Windows
                 Label18.Width = Label20.Width
                 Label19.Width = 0
                 Label19.Left = Label18.Left + Label18.Width
@@ -1351,12 +1351,12 @@ strErrText = "No STATE.SAH file founded"
                 Label20.Caption = "NO DATA TO DISPLAY"
             End If
         Else
-            'Выбран клиент под Linux или что похлеще...
+            'Р’С‹Р±СЂР°РЅ РєР»РёРµРЅС‚ РїРѕРґ Linux РёР»Рё С‡С‚Рѕ РїРѕС…Р»РµС‰Рµ...
             'TO DO
-            'Здесь нужно будет сделать проверку: какой именно пункт из Combo1 выбран...
-            'См. начало этой функции
+            'Р—РґРµСЃСЊ РЅСѓР¶РЅРѕ Р±СѓРґРµС‚ СЃРґРµР»Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ: РєР°РєРѕР№ РёРјРµРЅРЅРѕ РїСѓРЅРєС‚ РёР· Combo1 РІС‹Р±СЂР°РЅ...
+            'РЎРј. РЅР°С‡Р°Р»Рѕ СЌС‚РѕР№ С„СѓРЅРєС†РёРё
             If OutResult.CheckFile(1, 1) Then
-            'Выбран клиент под WIndows
+            'Р’С‹Р±СЂР°РЅ РєР»РёРµРЅС‚ РїРѕРґ WIndows
                 Label18.Width = Label20.Width
                 Label19.Width = 0
                 Label19.Left = Label18.Left + Label18.Width
@@ -1368,16 +1368,16 @@ strErrText = "No STATE.SAH file founded"
                 Label20.Caption = "NO DATA TO DISPLAY"
             End If
         End If
-    End If  'Вывод завершен
+    End If  'Р’С‹РІРѕРґ Р·Р°РІРµСЂС€РµРЅ
     Exit Sub
 DisplayInfoErr:
     Err.Raise vbObjectError, "DisplayInfo", strErrText
 End Sub
 
 Private Sub DisplayGraph()
-Dim DataStringP As String, DataStringT As String    'Сигналы (pulse/triplet)
-Dim sValueP As String, sValueT As String    'Величина сигнала (pulse/triplet) (HEX)
-Dim lValueP As Long, lValueT As Long        'Величина сигнала (pulse/triplet) (DEC)
+Dim DataStringP As String, DataStringT As String    'РЎРёРіРЅР°Р»С‹ (pulse/triplet)
+Dim sValueP As String, sValueT As String    'Р’РµР»РёС‡РёРЅР° СЃРёРіРЅР°Р»Р° (pulse/triplet) (HEX)
+Dim lValueP As Long, lValueT As Long        'Р’РµР»РёС‡РёРЅР° СЃРёРіРЅР°Р»Р° (pulse/triplet) (DEC)
 Dim i As Long
 Dim PulseY As Long, TripletY As Long
 Dim X As Long
@@ -1396,7 +1396,7 @@ Dim X As Long
         X = (i - 1) * 6
         PulseY = 1024 - lValueP * 4
         TripletY = 1024 - lValueT * 4
-        If PulseY < TripletY Then   'PulseY на графике ВЫШЕ...
+        If PulseY < TripletY Then   'PulseY РЅР° РіСЂР°С„РёРєРµ Р’Р«РЁР•...
             Picture1.ForeColor = vbYellow
             Picture1.Line (X, PulseY)-(X, 1024)
             Picture1.Line (X, PulseY)-(X + 6, PulseY)
@@ -1405,7 +1405,7 @@ Dim X As Long
             Picture1.Line (X, TripletY)-(X, 1024)
             Picture1.Line (X, TripletY)-(X + 6, TripletY)
             Picture1.Line (X + 6, TripletY)-(X + 6, 1024)
-        Else                        'TripleY на графике ВЫШЕ...
+        Else                        'TripleY РЅР° РіСЂР°С„РёРєРµ Р’Р«РЁР•...
             Picture1.ForeColor = vbRed
             Picture1.Line (X, TripletY)-(X, 1024)
             Picture1.Line (X, TripletY)-(X + 6, TripletY)
@@ -1450,29 +1450,29 @@ Dim NoJob As Boolean
 '''        End If
         
         Select Case Indy(i, 4)
-            Case 0: 'Увеличение на единицу (финальное)
+            Case 0: 'РЈРІРµР»РёС‡РµРЅРёРµ РЅР° РµРґРёРЅРёС†Сѓ (С„РёРЅР°Р»СЊРЅРѕРµ)
                 NoJob = False
                 If Indy(i, 3) < Indy(i, 2) Then
                     Indy(i, 3) = Indy(i, 3) + 1
                 End If
                 Indy(i, 4) = 3
-            Case 1: 'Увеличение
+            Case 1: 'РЈРІРµР»РёС‡РµРЅРёРµ
                 NoJob = False
                 If Indy(i, 3) < Indy(i, 1) Then
                     Indy(i, 3) = Indy(i, 3) + 1
                 Else
                     Indy(i, 4) = 2
-                    'Меняем направление, этот кадр пропускаем (замираем на месте)
+                    'РњРµРЅСЏРµРј РЅР°РїСЂР°РІР»РµРЅРёРµ, СЌС‚РѕС‚ РєР°РґСЂ РїСЂРѕРїСѓСЃРєР°РµРј (Р·Р°РјРёСЂР°РµРј РЅР° РјРµСЃС‚Рµ)
                 End If
-            Case 2: 'Уменьшение
+            Case 2: 'РЈРјРµРЅСЊС€РµРЅРёРµ
                 NoJob = False
                 If Indy(i, 3) > Indy(i, 0) Then
                     Indy(i, 3) = Indy(i, 3) - 1
                 Else
                     Indy(i, 4) = 0
-                    'Меняем направление, этот кадр пропускаем (замираем на месте)
+                    'РњРµРЅСЏРµРј РЅР°РїСЂР°РІР»РµРЅРёРµ, СЌС‚РѕС‚ РєР°РґСЂ РїСЂРѕРїСѓСЃРєР°РµРј (Р·Р°РјРёСЂР°РµРј РЅР° РјРµСЃС‚Рµ)
                 End If
-            Case 3: 'Стоп!
+            Case 3: 'РЎС‚РѕРї!
         End Select
         Image1(i).Picture = LoadResPicture(110 + Indy(i, 3), vbResBitmap)
         Image2(i).Picture = LoadResPicture(130 + Indy(i, 3), vbResBitmap)
