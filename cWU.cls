@@ -42,7 +42,7 @@ Private mvarNsamples As String 'local copy
 Private mvarTapeVer As String 'local copy
 Private mvarNumPositions As String 'local copy
 Private mvarAngleRange As String 'local copy
-Private mvarComments As String 'local copy              'КОММЕНТАРИЙ
+Private mvarComments As String 'local copy              'РљРћРњРњР•РќРўРђР РР™
 Private mvarNumID As String 'local copy
 Private mvarType_of_unit As String 'local copy
 Private mvarTask As String 'local copy
@@ -428,7 +428,7 @@ Public Property Get StartRA() As String
 End Property
 
 '**********************************************************
-'*           Читает значения массива координат            *
+'*           Р§РёС‚Р°РµС‚ Р·РЅР°С‡РµРЅРёСЏ РјР°СЃСЃРёРІР° РєРѕРѕСЂРґРёРЅР°С‚            *
 '**********************************************************
 Public Function GetCoordX(Index As Long) As String
     On Error GoTo GetCoordXErr
@@ -448,7 +448,7 @@ GetCoordXErr:
 End Function
 
 '**********************************************************
-'*       Устанавливает значения массива координат         *
+'*       РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р·РЅР°С‡РµРЅРёСЏ РјР°СЃСЃРёРІР° РєРѕРѕСЂРґРёРЅР°С‚         *
 '**********************************************************
 Public Function SetCoordX(sfile As String, Index As Long) As Boolean
     On Error GoTo SetCoordXErr
@@ -469,19 +469,19 @@ SetCoordXErr:
 End Function
 
 '**********************************************************
-'*            Очищает некоторые поля объекта              *
-'*         Mode = 0 - Очистить все поля объекта           *
-'*            Mode = 1 - все кроме ID и Name              *
+'*            РћС‡РёС‰Р°РµС‚ РЅРµРєРѕС‚РѕСЂС‹Рµ РїРѕР»СЏ РѕР±СЉРµРєС‚Р°              *
+'*         Mode = 0 - РћС‡РёСЃС‚РёС‚СЊ РІСЃРµ РїРѕР»СЏ РѕР±СЉРµРєС‚Р°           *
+'*            Mode = 1 - РІСЃРµ РєСЂРѕРјРµ ID Рё Name              *
 '**********************************************************
 Public Function ClearAll(ByVal Mode As Long) As String
 Dim i As Long
     On Error GoTo ClearAllErr
     
     Select Case Mode
-        Case 0:     'Полная очистка
+        Case 0:     'РџРѕР»РЅР°СЏ РѕС‡РёСЃС‚РєР°
             NumID = "-1"
             UnitName = ""
-        Case 1:     'Оставить ID и Name
+        Case 1:     'РћСЃС‚Р°РІРёС‚СЊ ID Рё Name
     End Select
     Type_of_unit = ""
     Task = ""
@@ -520,11 +520,11 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*           Проверить существование файла                *
-'*       Mode = 0 - путь к файлу журнала                  *
-'*       Mode = 1 - путь к текущему блоку                 *
-'*       Mode = 2 - путь к блоку клиента под Linux        *
-'*       Mode = 3 - путь к файлу-индексу блоков           *
+'*           РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р°                *
+'*       Mode = 0 - РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ Р¶СѓСЂРЅР°Р»Р°                  *
+'*       Mode = 1 - РїСѓС‚СЊ Рє С‚РµРєСѓС‰РµРјСѓ Р±Р»РѕРєСѓ                 *
+'*       Mode = 2 - РїСѓС‚СЊ Рє Р±Р»РѕРєСѓ РєР»РёРµРЅС‚Р° РїРѕРґ Linux        *
+'*       Mode = 3 - РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ-РёРЅРґРµРєСЃСѓ Р±Р»РѕРєРѕРІ           *
 '**********************************************************
 Public Function CheckFile(ByVal Mode As Long) As Boolean
 Dim CheckResult As Boolean
@@ -544,23 +544,23 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*  Получить полное имя файла с данными о текущем блоке   *
-'*       Mode = 0 - путь к файлу журнала                  *
-'*       Mode = 1 - путь к текущему блоку                 *
-'*       Mode = 2 - путь к блоку клиента под Linux        *
-'*       Mode = 3 - путь к файлу-индексу блоков           *
+'*  РџРѕР»СѓС‡РёС‚СЊ РїРѕР»РЅРѕРµ РёРјСЏ С„Р°Р№Р»Р° СЃ РґР°РЅРЅС‹РјРё Рѕ С‚РµРєСѓС‰РµРј Р±Р»РѕРєРµ   *
+'*       Mode = 0 - РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ Р¶СѓСЂРЅР°Р»Р°                  *
+'*       Mode = 1 - РїСѓС‚СЊ Рє С‚РµРєСѓС‰РµРјСѓ Р±Р»РѕРєСѓ                 *
+'*       Mode = 2 - РїСѓС‚СЊ Рє Р±Р»РѕРєСѓ РєР»РёРµРЅС‚Р° РїРѕРґ Linux        *
+'*       Mode = 3 - РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ-РёРЅРґРµРєСЃСѓ Р±Р»РѕРєРѕРІ           *
 '**********************************************************
 Public Function GetFilePath(ByVal Mode As Long) As String
     On Error GoTo GetFilePathErr
     
     Select Case Mode
-        Case 0:     'Чтение из журнала
+        Case 0:     'Р§С‚РµРЅРёРµ РёР· Р¶СѓСЂРЅР°Р»Р°
             GetFilePath = App.path & "\" & Datafile
-        Case 1:     'Чтение непосредственно из WU
+        Case 1:     'Р§С‚РµРЅРёРµ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РёР· WU
             GetFilePath = SETIpath & "\" & FileWU
-        Case 2:     'Чтение блока, обрабатываемого клиентом под Linux
+        Case 2:     'Р§С‚РµРЅРёРµ Р±Р»РѕРєР°, РѕР±СЂР°Р±Р°С‚С‹РІР°РµРјРѕРіРѕ РєР»РёРµРЅС‚РѕРј РїРѕРґ Linux
             GetFilePath = LinuxPath & "\" & FileWULinux
-        Case 3:     'Путь к файлу-индексу блоков
+        Case 3:     'РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ-РёРЅРґРµРєСЃСѓ Р±Р»РѕРєРѕРІ
             GetFilePath = App.path & "\" & IndexFileW
     End Select
     Exit Function
@@ -573,141 +573,141 @@ End Function
 'LINUX compatible
 'EFRS (extended failures reporting system)
 '**********************************************************
-'*  Получить полное имя файла с данными о текущем блоке   *
-'*       Mode = 0 - добавить только запись с номером ID   *
-'*       Mode = 1 - построить индекс заново               *
-'*       ID - номер блока (для Mode = 0)                  *
-'*       (нужна еще проверка перезаписи)                  *
-'*Сортировка - по номеру блока (т.е. не нужно сортировать)*
-'*  WriteIndex = 0 - неизвестная ошибка                   *
-'*  WriteIndex = 1 - успешное завершение                  *
-'*  WriteIndex = 2 - записи с данным ID в журнале нет     *
-'*  WriteIndex = 3 - ID не задан (режим Mode = 0)         *
-'*  WriteIndex = 4 - ошибка при вызове DecodeHostory      *
-'*  WriteIndex = 5 - файл журнала не найден               *
+'*  РџРѕР»СѓС‡РёС‚СЊ РїРѕР»РЅРѕРµ РёРјСЏ С„Р°Р№Р»Р° СЃ РґР°РЅРЅС‹РјРё Рѕ С‚РµРєСѓС‰РµРј Р±Р»РѕРєРµ   *
+'*       Mode = 0 - РґРѕР±Р°РІРёС‚СЊ С‚РѕР»СЊРєРѕ Р·Р°РїРёСЃСЊ СЃ РЅРѕРјРµСЂРѕРј ID   *
+'*       Mode = 1 - РїРѕСЃС‚СЂРѕРёС‚СЊ РёРЅРґРµРєСЃ Р·Р°РЅРѕРІРѕ               *
+'*       ID - РЅРѕРјРµСЂ Р±Р»РѕРєР° (РґР»СЏ Mode = 0)                  *
+'*       (РЅСѓР¶РЅР° РµС‰Рµ РїСЂРѕРІРµСЂРєР° РїРµСЂРµР·Р°РїРёСЃРё)                  *
+'*РЎРѕСЂС‚РёСЂРѕРІРєР° - РїРѕ РЅРѕРјРµСЂСѓ Р±Р»РѕРєР° (С‚.Рµ. РЅРµ РЅСѓР¶РЅРѕ СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ)*
+'*  WriteIndex = 0 - РЅРµРёР·РІРµСЃС‚РЅР°СЏ РѕС€РёР±РєР°                   *
+'*  WriteIndex = 1 - СѓСЃРїРµС€РЅРѕРµ Р·Р°РІРµСЂС€РµРЅРёРµ                  *
+'*  WriteIndex = 2 - Р·Р°РїРёСЃРё СЃ РґР°РЅРЅС‹Рј ID РІ Р¶СѓСЂРЅР°Р»Рµ РЅРµС‚     *
+'*  WriteIndex = 3 - ID РЅРµ Р·Р°РґР°РЅ (СЂРµР¶РёРј Mode = 0)         *
+'*  WriteIndex = 4 - РѕС€РёР±РєР° РїСЂРё РІС‹Р·РѕРІРµ DecodeHostory      *
+'*  WriteIndex = 5 - С„Р°Р№Р» Р¶СѓСЂРЅР°Р»Р° РЅРµ РЅР°Р№РґРµРЅ               *
 '**********************************************************
 Public Function WriteIndex(ByVal Mode As Long, Optional ByVal ID As Long = -6) As Long
-Dim hFileInd As Long        'указатель на файл SETItopw.dat
-Dim sfile As String         'для чтения информации из журнала
+Dim hFileInd As Long        'СѓРєР°Р·Р°С‚РµР»СЊ РЅР° С„Р°Р№Р» SETItopw.dat
+Dim sfile As String         'РґР»СЏ С‡С‚РµРЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё РёР· Р¶СѓСЂРЅР°Р»Р°
 Dim LastRecNum As Long
 Dim i As Long, j As Long
-Dim TMPrec As tTopW         'Временная запись-пустышка
+Dim TMPrec As tTopW         'Р’СЂРµРјРµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ-РїСѓСЃС‚С‹С€РєР°
     On Error GoTo WriteIndexErr
     
     WriteIndex = 0
     sfile = ""
-    TMPrec.freq = 0         'Очистка полей записи-пустышки
+    TMPrec.freq = 0         'РћС‡РёСЃС‚РєР° РїРѕР»РµР№ Р·Р°РїРёСЃРё-РїСѓСЃС‚С‹С€РєРё
     TMPrec.ID = -6
     TMPrec.StartDEC = 0
     TMPrec.StartRA = 0
     TMPrec.time = ""
-    'Проверим файл-индекс
+    'РџСЂРѕРІРµСЂРёРј С„Р°Р№Р»-РёРЅРґРµРєСЃ
     If Not (CheckFile(3)) Then
-        Mode = 1    'Файла индексов еще нет - строим заново
+        Mode = 1    'Р¤Р°Р№Р»Р° РёРЅРґРµРєСЃРѕРІ РµС‰Рµ РЅРµС‚ - СЃС‚СЂРѕРёРј Р·Р°РЅРѕРІРѕ
     End If
     Select Case Mode
-        Case 0: 'Добавить (если надо) в существующий файл
-        ''АЛГОРИТМ
-        ''Если ID задан - прочитать запись из журнала, иначе - ошибка, выход из функции
-        ''Искать в индексе запись с таким же ID, если ID < LastID
-        ''Если найдена, то Put на ее место новую запись, иначе добавить (с учетом номера)
+        Case 0: 'Р”РѕР±Р°РІРёС‚СЊ (РµСЃР»Рё РЅР°РґРѕ) РІ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ С„Р°Р№Р»
+        ''РђР›Р“РћР РРўРњ
+        ''Р•СЃР»Рё ID Р·Р°РґР°РЅ - РїСЂРѕС‡РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ РёР· Р¶СѓСЂРЅР°Р»Р°, РёРЅР°С‡Рµ - РѕС€РёР±РєР°, РІС‹С…РѕРґ РёР· С„СѓРЅРєС†РёРё
+        ''РСЃРєР°С‚СЊ РІ РёРЅРґРµРєСЃРµ Р·Р°РїРёСЃСЊ СЃ С‚Р°РєРёРј Р¶Рµ ID, РµСЃР»Рё ID < LastID
+        ''Р•СЃР»Рё РЅР°Р№РґРµРЅР°, С‚Рѕ Put РЅР° РµРµ РјРµСЃС‚Рѕ РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ, РёРЅР°С‡Рµ РґРѕР±Р°РІРёС‚СЊ (СЃ СѓС‡РµС‚РѕРј РЅРѕРјРµСЂР°)
             If Not (ID = -6) Then
-                'Индекс задан - проверяем длину файла
-                sfile = ReadHistory(ID, 1)  'Читаем запись по индексу
-                If Not (sfile = "") Then 'Чтение журнала успешно
+                'РРЅРґРµРєСЃ Р·Р°РґР°РЅ - РїСЂРѕРІРµСЂСЏРµРј РґР»РёРЅСѓ С„Р°Р№Р»Р°
+                sfile = ReadHistory(ID, 1)  'Р§РёС‚Р°РµРј Р·Р°РїРёСЃСЊ РїРѕ РёРЅРґРµРєСЃСѓ
+                If Not (sfile = "") Then 'Р§С‚РµРЅРёРµ Р¶СѓСЂРЅР°Р»Р° СѓСЃРїРµС€РЅРѕ
                     If DecodeHistory(sfile) Then
                         TopW.ID = NumID
                         TopW.freq = SubbandBase
                         TopW.StartDEC = StartDEC
                         TopW.StartRA = StartRA
                         TopW.time = ExtractTime(TimeOfRec)
-                        'Открыть файл индекса
+                        'РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р» РёРЅРґРµРєСЃР°
                         hFileInd = FreeFile
                         Open GetFilePath(3) For Random As hFileInd Len = Len(TopW)
                         LastRecNum = LOF(hFileInd) \ Len(TopW)
                         If ID > LastRecNum Then
-                            'ID дальше конца файла
+                            'ID РґР°Р»СЊС€Рµ РєРѕРЅС†Р° С„Р°Р№Р»Р°
                             If ((ID - LastRecNum) > 1) Then
-                                'Заполнить промежуточные записи пустышками (ID=-6)
-                                'будем использовать TMPrec
+                                'Р—Р°РїРѕР»РЅРёС‚СЊ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Рµ Р·Р°РїРёСЃРё РїСѓСЃС‚С‹С€РєР°РјРё (ID=-6)
+                                'Р±СѓРґРµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ TMPrec
                                 For i = LastRecNum + 1 To ID - 1
                                     Seek hFileInd, i
                                     Put hFileInd, , TMPrec
                                 Next i
-                                'Записать информацию
+                                'Р—Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ
                             End If
-                            'Теперь ID указывает на запись, следующую за последней
+                            'РўРµРїРµСЂСЊ ID СѓРєР°Р·С‹РІР°РµС‚ РЅР° Р·Р°РїРёСЃСЊ, СЃР»РµРґСѓСЋС‰СѓСЋ Р·Р° РїРѕСЃР»РµРґРЅРµР№
                         End If
-                        'Подготовительная работа проведена (если надо было)
-                        'записываем информацию!
+                        'РџРѕРґРіРѕС‚РѕРІРёС‚РµР»СЊРЅР°СЏ СЂР°Р±РѕС‚Р° РїСЂРѕРІРµРґРµРЅР° (РµСЃР»Рё РЅР°РґРѕ Р±С‹Р»Рѕ)
+                        'Р·Р°РїРёСЃС‹РІР°РµРј РёРЅС„РѕСЂРјР°С†РёСЋ!
                         Put hFileInd, ID, TopW
                         Close hFileInd
-                        WriteIndex = 1 'успешное завершение
+                        WriteIndex = 1 'СѓСЃРїРµС€РЅРѕРµ Р·Р°РІРµСЂС€РµРЅРёРµ
                     Else
-                        WriteIndex = 4 'ошибка при вызове DecodeHostory
+                        WriteIndex = 4 'РѕС€РёР±РєР° РїСЂРё РІС‹Р·РѕРІРµ DecodeHostory
                     End If
                 Else
-                    WriteIndex = 2 'записи с данным ID в журнале нет
+                    WriteIndex = 2 'Р·Р°РїРёСЃРё СЃ РґР°РЅРЅС‹Рј ID РІ Р¶СѓСЂРЅР°Р»Рµ РЅРµС‚
                 End If
             Else
-                WriteIndex = 3 'ID не задан (режим Mode = 0)
+                WriteIndex = 3 'ID РЅРµ Р·Р°РґР°РЅ (СЂРµР¶РёРј Mode = 0)
             End If
-        Case 1: 'Построить индекс заново
-            'Открываем журнал - загружаем записи ВРУЧНУЮ!!!
-            'Не обращаемся к ReadHistory!!!
+        Case 1: 'РџРѕСЃС‚СЂРѕРёС‚СЊ РёРЅРґРµРєСЃ Р·Р°РЅРѕРІРѕ
+            'РћС‚РєСЂС‹РІР°РµРј Р¶СѓСЂРЅР°Р» - Р·Р°РіСЂСѓР¶Р°РµРј Р·Р°РїРёСЃРё Р’Р РЈР§РќРЈР®!!!
+            'РќРµ РѕР±СЂР°С‰Р°РµРјСЃСЏ Рє ReadHistory!!!
             If CheckFile(0) Then
-                'Журнал обнаружен
-                'Если индекс существует - стереть его
+                'Р–СѓСЂРЅР°Р» РѕР±РЅР°СЂСѓР¶РµРЅ
+                'Р•СЃР»Рё РёРЅРґРµРєСЃ СЃСѓС‰РµСЃС‚РІСѓРµС‚ - СЃС‚РµСЂРµС‚СЊ РµРіРѕ
                 If CheckFile(3) Then
                     Kill GetFilePath(3)
                 End If
                 hFile = FreeFile
                 Open GetFilePath(0) For Input As hFile
-                For i = 1 To RegRecords 'перебираем записи поштучно и определяем их ID
+                For i = 1 To RegRecords 'РїРµСЂРµР±РёСЂР°РµРј Р·Р°РїРёСЃРё РїРѕС€С‚СѓС‡РЅРѕ Рё РѕРїСЂРµРґРµР»СЏРµРј РёС… ID
                     Line Input #hFile, sfile
                     If DecodeHistory(sfile) Then
-                        'Подготавливаем запись для индекса
+                        'РџРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј Р·Р°РїРёСЃСЊ РґР»СЏ РёРЅРґРµРєСЃР°
                         TopW.ID = CLng(Val(NumID))
                         TopW.freq = CLng(Val(SubbandBase))
                         TopW.StartDEC = CSng(Val(StartDEC))
                         TopW.StartRA = CSng(Val(StartRA))
                         TopW.time = ExtractTime(TimeOfRec)
-                        'Открыть файл индекса
+                        'РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р» РёРЅРґРµРєСЃР°
                         hFileInd = FreeFile
                         Open GetFilePath(3) For Random As hFileInd Len = Len(TopW)
                         LastRecNum = LOF(hFileInd) \ Len(TopW)
-                        'Записываем индекс в соответствии с NumID записи в журнале
+                        'Р—Р°РїРёСЃС‹РІР°РµРј РёРЅРґРµРєСЃ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ NumID Р·Р°РїРёСЃРё РІ Р¶СѓСЂРЅР°Р»Рµ
                         If NumID > LastRecNum Then
-                            'ID дальше конца файла
+                            'ID РґР°Р»СЊС€Рµ РєРѕРЅС†Р° С„Р°Р№Р»Р°
                             If ((NumID - LastRecNum) > 1) Then
-                                'Заполнить промежуточные записи пустышками (ID=-6)
-                                'будем использовать TMPrec
+                                'Р—Р°РїРѕР»РЅРёС‚СЊ РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Рµ Р·Р°РїРёСЃРё РїСѓСЃС‚С‹С€РєР°РјРё (ID=-6)
+                                'Р±СѓРґРµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ TMPrec
                                 For j = LastRecNum + 1 To NumID - 1
                                     Seek hFileInd, j
                                     Put hFileInd, , TMPrec
                                 Next j
-                                'Записать информацию
+                                'Р—Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ
                             End If
-                            'Теперь NumID указывает на запись, следующую за последней
+                            'РўРµРїРµСЂСЊ NumID СѓРєР°Р·С‹РІР°РµС‚ РЅР° Р·Р°РїРёСЃСЊ, СЃР»РµРґСѓСЋС‰СѓСЋ Р·Р° РїРѕСЃР»РµРґРЅРµР№
                         End If
-                        'Подготовительная работа проведена (если надо было)
-                        'записываем информацию!
+                        'РџРѕРґРіРѕС‚РѕРІРёС‚РµР»СЊРЅР°СЏ СЂР°Р±РѕС‚Р° РїСЂРѕРІРµРґРµРЅР° (РµСЃР»Рё РЅР°РґРѕ Р±С‹Р»Рѕ)
+                        'Р·Р°РїРёСЃС‹РІР°РµРј РёРЅС„РѕСЂРјР°С†РёСЋ!
                         Put hFileInd, NumID, TopW
                         Close hFileInd
-                        WriteIndex = 1 'успешное завершение
+                        WriteIndex = 1 'СѓСЃРїРµС€РЅРѕРµ Р·Р°РІРµСЂС€РµРЅРёРµ
                     Else
-                        WriteIndex = 4 'ошибка при вызове DecodeHostory
+                        WriteIndex = 4 'РѕС€РёР±РєР° РїСЂРё РІС‹Р·РѕРІРµ DecodeHostory
                         i = RegRecords
                     End If
                 Next i
                 Close hFile
                 If WriteIndex < 2 Then
-                    'Успешное завершение. Надеюсь, что все ошибки были перехвачены
-                    'и WriteIndex=0 осталось с начала функции
+                    'РЈСЃРїРµС€РЅРѕРµ Р·Р°РІРµСЂС€РµРЅРёРµ. РќР°РґРµСЋСЃСЊ, С‡С‚Рѕ РІСЃРµ РѕС€РёР±РєРё Р±С‹Р»Рё РїРµСЂРµС…РІР°С‡РµРЅС‹
+                    'Рё WriteIndex=0 РѕСЃС‚Р°Р»РѕСЃСЊ СЃ РЅР°С‡Р°Р»Р° С„СѓРЅРєС†РёРё
                     WriteIndex = 1
                 End If
             Else
-                WriteIndex = 5 'файл журнала не найден
+                WriteIndex = 5 'С„Р°Р№Р» Р¶СѓСЂРЅР°Р»Р° РЅРµ РЅР°Р№РґРµРЅ
             End If
     End Select
     Exit Function
@@ -719,11 +719,11 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*      Читает запись из файла индекса SETItopw.dat       *
-'*              ID содержит индекс записи                 *
+'*      Р§РёС‚Р°РµС‚ Р·Р°РїРёСЃСЊ РёР· С„Р°Р№Р»Р° РёРЅРґРµРєСЃР° SETItopw.dat       *
+'*              ID СЃРѕРґРµСЂР¶РёС‚ РёРЅРґРµРєСЃ Р·Р°РїРёСЃРё                 *
 '**********************************************************
 Public Function ReadIndex(ByVal ID As Long) As Boolean
-Dim hFileInd As Long        'указатель на файл SETItopw.dat
+Dim hFileInd As Long        'СѓРєР°Р·Р°С‚РµР»СЊ РЅР° С„Р°Р№Р» SETItopw.dat
 Dim LastRecNum As Long
     On Error GoTo ReadIndexErr
     
@@ -732,9 +732,9 @@ Dim LastRecNum As Long
         hFileInd = FreeFile
         Open GetFilePath(3) For Random As hFileInd Len = Len(TopW)
         LastRecNum = LOF(hFileInd) \ Len(TopW)
-        If LastRecNum < ID Then 'ID больше, чем есть записей в файле!
+        If LastRecNum < ID Then 'ID Р±РѕР»СЊС€Рµ, С‡РµРј РµСЃС‚СЊ Р·Р°РїРёСЃРµР№ РІ С„Р°Р№Р»Рµ!
             ReadIndex = False
-        Else    'читать запись из файла
+        Else    'С‡РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ РёР· С„Р°Р№Р»Р°
             Get hFileInd, ID, TopW
             ReadIndex = True
         End If
@@ -748,7 +748,7 @@ ReadIndexErr:
 End Function
 
 '**********************************************************
-'*    Прочитать заданный параметр из шифрованной записи   *
+'*    РџСЂРѕС‡РёС‚Р°С‚СЊ Р·Р°РґР°РЅРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ РёР· С€РёС„СЂРѕРІР°РЅРЅРѕР№ Р·Р°РїРёСЃРё   *
 '**********************************************************
 Public Function GetEncodedToken(ByVal tokenname As String, ByVal sfile As String) As String
 Dim i As Long, j As Long
@@ -781,10 +781,10 @@ GetEncodedTokenErr:
 End Function
 
 '**********************************************************
-'*         Прочитать заголовок из файла-журнала           *
-'*             ID - номер записи в журнале                *
-'*       Mode=0: ID - порядковый номер записи в файле     *
-'*       Mode=1: ID - идентификационный номер блока       *
+'*         РџСЂРѕС‡РёС‚Р°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє РёР· С„Р°Р№Р»Р°-Р¶СѓСЂРЅР°Р»Р°           *
+'*             ID - РЅРѕРјРµСЂ Р·Р°РїРёСЃРё РІ Р¶СѓСЂРЅР°Р»Рµ                *
+'*       Mode=0: ID - РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё РІ С„Р°Р№Р»Рµ     *
+'*       Mode=1: ID - РёРґРµРЅС‚РёС„РёРєР°С†РёРѕРЅРЅС‹Р№ РЅРѕРјРµСЂ Р±Р»РѕРєР°       *
 '**********************************************************
 Public Function ReadHistory(ByVal ID As Long, ByVal Mode As Long) As String
 Dim sfile As String
@@ -792,7 +792,7 @@ Dim i As Long
     On Error GoTo ReadHistoryErr
     sfile = ""
     If (Dir(GetFilePath(0), vbNormal) <> "") Then
-        hFile = FreeFile                        'Получить свободный указатель
+        hFile = FreeFile                        'РџРѕР»СѓС‡РёС‚СЊ СЃРІРѕР±РѕРґРЅС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ
         Open GetFilePath(0) For Input As hFile
         Select Case Mode
             Case 0:
@@ -819,8 +819,8 @@ ReadHistoryErr:
 End Function
 
 '**********************************************************
-'*          Дешифрует запись из файла-журнала             *
-'*      sfile - строка, полученная от ReadHistory         *
+'*          Р”РµС€РёС„СЂСѓРµС‚ Р·Р°РїРёСЃСЊ РёР· С„Р°Р№Р»Р°-Р¶СѓСЂРЅР°Р»Р°             *
+'*      sfile - СЃС‚СЂРѕРєР°, РїРѕР»СѓС‡РµРЅРЅР°СЏ РѕС‚ ReadHistory         *
 '**********************************************************
 Public Function DecodeHistory(sfile As String) As Boolean
 Dim i As Long, j As Long, x As Long
@@ -1032,9 +1032,9 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*      Прочитать заголовок текущего рабочего блока       *
-'*  Mode=1: файла типа Work_unit.sah (клиент для Windows) *
-'*  Mode=2: файла типа work_uni.sah (клиент для Linux)    *
+'*      РџСЂРѕС‡РёС‚Р°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє С‚РµРєСѓС‰РµРіРѕ СЂР°Р±РѕС‡РµРіРѕ Р±Р»РѕРєР°       *
+'*  Mode=1: С„Р°Р№Р»Р° С‚РёРїР° Work_unit.sah (РєР»РёРµРЅС‚ РґР»СЏ Windows) *
+'*  Mode=2: С„Р°Р№Р»Р° С‚РёРїР° work_uni.sah (РєР»РёРµРЅС‚ РґР»СЏ Linux)    *
 '**********************************************************
 Public Function ReadFile(ByVal Mode As Long) As String
 Dim sfile As String
@@ -1043,7 +1043,7 @@ Dim i As Long
     
     If (Dir(GetFilePath(Mode), vbNormal) <> "") Then
         sfile = ""
-        hFile = FreeFile                        'Получить свободный указатель
+        hFile = FreeFile                        'РџРѕР»СѓС‡РёС‚СЊ СЃРІРѕР±РѕРґРЅС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ
         Open GetFilePath(Mode) For Input As hFile
         ''For i = 1 To 2000
             ''sfile = sfile + Input(1, #1)
@@ -1062,16 +1062,16 @@ ReadFileErr:
 End Function
 
 '**********************************************************
-'*          Добавляет запись в базу данных для            *
-'*          последующей демонстрации в DataGrid           *
-'*   Mode = 0 инициализация списка при запуске программы  *
-'*          Mode = 1 добавление только 1 записи           *
-'*        Mode = 2 обновление существующей записи         *
+'*          Р”РѕР±Р°РІР»СЏРµС‚ Р·Р°РїРёСЃСЊ РІ Р±Р°Р·Сѓ РґР°РЅРЅС‹С… РґР»СЏ            *
+'*          РїРѕСЃР»РµРґСѓСЋС‰РµР№ РґРµРјРѕРЅСЃС‚СЂР°С†РёРё РІ DataGrid           *
+'*   Mode = 0 РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃРїРёСЃРєР° РїСЂРё Р·Р°РїСѓСЃРєРµ РїСЂРѕРіСЂР°РјРјС‹  *
+'*          Mode = 1 РґРѕР±Р°РІР»РµРЅРёРµ С‚РѕР»СЊРєРѕ 1 Р·Р°РїРёСЃРё           *
+'*        Mode = 2 РѕР±РЅРѕРІР»РµРЅРёРµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµР№ Р·Р°РїРёСЃРё         *
 '**********************************************************
 Public Sub AddRecord(ByVal Mode As Long, Optional ByVal RecNum As Long)
 Dim sfile As String
 Dim i As Long
-'ЭКВИВАЛЕНТНЫЕ ОПЕРАТОРЫ
+'Р­РљР’РР’РђР›Р•РќРўРќР«Р• РћРџР•Р РђРўРћР Р«
 'rsWUhistory!ID = ...
 'rsWUhistory.Fields.Item("ID") = ...
 On Error GoTo AddRecordErr
@@ -1080,7 +1080,7 @@ Select Case Mode
 Case 0:
     If (Dir(GetFilePath(0), vbNormal) <> "") Then
         sfile = ""
-        hFile = FreeFile                        'Получить свободный указатель
+        hFile = FreeFile                        'РџРѕР»СѓС‡РёС‚СЊ СЃРІРѕР±РѕРґРЅС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ
         Open GetFilePath(0) For Input As hFile
         For i = 1 To RegRecords
             Line Input #hFile, sfile
@@ -1112,7 +1112,7 @@ Case 0:
 ''Close hFile
     End If
 Case 1:
-    'Если нужно добавить только 1 запись, то вызывать ReadHistory
+    'Р•СЃР»Рё РЅСѓР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ С‚РѕР»СЊРєРѕ 1 Р·Р°РїРёСЃСЊ, С‚Рѕ РІС‹Р·С‹РІР°С‚СЊ ReadHistory
     If DecodeHistory(ReadHistory(RecNum, 1)) Then
         rsWUhistory.MoveFirst
         Do While CLng(Val(rsWUhistory.Fields.Item("ID"))) < CLng(Val(NumID))
@@ -1171,8 +1171,8 @@ AddRecordErr:
 End Sub
 
 '**********************************************************
-'*         Дешифрует заголовок блока из строки            *
-'*       sfile - строка, полученная от  ReadFile          *
+'*         Р”РµС€РёС„СЂСѓРµС‚ Р·Р°РіРѕР»РѕРІРѕРє Р±Р»РѕРєР° РёР· СЃС‚СЂРѕРєРё            *
+'*       sfile - СЃС‚СЂРѕРєР°, РїРѕР»СѓС‡РµРЅРЅР°СЏ РѕС‚  ReadFile          *
 '**********************************************************
 Public Function DecodeWU(sfile As String) As Boolean
 Dim i As Long
@@ -1215,7 +1215,7 @@ DecodeWUErr:
 End Function
 
 '**********************************************************
-'*        Зашифровывает заголовок блока в строку          *
+'*        Р—Р°С€РёС„СЂРѕРІС‹РІР°РµС‚ Р·Р°РіРѕР»РѕРІРѕРє Р±Р»РѕРєР° РІ СЃС‚СЂРѕРєСѓ          *
 '**********************************************************
 Public Function EncodeWU() As String
 Dim sfile As String
@@ -1380,23 +1380,23 @@ EncodeWUErr:
 End Function
 
 '**********************************************************
-'*      Записывает зашифрованный заголовок в журнал       *
-'*       sfile - зашифрованная строка (от EncodeWU)       *
-'*Mode=0 - изменение существующей записи или вставка новой*
-'*   Mode = 1 - добавление новой записи В КОНЕЦ файла     *
+'*      Р—Р°РїРёСЃС‹РІР°РµС‚ Р·Р°С€РёС„СЂРѕРІР°РЅРЅС‹Р№ Р·Р°РіРѕР»РѕРІРѕРє РІ Р¶СѓСЂРЅР°Р»       *
+'*       sfile - Р·Р°С€РёС„СЂРѕРІР°РЅРЅР°СЏ СЃС‚СЂРѕРєР° (РѕС‚ EncodeWU)       *
+'*Mode=0 - РёР·РјРµРЅРµРЅРёРµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµР№ Р·Р°РїРёСЃРё РёР»Рё РІСЃС‚Р°РІРєР° РЅРѕРІРѕР№*
+'*   Mode = 1 - РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё Р’ РљРћРќР•Р¦ С„Р°Р№Р»Р°     *
 '**********************************************************
 Public Function WriteHistory(ByVal sfile As String, ByVal Mode As Long) As Boolean
 Dim s As String, Num As String
 Dim hTMPFile As Long, i As Long
 Dim WriteDone As Boolean
-'Проверить файл на наличие одноИМЕННОГО блока и блока с тем же ID - в ввызывающей функции!!!
+'РџСЂРѕРІРµСЂРёС‚СЊ С„Р°Р№Р» РЅР° РЅР°Р»РёС‡РёРµ РѕРґРЅРѕРРњР•РќРќРћР“Рћ Р±Р»РѕРєР° Рё Р±Р»РѕРєР° СЃ С‚РµРј Р¶Рµ ID - РІ РІРІС‹Р·С‹РІР°СЋС‰РµР№ С„СѓРЅРєС†РёРё!!!
     On Error GoTo WriteHistoryErr
 
     hFile = FreeFile
     WriteHistory = False
     
-    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Если журнал существует, то
-        If FileLen(GetFilePath(0)) < 50 Then        'Если он пуст (т.к. запись гораздо длиннее 50 байтов)
+    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Р•СЃР»Рё Р¶СѓСЂРЅР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ
+        If FileLen(GetFilePath(0)) < 50 Then        'Р•СЃР»Рё РѕРЅ РїСѓСЃС‚ (С‚.Рє. Р·Р°РїРёСЃСЊ РіРѕСЂР°Р·РґРѕ РґР»РёРЅРЅРµРµ 50 Р±Р°Р№С‚РѕРІ)
             Open GetFilePath(0) For Output As hFile
             Print #hFile, sfile
             Close (hFile)
@@ -1404,8 +1404,8 @@ Dim WriteDone As Boolean
             LastRecordNum = GetLastNum
             WriteHistory = True
             RaiseEvent WriteComplete        'Yield to application about completed task
-        Else    'Если файл не пуст, то нужно аккуратно добавить или перезаписать
-            ''ТЕСТИРОВАНИЕ НЕ ВЫЯВИЛО ОШИБОК ПРИ ОТСУТСТВИИ СЛЕДУЮЩИХ ИНСТРУКЦИЙ
+        Else    'Р•СЃР»Рё С„Р°Р№Р» РЅРµ РїСѓСЃС‚, С‚Рѕ РЅСѓР¶РЅРѕ Р°РєРєСѓСЂР°С‚РЅРѕ РґРѕР±Р°РІРёС‚СЊ РёР»Рё РїРµСЂРµР·Р°РїРёСЃР°С‚СЊ
+            ''РўР•РЎРўРР РћР’РђРќРР• РќР• Р’Р«РЇР’РР›Рћ РћРЁРР‘РћРљ РџР Р РћРўРЎРЈРўРЎРўР’РР РЎР›Р•Р”РЈР®Р©РРҐ РРќРЎРўР РЈРљР¦РР™
             ''Open GetFilePath(0) For Input As hFile
             ''Do
             ''    Line Input #hFile, s
@@ -1414,9 +1414,9 @@ Dim WriteDone As Boolean
             '''Seek hFile, 1
             ''Close (hFile)
             Select Case Mode
-                Case 0:     'Модификация существующей записи
+                Case 0:     'РњРѕРґРёС„РёРєР°С†РёСЏ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµР№ Р·Р°РїРёСЃРё
                     WriteDone = False
-                    Num = NumID 'Запомнить ID блока пока он не перезаписался другим значением
+                    Num = NumID 'Р—Р°РїРѕРјРЅРёС‚СЊ ID Р±Р»РѕРєР° РїРѕРєР° РѕРЅ РЅРµ РїРµСЂРµР·Р°РїРёСЃР°Р»СЃСЏ РґСЂСѓРіРёРј Р·РЅР°С‡РµРЅРёРµРј
                     hFile = FreeFile
                     Open GetFilePath(0) For Input As hFile
                     hTMPFile = FreeFile
@@ -1424,30 +1424,30 @@ Dim WriteDone As Boolean
                     For i = 1 To RegRecords
                         Line Input #hFile, s
                         If Not (DecodeHistory(s)) Then
-                            'Слабое утешение: сбоя программы не избежать
-                            'Произошло нарушение целостности файлового формата
+                            'РЎР»Р°Р±РѕРµ СѓС‚РµС€РµРЅРёРµ: СЃР±РѕСЏ РїСЂРѕРіСЂР°РјРјС‹ РЅРµ РёР·Р±РµР¶Р°С‚СЊ
+                            'РџСЂРѕРёР·РѕС€Р»Рѕ РЅР°СЂСѓС€РµРЅРёРµ С†РµР»РѕСЃС‚РЅРѕСЃС‚Рё С„Р°Р№Р»РѕРІРѕРіРѕ С„РѕСЂРјР°С‚Р°
                             WriteHistory = False
                             Exit For
-                            Exit Function   'Это ерунда, но для успокоения совести...
+                            Exit Function   'Р­С‚Рѕ РµСЂСѓРЅРґР°, РЅРѕ РґР»СЏ СѓСЃРїРѕРєРѕРµРЅРёСЏ СЃРѕРІРµСЃС‚Рё...
                         End If
                         If WriteDone Then
-                            'Новый блок уже добавлен, поэтому просто перекачиваем
-                            'оставшиеся записи...
+                            'РќРѕРІС‹Р№ Р±Р»РѕРє СѓР¶Рµ РґРѕР±Р°РІР»РµРЅ, РїРѕСЌС‚РѕРјСѓ РїСЂРѕСЃС‚Рѕ РїРµСЂРµРєР°С‡РёРІР°РµРј
+                            'РѕСЃС‚Р°РІС€РёРµСЃСЏ Р·Р°РїРёСЃРё...
                             Print #hTMPFile, s
                         ElseIf CDbl(Val(Num)) > CDbl(Val(NumID)) Then
-                            'Если ID нового блока больше, чем у только что прочитанного,
-                            'то пока пропустить запись нового блока
+                            'Р•СЃР»Рё ID РЅРѕРІРѕРіРѕ Р±Р»РѕРєР° Р±РѕР»СЊС€Рµ, С‡РµРј Сѓ С‚РѕР»СЊРєРѕ С‡С‚Рѕ РїСЂРѕС‡РёС‚Р°РЅРЅРѕРіРѕ,
+                            'С‚Рѕ РїРѕРєР° РїСЂРѕРїСѓСЃС‚РёС‚СЊ Р·Р°РїРёСЃСЊ РЅРѕРІРѕРіРѕ Р±Р»РѕРєР°
                             Print #hTMPFile, s
                         ElseIf CDbl(Val(Num)) = CDbl(Val(NumID)) Then
-                            'ID нового блока равен ID старого! Перезаписываем...
+                            'ID РЅРѕРІРѕРіРѕ Р±Р»РѕРєР° СЂР°РІРµРЅ ID СЃС‚Р°СЂРѕРіРѕ! РџРµСЂРµР·Р°РїРёСЃС‹РІР°РµРј...
                             Print #hTMPFile, sfile
                             WriteDone = True
                             Debug.Print sfile
                         ElseIf Not (WriteDone) Then
-                            'Осталась последняя возможность: ID нового блока меньше,
-                            'чем у только что прочитанного, но запись еще не
-                            'производилась, поэтому вставляем новый блок и
-                            'записываем сразу за ним старый...
+                            'РћСЃС‚Р°Р»Р°СЃСЊ РїРѕСЃР»РµРґРЅСЏСЏ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ: ID РЅРѕРІРѕРіРѕ Р±Р»РѕРєР° РјРµРЅСЊС€Рµ,
+                            'С‡РµРј Сѓ С‚РѕР»СЊРєРѕ С‡С‚Рѕ РїСЂРѕС‡РёС‚Р°РЅРЅРѕРіРѕ, РЅРѕ Р·Р°РїРёСЃСЊ РµС‰Рµ РЅРµ
+                            'РїСЂРѕРёР·РІРѕРґРёР»Р°СЃСЊ, РїРѕСЌС‚РѕРјСѓ РІСЃС‚Р°РІР»СЏРµРј РЅРѕРІС‹Р№ Р±Р»РѕРє Рё
+                            'Р·Р°РїРёСЃС‹РІР°РµРј СЃСЂР°Р·Сѓ Р·Р° РЅРёРј СЃС‚Р°СЂС‹Р№...
                             Print #hTMPFile, sfile
                             Print #hTMPFile, s
                             RegRecords = RegRecords + 1
@@ -1461,7 +1461,7 @@ Dim WriteDone As Boolean
                     Name App.path & "\tmpdata.tmp" As GetFilePath(0)
                     RaiseEvent WriteComplete        'Yield to application about completed task
                    'Kill App.Path & "\tmpdata.tmp"
-                Case 1:     'Добавление новой записи
+                Case 1:     'Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё
                     Open GetFilePath(0) For Append As hFile
                     Print #hFile, sfile
                     Close (hFile)
@@ -1471,7 +1471,7 @@ Dim WriteDone As Boolean
                     RaiseEvent WriteComplete        'Yield to application about completed task
             End Select
         End If
-    Else                                            'Файл не существует
+    Else                                            'Р¤Р°Р№Р» РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚
         Open GetFilePath(0) For Output As hFile
         Print #hFile, sfile
         Close (hFile)
@@ -1488,19 +1488,19 @@ WriteHistoryErr:
 End Function
 
 '**********************************************************
-'*       Восстанавливает журнал при нестандартном         *
-'*             завершении предыдущей сессии               *
-'*       LogState хранится в реестре и обновляется        *
-'*       после каждой операции перезаписи журнала         *
+'*       Р’РѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р¶СѓСЂРЅР°Р» РїСЂРё РЅРµСЃС‚Р°РЅРґР°СЂС‚РЅРѕРј         *
+'*             Р·Р°РІРµСЂС€РµРЅРёРё РїСЂРµРґС‹РґСѓС‰РµР№ СЃРµСЃСЃРёРё               *
+'*       LogState С…СЂР°РЅРёС‚СЃСЏ РІ СЂРµРµСЃС‚СЂРµ Рё РѕР±РЅРѕРІР»СЏРµС‚СЃСЏ        *
+'*       РїРѕСЃР»Рµ РєР°Р¶РґРѕР№ РѕРїРµСЂР°С†РёРё РїРµСЂРµР·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р°         *
 '**********************************************************
 Public Function CrushRecover(LogState As Long) As Boolean
     On Error GoTo CrushRecoverErr
-'TO DO - константы должны соответствовать во всех частях проекта
+'TO DO - РєРѕРЅСЃС‚Р°РЅС‚С‹ РґРѕР»Р¶РЅС‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРѕРІР°С‚СЊ РІРѕ РІСЃРµС… С‡Р°СЃС‚СЏС… РїСЂРѕРµРєС‚Р°
     Select Case LogState
-        Case 1:     'Началось обновление, но запись не успела начаться
-        Case 2:     'Шел процесс создания временного файла
-        Case 3:     'Временный файл был создан, но удалить старый или
-                    'переименовать временный файл не удалось
+        Case 1:     'РќР°С‡Р°Р»РѕСЃСЊ РѕР±РЅРѕРІР»РµРЅРёРµ, РЅРѕ Р·Р°РїРёСЃСЊ РЅРµ СѓСЃРїРµР»Р° РЅР°С‡Р°С‚СЊСЃСЏ
+        Case 2:     'РЁРµР» РїСЂРѕС†РµСЃСЃ СЃРѕР·РґР°РЅРёСЏ РІСЂРµРјРµРЅРЅРѕРіРѕ С„Р°Р№Р»Р°
+        Case 3:     'Р’СЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» Р±С‹Р» СЃРѕР·РґР°РЅ, РЅРѕ СѓРґР°Р»РёС‚СЊ СЃС‚Р°СЂС‹Р№ РёР»Рё
+                    'РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» РЅРµ СѓРґР°Р»РѕСЃСЊ
     End Select
     
     Exit Function
@@ -1510,8 +1510,8 @@ CrushRecoverErr:
 End Function
 
 '**********************************************************
-'*    Проверяет соответствие числа зарегестрированных     *
-'*    блоков в реестре действительному положению дел      *
+'*    РџСЂРѕРІРµСЂСЏРµС‚ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ С‡РёСЃР»Р° Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С…     *
+'*    Р±Р»РѕРєРѕРІ РІ СЂРµРµСЃС‚СЂРµ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕРјСѓ РїРѕР»РѕР¶РµРЅРёСЋ РґРµР»      *
 '**********************************************************
 Public Function CheckRegSettings(NumRec As Long, Repair As Boolean) As Boolean
 Dim s As String
@@ -1520,8 +1520,8 @@ Dim NumOfRecords As Long
 
     hFile = FreeFile
     NumOfRecords = 0
-    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Если журнал существует, то
-        If FileLen(GetFilePath(0)) > 50 Then        'Если он не пуст
+    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Р•СЃР»Рё Р¶СѓСЂРЅР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ
+        If FileLen(GetFilePath(0)) > 50 Then        'Р•СЃР»Рё РѕРЅ РЅРµ РїСѓСЃС‚
             Open GetFilePath(0) For Input As hFile
             Do
                 Line Input #hFile, s
@@ -1530,11 +1530,11 @@ Dim NumOfRecords As Long
             Close (hFile)
         End If
     End If
-    If NumOfRecords = NumRec Then   'Число записей соответствует числу в реестре
-        CheckRegSettings = True     'Исправлять не надо
+    If NumOfRecords = NumRec Then   'Р§РёСЃР»Рѕ Р·Р°РїРёСЃРµР№ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ С‡РёСЃР»Сѓ РІ СЂРµРµСЃС‚СЂРµ
+        CheckRegSettings = True     'РСЃРїСЂР°РІР»СЏС‚СЊ РЅРµ РЅР°РґРѕ
     Else
-        CheckRegSettings = False    'Обнаружено несоответствие
-        If Repair Then              'Если нужно исправить, то...
+        CheckRegSettings = False    'РћР±РЅР°СЂСѓР¶РµРЅРѕ РЅРµСЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ
+        If Repair Then              'Р•СЃР»Рё РЅСѓР¶РЅРѕ РёСЃРїСЂР°РІРёС‚СЊ, С‚Рѕ...
             SaveSetting App.Title, "Settings", "NumOfHistoryRec", NumOfRecords
             RegRecords = NumOfRecords
         End If
@@ -1547,7 +1547,7 @@ CheckRegSettingsErr:
 End Function
 
 '**********************************************************
-'*     Возвращает номер блока в журнале по его имени      *
+'*     Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅРѕРјРµСЂ Р±Р»РѕРєР° РІ Р¶СѓСЂРЅР°Р»Рµ РїРѕ РµРіРѕ РёРјРµРЅРё      *
 '**********************************************************
 Public Function GetIDbyName(name As String) As String
 Dim sfile As String
@@ -1558,8 +1558,8 @@ Dim fResult As String
     fResult = ""
     hFile = FreeFile
     
-    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Если журнал существует, то
-        If FileLen(GetFilePath(0)) > 50 Then        'Если он не пуст
+    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Р•СЃР»Рё Р¶СѓСЂРЅР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ
+        If FileLen(GetFilePath(0)) > 50 Then        'Р•СЃР»Рё РѕРЅ РЅРµ РїСѓСЃС‚
             Open GetFilePath(0) For Input As hFile
                 Do
                     Line Input #hFile, sfile
@@ -1579,11 +1579,11 @@ GetIDbyNameErr:
 End Function
 
 '**********************************************************
-'*Проверяет наличие блока с заданным номером и/или именем *
-'*        Mode - определяет режим работы функции          *
-'*               Mode=0 - проверка ID                     *
-'*               Mode=1 - проверка Name                   *
-'*               Mode=2 - проверка обоих параметров       *
+'*РџСЂРѕРІРµСЂСЏРµС‚ РЅР°Р»РёС‡РёРµ Р±Р»РѕРєР° СЃ Р·Р°РґР°РЅРЅС‹Рј РЅРѕРјРµСЂРѕРј Рё/РёР»Рё РёРјРµРЅРµРј *
+'*        Mode - РѕРїСЂРµРґРµР»СЏРµС‚ СЂРµР¶РёРј СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё          *
+'*               Mode=0 - РїСЂРѕРІРµСЂРєР° ID                     *
+'*               Mode=1 - РїСЂРѕРІРµСЂРєР° Name                   *
+'*               Mode=2 - РїСЂРѕРІРµСЂРєР° РѕР±РѕРёС… РїР°СЂР°РјРµС‚СЂРѕРІ       *
 '**********************************************************
 Public Function CheckUnit(ByVal Mode As Long, ByVal IDorNAME As String, Optional ByVal NAMEonly As String) As Boolean
 Dim s As String
@@ -1592,8 +1592,8 @@ Dim s As String
     CheckUnit = False
     hFile = FreeFile
     
-    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Если журнал существует, то
-        If FileLen(GetFilePath(0)) > 50 Then        'Если он не пуст
+    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Р•СЃР»Рё Р¶СѓСЂРЅР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ
+        If FileLen(GetFilePath(0)) > 50 Then        'Р•СЃР»Рё РѕРЅ РЅРµ РїСѓСЃС‚
             Open GetFilePath(0) For Input As hFile
             Select Case Mode
                 Case 0:
@@ -1631,7 +1631,7 @@ CheckUnitErr:
 End Function
 
 '**********************************************************
-'*           Определяет ID последней записи               *
+'*           РћРїСЂРµРґРµР»СЏРµС‚ ID РїРѕСЃР»РµРґРЅРµР№ Р·Р°РїРёСЃРё               *
 '**********************************************************
 Public Function GetLastNum() As Long
 Dim s As String
@@ -1641,8 +1641,8 @@ Dim MaxID As Long
 
     hFile = FreeFile
     MaxID = 0
-    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Если журнал существует, то
-        If FileLen(GetFilePath(0)) > 50 Then        'Если он не пуст
+    If (Dir(GetFilePath(0), vbNormal) <> "") Then   'Р•СЃР»Рё Р¶СѓСЂРЅР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ
+        If FileLen(GetFilePath(0)) > 50 Then        'Р•СЃР»Рё РѕРЅ РЅРµ РїСѓСЃС‚
             Open GetFilePath(0) For Input As hFile
             Do
                 Line Input #hFile, s
@@ -1678,7 +1678,7 @@ Private Sub Class_Initialize()
     DataMembers.Add "WUhistory"
     
     If (Dir(GetFilePath(1), vbNormal) <> "") Then
-        existWU = True      'Режим чтения из WU-файла
+        existWU = True      'Р РµР¶РёРј С‡С‚РµРЅРёСЏ РёР· WU-С„Р°Р№Р»Р°
     Else
         existWU = False
     End If
@@ -1711,11 +1711,11 @@ Private Sub Class_Initialize()
 End Sub
 '
 ''**********************************************************
-''*         Выделяет заданный параметр из строки.          *
-''* Функция работает с символом перевода строки в качестве *
-''* разделителя параметров. Этот способ применяется только *
-''*    при обработке файлов рабочих блоков. Для файлов     *
-''*    результатов используется функция GetEncodedToken    *
+''*         Р’С‹РґРµР»СЏРµС‚ Р·Р°РґР°РЅРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ РёР· СЃС‚СЂРѕРєРё.          *
+''* Р¤СѓРЅРєС†РёСЏ СЂР°Р±РѕС‚Р°РµС‚ СЃ СЃРёРјРІРѕР»РѕРј РїРµСЂРµРІРѕРґР° СЃС‚СЂРѕРєРё РІ РєР°С‡РµСЃС‚РІРµ *
+''* СЂР°Р·РґРµР»РёС‚РµР»СЏ РїР°СЂР°РјРµС‚СЂРѕРІ. Р­С‚РѕС‚ СЃРїРѕСЃРѕР± РїСЂРёРјРµРЅСЏРµС‚СЃСЏ С‚РѕР»СЊРєРѕ *
+''*    РїСЂРё РѕР±СЂР°Р±РѕС‚РєРµ С„Р°Р№Р»РѕРІ СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ. Р”Р»СЏ С„Р°Р№Р»РѕРІ     *
+''*    СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С„СѓРЅРєС†РёСЏ GetEncodedToken    *
 ''**********************************************************
 'Private Function GetToken(tokenname As String, ByVal psfile As String) As String
 'Dim res As String
