@@ -45,7 +45,7 @@ Private mvarchirp_rate As Single 'local copy
 Private mvarncfft As Long 'local copy
 Private mvarhFile As Long 'local copy
 
-SpikeRec As tSpikeRec   'Запись для работы с файлом данных (SETIspik.txt)
+SpikeRec As tSpikeRec   'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РґР°РЅРЅС‹С… (SETIspik.txt)
 
 Public Property Let hFile(ByVal vData As Long)
 'used when assigning a value to the property, on the left side of an assignment.
