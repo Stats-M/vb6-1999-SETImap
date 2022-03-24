@@ -8,8 +8,8 @@ Public Const MyObjectError2 = 1010
 Public Const MyObjectErrorN = 1234
 Public Const MyUnhandledError = 9999
 
-'Мои собственные константы
-'Константы для заголовков MsgBox
+'РњРѕРё СЃРѕР±СЃС‚РІРµРЅРЅС‹Рµ РєРѕРЅСЃС‚Р°РЅС‚С‹
+'РљРѕРЅСЃС‚Р°РЅС‚С‹ РґР»СЏ Р·Р°РіРѕР»РѕРІРєРѕРІ MsgBox
 Public Const StandartErrHeader = 1100
 Public Const DataEntryErrHeader = 1101
 
@@ -75,8 +75,8 @@ Public Sub RaiseError(ErrorNumber As Long, Source As String)
 End Sub
 
 '**********************************************************
-'*  Показывает сообщение об ошибках (текст - из ресурсов) *
-'*  Начало нумерации - с 1200                             *
+'*  РџРѕРєР°Р·С‹РІР°РµС‚ СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєР°С… (С‚РµРєСЃС‚ - РёР· СЂРµСЃСѓСЂСЃРѕРІ) *
+'*  РќР°С‡Р°Р»Рѕ РЅСѓРјРµСЂР°С†РёРё - СЃ 1200                             *
 '**********************************************************
 
 Public Sub RaiseErrMsg(ErrorNumber As Long, ErrHeader As Long)
