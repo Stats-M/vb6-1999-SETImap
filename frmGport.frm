@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Begin VB.Form frmGport 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Ãðàôè÷åñêèé àíàëèç ðåçóëüòàòîâ"
+   Caption         =   "Ð“Ñ€Ð°Ñ„Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð°Ð½Ð°Ð»Ð¸Ð· Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ð¾Ð²"
    ClientHeight    =   6135
    ClientLeft      =   45
    ClientTop       =   330
@@ -14,7 +14,7 @@ Begin VB.Form frmGport
    ScaleWidth      =   10530
    StartUpPosition =   3  'Windows Default
    Begin VB.CheckBox Check2 
-      Caption         =   "Ðó÷íîå óêàçàíèå äèàïàçîíà"
+      Caption         =   "Ð ÑƒÑ‡Ð½Ð¾Ðµ ÑƒÐºÐ°Ð·Ð°Ð½Ð¸Ðµ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°"
       Height          =   330
       Left            =   8715
       TabIndex        =   13
@@ -39,7 +39,7 @@ Begin VB.Form frmGport
       Scrolling       =   1
    End
    Begin VB.CheckBox Check1 
-      Caption         =   "Îáíîâèòü èíäåêñ"
+      Caption         =   "ÐžÐ±Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð¸Ð½Ð´ÐµÐºÑ"
       Height          =   435
       Left            =   8925
       TabIndex        =   10
@@ -71,7 +71,7 @@ Begin VB.Form frmGport
       Width           =   3270
    End
    Begin VB.CommandButton Command2 
-      Caption         =   "Íà÷àòü!"
+      Caption         =   "ÐÐ°Ñ‡Ð°Ñ‚ÑŒ!"
       Height          =   345
       Left            =   8820
       TabIndex        =   3
@@ -79,7 +79,7 @@ Begin VB.Form frmGport
       Width           =   1467
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Çàêðûòü"
+      Caption         =   "Ð—Ð°ÐºÑ€Ñ‹Ñ‚ÑŒ"
       Default         =   -1  'True
       Height          =   345
       Left            =   8820
@@ -107,7 +107,7 @@ Begin VB.Form frmGport
    End
    Begin VB.Label Label7 
       Alignment       =   2  'Center
-      Caption         =   "ÏÐÀÂÀß êíîïêà - êîíåö äèàïàçîíà"
+      Caption         =   "ÐŸÐ ÐÐ’ÐÐ¯ ÐºÐ½Ð¾Ð¿ÐºÐ° - ÐºÐ¾Ð½ÐµÑ† Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°"
       Height          =   435
       Left            =   8715
       TabIndex        =   15
@@ -117,7 +117,7 @@ Begin VB.Form frmGport
    End
    Begin VB.Label Label6 
       Alignment       =   2  'Center
-      Caption         =   "ËÅÂÀß êíîïêà - íà÷àëî äèàïàçîíà"
+      Caption         =   "Ð›Ð•Ð’ÐÐ¯ ÐºÐ½Ð¾Ð¿ÐºÐ° - Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°"
       Height          =   435
       Left            =   8715
       TabIndex        =   14
@@ -127,7 +127,7 @@ Begin VB.Form frmGport
    End
    Begin VB.Label Label5 
       Alignment       =   2  'Center
-      Caption         =   "Ïîñòðîåíèå..."
+      Caption         =   "ÐŸÐ¾ÑÑ‚Ñ€Ð¾ÐµÐ½Ð¸Ðµ..."
       Height          =   225
       Left            =   8715
       TabIndex        =   12
@@ -152,7 +152,7 @@ Begin VB.Form frmGport
       Width           =   1590
    End
    Begin VB.Label Label2 
-      Caption         =   "Òèï ãðàôèêà"
+      Caption         =   "Ð¢Ð¸Ð¿ Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ°"
       Height          =   225
       Left            =   4095
       TabIndex        =   6
@@ -160,7 +160,7 @@ Begin VB.Form frmGport
       Width           =   1065
    End
    Begin VB.Label Label1 
-      Caption         =   "Êàòåãîðèÿ äàííûõ"
+      Caption         =   "ÐšÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ñ Ð´Ð°Ð½Ð½Ñ‹Ñ…"
       Height          =   225
       Left            =   210
       TabIndex        =   0
@@ -174,12 +174,12 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-Public Mode As Long     'Êàêîé ðåæèì âûáðàí (òèï ãðàôèêà)
-Public BandWith As Long    'Øèðèíà ïîëîñû ÷àñòîò
+Public Mode As Long     'ÐšÐ°ÐºÐ¾Ð¹ Ñ€ÐµÐ¶Ð¸Ð¼ Ð²Ñ‹Ð±Ñ€Ð°Ð½ (Ñ‚Ð¸Ð¿ Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ°)
+Public BandWith As Long    'Ð¨Ð¸Ñ€Ð¸Ð½Ð° Ð¿Ð¾Ð»Ð¾ÑÑ‹ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚
 
 Private Sub Check2_Click()
-    'Åñëè îòìåòêà ïîñòàâëåíà, òî ïîãàñèòü âñå, à ïîäñêàçêè âûñâåòèòü.
-    'Åñëè îòìåòêà ïîãàøåíà, òî ñ÷èòàåòñÿ, ÷òî ðàáîòà ñ ýòèì ãðàôèêîì çàêîí÷åíà.
+    'Ð•ÑÐ»Ð¸ Ð¾Ñ‚Ð¼ÐµÑ‚ÐºÐ° Ð¿Ð¾ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð°, Ñ‚Ð¾ Ð¿Ð¾Ð³Ð°ÑÐ¸Ñ‚ÑŒ Ð²ÑÐµ, Ð° Ð¿Ð¾Ð´ÑÐºÐ°Ð·ÐºÐ¸ Ð²Ñ‹ÑÐ²ÐµÑ‚Ð¸Ñ‚ÑŒ.
+    'Ð•ÑÐ»Ð¸ Ð¾Ñ‚Ð¼ÐµÑ‚ÐºÐ° Ð¿Ð¾Ð³Ð°ÑˆÐµÐ½Ð°, Ñ‚Ð¾ ÑÑ‡Ð¸Ñ‚Ð°ÐµÑ‚ÑÑ, Ñ‡Ñ‚Ð¾ Ñ€Ð°Ð±Ð¾Ñ‚Ð° Ñ ÑÑ‚Ð¸Ð¼ Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ¾Ð¼ Ð·Ð°ÐºÐ¾Ð½Ñ‡ÐµÐ½Ð°.
     Call DisableControls
     Combo2.Enabled = False
     If Check2.Value = vbChecked Then
@@ -196,74 +196,74 @@ End Sub
 Private Sub Picture1_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
     If Check2.Value = vbChecked Then
         Select Case Button
-            Case 0: 'Ëåâàÿ êíîïêà
-                Result = MsgBox("Ëåâàÿ êíîïêà! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "Îãî!")
-            Case 1: 'Ïðàâàÿ êíîïêà
-                Result = MsgBox("Ïðàâàÿ êíîïêà! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "Îãî!")
+            Case 0: 'Ð›ÐµÐ²Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ°
+                Result = MsgBox("Ð›ÐµÐ²Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ°! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "ÐžÐ³Ð¾!")
+            Case 1: 'ÐŸÑ€Ð°Ð²Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ°
+                Result = MsgBox("ÐŸÑ€Ð°Ð²Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ°! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "ÐžÐ³Ð¾!")
         End Select
     End If
 End Sub
 
 Private Sub Slider1_Change()
     Select Case Mode
-        Case 101:   'Áëîêè -> ÷àñòîòû
+        Case 101:   'Ð‘Ð»Ð¾ÐºÐ¸ -> Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ñ‹
             Select Case Slider1.Value
                 Case 1:
                     BandWith = 25
-                    Label4.Caption = "25 ÊÃö"
+                    Label4.Caption = "25 ÐšÐ“Ñ†"
                 Case 2:
                     BandWith = 50
-                    Label4.Caption = "50 ÊÃö"
+                    Label4.Caption = "50 ÐšÐ“Ñ†"
                 Case 3:
                     BandWith = 100
-                    Label4.Caption = "100 ÊÃö"
+                    Label4.Caption = "100 ÐšÐ“Ñ†"
                 Case 4:
                     BandWith = 125
-                    Label4.Caption = "125 ÊÃö"
+                    Label4.Caption = "125 ÐšÐ“Ñ†"
                 Case 5:
                     BandWith = 250
-                    Label4.Caption = "250 ÊÃö"
+                    Label4.Caption = "250 ÐšÐ“Ñ†"
                 Case 6:
                     BandWith = 500
-                    Label4.Caption = "500 ÊÃö"
+                    Label4.Caption = "500 ÐšÐ“Ñ†"
                 Case 7:
                     BandWith = 1250
-                    Label4.Caption = "1250 ÊÃö"
+                    Label4.Caption = "1250 ÐšÐ“Ñ†"
             End Select
-        Case 102:   'Áëîêè -> RA
+        Case 102:   'Ð‘Ð»Ð¾ÐºÐ¸ -> RA
             Select Case Slider1.Value
                 Case 1:
                     BandWith = 1
-                    Label4.Caption = "1 ÷àñ"
+                    Label4.Caption = "1 Ñ‡Ð°Ñ"
                 Case 2:
                     BandWith = 2
-                    Label4.Caption = "2 ÷àñà"
+                    Label4.Caption = "2 Ñ‡Ð°ÑÐ°"
                 Case 3:
                     BandWith = 3
-                    Label4.Caption = "3 ÷àñà"
+                    Label4.Caption = "3 Ñ‡Ð°ÑÐ°"
                 Case 4:
                     BandWith = 4
-                    Label4.Caption = "4 ÷àñà"
+                    Label4.Caption = "4 Ñ‡Ð°ÑÐ°"
                 Case 5:
                     BandWith = 6
-                    Label4.Caption = "6 ÷àñîâ"
+                    Label4.Caption = "6 Ñ‡Ð°ÑÐ¾Ð²"
             End Select
-        Case 103:   'Áëîêè -> DEC
+        Case 103:   'Ð‘Ð»Ð¾ÐºÐ¸ -> DEC
             Select Case Slider1.Value
                 Case 1:
                     BandWith = 2
-                    Label4.Caption = "2 ãðàäóñà"
+                    Label4.Caption = "2 Ð³Ñ€Ð°Ð´ÑƒÑÐ°"
                 Case 2:
                     BandWith = 5
-                    Label4.Caption = "5 ãðàäóñîâ"
+                    Label4.Caption = "5 Ð³Ñ€Ð°Ð´ÑƒÑÐ¾Ð²"
                 Case 3:
                     BandWith = 10
-                    Label4.Caption = "10 ãðàäóñîâ"
+                    Label4.Caption = "10 Ð³Ñ€Ð°Ð´ÑƒÑÐ¾Ð²"
                 Case 4:
                     BandWith = 25
-                    Label4.Caption = "25 ãðàäóñîâ"
+                    Label4.Caption = "25 Ð³Ñ€Ð°Ð´ÑƒÑÐ¾Ð²"
             End Select
-        Case 201:   'Ïèêè -> Ìîùíîñòü
+        Case 201:   'ÐŸÐ¸ÐºÐ¸ -> ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ
             Select Case Slider1.Value
                 Case 1:
                     BandWith = 6
@@ -285,57 +285,57 @@ Private Sub Slider1_Change()
 End Sub
 
 '*******************************************
-'*       Âûáîð êàòåãîðèè ãðàôèêîâ          *
+'*       Ð’Ñ‹Ð±Ð¾Ñ€ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸ Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ¾Ð²          *
 '*******************************************
 Private Sub Combo1_Click()
-    'Ðàçðåøèòü âûáîð ïîäïóíêòîâ èç âòîðîãî ñïèñêà
+    'Ð Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ Ð²Ñ‹Ð±Ð¾Ñ€ Ð¿Ð¾Ð´Ð¿ÑƒÐ½ÐºÑ‚Ð¾Ð² Ð¸Ð· Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ ÑÐ¿Ð¸ÑÐºÐ°
     Combo2.Enabled = True
-    'Î÷èñòèòü ñïèñîê ïåðåä åãî çàïîëíåíèåì
+    'ÐžÑ‡Ð¸ÑÑ‚Ð¸Ñ‚ÑŒ ÑÐ¿Ð¸ÑÐ¾Ðº Ð¿ÐµÑ€ÐµÐ´ ÐµÐ³Ð¾ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸ÐµÐ¼
     Combo2.Clear
-    'Çàïðåòèòü ïîñòðîåíèÿ ãðàôèêîâ äî âûáîðà ïîäïóíêòà èç âòîðîãî ñïèñêà
+    'Ð—Ð°Ð¿Ñ€ÐµÑ‚Ð¸Ñ‚ÑŒ Ð¿Ð¾ÑÑ‚Ñ€Ð¾ÐµÐ½Ð¸Ñ Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ¾Ð² Ð´Ð¾ Ð²Ñ‹Ð±Ð¾Ñ€Ð° Ð¿Ð¾Ð´Ð¿ÑƒÐ½ÐºÑ‚Ð° Ð¸Ð· Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ ÑÐ¿Ð¸ÑÐºÐ°
     Command2.Enabled = False
-    'TO DO â çàâèñèìîñòè îò êàòåãîðèè íàïîëíèòü Combo2 ïóíêòàìè...
-    If Combo1.text = "Ðàáî÷èå áëîêè" Then
-        Combo2.AddItem "Ðàñïðåäåëåíèå ïî ÷àñòîòàì", 0
-        Combo2.AddItem "Óãëîâûå êîîðäèíàòû", 1
-        Combo2.AddItem "Ñêëîíåíèå", 2
-    ElseIf Combo1.text = "Ïèêè" Then
-        Combo2.AddItem "Ðàñïðåäåëåíèå ïî ìîùíîñòè", 0
-        Combo2.AddItem "Ìîùíîñòü - ñäâèã äîïïëåðà", 1
-        Combo2.AddItem "Ìîùíîñòü - íåñóùàÿ ÷àñòîòà", 2
+    'TO DO Ð² Ð·Ð°Ð²Ð¸ÑÐ¸Ð¼Ð¾ÑÑ‚Ð¸ Ð¾Ñ‚ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸ Ð½Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Combo2 Ð¿ÑƒÐ½ÐºÑ‚Ð°Ð¼Ð¸...
+    If Combo1.text = "Ð Ð°Ð±Ð¾Ñ‡Ð¸Ðµ Ð±Ð»Ð¾ÐºÐ¸" Then
+        Combo2.AddItem "Ð Ð°ÑÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ð°Ð¼", 0
+        Combo2.AddItem "Ð£Ð³Ð»Ð¾Ð²Ñ‹Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹", 1
+        Combo2.AddItem "Ð¡ÐºÐ»Ð¾Ð½ÐµÐ½Ð¸Ðµ", 2
+    ElseIf Combo1.text = "ÐŸÐ¸ÐºÐ¸" Then
+        Combo2.AddItem "Ð Ð°ÑÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ Ð¼Ð¾Ñ‰Ð½Ð¾ÑÑ‚Ð¸", 0
+        Combo2.AddItem "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ - ÑÐ´Ð²Ð¸Ð³ Ð´Ð¾Ð¿Ð¿Ð»ÐµÑ€Ð°", 1
+        Combo2.AddItem "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ - Ð½ÐµÑÑƒÑ‰Ð°Ñ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ð°", 2
     End If
 End Sub
 
 '*******************************************
-'*        Îïðåäåëåíèå òèïà ãðàôèêà         *
+'*        ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ñ‚Ð¸Ð¿Ð° Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ°         *
 '*******************************************
 Private Sub Combo2_Click()
-    If Combo1.text = "Ðàáî÷èå áëîêè" Then
-        If Combo2.text = "Ðàñïðåäåëåíèå ïî ÷àñòîòàì" Then
+    If Combo1.text = "Ð Ð°Ð±Ð¾Ñ‡Ð¸Ðµ Ð±Ð»Ð¾ÐºÐ¸" Then
+        If Combo2.text = "Ð Ð°ÑÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ð°Ð¼" Then
             Mode = 101
-        ElseIf Combo2.text = "Óãëîâûå êîîðäèíàòû" Then
+        ElseIf Combo2.text = "Ð£Ð³Ð»Ð¾Ð²Ñ‹Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹" Then
             Mode = 102
-        ElseIf Combo2.text = "Ñêëîíåíèå" Then
+        ElseIf Combo2.text = "Ð¡ÐºÐ»Ð¾Ð½ÐµÐ½Ð¸Ðµ" Then
             Mode = 103
         End If
-    ElseIf Combo1.text = "Ïèêè" Then
-        If Combo2.text = "Ðàñïðåäåëåíèå ïî ìîùíîñòè" Then
+    ElseIf Combo1.text = "ÐŸÐ¸ÐºÐ¸" Then
+        If Combo2.text = "Ð Ð°ÑÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ Ð¼Ð¾Ñ‰Ð½Ð¾ÑÑ‚Ð¸" Then
             Mode = 201
-        ElseIf Combo2.text = "Ìîùíîñòü - ñäâèã äîïïëåðà" Then
+        ElseIf Combo2.text = "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ - ÑÐ´Ð²Ð¸Ð³ Ð´Ð¾Ð¿Ð¿Ð»ÐµÑ€Ð°" Then
             Mode = 202
-        ElseIf Combo2.text = "Ìîùíîñòü - íåñóùàÿ ÷àñòîòà" Then
+        ElseIf Combo2.text = "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ - Ð½ÐµÑÑƒÑ‰Ð°Ñ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ð°" Then
             Mode = 203
         End If
     End If
-    Call ChangeControls     'Ïîäãîòîâèòü íàñòðîéêè äëÿ äàííîãî òèïà ãðàôèêà
-    Command2.Enabled = True 'Ðàçðåøèòü ïîñòðîåíèå ãðàôèêà
+    Call ChangeControls     'ÐŸÐ¾Ð´Ð³Ð¾Ñ‚Ð¾Ð²Ð¸Ñ‚ÑŒ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ Ð´Ð»Ñ Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ñ‚Ð¸Ð¿Ð° Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ°
+    Command2.Enabled = True 'Ð Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ Ð¿Ð¾ÑÑ‚Ñ€Ð¾ÐµÐ½Ð¸Ðµ Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ°
 End Sub
 
 Private Sub ChangeControls()
     Call DisableControls
     Select Case Mode
         Case 101:
-            Label3.Caption = "Øèðèíà ñòîëáöîâ"
+            Label3.Caption = "Ð¨Ð¸Ñ€Ð¸Ð½Ð° ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²"
             Label3.Visible = True
             Slider1.min = 1
             Slider1.Max = 7
@@ -343,12 +343,12 @@ Private Sub ChangeControls()
             Slider1.LargeChange = 1
             Slider1.Value = 6
             Slider1.Visible = True
-            Label4.Caption = "500 êÃö"
+            Label4.Caption = "500 ÐºÐ“Ñ†"
             Label4.Visible = True
-            BandWith = 500      'Íà ñëó÷àé, åñëè óñòàíîâêà ïî-óìîë÷àíèþ íå èçìåíèòñÿ
-                                '(÷òîáû íå áûëî äåëåíèÿ íà íîëü)
+            BandWith = 500      'ÐÐ° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð¿Ð¾-ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ Ð½Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑÑ
+                                '(Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ðµ Ð±Ñ‹Ð»Ð¾ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð½Ð° Ð½Ð¾Ð»ÑŒ)
         Case 102:
-            Label3.Caption = "Øèðèíà ñòîëáöîâ"
+            Label3.Caption = "Ð¨Ð¸Ñ€Ð¸Ð½Ð° ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²"
             Label3.Visible = True
             Slider1.min = 1
             Slider1.Max = 5
@@ -356,12 +356,12 @@ Private Sub ChangeControls()
             Slider1.LargeChange = 1
             Slider1.Value = 5
             Slider1.Visible = True
-            Label4.Caption = "6 ÷àñîâ"
+            Label4.Caption = "6 Ñ‡Ð°ÑÐ¾Ð²"
             Label4.Visible = True
-            BandWith = 6        'Íà ñëó÷àé, åñëè óñòàíîâêà ïî-óìîë÷àíèþ íå èçìåíèòñÿ
-                                '(÷òîáû íå áûëî äåëåíèÿ íà íîëü)
+            BandWith = 6        'ÐÐ° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð¿Ð¾-ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ Ð½Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑÑ
+                                '(Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ðµ Ð±Ñ‹Ð»Ð¾ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð½Ð° Ð½Ð¾Ð»ÑŒ)
         Case 103:
-            Label3.Caption = "Øèðèíà ñòîëáöîâ"
+            Label3.Caption = "Ð¨Ð¸Ñ€Ð¸Ð½Ð° ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²"
             Label3.Visible = True
             Slider1.min = 1
             Slider1.Max = 4
@@ -369,12 +369,12 @@ Private Sub ChangeControls()
             Slider1.LargeChange = 1
             Slider1.Value = 4
             Slider1.Visible = True
-            Label4.Caption = "25 ãðàäóñîâ"
+            Label4.Caption = "25 Ð³Ñ€Ð°Ð´ÑƒÑÐ¾Ð²"
             Label4.Visible = True
-            BandWith = 25       'Íà ñëó÷àé, åñëè óñòàíîâêà ïî-óìîë÷àíèþ íå èçìåíèòñÿ
-                                '(÷òîáû íå áûëî äåëåíèÿ íà íîëü)
+            BandWith = 25       'ÐÐ° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð¿Ð¾-ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ Ð½Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑÑ
+                                '(Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ðµ Ð±Ñ‹Ð»Ð¾ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð½Ð° Ð½Ð¾Ð»ÑŒ)
         Case 201:
-            Label3.Caption = "Øèðèíà ñòîëáöîâ"
+            Label3.Caption = "Ð¨Ð¸Ñ€Ð¸Ð½Ð° ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²"
             Label3.Visible = True
             Slider1.min = 1
             Slider1.Max = 5
@@ -384,12 +384,12 @@ Private Sub ChangeControls()
             Slider1.Visible = True
             Label4.Caption = "50"
             Label4.Visible = True
-            BandWith = 50       'Íà ñëó÷àé, åñëè óñòàíîâêà ïî-óìîë÷àíèþ íå èçìåíèòñÿ
-                                '(÷òîáû íå áûëî äåëåíèÿ íà íîëü)
+            BandWith = 50       'ÐÐ° ÑÐ»ÑƒÑ‡Ð°Ð¹, ÐµÑÐ»Ð¸ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð¿Ð¾-ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ Ð½Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑÑ
+                                '(Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ðµ Ð±Ñ‹Ð»Ð¾ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð½Ð° Ð½Ð¾Ð»ÑŒ)
     End Select
 End Sub
 
-'Äåçàêòèâèðîâàòü âñå îáúåêòû è ïîäãîòîâèòüñÿ ê íîâûì êîìàíäàì
+'Ð”ÐµÐ·Ð°ÐºÑ‚Ð¸Ð²Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð²ÑÐµ Ð¾Ð±ÑŠÐµÐºÑ‚Ñ‹ Ð¸ Ð¿Ð¾Ð´Ð³Ð¾Ñ‚Ð¾Ð²Ð¸Ñ‚ÑŒÑÑ Ðº Ð½Ð¾Ð²Ñ‹Ð¼ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°Ð¼
 Private Sub DisableControls()
     Label3.Visible = False
     Label4.Visible = False
@@ -405,26 +405,26 @@ End Sub
 
 Private Sub Command2_Click()
     If Check1.Value = vbChecked Then
-        'Ïîñòðîèòü èíäåêñ áëîêîâ çàíîâî
+        'ÐŸÐ¾ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÑŒ Ð¸Ð½Ð´ÐµÐºÑ Ð±Ð»Ð¾ÐºÐ¾Ð² Ð·Ð°Ð½Ð¾Ð²Ð¾
         WU.WriteIndex (1)
         Check1.Value = vbUnchecked
     End If
-    'TO DO Îïðåäåëèòü òåêóùèé ðåæèì
+    'TO DO ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚ÑŒ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ð¹ Ñ€ÐµÐ¶Ð¸Ð¼
     Call DrawGraph
 End Sub
 
 Private Sub Form_Load()
     Me.Icon = LoadResPicture(101, vbResIcon)
-    Me.Caption = "Ãðàôè÷åñêèé àíàëèç"
+    Me.Caption = "Ð“Ñ€Ð°Ñ„Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð°Ð½Ð°Ð»Ð¸Ð·"
     Picture1.BackColor = vbBlack
-    Combo1.AddItem "Ðàáî÷èå áëîêè", 0
-    Combo1.AddItem "Ïèêè", 1
-    Combo1.AddItem "Ãàóññèàíû", 2
-    Combo1.AddItem "Èìïóëüñû", 3
-    Combo1.AddItem "Òðèïëåòû", 4
-    Combo1.AddItem "Äðóãèå", 5
+    Combo1.AddItem "Ð Ð°Ð±Ð¾Ñ‡Ð¸Ðµ Ð±Ð»Ð¾ÐºÐ¸", 0
+    Combo1.AddItem "ÐŸÐ¸ÐºÐ¸", 1
+    Combo1.AddItem "Ð“Ð°ÑƒÑÑÐ¸Ð°Ð½Ñ‹", 2
+    Combo1.AddItem "Ð˜Ð¼Ð¿ÑƒÐ»ÑŒÑÑ‹", 3
+    Combo1.AddItem "Ð¢Ñ€Ð¸Ð¿Ð»ÐµÑ‚Ñ‹", 4
+    Combo1.AddItem "Ð”Ñ€ÑƒÐ³Ð¸Ðµ", 5
     Combo2.Enabled = False
-    'Ïîêà íå âûáðàí òèï ãðàôèêà - ñòðîèòü íåëüçÿ
+    'ÐŸÐ¾ÐºÐ° Ð½Ðµ Ð²Ñ‹Ð±Ñ€Ð°Ð½ Ñ‚Ð¸Ð¿ Ð³Ñ€Ð°Ñ„Ð¸ÐºÐ° - ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÑŒ Ð½ÐµÐ»ÑŒÐ·Ñ
     Command2.Enabled = False
 End Sub
 
@@ -432,14 +432,14 @@ Private Sub DrawGraph()
 Dim i As Long, j As Long
 Dim Hits As Long
 Dim TMPvalue As Long
-Dim BandNums As Long    '×èñëî ñòîëáöîâ
-Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
+Dim BandNums As Long    'Ð§Ð¸ÑÐ»Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²
+Dim OnePercent As Long  'ÐžÐ´Ð¸Ð½ Ð¿Ñ€Ð¾Ñ†ÐµÐ½Ñ‚ (Ð´Ð»Ñ Ð¸Ð½Ð´Ð¸ÐºÐ°Ñ‚Ð¾Ñ€Ð° Ð¿Ñ€Ð¾Ð³Ñ€ÐµÑÑÐ°)
 
     AutoRedraw = -1   ' Turn on AutoRedraw.
     Select Case Mode
-        Case 101:   '->  Áëîêè->÷àñòîòû
+        Case 101:   '->  Ð‘Ð»Ð¾ÐºÐ¸->Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ñ‹
             Picture1.Scale (0, 110)-(140, 0)    ' Set custom coordinate system.
-                                                'Ïî 20 åäèíèö ïðî çàïàñ ñïðàâà è ñëåâà
+                                                'ÐŸÐ¾ 20 ÐµÐ´Ð¸Ð½Ð¸Ñ† Ð¿Ñ€Ð¾ Ð·Ð°Ð¿Ð°Ñ ÑÐ¿Ñ€Ð°Ð²Ð° Ð¸ ÑÐ»ÐµÐ²Ð°
             Picture1.ForeColor = vbWhite
             Picture1.Cls
             For i = 100 To 10 Step -10
@@ -463,9 +463,9 @@ Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
             
             
             BandNums = 2500 \ BandWith
-            For j = 0 To BandNums - 1       'Ñòîëüêî ïðîõîäîâ, ñêîëüêî ñòîëáöîâ
-                Hits = 0 'Îáíóëèòü ñ÷åò÷èê ñîâïàäåíèé
-                For i = 1 To RegRecords     'Ïðîâåðèòü âñå çàïèñè
+            For j = 0 To BandNums - 1       'Ð¡Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ñ€Ð¾Ñ…Ð¾Ð´Ð¾Ð², ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²
+                Hits = 0 'ÐžÐ±Ð½ÑƒÐ»Ð¸Ñ‚ÑŒ ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¹
+                For i = 1 To RegRecords     'ÐŸÑ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ð²ÑÐµ Ð·Ð°Ð¿Ð¸ÑÐ¸
                     WU.ReadIndex (i)
                     TMPvalue = CLng(Trunc(CDbl(TopW.freq)))
                     If TMPvalue >= (1418750000 + BandWith * j * 1000) Then
@@ -480,9 +480,9 @@ Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
                     Picture1.Line (20 + j * (100 \ BandNums), 0)-(20 + (j + 1) * (100 \ BandNums), Hits), RGB(255, 0, 0), BF ' red bar.
                 End If
             Next j
-        Case 102:   '->  Áëîêè->RA
+        Case 102:   '->  Ð‘Ð»Ð¾ÐºÐ¸->RA
             Picture1.Scale (0, 110)-(160, 0)        ' Set custom coordinate system.
-                                                    'Ïî 20 åäèíèö ïðî çàïàñ ñïðàâà è ñëåâà
+                                                    'ÐŸÐ¾ 20 ÐµÐ´Ð¸Ð½Ð¸Ñ† Ð¿Ñ€Ð¾ Ð·Ð°Ð¿Ð°Ñ ÑÐ¿Ñ€Ð°Ð²Ð° Ð¸ ÑÐ»ÐµÐ²Ð°
             Picture1.ForeColor = vbWhite
             Picture1.Cls
             For i = 100 To 10 Step -10
@@ -505,9 +505,9 @@ Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
             Picture1.Print "24 RA"  ' Print scale mark value on left.
                         
             BandNums = 24 \ BandWith
-            For j = 0 To BandNums - 1       'Ñòîëüêî ïðîõîäîâ, ñêîëüêî ñòîëáöîâ
-                Hits = 0 'Îáíóëèòü ñ÷åò÷èê ñîâïàäåíèé
-                For i = 1 To RegRecords     'Ïðîâåðèòü âñå çàïèñè
+            For j = 0 To BandNums - 1       'Ð¡Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ñ€Ð¾Ñ…Ð¾Ð´Ð¾Ð², ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²
+                Hits = 0 'ÐžÐ±Ð½ÑƒÐ»Ð¸Ñ‚ÑŒ ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¹
+                For i = 1 To RegRecords     'ÐŸÑ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ð²ÑÐµ Ð·Ð°Ð¿Ð¸ÑÐ¸
                     WU.ReadIndex (i)
                     TMPvalue = CLng(Trunc(CDbl(TopW.StartRA)))
                     If TMPvalue >= (BandWith * j) Then
@@ -523,9 +523,9 @@ Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
                 End If
             Next j
             
-        Case 103:   '->  Áëîêè->ñêëîíåíèå
+        Case 103:   '->  Ð‘Ð»Ð¾ÐºÐ¸->ÑÐºÐ»Ð¾Ð½ÐµÐ½Ð¸Ðµ
             Picture1.Scale (0, 110)-(140, 0)    ' Set custom coordinate system.
-                                                'Ïî 20 åäèíèö ïðî çàïàñ ñïðàâà è ñëåâà
+                                                'ÐŸÐ¾ 20 ÐµÐ´Ð¸Ð½Ð¸Ñ† Ð¿Ñ€Ð¾ Ð·Ð°Ð¿Ð°Ñ ÑÐ¿Ñ€Ð°Ð²Ð° Ð¸ ÑÐ»ÐµÐ²Ð°
             Picture1.ForeColor = vbWhite
             Picture1.Cls
             For i = 100 To 10 Step -10
@@ -548,9 +548,9 @@ Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
             Picture1.Print "+45 DEC"  ' Print scale mark value on left.
             
             BandNums = 50 \ BandWith
-            For j = 0 To BandNums - 1       'Ñòîëüêî ïðîõîäîâ, ñêîëüêî ñòîëáöîâ
-                Hits = 0 'Îáíóëèòü ñ÷åò÷èê ñîâïàäåíèé
-                For i = 1 To RegRecords     'Ïðîâåðèòü âñå çàïèñè
+            For j = 0 To BandNums - 1       'Ð¡Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ñ€Ð¾Ñ…Ð¾Ð´Ð¾Ð², ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²
+                Hits = 0 'ÐžÐ±Ð½ÑƒÐ»Ð¸Ñ‚ÑŒ ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¹
+                For i = 1 To RegRecords     'ÐŸÑ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ð²ÑÐµ Ð·Ð°Ð¿Ð¸ÑÐ¸
                     WU.ReadIndex (i)
                     TMPvalue = CLng(Trunc(CDbl(TopW.StartDEC)))
                     If TMPvalue >= (BandWith * j) Then
@@ -565,9 +565,9 @@ Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
                     Picture1.Line (20 + j * (100 \ BandNums), 0)-(20 + (j + 1) * (100 \ BandNums), Hits), RGB(255, 0, 0), BF ' red bar.
                 End If
             Next j
-        Case 201:   'Ïèêè -> ìîùíîñòü
+        Case 201:   'ÐŸÐ¸ÐºÐ¸ -> Ð¼Ð¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ
             Picture1.Scale (0, 110)-(140, 0)    ' Set custom coordinate system.
-                                                'Ïî 20 åäèíèö ïðî çàïàñ ñïðàâà è ñëåâà
+                                                'ÐŸÐ¾ 20 ÐµÐ´Ð¸Ð½Ð¸Ñ† Ð¿Ñ€Ð¾ Ð·Ð°Ð¿Ð°Ñ ÑÐ¿Ñ€Ð°Ð²Ð° Ð¸ ÑÐ»ÐµÐ²Ð°
             Picture1.ForeColor = vbWhite
             Picture1.Cls
             For i = 100 To 10 Step -10
@@ -584,21 +584,21 @@ Dim OnePercent As Long  'Îäèí ïðîöåíò (äëÿ èíäèêàòîðà ïðîãðåññà)
             Picture1.Line (120, 110)-(120, 10), RGB(255, 255, 255)
             Picture1.CurrentX = 1
             Picture1.CurrentY = 110
-            Picture1.Print "Ìîùíîñòü 0"  ' Print scale mark value on left.
+            Picture1.Print "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ 0"  ' Print scale mark value on left.
             Picture1.CurrentX = 121
             Picture1.CurrentY = 110
-            Picture1.Print "Ìîùíîñòü 600"  ' Print scale mark value on left.
+            Picture1.Print "ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ 600"  ' Print scale mark value on left.
             
             Label5.Visible = True
             Label5.Refresh
             ProgressBar1.Visible = True
             
             BandNums = 600 \ BandWith
-            For j = 0 To BandNums - 1       'Ñòîëüêî ïðîõîäîâ, ñêîëüêî ñòîëáöîâ
-                Hits = 0 'Îáíóëèòü ñ÷åò÷èê ñîâïàäåíèé
-                For i = 1 To RegRecords     'Ïðîâåðèòü âñå çàïèñè
+            For j = 0 To BandNums - 1       'Ð¡Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ñ€Ð¾Ñ…Ð¾Ð´Ð¾Ð², ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²
+                Hits = 0 'ÐžÐ±Ð½ÑƒÐ»Ð¸Ñ‚ÑŒ ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº ÑÐ¾Ð²Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¹
+                For i = 1 To RegRecords     'ÐŸÑ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ð²ÑÐµ Ð·Ð°Ð¿Ð¸ÑÐ¸
                     If State.ReadIndex(0, i) Then
-                    '×òåíèå ïðîèçâåäåíî óñïåøíî
+                    'Ð§Ñ‚ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¾ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾
                         TMPvalue = CLng(Trunc(CDbl(TopS.power)))
                         If TMPvalue >= (BandWith * j) Then
                             If TMPvalue < (BandWith * (j + 1)) Then
