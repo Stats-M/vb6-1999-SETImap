@@ -1,11 +1,11 @@
 Attribute VB_Name = "Module1"
 Option Explicit
 
-'ОПИСАНИЕ ИСПОЛЬЗУЕМЫХ КЛАССОВ
-'Class cWU          Информация о блоке
-'Class cState       Информация о текущем состоянии клиента
-'Class cUserInfo    Информация о пользователе
-'Class cOutResult   Работа с выходными файлами SETI@home
+'РћРџРРЎРђРќРР• РРЎРџРћР›Р¬Р—РЈР•РњР«РҐ РљР›РђРЎРЎРћР’
+'Class cWU          РРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р±Р»РѕРєРµ
+'Class cState       РРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РµРєСѓС‰РµРј СЃРѕСЃС‚РѕСЏРЅРёРё РєР»РёРµРЅС‚Р°
+'Class cUserInfo    РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ
+'Class cOutResult   Р Р°Р±РѕС‚Р° СЃ РІС‹С…РѕРґРЅС‹РјРё С„Р°Р№Р»Р°РјРё SETI@home
 '=========================================================
 
 ' Reg Key Security Options...
@@ -20,8 +20,8 @@ Public Const REG_DWORD = 4                      ' 32-bit number
 
 Public Const BackSlash = "\"
 Public Const Slash = "/"
-Public Const strSepURLDir = "/"             'Разделитель URL-адресов
-Public Const strSepDir = "\"                'Разделитель директорий
+Public Const strSepURLDir = "/"             'Р Р°Р·РґРµР»РёС‚РµР»СЊ URL-Р°РґСЂРµСЃРѕРІ
+Public Const strSepDir = "\"                'Р Р°Р·РґРµР»РёС‚РµР»СЊ РґРёСЂРµРєС‚РѕСЂРёР№
 
 Public Const iMaxSize = 255
 
@@ -32,51 +32,51 @@ Public Const gREGVALSYSINFO = "PATH"
 Public Const gSETIKEYLOC = "SOFTWARE\SETI@Home"
 Public Const gSETIKEYVAL = "ClientDir"
 
-Public Const FileWU = "work_unit.sah"           'Файл рабочих блоков SETI@home
-Public Const FileWULinux = "work_uni.sah"       'То же (для Linux)
+Public Const FileWU = "work_unit.sah"           'Р¤Р°Р№Р» СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ SETI@home
+Public Const FileWULinux = "work_uni.sah"       'РўРѕ Р¶Рµ (РґР»СЏ Linux)
 Public Const FileUser = "user_info.sah"
 Public Const FileUserLinux = "user_inf.sah"
 Public Const FileState = "state.sah"
 Public Const FileOut = "outfile.sah"
 Public Const FileRes = "result.sah"
 Public Const Datafile = "SETIdata.txt"
-Public Const ResultFile = "SETIres.txt"         '? Что это? Какой-то хвост от старого кода?
-Public Const IndexFileG = "SETItopg.dat"        'Файл-индекс лучших гауссиан
-Public Const IndexFileS = "SETItops.dat"        'Файл-индекс лучших пиков
-Public Const IndexFileW = "SETItopw.dat"        'Файл-индекс информации о блоках
-Public Const GaussFile = "SETIgaus.dat"         'Файл гауссиан из result.sah
-Public Const SpikeFile = "SETIspik.dat"         'Файл пиков из result.sah
-Public Const PulseFile = "SETIpuls.dat"         'Файл импульсов из result.sah
-Public Const TripletFile = "SETItrip.dat"       'Файл триплетов из result.sah
-Public Const StateFile = "SETIstat.dat"         'Файл лучших значений из state.sah
-Public Const StateCache = "SETIcach.dat"        'Файл ветесняемых значений из state.sah
+Public Const ResultFile = "SETIres.txt"         '? Р§С‚Рѕ СЌС‚Рѕ? РљР°РєРѕР№-С‚Рѕ С…РІРѕСЃС‚ РѕС‚ СЃС‚Р°СЂРѕРіРѕ РєРѕРґР°?
+Public Const IndexFileG = "SETItopg.dat"        'Р¤Р°Р№Р»-РёРЅРґРµРєСЃ Р»СѓС‡С€РёС… РіР°СѓСЃСЃРёР°РЅ
+Public Const IndexFileS = "SETItops.dat"        'Р¤Р°Р№Р»-РёРЅРґРµРєСЃ Р»СѓС‡С€РёС… РїРёРєРѕРІ
+Public Const IndexFileW = "SETItopw.dat"        'Р¤Р°Р№Р»-РёРЅРґРµРєСЃ РёРЅС„РѕСЂРјР°С†РёРё Рѕ Р±Р»РѕРєР°С…
+Public Const GaussFile = "SETIgaus.dat"         'Р¤Р°Р№Р» РіР°СѓСЃСЃРёР°РЅ РёР· result.sah
+Public Const SpikeFile = "SETIspik.dat"         'Р¤Р°Р№Р» РїРёРєРѕРІ РёР· result.sah
+Public Const PulseFile = "SETIpuls.dat"         'Р¤Р°Р№Р» РёРјРїСѓР»СЊСЃРѕРІ РёР· result.sah
+Public Const TripletFile = "SETItrip.dat"       'Р¤Р°Р№Р» С‚СЂРёРїР»РµС‚РѕРІ РёР· result.sah
+Public Const StateFile = "SETIstat.dat"         'Р¤Р°Р№Р» Р»СѓС‡С€РёС… Р·РЅР°С‡РµРЅРёР№ РёР· state.sah
+Public Const StateCache = "SETIcach.dat"        'Р¤Р°Р№Р» РІРµС‚РµСЃРЅСЏРµРјС‹С… Р·РЅР°С‡РµРЅРёР№ РёР· state.sah
 Public Const LinuxPath = "C:\setilin"
-Public Const ReportFile = "sreport.txt"   'Файл краткого отчета о результатах
-Public Const HelpCHMFile = "\SETIhelp.chm"      'Файл помощи
+Public Const ReportFile = "sreport.txt"   'Р¤Р°Р№Р» РєСЂР°С‚РєРѕРіРѕ РѕС‚С‡РµС‚Р° Рѕ СЂРµР·СѓР»СЊС‚Р°С‚Р°С…
+Public Const HelpCHMFile = "\SETIhelp.chm"      'Р¤Р°Р№Р» РїРѕРјРѕС‰Рё
 Public Const strHHelpEXEname = "hh.exe"
 Public Const ClientNo = 0
 Public Const Client9x = 1
 Public Const ClientNT = 2
 
 Public Type tTopG
-    ID As Long          'Номер рабочего блока
+    ID As Long          'РќРѕРјРµСЂ СЂР°Р±РѕС‡РµРіРѕ Р±Р»РѕРєР°
     power As Single
     rate As Single
     average As Single
 End Type
 
 Public Type tTopS
-    ID As Long          'Номер рабочего блока
+    ID As Long          'РќРѕРјРµСЂ СЂР°Р±РѕС‡РµРіРѕ Р±Р»РѕРєР°
     power As Single
     rate As Single
 End Type
 
 Public Type tTopW
-    ID As Long              'Номер блока
-    time As String * 24     'Дата (в текстовом виде - ровно 24 символа)
-    StartRA As Single       'Стартовый угол
-    StartDEC As Single      'Стартовое склонение
-    freq As Single          'Частота сигнала (base frequency)
+    ID As Long              'РќРѕРјРµСЂ Р±Р»РѕРєР°
+    time As String * 24     'Р”Р°С‚Р° (РІ С‚РµРєСЃС‚РѕРІРѕРј РІРёРґРµ - СЂРѕРІРЅРѕ 24 СЃРёРјРІРѕР»Р°)
+    StartRA As Single       'РЎС‚Р°СЂС‚РѕРІС‹Р№ СѓРіРѕР»
+    StartDEC As Single      'РЎС‚Р°СЂС‚РѕРІРѕРµ СЃРєР»РѕРЅРµРЅРёРµ
+    freq As Single          'Р§Р°СЃС‚РѕС‚Р° СЃРёРіРЅР°Р»Р° (base frequency)
 End Type
 
 Public fMainForm As frmMain
@@ -84,109 +84,109 @@ Public WU As cWU
 Public State As cState
 Public UserInfo As cUserInfo
 Public OutResult As cOutResult
-Public StatusStr As Object          'Указатель для ускорения доступа к объекту
-Public SETIpath As String           'Расположение файлов SETI@home
-Public Result As VbMsgBoxResult     'Для окошек сообщений
-Public RegRecords As Long           'Число записей в журнале (значение хранится в реестре)
-Public LastRecordNum As Long        'Номер последней записи (значение хранится в реестре)
-Public bResult As Boolean           'Для возврата значений вызываемых функций
-Public EditMode As Boolean          'Определяет, редактируется ли старый блок(см. frmInput)
-Public NewMode As Boolean           'Определяет, вводится ли новый блок
-Public EditRowNum As Long           'Какая строчка выбрана для редактирования
-Public EditID As Long               'ID блока из строчки EditRowNum
-Public WinID As Long        'ID текущего блока (клиент для Windows)
-Public LinID As Long        'ID текущего блока (клиент для Linux)
-Public showWU As Boolean    'В History показывать журнал WU или State?
-Public WUbind As Boolean    'Вызов AddRecord производится ТОЛЬКО ОДИН раз!
-Public Sbind As Boolean     'Вызов AddRecord производится ТОЛЬКО ОДИН раз!
-Public TopG As tTopG            'Запись для работы с файлом индексов (SETItopg.dat)
-Public TopS As tTopS            'Запись для работы с файлом индексов (SETItops.dat)
-Public TopW As tTopW            'Запись для работы с файлом индексов (SETIwu.dat)
-Public MarkerType As Long       'Тип маркера, обозначающего один блок
-Public MarkerSize As Long       'Размер маркера
-Public RedrawOnStartup As Long  'Перерисовывать ли карту автоматически
-Public LastInColor As Long      'Выделять текущий блок цветом
-Public AutoShowWU As Long       'Показывать ли текущие результаты автоматически
-Public EnableRegSave As Long    'Можно ли сохранять настойки в реестре?
-Public UpdateOnStartup As Long  'Только ли при старте обновлять state-журнал? (1=да)
-Public AllowAnim As Long        'Разрешить анимацию
-Public UseDefaultRF As Long     'Использовать файл краткого отчета по умолчанию? (0=нет)
-Public ReportFileReg As String  'Имя файла краткого отчета (из реестра)
-Public AnimTick As Long         'Время показа одного кадра (мсек)
-Public SplitterOverwr As Long   'Перезаписывать повторные результаты (0=нет)
-Public DoImport As Long         'Импортировать ли журналы при отсутствии текущего блока (0=нет)
-Public DoLinux As Long          'Осуществлять ли проверку Linux-клиента при старте
+Public StatusStr As Object          'РЈРєР°Р·Р°С‚РµР»СЊ РґР»СЏ СѓСЃРєРѕСЂРµРЅРёСЏ РґРѕСЃС‚СѓРїР° Рє РѕР±СЉРµРєС‚Сѓ
+Public SETIpath As String           'Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»РѕРІ SETI@home
+Public Result As VbMsgBoxResult     'Р”Р»СЏ РѕРєРѕС€РµРє СЃРѕРѕР±С‰РµРЅРёР№
+Public RegRecords As Long           'Р§РёСЃР»Рѕ Р·Р°РїРёСЃРµР№ РІ Р¶СѓСЂРЅР°Р»Рµ (Р·РЅР°С‡РµРЅРёРµ С…СЂР°РЅРёС‚СЃСЏ РІ СЂРµРµСЃС‚СЂРµ)
+Public LastRecordNum As Long        'РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ Р·Р°РїРёСЃРё (Р·РЅР°С‡РµРЅРёРµ С…СЂР°РЅРёС‚СЃСЏ РІ СЂРµРµСЃС‚СЂРµ)
+Public bResult As Boolean           'Р”Р»СЏ РІРѕР·РІСЂР°С‚Р° Р·РЅР°С‡РµРЅРёР№ РІС‹Р·С‹РІР°РµРјС‹С… С„СѓРЅРєС†РёР№
+Public EditMode As Boolean          'РћРїСЂРµРґРµР»СЏРµС‚, СЂРµРґР°РєС‚РёСЂСѓРµС‚СЃСЏ Р»Рё СЃС‚Р°СЂС‹Р№ Р±Р»РѕРє(СЃРј. frmInput)
+Public NewMode As Boolean           'РћРїСЂРµРґРµР»СЏРµС‚, РІРІРѕРґРёС‚СЃСЏ Р»Рё РЅРѕРІС‹Р№ Р±Р»РѕРє
+Public EditRowNum As Long           'РљР°РєР°СЏ СЃС‚СЂРѕС‡РєР° РІС‹Р±СЂР°РЅР° РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
+Public EditID As Long               'ID Р±Р»РѕРєР° РёР· СЃС‚СЂРѕС‡РєРё EditRowNum
+Public WinID As Long        'ID С‚РµРєСѓС‰РµРіРѕ Р±Р»РѕРєР° (РєР»РёРµРЅС‚ РґР»СЏ Windows)
+Public LinID As Long        'ID С‚РµРєСѓС‰РµРіРѕ Р±Р»РѕРєР° (РєР»РёРµРЅС‚ РґР»СЏ Linux)
+Public showWU As Boolean    'Р’ History РїРѕРєР°Р·С‹РІР°С‚СЊ Р¶СѓСЂРЅР°Р» WU РёР»Рё State?
+Public WUbind As Boolean    'Р’С‹Р·РѕРІ AddRecord РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РўРћР›Р¬РљРћ РћР”РРќ СЂР°Р·!
+Public Sbind As Boolean     'Р’С‹Р·РѕРІ AddRecord РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РўРћР›Р¬РљРћ РћР”РРќ СЂР°Р·!
+Public TopG As tTopG            'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РёРЅРґРµРєСЃРѕРІ (SETItopg.dat)
+Public TopS As tTopS            'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РёРЅРґРµРєСЃРѕРІ (SETItops.dat)
+Public TopW As tTopW            'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РёРЅРґРµРєСЃРѕРІ (SETIwu.dat)
+Public MarkerType As Long       'РўРёРї РјР°СЂРєРµСЂР°, РѕР±РѕР·РЅР°С‡Р°СЋС‰РµРіРѕ РѕРґРёРЅ Р±Р»РѕРє
+Public MarkerSize As Long       'Р Р°Р·РјРµСЂ РјР°СЂРєРµСЂР°
+Public RedrawOnStartup As Long  'РџРµСЂРµСЂРёСЃРѕРІС‹РІР°С‚СЊ Р»Рё РєР°СЂС‚Сѓ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
+Public LastInColor As Long      'Р’С‹РґРµР»СЏС‚СЊ С‚РµРєСѓС‰РёР№ Р±Р»РѕРє С†РІРµС‚РѕРј
+Public AutoShowWU As Long       'РџРѕРєР°Р·С‹РІР°С‚СЊ Р»Рё С‚РµРєСѓС‰РёРµ СЂРµР·СѓР»СЊС‚Р°С‚С‹ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
+Public EnableRegSave As Long    'РњРѕР¶РЅРѕ Р»Рё СЃРѕС…СЂР°РЅСЏС‚СЊ РЅР°СЃС‚РѕР№РєРё РІ СЂРµРµСЃС‚СЂРµ?
+Public UpdateOnStartup As Long  'РўРѕР»СЊРєРѕ Р»Рё РїСЂРё СЃС‚Р°СЂС‚Рµ РѕР±РЅРѕРІР»СЏС‚СЊ state-Р¶СѓСЂРЅР°Р»? (1=РґР°)
+Public AllowAnim As Long        'Р Р°Р·СЂРµС€РёС‚СЊ Р°РЅРёРјР°С†РёСЋ
+Public UseDefaultRF As Long     'РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С„Р°Р№Р» РєСЂР°С‚РєРѕРіРѕ РѕС‚С‡РµС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ? (0=РЅРµС‚)
+Public ReportFileReg As String  'РРјСЏ С„Р°Р№Р»Р° РєСЂР°С‚РєРѕРіРѕ РѕС‚С‡РµС‚Р° (РёР· СЂРµРµСЃС‚СЂР°)
+Public AnimTick As Long         'Р’СЂРµРјСЏ РїРѕРєР°Р·Р° РѕРґРЅРѕРіРѕ РєР°РґСЂР° (РјСЃРµРє)
+Public SplitterOverwr As Long   'РџРµСЂРµР·Р°РїРёСЃС‹РІР°С‚СЊ РїРѕРІС‚РѕСЂРЅС‹Рµ СЂРµР·СѓР»СЊС‚Р°С‚С‹ (0=РЅРµС‚)
+Public DoImport As Long         'РРјРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ Р»Рё Р¶СѓСЂРЅР°Р»С‹ РїСЂРё РѕС‚СЃСѓС‚СЃС‚РІРёРё С‚РµРєСѓС‰РµРіРѕ Р±Р»РѕРєР° (0=РЅРµС‚)
+Public DoLinux As Long          'РћСЃСѓС‰РµСЃС‚РІР»СЏС‚СЊ Р»Рё РїСЂРѕРІРµСЂРєСѓ Linux-РєР»РёРµРЅС‚Р° РїСЂРё СЃС‚Р°СЂС‚Рµ
 
-'Эти переменные нужны для работы автокалибровки (ViewWU)
+'Р­С‚Рё РїРµСЂРµРјРµРЅРЅС‹Рµ РЅСѓР¶РЅС‹ РґР»СЏ СЂР°Р±РѕС‚С‹ Р°РІС‚РѕРєР°Р»РёР±СЂРѕРІРєРё (ViewWU)
 Public MaxPscore As Long
-''Public MaxPperiod As Long     не имеет смысла
+''Public MaxPperiod As Long     РЅРµ РёРјРµРµС‚ СЃРјС‹СЃР»Р°
 Public MaxPpower As Long
 Public MaxTscore As Long
-''Public MaxTperiod As Long     не имеет смысла
+''Public MaxTperiod As Long     РЅРµ РёРјРµРµС‚ СЃРјС‹СЃР»Р°
 Public MaxTpower As Long
 Public MaxGpower As Long
 Public MaxGfit As Long
 Public MaxSpower As Long
 Public MaxGintegr As Long
 
-'Внешние DLL-функции
+'Р’РЅРµС€РЅРёРµ DLL-С„СѓРЅРєС†РёРё
 Public Declare Function GetWindowsDirectory Lib "Kernel32" Alias "GetWindowsDirectoryA" (ByVal lpBuffer As String, ByVal nSize As Long) As Long
 Public Declare Function RegOpenKeyEx Lib "advapi32" Alias "RegOpenKeyExA" (ByVal hKey As Long, ByVal lpSubKey As String, ByVal ulOptions As Long, ByVal samDesired As Long, ByRef phkResult As Long) As Long
 Public Declare Function RegQueryValueEx Lib "advapi32" Alias "RegQueryValueExA" (ByVal hKey As Long, ByVal lpValueName As String, ByVal lpReserved As Long, ByRef lpType As Long, ByVal lpData As String, ByRef lpcbData As Long) As Long
 Public Declare Function RegCloseKey Lib "advapi32" (ByVal hKey As Long) As Long
 
 Sub InitApp()
-Dim HistoryWUExist As Boolean           'Блок с этим именем уже есть в файле журнала
+Dim HistoryWUExist As Boolean           'Р‘Р»РѕРє СЃ СЌС‚РёРј РёРјРµРЅРµРј СѓР¶Рµ РµСЃС‚СЊ РІ С„Р°Р№Р»Рµ Р¶СѓСЂРЅР°Р»Р°
     
 'INIT MAIN COMPONENTS
-    GetRegSettings                      'Чтение настроек из реестра
-    Set WU = New cWU                    'Инициализация объектов
+    GetRegSettings                      'Р§С‚РµРЅРёРµ РЅР°СЃС‚СЂРѕРµРє РёР· СЂРµРµСЃС‚СЂР°
+    Set WU = New cWU                    'РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РѕР±СЉРµРєС‚РѕРІ
     Set State = New cState
     Set UserInfo = New cUserInfo
     Set OutResult = New cOutResult
     
-    HistoryWUExist = False              'Флаг существования записи о текущем блоке в журнале
-    EditMode = False                    'Вкл. режим добавления новых записей (см frmHistory)
-    Set StatusStr = fMainForm.Label2    'Инициализация указателя на статусную строку
-    WinID = 0       'Обнулить, чтобы не вызывать ошибочной перезаписи информации
+    HistoryWUExist = False              'Р¤Р»Р°Рі СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРё Рѕ С‚РµРєСѓС‰РµРј Р±Р»РѕРєРµ РІ Р¶СѓСЂРЅР°Р»Рµ
+    EditMode = False                    'Р’РєР». СЂРµР¶РёРј РґРѕР±Р°РІР»РµРЅРёСЏ РЅРѕРІС‹С… Р·Р°РїРёСЃРµР№ (СЃРј frmHistory)
+    Set StatusStr = fMainForm.Label2    'РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СѓРєР°Р·Р°С‚РµР»СЏ РЅР° СЃС‚Р°С‚СѓСЃРЅСѓСЋ СЃС‚СЂРѕРєСѓ
+    WinID = 0       'РћР±РЅСѓР»РёС‚СЊ, С‡С‚РѕР±С‹ РЅРµ РІС‹Р·С‹РІР°С‚СЊ РѕС€РёР±РѕС‡РЅРѕР№ РїРµСЂРµР·Р°РїРёСЃРё РёРЅС„РѕСЂРјР°С†РёРё
     LinID = 0
-    showWU = True   'По-умолчанию показывать журнал рабочих блоков
-    WUbind = False  'Привязки данных еще не было
-    Sbind = False   'Привязки данных еще не было
+    showWU = True   'РџРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ РїРѕРєР°Р·С‹РІР°С‚СЊ Р¶СѓСЂРЅР°Р» СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ
+    WUbind = False  'РџСЂРёРІСЏР·РєРё РґР°РЅРЅС‹С… РµС‰Рµ РЅРµ Р±С‹Р»Рѕ
+    Sbind = False   'РџСЂРёРІСЏР·РєРё РґР°РЅРЅС‹С… РµС‰Рµ РЅРµ Р±С‹Р»Рѕ
     If (Dir(App.path & HelpCHMFile) <> "") Then
         App.HelpFile = App.path & HelpCHMFile
     End If
     
 'STAGE 1 - PERFORMING CHECK UP OF THE WORK UNIT FILE
-    StatusStr.Caption = "Проверка файла журнала..."
+    StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р° Р¶СѓСЂРЅР°Р»Р°..."
     bResult = WU.CheckRegSettings(RegRecords, False)
     If bResult Then
-        StatusStr.Caption = "Проверка файла журнала завершена. Ошибок не обнаружено."
+        StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р° Р¶СѓСЂРЅР°Р»Р° Р·Р°РІРµСЂС€РµРЅР°. РћС€РёР±РѕРє РЅРµ РѕР±РЅР°СЂСѓР¶РµРЅРѕ."
     Else
-        Result = MsgBox("Размер файла журнала не соответствует" + vbCrLf + "записи в реестре Windows." + vbCrLf + "Хотите ли Вы чтобы SETImap исправила эту ошибку?", vbYesNo, "Ошибка реестра")
-        StatusStr.Caption = "Проверка файла журнала выявила ошибочные сведения"
+        Result = MsgBox("Р Р°Р·РјРµСЂ С„Р°Р№Р»Р° Р¶СѓСЂРЅР°Р»Р° РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚" + vbCrLf + "Р·Р°РїРёСЃРё РІ СЂРµРµСЃС‚СЂРµ Windows." + vbCrLf + "РҐРѕС‚РёС‚Рµ Р»Рё Р’С‹ С‡С‚РѕР±С‹ SETImap РёСЃРїСЂР°РІРёР»Р° СЌС‚Сѓ РѕС€РёР±РєСѓ?", vbYesNo, "РћС€РёР±РєР° СЂРµРµСЃС‚СЂР°")
+        StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р° Р¶СѓСЂРЅР°Р»Р° РІС‹СЏРІРёР»Р° РѕС€РёР±РѕС‡РЅС‹Рµ СЃРІРµРґРµРЅРёСЏ"
         If Result = vbYes Then
             bResult = WU.CheckRegSettings(RegRecords, True)
-            Result = MsgBox("Исправлено значение размера журнала в реестре", vbOKOnly, "Ошибка реестра")
+            Result = MsgBox("РСЃРїСЂР°РІР»РµРЅРѕ Р·РЅР°С‡РµРЅРёРµ СЂР°Р·РјРµСЂР° Р¶СѓСЂРЅР°Р»Р° РІ СЂРµРµСЃС‚СЂРµ", vbOKOnly, "РћС€РёР±РєР° СЂРµРµСЃС‚СЂР°")
         Else
-            Result = MsgBox("Обнаруженная ошибка может явиться причиной" + vbCrLf + "потери данных и неправильной работы программы." + vbCrLf + "SETImap принимает решение об автоматическом исправлении.", vbOKOnly + vbExclamation, "Ошибка реестра")
+            Result = MsgBox("РћР±РЅР°СЂСѓР¶РµРЅРЅР°СЏ РѕС€РёР±РєР° РјРѕР¶РµС‚ СЏРІРёС‚СЊСЃСЏ РїСЂРёС‡РёРЅРѕР№" + vbCrLf + "РїРѕС‚РµСЂРё РґР°РЅРЅС‹С… Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ РїСЂРѕРіСЂР°РјРјС‹." + vbCrLf + "SETImap РїСЂРёРЅРёРјР°РµС‚ СЂРµС€РµРЅРёРµ РѕР± Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРј РёСЃРїСЂР°РІР»РµРЅРёРё.", vbOKOnly + vbExclamation, "РћС€РёР±РєР° СЂРµРµСЃС‚СЂР°")
             bResult = WU.CheckRegSettings(RegRecords, True)
         End If
-        StatusStr.Caption = "Проверка файла журнала завершена: все ошибки устранены."
+        StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р° Р¶СѓСЂРЅР°Р»Р° Р·Р°РІРµСЂС€РµРЅР°: РІСЃРµ РѕС€РёР±РєРё СѓСЃС‚СЂР°РЅРµРЅС‹."
     End If
     If LastRecordNum <> WU.GetLastNum Then
-        Result = MsgBox("Номер последней записи в журнале не соответствует" + vbCrLf + "значению в реестре Windows. Ошибка будет автоматически исправлена", vbOKOnly, "Ошибка реестра")
+        Result = MsgBox("РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ Р·Р°РїРёСЃРё РІ Р¶СѓСЂРЅР°Р»Рµ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚" + vbCrLf + "Р·РЅР°С‡РµРЅРёСЋ РІ СЂРµРµСЃС‚СЂРµ Windows. РћС€РёР±РєР° Р±СѓРґРµС‚ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РёСЃРїСЂР°РІР»РµРЅР°", vbOKOnly, "РћС€РёР±РєР° СЂРµРµСЃС‚СЂР°")
         LastRecordNum = WU.GetLastNum
-        StatusStr.Caption = StatusStr.Caption + " Номер последней записи в реестре исправлен."
+        StatusStr.Caption = StatusStr.Caption + " РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ Р·Р°РїРёСЃРё РІ СЂРµРµСЃС‚СЂРµ РёСЃРїСЂР°РІР»РµРЅ."
         SaveSetting App.Title, "Settings", "LastRecordNum", LastRecordNum
     End If
     
-'ВНИМАНИЕ! Этот участок нужно оставить на случай сбоев при переходе к новому формату
-    'Ver 3.00 перевод файлов в новый формат
-    'очистить поля
-    'читать 1 запись из SETIstat
-    'перекодировать
-    'записать 1 запись в SETIex
+'Р’РќРРњРђРќРР•! Р­С‚РѕС‚ СѓС‡Р°СЃС‚РѕРє РЅСѓР¶РЅРѕ РѕСЃС‚Р°РІРёС‚СЊ РЅР° СЃР»СѓС‡Р°Р№ СЃР±РѕРµРІ РїСЂРё РїРµСЂРµС…РѕРґРµ Рє РЅРѕРІРѕРјСѓ С„РѕСЂРјР°С‚Сѓ
+    'Ver 3.00 РїРµСЂРµРІРѕРґ С„Р°Р№Р»РѕРІ РІ РЅРѕРІС‹Р№ С„РѕСЂРјР°С‚
+    'РѕС‡РёСЃС‚РёС‚СЊ РїРѕР»СЏ
+    'С‡РёС‚Р°С‚СЊ 1 Р·Р°РїРёСЃСЊ РёР· SETIstat
+    'РїРµСЂРµРєРѕРґРёСЂРѕРІР°С‚СЊ
+    'Р·Р°РїРёСЃР°С‚СЊ 1 Р·Р°РїРёСЃСЊ РІ SETIex
 '''''    Dim i As Long
 '''''
 '''''    For i = 1 To 197
@@ -201,7 +201,7 @@ Dim HistoryWUExist As Boolean           'Блок с этим именем уже есть в файле жур
 '''''
 '''''    Next i
 '''''    Result = MsgBox("ALL DONE!", vbOKOnly, "SUCCESS")
-'''''    Ver 3.00 Заглушка!!!
+'''''    Ver 3.00 Р—Р°РіР»СѓС€РєР°!!!
 '''''    Exit Sub
     
     If WU.existWU Then
@@ -211,100 +211,100 @@ Dim HistoryWUExist As Boolean           'Блок с этим именем уже есть в файле жур
         Debug.Print WU.SubbandNum
         Debug.Print WU.UnitName
         If WU.CheckUnit(1, WU.UnitName) Then
-            HistoryWUExist = True   'Этот блок уже записан в журнал
+            HistoryWUExist = True   'Р­С‚РѕС‚ Р±Р»РѕРє СѓР¶Рµ Р·Р°РїРёСЃР°РЅ РІ Р¶СѓСЂРЅР°Р»
         End If
-        If Not (HistoryWUExist) Then    'Нет этого блока в журнале
+        If Not (HistoryWUExist) Then    'РќРµС‚ СЌС‚РѕРіРѕ Р±Р»РѕРєР° РІ Р¶СѓСЂРЅР°Р»Рµ
             WU.NumID = LastRecordNum + 1
             If WU.WriteHistory(WU.EncodeWU, 1) Then
-                Result = MsgBox("Успешная запись в файл журнала(WINDOWS)", vbOKOnly, "Запись блока(WINDOWS)")
-                'WriteHistory сам знает когда изменять значения RegRecords и LastRecordNum
+                Result = MsgBox("РЈСЃРїРµС€РЅР°СЏ Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» Р¶СѓСЂРЅР°Р»Р°(WINDOWS)", vbOKOnly, "Р—Р°РїРёСЃСЊ Р±Р»РѕРєР°(WINDOWS)")
+                'WriteHistory СЃР°Рј Р·РЅР°РµС‚ РєРѕРіРґР° РёР·РјРµРЅСЏС‚СЊ Р·РЅР°С‡РµРЅРёСЏ RegRecords Рё LastRecordNum
                 ''RegRecords = RegRecords + 1
                 ''LastRecordNum = LastRecordNum + 1
-                SaveRegSettings 'Сохранить изменения в реестре
-                StatusStr.Caption = "Сведения о новом блоке данных успешно занесены в журнал(WINDOWS)."
-                State.UpdateRegistry (0)    'Обнулить реестр: новый блок
+                SaveRegSettings 'РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ РІ СЂРµРµСЃС‚СЂРµ
+                StatusStr.Caption = "РЎРІРµРґРµРЅРёСЏ Рѕ РЅРѕРІРѕРј Р±Р»РѕРєРµ РґР°РЅРЅС‹С… СѓСЃРїРµС€РЅРѕ Р·Р°РЅРµСЃРµРЅС‹ РІ Р¶СѓСЂРЅР°Р»(WINDOWS)."
+                State.UpdateRegistry (0)    'РћР±РЅСѓР»РёС‚СЊ СЂРµРµСЃС‚СЂ: РЅРѕРІС‹Р№ Р±Р»РѕРє
             End If
         Else
-        'Нужно прочитать номер блока из журнала
+        'РќСѓР¶РЅРѕ РїСЂРѕС‡РёС‚Р°С‚СЊ РЅРѕРјРµСЂ Р±Р»РѕРєР° РёР· Р¶СѓСЂРЅР°Р»Р°
             WU.NumID = WU.GetIDbyName(WU.UnitName)
         End If
         WinID = WU.NumID
     Else
-        Result = MsgBox("Блок данных не обнаружен. Возможно, SETI@home" + vbCrLf + "закончила обработку информации и нуждается в связи с сервером", vbOKOnly, "Блок данных отсутствует (WINDOWS client)")
-        State.UpdateRegistry (2)    'Очистить реестр: признак окончания работы над блоком
+        Result = MsgBox("Р‘Р»РѕРє РґР°РЅРЅС‹С… РЅРµ РѕР±РЅР°СЂСѓР¶РµРЅ. Р’РѕР·РјРѕР¶РЅРѕ, SETI@home" + vbCrLf + "Р·Р°РєРѕРЅС‡РёР»Р° РѕР±СЂР°Р±РѕС‚РєСѓ РёРЅС„РѕСЂРјР°С†РёРё Рё РЅСѓР¶РґР°РµС‚СЃСЏ РІ СЃРІСЏР·Рё СЃ СЃРµСЂРІРµСЂРѕРј", vbOKOnly, "Р‘Р»РѕРє РґР°РЅРЅС‹С… РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ (WINDOWS client)")
+        State.UpdateRegistry (2)    'РћС‡РёСЃС‚РёС‚СЊ СЂРµРµСЃС‚СЂ: РїСЂРёР·РЅР°Рє РѕРєРѕРЅС‡Р°РЅРёСЏ СЂР°Р±РѕС‚С‹ РЅР°Рґ Р±Р»РѕРєРѕРј
         If OutResult.CheckFile(0, 1) Then
             WinID = CLng(Val(WU.GetIDbyName(OutResult.DetectWU(OutResult.ReadFile(0, 1)))))
         End If
-        'TO DO - вместо 0 прочитать значение из реестра
+        'TO DO - РІРјРµСЃС‚Рѕ 0 РїСЂРѕС‡РёС‚Р°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РёР· СЂРµРµСЃС‚СЂР°
         'If WU.CheckRegSettings(0, False) Then
             'WU.DecodeHistory (WU.ReadHistory(0))
         'End If
         'STAGE 3: UPDATING ALL TIME RESULTS LOG (IF RESULT.SAH EXIST)
         'Windows client
-        If Not (WinID = 0) Then 'Обновление только при известном номере блока
+        If Not (WinID = 0) Then 'РћР±РЅРѕРІР»РµРЅРёРµ С‚РѕР»СЊРєРѕ РїСЂРё РёР·РІРµСЃС‚РЅРѕРј РЅРѕРјРµСЂРµ Р±Р»РѕРєР°
             If OutResult.CheckFile(0, 1) Then
                 bResult = OutResult.Splitter(0, OutResult.ReadFile(0, 1), 1, WinID)
             End If
         Else
-            'TO DO Проверить разрешен ли импорт журналов
+            'TO DO РџСЂРѕРІРµСЂРёС‚СЊ СЂР°Р·СЂРµС€РµРЅ Р»Рё РёРјРїРѕСЂС‚ Р¶СѓСЂРЅР°Р»РѕРІ
             If DoImport = 1 Then
                 
             End If
         End If
     End If
-    StatusStr.Caption = "Проверка рабочего блока Windows-клиента завершена."
+    StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° СЂР°Р±РѕС‡РµРіРѕ Р±Р»РѕРєР° Windows-РєР»РёРµРЅС‚Р° Р·Р°РІРµСЂС€РµРЅР°."
     
 If DoLinux = 1 Then
-    'ПРОВЕРКА БЛОКА У ЛИНУКС-КЛИЕНТА
+    'РџР РћР’Р•Р РљРђ Р‘Р›РћРљРђ РЈ Р›РРќРЈРљРЎ-РљР›РР•РќРўРђ
     If (Dir(WU.GetFilePath(2), vbNormal) <> "") Then
         WU.DecodeWU (WU.ReadFile(2))
         HistoryWUExist = False
         If WU.CheckUnit(1, WU.UnitName) Then
-            HistoryWUExist = True   'Этот блок уже записан в журнал
+            HistoryWUExist = True   'Р­С‚РѕС‚ Р±Р»РѕРє СѓР¶Рµ Р·Р°РїРёСЃР°РЅ РІ Р¶СѓСЂРЅР°Р»
         End If
-        If Not (HistoryWUExist) Then    'Нет этого блока в журнале
+        If Not (HistoryWUExist) Then    'РќРµС‚ СЌС‚РѕРіРѕ Р±Р»РѕРєР° РІ Р¶СѓСЂРЅР°Р»Рµ
             WU.NumID = LastRecordNum + 1
             If WU.WriteHistory(WU.EncodeWU, 1) Then
-                Result = MsgBox("Успешная запись в файл журнала (LINUX)", vbOKOnly, "Запись блока (LINUX)")
-                'WriteHistory сам знает когда изменять значения RegRecords и LastRecordNum
+                Result = MsgBox("РЈСЃРїРµС€РЅР°СЏ Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» Р¶СѓСЂРЅР°Р»Р° (LINUX)", vbOKOnly, "Р—Р°РїРёСЃСЊ Р±Р»РѕРєР° (LINUX)")
+                'WriteHistory СЃР°Рј Р·РЅР°РµС‚ РєРѕРіРґР° РёР·РјРµРЅСЏС‚СЊ Р·РЅР°С‡РµРЅРёСЏ RegRecords Рё LastRecordNum
                 ''RegRecords = RegRecords + 1
                 ''LastRecordNum = LastRecordNum + 1
-                SaveRegSettings 'Сохранить изменения в реестре
-                StatusStr.Caption = "Сведения о новом блоке данных успешно занесены в журнал (LINUX)."
-                State.UpdateRegistry (1)    'Обнулить реестр: новый блок
+                SaveRegSettings 'РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ РІ СЂРµРµСЃС‚СЂРµ
+                StatusStr.Caption = "РЎРІРµРґРµРЅРёСЏ Рѕ РЅРѕРІРѕРј Р±Р»РѕРєРµ РґР°РЅРЅС‹С… СѓСЃРїРµС€РЅРѕ Р·Р°РЅРµСЃРµРЅС‹ РІ Р¶СѓСЂРЅР°Р» (LINUX)."
+                State.UpdateRegistry (1)    'РћР±РЅСѓР»РёС‚СЊ СЂРµРµСЃС‚СЂ: РЅРѕРІС‹Р№ Р±Р»РѕРє
             End If
         Else
-        'Нужно прочитать номер блока из журнала
+        'РќСѓР¶РЅРѕ РїСЂРѕС‡РёС‚Р°С‚СЊ РЅРѕРјРµСЂ Р±Р»РѕРєР° РёР· Р¶СѓСЂРЅР°Р»Р°
             WU.NumID = WU.GetIDbyName(WU.UnitName)
         End If
         LinID = WU.NumID
     Else
-        Result = MsgBox("Блок данных (клиент для Linux) не обнаружен. Возможно, SETI@home" + vbCrLf + "закончила обработку информации и нуждается в запасном блоке", vbOKOnly, "Блок данных отсутствует (LINUX client)")
-        State.UpdateRegistry (3)    'Очистить реестр: признак окончания работы над блоком
+        Result = MsgBox("Р‘Р»РѕРє РґР°РЅРЅС‹С… (РєР»РёРµРЅС‚ РґР»СЏ Linux) РЅРµ РѕР±РЅР°СЂСѓР¶РµРЅ. Р’РѕР·РјРѕР¶РЅРѕ, SETI@home" + vbCrLf + "Р·Р°РєРѕРЅС‡РёР»Р° РѕР±СЂР°Р±РѕС‚РєСѓ РёРЅС„РѕСЂРјР°С†РёРё Рё РЅСѓР¶РґР°РµС‚СЃСЏ РІ Р·Р°РїР°СЃРЅРѕРј Р±Р»РѕРєРµ", vbOKOnly, "Р‘Р»РѕРє РґР°РЅРЅС‹С… РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ (LINUX client)")
+        State.UpdateRegistry (3)    'РћС‡РёСЃС‚РёС‚СЊ СЂРµРµСЃС‚СЂ: РїСЂРёР·РЅР°Рє РѕРєРѕРЅС‡Р°РЅРёСЏ СЂР°Р±РѕС‚С‹ РЅР°Рґ Р±Р»РѕРєРѕРј
         If OutResult.CheckFile(1, 1) Then
             LinID = CLng(Val(WU.GetIDbyName(OutResult.DetectWU(OutResult.ReadFile(1, 1)))))
         End If
-        'TO DO - вместо 0 прочитать значение из реестра
+        'TO DO - РІРјРµСЃС‚Рѕ 0 РїСЂРѕС‡РёС‚Р°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РёР· СЂРµРµСЃС‚СЂР°
         'If WU.CheckRegSettings(0, False) Then
             'WU.DecodeHistory (WU.ReadHistory(0))
         'End If
         'STAGE 3: UPDATING ALL TIME RESULTS LOG (IF RESULT.SAH EXIST)
         'Linux client
-        If Not (LinID = 0) Then 'Обновление только при известном номере блока
+        If Not (LinID = 0) Then 'РћР±РЅРѕРІР»РµРЅРёРµ С‚РѕР»СЊРєРѕ РїСЂРё РёР·РІРµСЃС‚РЅРѕРј РЅРѕРјРµСЂРµ Р±Р»РѕРєР°
             If OutResult.CheckFile(1, 1) Then
                 bResult = OutResult.Splitter(1, OutResult.ReadFile(1, 1), 1, LinID)
             End If
         Else
-            'TO DO Проверить разрешен ли импорт журналов
+            'TO DO РџСЂРѕРІРµСЂРёС‚СЊ СЂР°Р·СЂРµС€РµРЅ Р»Рё РёРјРїРѕСЂС‚ Р¶СѓСЂРЅР°Р»РѕРІ
             If DoImport = 1 Then
                 
             End If
         End If
     End If
-    StatusStr.Caption = "Проверка рабочего блока Linux-клиента завершена."
+    StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° СЂР°Р±РѕС‡РµРіРѕ Р±Р»РѕРєР° Linux-РєР»РёРµРЅС‚Р° Р·Р°РІРµСЂС€РµРЅР°."
     
 'STAGE 2: CHECKING CURRENT RESULTS
-    'ТЕСТ - ПРОЧИТАТЬ ФАЙЛ STATE.SAH
+    'РўР•РЎРў - РџР РћР§РРўРђРўР¬ Р¤РђР™Р› STATE.SAH
     If State.CheckFile(1) Then
         If State.DecodeState(State.ReadFile(1)) Then
             StatusStr.Caption = State.bg_power & "<-gaussian (LINUX) spike ->" & State.bs_power
@@ -318,7 +318,7 @@ If DoLinux = 1 Then
             End If
         End If
     End If
-    StatusStr.Caption = "Проверка текущих результатов Linux-клиента завершена."
+    StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° С‚РµРєСѓС‰РёС… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ Linux-РєР»РёРµРЅС‚Р° Р·Р°РІРµСЂС€РµРЅР°."
 End If  'Perform Linux client check-up
 
     If State.CheckFile(0) Then
@@ -332,13 +332,13 @@ End If  'Perform Linux client check-up
             End If
         End If
     End If
-    StatusStr.Caption = "Проверка текущих результатов Windows-клиента завершена."
-    StatusStr.Caption = "Проверка промежуточных результатов клиента завершена."
+    StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° С‚РµРєСѓС‰РёС… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ Windows-РєР»РёРµРЅС‚Р° Р·Р°РІРµСЂС€РµРЅР°."
+    StatusStr.Caption = "РџСЂРѕРІРµСЂРєР° РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹С… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РєР»РёРµРЅС‚Р° Р·Р°РІРµСЂС€РµРЅР°."
     
-    frmMain.RunServices     'Запустить сервисы, устанавливаемые из настроек
+    frmMain.RunServices     'Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРµСЂРІРёСЃС‹, СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРјС‹Рµ РёР· РЅР°СЃС‚СЂРѕРµРє
     
-''    Перенесем это в Load или Init окна журнала чтобы не тормозить!
-''    WU.AddRecord 0  'Загрузить ВСЕ Сведения из журнала и поместить информацию на карту
+''    РџРµСЂРµРЅРµСЃРµРј СЌС‚Рѕ РІ Load РёР»Рё Init РѕРєРЅР° Р¶СѓСЂРЅР°Р»Р° С‡С‚РѕР±С‹ РЅРµ С‚РѕСЂРјРѕР·РёС‚СЊ!
+''    WU.AddRecord 0  'Р—Р°РіСЂСѓР·РёС‚СЊ Р’РЎР• РЎРІРµРґРµРЅРёСЏ РёР· Р¶СѓСЂРЅР°Р»Р° Рё РїРѕРјРµСЃС‚РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ РЅР° РєР°СЂС‚Сѓ
 End Sub
 
 Sub Main()
@@ -353,7 +353,7 @@ Dim PauseTime, Start, Finish
     Loop
     Finish = Timer   ' Set end time.
     If Not (GetKeyValue(HKEY_LOCAL_MACHINE, gSETIKEYLOC, gSETIKEYVAL, SETIpath)) Then
-        Result = MsgBox("Ошибка при попытке найти расположение SETI@home", vbOKOnly, "CRITICAL ERROR")
+        Result = MsgBox("РћС€РёР±РєР° РїСЂРё РїРѕРїС‹С‚РєРµ РЅР°Р№С‚Рё СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ SETI@home", vbOKOnly, "CRITICAL ERROR")
         End
     End If
     Set fMainForm = New frmMain
@@ -366,8 +366,8 @@ Dim PauseTime, Start, Finish
 End Sub
 
 '**********************************************************
-'*     Вытаскивает "нормальную" дату из ее комбинации     *
-'*                с вещественным числом                   *
+'*     Р’С‹С‚Р°СЃРєРёРІР°РµС‚ "РЅРѕСЂРјР°Р»СЊРЅСѓСЋ" РґР°С‚Сѓ РёР· РµРµ РєРѕРјР±РёРЅР°С†РёРё     *
+'*                СЃ РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рј С‡РёСЃР»РѕРј                   *
 '**********************************************************
 Function ExtractTime(sTime As String) As String
 Dim i As Long
@@ -379,8 +379,8 @@ Dim res As String
 End Function
 
 '**********************************************************
-'*            Вытаскивает дату из комбинации              *
-'*          вещественного числа и обычной даты            *
+'*            Р’С‹С‚Р°СЃРєРёРІР°РµС‚ РґР°С‚Сѓ РёР· РєРѕРјР±РёРЅР°С†РёРё              *
+'*          РІРµС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ С‡РёСЃР»Р° Рё РѕР±С‹С‡РЅРѕР№ РґР°С‚С‹            *
 '**********************************************************
 Function ExtractDigTime(sTime As String) As String
 Dim res As String
@@ -393,9 +393,9 @@ Dim res As String
 End Function
 
 '**********************************************************
-'*       Переводит строку в число. При возникновении      *
-'*    ошибки происходит попытка замены точки на запятую   *
-'*      Возвращает -1 если аргумент не является датой     *
+'*       РџРµСЂРµРІРѕРґРёС‚ СЃС‚СЂРѕРєСѓ РІ С‡РёСЃР»Рѕ. РџСЂРё РІРѕР·РЅРёРєРЅРѕРІРµРЅРёРё      *
+'*    РѕС€РёР±РєРё РїСЂРѕРёСЃС…РѕРґРёС‚ РїРѕРїС‹С‚РєР° Р·Р°РјРµРЅС‹ С‚РѕС‡РєРё РЅР° Р·Р°РїСЏС‚СѓСЋ   *
+'*      Р’РѕР·РІСЂР°С‰Р°РµС‚ -1 РµСЃР»Рё Р°СЂРіСѓРјРµРЅС‚ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РґР°С‚РѕР№     *
 '**********************************************************
 Function MyStrToFloat(s As String) As Double
 Dim f As Double
@@ -421,8 +421,8 @@ StrToFloatErr:
 End Function
 
 '**********************************************************
-'*     Дополняет строку лидирующими нулями, например,     *
-'*      вместо "1 секунда" будет выдано "01 секунда"      *
+'*     Р”РѕРїРѕР»РЅСЏРµС‚ СЃС‚СЂРѕРєСѓ Р»РёРґРёСЂСѓСЋС‰РёРјРё РЅСѓР»СЏРјРё, РЅР°РїСЂРёРјРµСЂ,     *
+'*      РІРјРµСЃС‚Рѕ "1 СЃРµРєСѓРЅРґР°" Р±СѓРґРµС‚ РІС‹РґР°РЅРѕ "01 СЃРµРєСѓРЅРґР°"      *
 '**********************************************************
 Function LeftZero(s As String, i As Long) As String
     If Len(s) = i Then
@@ -433,7 +433,7 @@ Function LeftZero(s As String, i As Long) As String
 End Function
 
 '**********************************************************
-'*           Отбрасывает дробную часть аргумента          *
+'*           РћС‚Р±СЂР°СЃС‹РІР°РµС‚ РґСЂРѕР±РЅСѓСЋ С‡Р°СЃС‚СЊ Р°СЂРіСѓРјРµРЅС‚Р°          *
 '**********************************************************
 Function Trunc(dValue As Double) As Double
 Dim s As String, tmp As String
@@ -462,8 +462,8 @@ Dim i As Long
 End Function
 
 '**********************************************************
-'*      Преобразует текущий сдвиг допплера в проценты     *
-'*                  сделанной работы                      *
+'*      РџСЂРµРѕР±СЂР°Р·СѓРµС‚ С‚РµРєСѓС‰РёР№ СЃРґРІРёРі РґРѕРїРїР»РµСЂР° РІ РїСЂРѕС†РµРЅС‚С‹     *
+'*                  СЃРґРµР»Р°РЅРЅРѕР№ СЂР°Р±РѕС‚С‹                      *
 '**********************************************************
 Function CRtoPercent(cr As Single) As Long
 Dim TMPvalue As Long
@@ -476,10 +476,10 @@ Dim fResult As Long
         TMPvalue = Abs(TMPvalue)
     End If
     If TMPvalue < 500 Then
-    'Сдвиг допплера менее 5
+    'РЎРґРІРёРі РґРѕРїРїР»РµСЂР° РјРµРЅРµРµ 5
         fResult = (TMPvalue * 25) \ 500
     Else
-    'Сдвиг допплера более 5
+    'РЎРґРІРёРі РґРѕРїРїР»РµСЂР° Р±РѕР»РµРµ 5
         fResult = 25 + (TMPvalue - 500) \ 180
     End If
     If Negative Then
@@ -492,31 +492,31 @@ Dim fResult As Long
 End Function
 
 '**********************************************************
-'*     Декодирует время в формате SETI@home в обычные     *
-'*              дни, часы, минуты и секунды               *
+'*     Р”РµРєРѕРґРёСЂСѓРµС‚ РІСЂРµРјСЏ РІ С„РѕСЂРјР°С‚Рµ SETI@home РІ РѕР±С‹С‡РЅС‹Рµ     *
+'*              РґРЅРё, С‡Р°СЃС‹, РјРёРЅСѓС‚С‹ Рё СЃРµРєСѓРЅРґС‹               *
 '**********************************************************
 Function DecodeTime(dTime As Double, bDay As Boolean) As String
     If Not bDay Then
-        DecodeTime = LeftZero(CStr(dTime \ 3600), 1) + " час " + LeftZero(CStr(Trunc((dTime - ((dTime \ 3600) * 3600)) / 60)), 1) + " мин " + LeftZero(CStr(Trunc(((dTime * 60) - Trunc(dTime * 60)) * 60)), 1) + " сек"
+        DecodeTime = LeftZero(CStr(dTime \ 3600), 1) + " С‡Р°СЃ " + LeftZero(CStr(Trunc((dTime - ((dTime \ 3600) * 3600)) / 60)), 1) + " РјРёРЅ " + LeftZero(CStr(Trunc(((dTime * 60) - Trunc(dTime * 60)) * 60)), 1) + " СЃРµРє"
     Else
-        DecodeTime = CStr((dTime \ 86400)) + " дней " + LeftZero(CStr(Trunc((dTime - ((dTime \ 86400) * 86400)) / 3600)), 1) + " час " + LeftZero(CStr(Trunc((dTime - ((dTime \ 3600) * 3600)) / 60)), 1) + " мин " + LeftZero(CStr(Trunc(((dTime * 60) - Trunc(dTime * 60)) * 60)), 1) + " сек"
+        DecodeTime = CStr((dTime \ 86400)) + " РґРЅРµР№ " + LeftZero(CStr(Trunc((dTime - ((dTime \ 86400) * 86400)) / 3600)), 1) + " С‡Р°СЃ " + LeftZero(CStr(Trunc((dTime - ((dTime \ 3600) * 3600)) / 60)), 1) + " РјРёРЅ " + LeftZero(CStr(Trunc(((dTime * 60) - Trunc(dTime * 60)) * 60)), 1) + " СЃРµРє"
     End If
 End Function
 
 '**********************************************************
-'*      Декодирует RA-координаты в формате SETI@home      *
-'*               в часы, минуты и секунды                 *
+'*      Р”РµРєРѕРґРёСЂСѓРµС‚ RA-РєРѕРѕСЂРґРёРЅР°С‚С‹ РІ С„РѕСЂРјР°С‚Рµ SETI@home      *
+'*               РІ С‡Р°СЃС‹, РјРёРЅСѓС‚С‹ Рё СЃРµРєСѓРЅРґС‹                 *
 '**********************************************************
 Function DecodeRA(ra As Double) As String
-    DecodeRA = LeftZero(CStr(Trunc(ra)), 1) + " час " + LeftZero(CStr(Trunc((ra - Trunc(ra)) * 60)), 1) + " мин " + LeftZero(CStr(Trunc(((ra * 60) - Trunc(ra * 60)) * 60)), 1) + " сек"
+    DecodeRA = LeftZero(CStr(Trunc(ra)), 1) + " С‡Р°СЃ " + LeftZero(CStr(Trunc((ra - Trunc(ra)) * 60)), 1) + " РјРёРЅ " + LeftZero(CStr(Trunc(((ra * 60) - Trunc(ra * 60)) * 60)), 1) + " СЃРµРє"
 End Function
 
 '**********************************************************
-'*     Декодирует DEC-координаты в формате SETI@home      *
-'*             в градусы, минуты и секунды                *
+'*     Р”РµРєРѕРґРёСЂСѓРµС‚ DEC-РєРѕРѕСЂРґРёРЅР°С‚С‹ РІ С„РѕСЂРјР°С‚Рµ SETI@home      *
+'*             РІ РіСЂР°РґСѓСЃС‹, РјРёРЅСѓС‚С‹ Рё СЃРµРєСѓРЅРґС‹                *
 '**********************************************************
 Function DecodeDEC(dec As Double) As String
-    DecodeDEC = LeftZero(CStr(Trunc(dec)), 1) + " град " + LeftZero(CStr(Trunc((dec - Trunc(dec)) * 60)), 1) + " мин " + LeftZero(CStr(Trunc(((dec * 60) - Trunc(dec * 60)) * 60)), 1) + " сек"
+    DecodeDEC = LeftZero(CStr(Trunc(dec)), 1) + " РіСЂР°Рґ " + LeftZero(CStr(Trunc((dec - Trunc(dec)) * 60)), 1) + " РјРёРЅ " + LeftZero(CStr(Trunc(((dec * 60) - Trunc(dec * 60)) * 60)), 1) + " СЃРµРє"
 '//Catching these strange "0 degrees 300 minutes 300 seconds" report - SUCCESS
 '//Bug fixed - Trunc function has beed modified in order to handle
 '//numbers in scientific format (like 1.2345E-06)
@@ -524,13 +524,13 @@ Function DecodeDEC(dec As Double) As String
 '        Debug.Print "Error reporting!"
 '        Debug.Print DEC
 '        Debug.Print Trunc((DEC - Trunc(DEC)) * 60)
-'        Debug.Print LeftZero(CStr(Trunc((DEC - Trunc(DEC)) * 60)), 1) + " мин "
+'        Debug.Print LeftZero(CStr(Trunc((DEC - Trunc(DEC)) * 60)), 1) + " РјРёРЅ "
 '        Debug.Print "-----------------------------------------"
 '    End If
 End Function
 
 '**********************************************************
-'*       Возвращает часы из вещественного аргумента       *
+'*       Р’РѕР·РІСЂР°С‰Р°РµС‚ С‡Р°СЃС‹ РёР· РІРµС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ Р°СЂРіСѓРјРµРЅС‚Р°       *
 '**********************************************************
 Function GetHourStr(dTime As Double) As String
 'procedure SplitCoor(time : real; var hr, min, sec :string);
@@ -539,7 +539,7 @@ Function GetHourStr(dTime As Double) As String
 End Function
 
 '**********************************************************
-'*     Возвращает минуты из вещественного аргумента       *
+'*     Р’РѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅСѓС‚С‹ РёР· РІРµС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ Р°СЂРіСѓРјРµРЅС‚Р°       *
 '**********************************************************
 Function GetMinStr(dTime As Double) As String
     dTime = Abs(dTime)
@@ -547,7 +547,7 @@ Function GetMinStr(dTime As Double) As String
 End Function
 
 '**********************************************************
-'*    Возвращает секунды из вещественного аргумента       *
+'*    Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµРєСѓРЅРґС‹ РёР· РІРµС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ Р°СЂРіСѓРјРµРЅС‚Р°       *
 '**********************************************************
 Function GetSecStr(dTime As Double) As String
     dTime = Abs(dTime)
@@ -555,7 +555,7 @@ Function GetSecStr(dTime As Double) As String
 End Function
 
 '**********************************************************
-'*     Зашифровывает координаты в формат SETI@home        *
+'*     Р—Р°С€РёС„СЂРѕРІС‹РІР°РµС‚ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІ С„РѕСЂРјР°С‚ SETI@home        *
 '**********************************************************
 Function EncodeCoor(hr As String, min As String, sec As String) As String
 Dim res As String
@@ -564,7 +564,7 @@ Dim res As String
             Do While (Not (Left(hr, 1) Like "[1-9]"))
                 hr = Right(hr, Len(hr) - 1)
             Loop
-            'Справа только цифры (свойства поля ввода), поэтому следующий цикл не нужен
+            'РЎРїСЂР°РІР° С‚РѕР»СЊРєРѕ С†РёС„СЂС‹ (СЃРІРѕР№СЃС‚РІР° РїРѕР»СЏ РІРІРѕРґР°), РїРѕСЌС‚РѕРјСѓ СЃР»РµРґСѓСЋС‰РёР№ С†РёРєР» РЅРµ РЅСѓР¶РµРЅ
             ''Do While (Not (Right(hr, 1) Like "[0-9]"))
                 ''hr = Left(hr, Len(hr) - 1)
             ''Loop
@@ -580,10 +580,10 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*           Прочитать заданный параметр                  *
-'* tokenname: Название параметра                          *
-'*    psfile: Строка, в которой производится поиск        *
-'*   Stopper: Символ, служащий разделителем записей       *
+'*           РџСЂРѕС‡РёС‚Р°С‚СЊ Р·Р°РґР°РЅРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ                  *
+'* tokenname: РќР°Р·РІР°РЅРёРµ РїР°СЂР°РјРµС‚СЂР°                          *
+'*    psfile: РЎС‚СЂРѕРєР°, РІ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїРѕРёСЃРє        *
+'*   Stopper: РЎРёРјРІРѕР», СЃР»СѓР¶Р°С‰РёР№ СЂР°Р·РґРµР»РёС‚РµР»РµРј Р·Р°РїРёСЃРµР№       *
 '**********************************************************
 Public Function GetToken(ByVal tokenname As String, ByVal psfile As String, ByVal stopper As String) As String
 Dim res As String
@@ -594,13 +594,13 @@ Dim i As Long, StartPos As Long, EndPos As Long
     If stopper = "space" Then
         stopper = " "
     End If
-    i = InStr(1, psfile, tokenname, vbTextCompare)  'Найти положение параметра в строке
+    i = InStr(1, psfile, tokenname, vbTextCompare)  'РќР°Р№С‚Рё РїРѕР»РѕР¶РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РІ СЃС‚СЂРѕРєРµ
     If i <> 0 Then
-        StartPos = i + Len(tokenname)   'Продвинуться вперед на длину названия параметра
+        StartPos = i + Len(tokenname)   'РџСЂРѕРґРІРёРЅСѓС‚СЊСЃСЏ РІРїРµСЂРµРґ РЅР° РґР»РёРЅСѓ РЅР°Р·РІР°РЅРёСЏ РїР°СЂР°РјРµС‚СЂР°
         Do While (Mid(psfile, StartPos, 1) = " ")
             StartPos = StartPos + 1
         Loop
-        EndPos = InStr(StartPos, psfile, stopper, vbTextCompare)    'Найти закрывающий символ
+        EndPos = InStr(StartPos, psfile, stopper, vbTextCompare)    'РќР°Р№С‚Рё Р·Р°РєСЂС‹РІР°СЋС‰РёР№ СЃРёРјРІРѕР»
         res = Mid(psfile, StartPos, EndPos - StartPos)
     End If
     'Trim spaces
@@ -619,13 +619,13 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*   Прочитать параметр, который не может быть прочитан   *
-'*   функцией GetToken. Взвращает все символы между       *
-'*   tokenname и stopper, за исключением символов         *
-'*   перевода строки и (опционально) пробелов.            *
-'* tokenname: Название параметра                          *
-'*   stopper: Группа символов, служащие ограничителем     *
-'*    psfile: Строка, в которой производится поиск        *
+'*   РџСЂРѕС‡РёС‚Р°С‚СЊ РїР°СЂР°РјРµС‚СЂ, РєРѕС‚РѕСЂС‹Р№ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСЂРѕС‡РёС‚Р°РЅ   *
+'*   С„СѓРЅРєС†РёРµР№ GetToken. Р’Р·РІСЂР°С‰Р°РµС‚ РІСЃРµ СЃРёРјРІРѕР»С‹ РјРµР¶РґСѓ       *
+'*   tokenname Рё stopper, Р·Р° РёСЃРєР»СЋС‡РµРЅРёРµРј СЃРёРјРІРѕР»РѕРІ         *
+'*   РїРµСЂРµРІРѕРґР° СЃС‚СЂРѕРєРё Рё (РѕРїС†РёРѕРЅР°Р»СЊРЅРѕ) РїСЂРѕР±РµР»РѕРІ.            *
+'* tokenname: РќР°Р·РІР°РЅРёРµ РїР°СЂР°РјРµС‚СЂР°                          *
+'*   stopper: Р“СЂСѓРїРїР° СЃРёРјРІРѕР»РѕРІ, СЃР»СѓР¶Р°С‰РёРµ РѕРіСЂР°РЅРёС‡РёС‚РµР»РµРј     *
+'*    psfile: РЎС‚СЂРѕРєР°, РІ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїРѕРёСЃРє        *
 '**********************************************************
 Public Function GetTokenEx(ByVal tokenname As String, ByVal psfile As String, ByVal stopper As String, ByVal SpacesStay As Boolean) As String
 Dim res As String, TMPstr As String
@@ -633,20 +633,20 @@ Dim i As Long, StartPos As Long, EndPos As Long
     On Error GoTo GetTokenExErr
     
     res = ""
-    i = InStr(1, psfile, tokenname, vbTextCompare)  'Найти положение параметра в строке
+    i = InStr(1, psfile, tokenname, vbTextCompare)  'РќР°Р№С‚Рё РїРѕР»РѕР¶РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РІ СЃС‚СЂРѕРєРµ
     If i <> 0 Then
-        StartPos = i + Len(tokenname)   'Продвинуться вперед на длину названия параметра
+        StartPos = i + Len(tokenname)   'РџСЂРѕРґРІРёРЅСѓС‚СЊСЃСЏ РІРїРµСЂРµРґ РЅР° РґР»РёРЅСѓ РЅР°Р·РІР°РЅРёСЏ РїР°СЂР°РјРµС‚СЂР°
         i = 0
-        i = InStr(StartPos, psfile, stopper, vbTextCompare) 'Поймать ограничитель
+        i = InStr(StartPos, psfile, stopper, vbTextCompare) 'РџРѕР№РјР°С‚СЊ РѕРіСЂР°РЅРёС‡РёС‚РµР»СЊ
         If i <> 0 Then
-            'Продолжаем работу ТОЛЬКО если найден ограничитель, иначе - выход
+            'РџСЂРѕРґРѕР»Р¶Р°РµРј СЂР°Р±РѕС‚Сѓ РўРћР›Р¬РљРћ РµСЃР»Рё РЅР°Р№РґРµРЅ РѕРіСЂР°РЅРёС‡РёС‚РµР»СЊ, РёРЅР°С‡Рµ - РІС‹С…РѕРґ
             EndPos = i
             For i = 0 To EndPos - StartPos - 1
                 TMPstr = Mid(psfile, StartPos + i, 1)
                 If Not (TMPstr = Chr(10)) Then
-                    If Not (TMPstr = Chr(13)) Then  'Отсечь переводы строки
+                    If Not (TMPstr = Chr(13)) Then  'РћС‚СЃРµС‡СЊ РїРµСЂРµРІРѕРґС‹ СЃС‚СЂРѕРєРё
                         If TMPstr = " " Then
-                            If SpacesStay Then      'Пробел пропускать только если указание
+                            If SpacesStay Then      'РџСЂРѕР±РµР» РїСЂРѕРїСѓСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РµСЃР»Рё СѓРєР°Р·Р°РЅРёРµ
                                 res = res & TMPstr
                             End If
                         Else
@@ -669,19 +669,19 @@ GetTokenExErr:
 End Function
 
 '**********************************************************
-'*        Читает из реестра настройки программы           *
+'*        Р§РёС‚Р°РµС‚ РёР· СЂРµРµСЃС‚СЂР° РЅР°СЃС‚СЂРѕР№РєРё РїСЂРѕРіСЂР°РјРјС‹           *
 '**********************************************************
 Public Sub GetRegSettings()
-    'Настройки журналов
+    'РќР°СЃС‚СЂРѕР№РєРё Р¶СѓСЂРЅР°Р»РѕРІ
     RegRecords = GetSetting(App.Title, "Settings", "NumOfHistoryRec", 0)
     LastRecordNum = GetSetting(App.Title, "Settings", "LastRecordNum", 0)
     SplitterOverwr = GetSetting(App.Title, "Settings", "SplitterOverwrite", 0)
-    'Настройки карты
+    'РќР°СЃС‚СЂРѕР№РєРё РєР°СЂС‚С‹
     MarkerType = GetSetting(App.Title, "Starmap", "MarkerType", 0)
     MarkerSize = GetSetting(App.Title, "Starmap", "MarkerSize", 0)
     RedrawOnStartup = GetSetting(App.Title, "Starmap", "RedrawOnStartup", 0)
     LastInColor = GetSetting(App.Title, "Starmap", "LastInColor", 0)
-    'Настройки программы
+    'РќР°СЃС‚СЂРѕР№РєРё РїСЂРѕРіСЂР°РјРјС‹
     AutoShowWU = GetSetting(App.Title, "Settings", "AutoShowWU", 0)
     EnableRegSave = GetSetting(App.Title, "Settings", "EnableRegSave", 1)
     UpdateOnStartup = GetSetting(App.Title, "Settings", "UpdateOnStartup", 1)
@@ -690,7 +690,7 @@ Public Sub GetRegSettings()
     UseDefaultRF = GetSetting(App.Title, "Settings", "UseDefaultReportFile", 1)
     AnimTick = GetSetting(App.Title, "Settings", "AnimationTick", 50)
     DoLinux = GetSetting(App.Title, "Settings", "DoLinux", 0)
-    'Настройки автокалибровки (ViewWU)
+    'РќР°СЃС‚СЂРѕР№РєРё Р°РІС‚РѕРєР°Р»РёР±СЂРѕРІРєРё (ViewWU)
     MaxPscore = GetSetting(App.Title, "AutoRange", "MaxPscore", 0)
     MaxPpower = GetSetting(App.Title, "AutoRange", "MaxPpower", 0)
     MaxTscore = GetSetting(App.Title, "AutoRange", "MaxTscore", 0)
@@ -703,7 +703,7 @@ Public Sub GetRegSettings()
 End Sub
 
 '**********************************************************
-'*        Сохраняет в реестре настройки программы         *
+'*        РЎРѕС…СЂР°РЅСЏРµС‚ РІ СЂРµРµСЃС‚СЂРµ РЅР°СЃС‚СЂРѕР№РєРё РїСЂРѕРіСЂР°РјРјС‹         *
 '**********************************************************
 Public Sub SaveRegSettings()
     SaveSetting App.Title, "Settings", "NumOfHistoryRec", RegRecords
@@ -711,25 +711,25 @@ Public Sub SaveRegSettings()
 End Sub
 
 '********************************************
-'* Получение пути установки Windows через   *
+'* РџРѕР»СѓС‡РµРЅРёРµ РїСѓС‚Рё СѓСЃС‚Р°РЅРѕРІРєРё Windows С‡РµСЂРµР·   *
 '* Win API                                  *
-'* Полученный путь содержит закрывающий     *
-'* разделитель директорий \                 *
+'* РџРѕР»СѓС‡РµРЅРЅС‹Р№ РїСѓС‚СЊ СЃРѕРґРµСЂР¶РёС‚ Р·Р°РєСЂС‹РІР°СЋС‰РёР№     *
+'* СЂР°Р·РґРµР»РёС‚РµР»СЊ РґРёСЂРµРєС‚РѕСЂРёР№ \                 *
 '********************************************
 Function GetWindowsDir() As String
 Dim strBuf As String
 Dim iZeroPos As Integer
 
-    'Заполняем буфер пробелами
+    'Р—Р°РїРѕР»РЅСЏРµРј Р±СѓС„РµСЂ РїСЂРѕР±РµР»Р°РјРё
     strBuf = Space(iMaxSize)
     If GetWindowsDirectory(strBuf, iMaxSize) > 0 Then
-        'Ищем терминатор строки
+        'РС‰РµРј С‚РµСЂРјРёРЅР°С‚РѕСЂ СЃС‚СЂРѕРєРё
         iZeroPos = InStr(strBuf, Chr$(0))
-        'Если терминатор есть, то удаляем его
+        'Р•СЃР»Рё С‚РµСЂРјРёРЅР°С‚РѕСЂ РµСЃС‚СЊ, С‚Рѕ СѓРґР°Р»СЏРµРј РµРіРѕ
         If iZeroPos > 0 Then
             strBuf = Left$(strBuf, iZeroPos - 1)
         End If
-        'Если на конце строки нет разделителя директорий, добавляем его
+        'Р•СЃР»Рё РЅР° РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё РЅРµС‚ СЂР°Р·РґРµР»РёС‚РµР»СЏ РґРёСЂРµРєС‚РѕСЂРёР№, РґРѕР±Р°РІР»СЏРµРј РµРіРѕ
         If Right(Trim(strBuf), Len(strSepURLDir)) <> strSepURLDir And _
            Right(Trim(strBuf), Len(strSepDir)) <> strSepDir Then
             strBuf = RTrim$(strBuf) & strSepDir
@@ -741,14 +741,14 @@ Dim iZeroPos As Integer
 End Function
 
 '************************************************************
-'* Запуск справочной системы Windows (формат справки *.CHM) *
-'* Поиск файла hh.exe через реестр производиться НЕ будет,  *
-'* положимся на то, что этот файл в большинстве случаев     *
-'* лежит в папке Windows                                    *
+'* Р—Р°РїСѓСЃРє СЃРїСЂР°РІРѕС‡РЅРѕР№ СЃРёСЃС‚РµРјС‹ Windows (С„РѕСЂРјР°С‚ СЃРїСЂР°РІРєРё *.CHM) *
+'* РџРѕРёСЃРє С„Р°Р№Р»Р° hh.exe С‡РµСЂРµР· СЂРµРµСЃС‚СЂ РїСЂРѕРёР·РІРѕРґРёС‚СЊСЃСЏ РќР• Р±СѓРґРµС‚,  *
+'* РїРѕР»РѕР¶РёРјСЃСЏ РЅР° С‚Рѕ, С‡С‚Рѕ СЌС‚РѕС‚ С„Р°Р№Р» РІ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ     *
+'* Р»РµР¶РёС‚ РІ РїР°РїРєРµ Windows                                    *
 '************************************************************
 Public Sub ShowCHMHelp()
 Dim RetValue As Double
-    'Получить путь к папке Windows через DLL call
+    'РџРѕР»СѓС‡РёС‚СЊ РїСѓС‚СЊ Рє РїР°РїРєРµ Windows С‡РµСЂРµР· DLL call
     RetValue = Shell(GetWindowsDir & strHHelpEXEname & Chr(32) & App.path & HelpCHMFile, vbMaximizedFocus)
 End Sub
 
@@ -808,7 +808,7 @@ GetKeyError:    ' Cleanup After An Error Has Occured...
         rc = RegCloseKey(hKey)                                  ' Close Registry Key
 End Function
 
-''Если есть блок, то проверить потом State
-''Иначе
-''Проверить State (и заодно получить ID)
-''Проверить Result
+''Р•СЃР»Рё РµСЃС‚СЊ Р±Р»РѕРє, С‚Рѕ РїСЂРѕРІРµСЂРёС‚СЊ РїРѕС‚РѕРј State
+''РРЅР°С‡Рµ
+''РџСЂРѕРІРµСЂРёС‚СЊ State (Рё Р·Р°РѕРґРЅРѕ РїРѕР»СѓС‡РёС‚СЊ ID)
+''РџСЂРѕРІРµСЂРёС‚СЊ Result
