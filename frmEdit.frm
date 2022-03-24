@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Begin VB.Form frmEdit 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Редактирование существующей записи"
+   Caption         =   "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµР№ Р·Р°РїРёСЃРё"
    ClientHeight    =   6105
    ClientLeft      =   45
    ClientTop       =   330
@@ -15,7 +15,7 @@ Begin VB.Form frmEdit
    ScaleWidth      =   10335
    StartUpPosition =   1  'CenterOwner
    Begin VB.Frame Frame1 
-      Caption         =   "Комментарии к текущему блоку"
+      Caption         =   "РљРѕРјРјРµРЅС‚Р°СЂРёРё Рє С‚РµРєСѓС‰РµРјСѓ Р±Р»РѕРєСѓ"
       Height          =   4425
       Index           =   4
       Left            =   -20000
@@ -51,7 +51,7 @@ Begin VB.Form frmEdit
          Width           =   5265
       End
       Begin VB.Label Label57 
-         Caption         =   "Резервное поле 3"
+         Caption         =   "Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ 3"
          Height          =   225
          Left            =   840
          TabIndex        =   164
@@ -59,7 +59,7 @@ Begin VB.Form frmEdit
          Width           =   1485
       End
       Begin VB.Label Label56 
-         Caption         =   "Резервное поле 2"
+         Caption         =   "Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ 2"
          Height          =   225
          Left            =   840
          TabIndex        =   161
@@ -67,7 +67,7 @@ Begin VB.Form frmEdit
          Width           =   1485
       End
       Begin VB.Label Label55 
-         Caption         =   "Резервное поле 1"
+         Caption         =   "Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ 1"
          Height          =   225
          Left            =   840
          TabIndex        =   160
@@ -84,7 +84,7 @@ Begin VB.Form frmEdit
          Width           =   8730
       End
       Begin VB.Label Label53 
-         Caption         =   "Ваш комментарий (будет показан на карте)"
+         Caption         =   "Р’Р°С€ РєРѕРјРјРµРЅС‚Р°СЂРёР№ (Р±СѓРґРµС‚ РїРѕРєР°Р·Р°РЅ РЅР° РєР°СЂС‚Рµ)"
          Height          =   330
          Left            =   210
          TabIndex        =   157
@@ -93,7 +93,7 @@ Begin VB.Form frmEdit
       End
    End
    Begin VB.Frame Frame1 
-      Caption         =   "Дополнительные параметры"
+      Caption         =   "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹"
       Height          =   4425
       Index           =   3
       Left            =   -20000
@@ -361,7 +361,7 @@ Begin VB.Form frmEdit
          Width           =   2220
       End
       Begin VB.Label Label42 
-         Caption         =   "Образец"
+         Caption         =   "РћР±СЂР°Р·РµС†"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -378,7 +378,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label41 
-         Caption         =   "Версия пленки (tape version)"
+         Caption         =   "Р’РµСЂСЃРёСЏ РїР»РµРЅРєРё (tape version)"
          Height          =   225
          Index           =   9
          Left            =   210
@@ -387,7 +387,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label41 
-         Caption         =   "Частота дискретизации (nsamples)"
+         Caption         =   "Р§Р°СЃС‚РѕС‚Р° РґРёСЃРєСЂРµС‚РёР·Р°С†РёРё (nsamples)"
          Height          =   225
          Index           =   8
          Left            =   210
@@ -414,7 +414,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label41 
-         Caption         =   "Версия сплиттера (splitter version)"
+         Caption         =   "Р’РµСЂСЃРёСЏ СЃРїР»РёС‚С‚РµСЂР° (splitter version)"
          Height          =   225
          Index           =   6
          Left            =   210
@@ -423,7 +423,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label41 
-         Caption         =   "Класс данных (data class)"
+         Caption         =   "РљР»Р°СЃСЃ РґР°РЅРЅС‹С… (data class)"
          Height          =   225
          Index           =   4
          Left            =   210
@@ -432,7 +432,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label41 
-         Caption         =   "Тип данных (data type)"
+         Caption         =   "РўРёРї РґР°РЅРЅС‹С… (data type)"
          Height          =   225
          Index           =   3
          Left            =   210
@@ -441,7 +441,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label41 
-         Caption         =   "Версия (version)"
+         Caption         =   "Р’РµСЂСЃРёСЏ (version)"
          Height          =   225
          Index           =   2
          Left            =   210
@@ -450,7 +450,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label41 
-         Caption         =   "Задача (task)"
+         Caption         =   "Р—Р°РґР°С‡Р° (task)"
          Height          =   225
          Index           =   1
          Left            =   210
@@ -459,7 +459,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label41 
-         Caption         =   "Тип (type)"
+         Caption         =   "РўРёРї (type)"
          Height          =   225
          Index           =   0
          Left            =   210
@@ -469,7 +469,7 @@ Begin VB.Form frmEdit
       End
    End
    Begin VB.Frame Frame1 
-      Caption         =   "Пространственно - временные координаты"
+      Caption         =   "РџСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµРЅРЅРѕ - РІСЂРµРјРµРЅРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹"
       Height          =   4530
       Index           =   2
       Left            =   -20000
@@ -654,7 +654,7 @@ Begin VB.Form frmEdit
          Width           =   3060
       End
       Begin VB.Label Label58 
-         Caption         =   "Точка 21"
+         Caption         =   "РўРѕС‡РєР° 21"
          Height          =   225
          Left            =   5145
          TabIndex        =   167
@@ -662,7 +662,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label30 
-         Caption         =   "Точка 20"
+         Caption         =   "РўРѕС‡РєР° 20"
          Height          =   225
          Left            =   5145
          TabIndex        =   57
@@ -670,7 +670,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label29 
-         Caption         =   "Точка 19"
+         Caption         =   "РўРѕС‡РєР° 19"
          Height          =   225
          Left            =   5145
          TabIndex        =   56
@@ -678,7 +678,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label28 
-         Caption         =   "Точка 18"
+         Caption         =   "РўРѕС‡РєР° 18"
          Height          =   225
          Left            =   5145
          TabIndex        =   55
@@ -686,7 +686,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label27 
-         Caption         =   "Точка 17"
+         Caption         =   "РўРѕС‡РєР° 17"
          Height          =   225
          Left            =   5145
          TabIndex        =   54
@@ -694,7 +694,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label26 
-         Caption         =   "Точка 16"
+         Caption         =   "РўРѕС‡РєР° 16"
          Height          =   225
          Left            =   5145
          TabIndex        =   45
@@ -702,7 +702,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label25 
-         Caption         =   "Точка 15"
+         Caption         =   "РўРѕС‡РєР° 15"
          Height          =   225
          Left            =   5145
          TabIndex        =   44
@@ -710,7 +710,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label24 
-         Caption         =   "Точка 14"
+         Caption         =   "РўРѕС‡РєР° 14"
          Height          =   225
          Left            =   5145
          TabIndex        =   43
@@ -718,7 +718,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label23 
-         Caption         =   "Точка 13"
+         Caption         =   "РўРѕС‡РєР° 13"
          Height          =   225
          Left            =   5145
          TabIndex        =   42
@@ -726,7 +726,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label22 
-         Caption         =   "Точка 12"
+         Caption         =   "РўРѕС‡РєР° 12"
          Height          =   225
          Left            =   5145
          TabIndex        =   41
@@ -734,7 +734,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label21 
-         Caption         =   "Точка 11"
+         Caption         =   "РўРѕС‡РєР° 11"
          Height          =   225
          Left            =   5145
          TabIndex        =   40
@@ -742,7 +742,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label20 
-         Caption         =   "Точка 10"
+         Caption         =   "РўРѕС‡РєР° 10"
          Height          =   225
          Left            =   5145
          TabIndex        =   39
@@ -820,7 +820,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label17 
-         Caption         =   "Время"
+         Caption         =   "Р’СЂРµРјСЏ"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -837,7 +837,7 @@ Begin VB.Form frmEdit
          Width           =   645
       End
       Begin VB.Label Label16 
-         Caption         =   "Образец :  2451423.37662  15.814  11.39"
+         Caption         =   "РћР±СЂР°Р·РµС† :  2451423.37662  15.814  11.39"
          BeginProperty Font 
             Name            =   "Arial"
             Size            =   9
@@ -854,7 +854,7 @@ Begin VB.Form frmEdit
          Width           =   3480
       End
       Begin VB.Label Label15 
-         Caption         =   "Точка 9"
+         Caption         =   "РўРѕС‡РєР° 9"
          Height          =   225
          Left            =   210
          TabIndex        =   25
@@ -862,7 +862,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label14 
-         Caption         =   "Точка 8"
+         Caption         =   "РўРѕС‡РєР° 8"
          Height          =   225
          Left            =   210
          TabIndex        =   24
@@ -870,7 +870,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label13 
-         Caption         =   "Точка 7"
+         Caption         =   "РўРѕС‡РєР° 7"
          Height          =   225
          Left            =   210
          TabIndex        =   23
@@ -878,7 +878,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label12 
-         Caption         =   "Точка 6"
+         Caption         =   "РўРѕС‡РєР° 6"
          Height          =   225
          Left            =   210
          TabIndex        =   22
@@ -886,7 +886,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label11 
-         Caption         =   "Точка 5"
+         Caption         =   "РўРѕС‡РєР° 5"
          Height          =   225
          Left            =   210
          TabIndex        =   21
@@ -894,7 +894,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label10 
-         Caption         =   "Точка 4"
+         Caption         =   "РўРѕС‡РєР° 4"
          Height          =   225
          Left            =   210
          TabIndex        =   20
@@ -902,7 +902,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label9 
-         Caption         =   "Точка 3"
+         Caption         =   "РўРѕС‡РєР° 3"
          Height          =   225
          Left            =   210
          TabIndex        =   19
@@ -910,7 +910,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label8 
-         Caption         =   "Точка 2"
+         Caption         =   "РўРѕС‡РєР° 2"
          Height          =   225
          Left            =   210
          TabIndex        =   18
@@ -918,7 +918,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label7 
-         Caption         =   "Точка 1"
+         Caption         =   "РўРѕС‡РєР° 1"
          Height          =   225
          Left            =   210
          TabIndex        =   17
@@ -926,7 +926,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label6 
-         Caption         =   "Точка 0"
+         Caption         =   "РўРѕС‡РєР° 0"
          Height          =   225
          Left            =   210
          TabIndex        =   16
@@ -935,7 +935,7 @@ Begin VB.Form frmEdit
       End
    End
    Begin VB.Frame Frame1 
-      Caption         =   "Физические параметры блока"
+      Caption         =   "Р¤РёР·РёС‡РµСЃРєРёРµ РїР°СЂР°РјРµС‚СЂС‹ Р±Р»РѕРєР°"
       Height          =   4425
       Index           =   1
       Left            =   -20000
@@ -943,7 +943,7 @@ Begin VB.Form frmEdit
       Top             =   735
       Width           =   9885
       Begin VB.OptionButton Option2 
-         Caption         =   "Десятичные единицы"
+         Caption         =   "Р”РµСЃСЏС‚РёС‡РЅС‹Рµ РµРґРёРЅРёС†С‹"
          Height          =   225
          Index           =   1
          Left            =   1680
@@ -952,7 +952,7 @@ Begin VB.Form frmEdit
          Width           =   2010
       End
       Begin VB.OptionButton Option2 
-         Caption         =   "Градусы"
+         Caption         =   "Р“СЂР°РґСѓСЃС‹"
          Height          =   225
          Index           =   0
          Left            =   525
@@ -1237,7 +1237,7 @@ Begin VB.Form frmEdit
          Width           =   2745
       End
       Begin VB.Label Label40 
-         Caption         =   "сек"
+         Caption         =   "СЃРµРє"
          Height          =   285
          Index           =   11
          Left            =   6405
@@ -1246,7 +1246,7 @@ Begin VB.Form frmEdit
          Width           =   330
       End
       Begin VB.Label Label40 
-         Caption         =   "мин"
+         Caption         =   "РјРёРЅ"
          Height          =   285
          Index           =   10
          Left            =   5460
@@ -1255,7 +1255,7 @@ Begin VB.Form frmEdit
          Width           =   435
       End
       Begin VB.Label Label40 
-         Caption         =   "град"
+         Caption         =   "РіСЂР°Рґ"
          Height          =   285
          Index           =   9
          Left            =   4515
@@ -1264,7 +1264,7 @@ Begin VB.Form frmEdit
          Width           =   435
       End
       Begin VB.Label Label40 
-         Caption         =   "сек"
+         Caption         =   "СЃРµРє"
          Height          =   285
          Index           =   8
          Left            =   6405
@@ -1273,7 +1273,7 @@ Begin VB.Form frmEdit
          Width           =   330
       End
       Begin VB.Label Label40 
-         Caption         =   "мин"
+         Caption         =   "РјРёРЅ"
          Height          =   285
          Index           =   7
          Left            =   5460
@@ -1282,7 +1282,7 @@ Begin VB.Form frmEdit
          Width           =   435
       End
       Begin VB.Label Label40 
-         Caption         =   "час"
+         Caption         =   "С‡Р°СЃ"
          Height          =   285
          Index           =   6
          Left            =   4515
@@ -1291,7 +1291,7 @@ Begin VB.Form frmEdit
          Width           =   435
       End
       Begin VB.Label Label40 
-         Caption         =   "сек"
+         Caption         =   "СЃРµРє"
          Height          =   285
          Index           =   5
          Left            =   6405
@@ -1300,7 +1300,7 @@ Begin VB.Form frmEdit
          Width           =   330
       End
       Begin VB.Label Label40 
-         Caption         =   "мин"
+         Caption         =   "РјРёРЅ"
          Height          =   285
          Index           =   4
          Left            =   5460
@@ -1309,7 +1309,7 @@ Begin VB.Form frmEdit
          Width           =   435
       End
       Begin VB.Label Label40 
-         Caption         =   "град"
+         Caption         =   "РіСЂР°Рґ"
          Height          =   285
          Index           =   3
          Left            =   4515
@@ -1318,7 +1318,7 @@ Begin VB.Form frmEdit
          Width           =   435
       End
       Begin VB.Label Label40 
-         Caption         =   "сек"
+         Caption         =   "СЃРµРє"
          Height          =   285
          Index           =   2
          Left            =   6405
@@ -1327,7 +1327,7 @@ Begin VB.Form frmEdit
          Width           =   330
       End
       Begin VB.Label Label40 
-         Caption         =   "мин"
+         Caption         =   "РјРёРЅ"
          Height          =   285
          Index           =   1
          Left            =   5460
@@ -1336,7 +1336,7 @@ Begin VB.Form frmEdit
          Width           =   435
       End
       Begin VB.Label Label40 
-         Caption         =   "час"
+         Caption         =   "С‡Р°СЃ"
          Height          =   285
          Index           =   0
          Left            =   4515
@@ -1489,7 +1489,7 @@ Begin VB.Form frmEdit
          Width           =   2325
       End
       Begin VB.Label Label39 
-         Caption         =   "Образец"
+         Caption         =   "РћР±СЂР°Р·РµС†"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -1516,7 +1516,7 @@ Begin VB.Form frmEdit
          Width           =   3375
       End
       Begin VB.Label Label39 
-         Caption         =   "Рабочий диапазон (subband sample rate), Гц"
+         Caption         =   "Р Р°Р±РѕС‡РёР№ РґРёР°РїР°Р·РѕРЅ (subband sample rate), Р“С†"
          Height          =   225
          Index           =   6
          Left            =   210
@@ -1525,7 +1525,7 @@ Begin VB.Form frmEdit
          Width           =   3375
       End
       Begin VB.Label Label39 
-         Caption         =   "Центр частотного диапазона (subband center), Гц"
+         Caption         =   "Р¦РµРЅС‚СЂ С‡Р°СЃС‚РѕС‚РЅРѕРіРѕ РґРёР°РїР°Р·РѕРЅР° (subband center), Р“С†"
          Height          =   435
          Index           =   5
          Left            =   210
@@ -1534,7 +1534,7 @@ Begin VB.Form frmEdit
          Width           =   3375
       End
       Begin VB.Label Label39 
-         Caption         =   "Угол обзора (angle range)"
+         Caption         =   "РЈРіРѕР» РѕР±Р·РѕСЂР° (angle range)"
          Height          =   225
          Index           =   4
          Left            =   210
@@ -1543,7 +1543,7 @@ Begin VB.Form frmEdit
          Width           =   3375
       End
       Begin VB.Label Label39 
-         Caption         =   "Конечное склонение (EndDEC)"
+         Caption         =   "РљРѕРЅРµС‡РЅРѕРµ СЃРєР»РѕРЅРµРЅРёРµ (EndDEC)"
          Height          =   225
          Index           =   3
          Left            =   210
@@ -1552,7 +1552,7 @@ Begin VB.Form frmEdit
          Width           =   3375
       End
       Begin VB.Label Label39 
-         Caption         =   "Конечный угол (EndRA)"
+         Caption         =   "РљРѕРЅРµС‡РЅС‹Р№ СѓРіРѕР» (EndRA)"
          Height          =   225
          Index           =   2
          Left            =   210
@@ -1561,7 +1561,7 @@ Begin VB.Form frmEdit
          Width           =   3375
       End
       Begin VB.Label Label39 
-         Caption         =   "Начальное склонение (StartDEC) - показывается клиентом SETI@home"
+         Caption         =   "РќР°С‡Р°Р»СЊРЅРѕРµ СЃРєР»РѕРЅРµРЅРёРµ (StartDEC) - РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ РєР»РёРµРЅС‚РѕРј SETI@home"
          Height          =   435
          Index           =   1
          Left            =   210
@@ -1570,7 +1570,7 @@ Begin VB.Form frmEdit
          Width           =   3375
       End
       Begin VB.Label Label39 
-         Caption         =   "Стартовый угол (StartRA) - показывается клиентом SETI@home"
+         Caption         =   "РЎС‚Р°СЂС‚РѕРІС‹Р№ СѓРіРѕР» (StartRA) - РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ РєР»РёРµРЅС‚РѕРј SETI@home"
          Height          =   435
          Index           =   0
          Left            =   210
@@ -1580,7 +1580,7 @@ Begin VB.Form frmEdit
       End
    End
    Begin VB.Frame Frame1 
-      Caption         =   "Общие сведения об обрабатываемом блоке"
+      Caption         =   "РћР±С‰РёРµ СЃРІРµРґРµРЅРёСЏ РѕР± РѕР±СЂР°Р±Р°С‚С‹РІР°РµРјРѕРј Р±Р»РѕРєРµ"
       Height          =   4530
       Index           =   0
       Left            =   150
@@ -1683,7 +1683,7 @@ Begin VB.Form frmEdit
          Width           =   2745
       End
       Begin VB.Label Label36 
-         Caption         =   "Частота (subband base), Гц"
+         Caption         =   "Р§Р°СЃС‚РѕС‚Р° (subband base), Р“С†"
          Height          =   225
          Left            =   315
          TabIndex        =   70
@@ -1759,7 +1759,7 @@ Begin VB.Form frmEdit
          Width           =   1485
       End
       Begin VB.Label Label31 
-         Caption         =   "Образец"
+         Caption         =   "РћР±СЂР°Р·РµС†"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -1776,7 +1776,7 @@ Begin VB.Form frmEdit
          Width           =   855
       End
       Begin VB.Label Label5 
-         Caption         =   "Телескоп (aо1420 для Аресибо)"
+         Caption         =   "РўРµР»РµСЃРєРѕРї (aРѕ1420 РґР»СЏ РђСЂРµСЃРёР±Рѕ)"
          Height          =   225
          Left            =   315
          TabIndex        =   11
@@ -1784,7 +1784,7 @@ Begin VB.Form frmEdit
          Width           =   2640
       End
       Begin VB.Label Label4 
-         Caption         =   "Время записи информации"
+         Caption         =   "Р’СЂРµРјСЏ Р·Р°РїРёСЃРё РёРЅС„РѕСЂРјР°С†РёРё"
          Height          =   225
          Left            =   315
          TabIndex        =   9
@@ -1792,7 +1792,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label3 
-         Caption         =   "Имя блока"
+         Caption         =   "РРјСЏ Р±Р»РѕРєР°"
          Height          =   225
          Left            =   315
          TabIndex        =   7
@@ -1800,7 +1800,7 @@ Begin VB.Form frmEdit
          Width           =   2850
       End
       Begin VB.Label Label2 
-         Caption         =   "Идентификационный номер записи"
+         Caption         =   "РРґРµРЅС‚РёС„РёРєР°С†РёРѕРЅРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё"
          Height          =   225
          Left            =   315
          TabIndex        =   5
@@ -1842,23 +1842,23 @@ Begin VB.Form frmEdit
       BeginProperty Tabs {1EFB6598-857C-11D1-B16A-00C0F0283628} 
          NumTabs         =   5
          BeginProperty Tab1 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Общие сведения"
+            Caption         =   "РћР±С‰РёРµ СЃРІРµРґРµРЅРёСЏ"
             ImageVarType    =   2
          EndProperty
          BeginProperty Tab2 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Физические параметры"
+            Caption         =   "Р¤РёР·РёС‡РµСЃРєРёРµ РїР°СЂР°РјРµС‚СЂС‹"
             ImageVarType    =   2
          EndProperty
          BeginProperty Tab3 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Координаты"
+            Caption         =   "РљРѕРѕСЂРґРёРЅР°С‚С‹"
             ImageVarType    =   2
          EndProperty
          BeginProperty Tab4 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Дополнительные сведения"
+            Caption         =   "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРІРµРґРµРЅРёСЏ"
             ImageVarType    =   2
          EndProperty
          BeginProperty Tab5 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Комментарии"
+            Caption         =   "РљРѕРјРјРµРЅС‚Р°СЂРёРё"
             ImageVarType    =   2
          EndProperty
       EndProperty
@@ -1917,10 +1917,10 @@ Private Sub Command1_Click()
 Dim i As Long
     'TO DO validate and save changes
     'Unload Me
-'Exit Sub    'ЗАГЛУШКА!!!
+'Exit Sub    'Р—РђР“Р›РЈРЁРљРђ!!!
     If WU.CheckUnit(0, Text1.text) Then
         If NewMode Then
-            Result = MsgBox("Запись с этим номером уже существует! Хотите ли Вы" + vbCrLf + "перезаписать новую информацию повех старой?", vbYesNo + vbExclamation, "Запись уже существует")
+            Result = MsgBox("Р—Р°РїРёСЃСЊ СЃ СЌС‚РёРј РЅРѕРјРµСЂРѕРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚! РҐРѕС‚РёС‚Рµ Р»Рё Р’С‹" + vbCrLf + "РїРµСЂРµР·Р°РїРёСЃР°С‚СЊ РЅРѕРІСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕРІРµС… СЃС‚Р°СЂРѕР№?", vbYesNo + vbExclamation, "Р—Р°РїРёСЃСЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚")
             If Result = vbYes Then
                 EditMode = True
                 NewMode = False
@@ -1932,7 +1932,7 @@ Dim i As Long
         End If
     Else
         If EditMode Then
-            Result = MsgBox("Записи с этим номером нет в журнале! Хотите ли Вы" + vbCrLf + "записать новую информацию вместо редактирования старой?", vbYesNo + vbExclamation, "Новая запись")
+            Result = MsgBox("Р—Р°РїРёСЃРё СЃ СЌС‚РёРј РЅРѕРјРµСЂРѕРј РЅРµС‚ РІ Р¶СѓСЂРЅР°Р»Рµ! РҐРѕС‚РёС‚Рµ Р»Рё Р’С‹" + vbCrLf + "Р·Р°РїРёСЃР°С‚СЊ РЅРѕРІСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ РІРјРµСЃС‚Рѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЃС‚Р°СЂРѕР№?", vbYesNo + vbExclamation, "РќРѕРІР°СЏ Р·Р°РїРёСЃСЊ")
             If Result = vbYes Then
                 EditMode = False
                 NewMode = True
@@ -1945,7 +1945,7 @@ Dim i As Long
     End If
     If WU.CheckUnit(1, Text2.text) Then
         If NewMode Then
-            Result = MsgBox("Запись с таким именем уже существует! Хотите ли Вы" + vbCrLf + "перезаписать новую информацию повех старой?", vbYesNo + vbExclamation, "Запись уже существует")
+            Result = MsgBox("Р—Р°РїРёСЃСЊ СЃ С‚Р°РєРёРј РёРјРµРЅРµРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚! РҐРѕС‚РёС‚Рµ Р»Рё Р’С‹" + vbCrLf + "РїРµСЂРµР·Р°РїРёСЃР°С‚СЊ РЅРѕРІСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕРІРµС… СЃС‚Р°СЂРѕР№?", vbYesNo + vbExclamation, "Р—Р°РїРёСЃСЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚")
             If Result = vbYes Then
                 EditMode = True
                 NewMode = False
@@ -1957,7 +1957,7 @@ Dim i As Long
         End If
     Else
         If EditMode Then
-            Result = MsgBox("Записи с таким именем нет в журнале! Хотите ли Вы" + vbCrLf + "записать новую информацию вместо редактирования старой?", vbYesNo + vbExclamation, "Новая запись")
+            Result = MsgBox("Р—Р°РїРёСЃРё СЃ С‚Р°РєРёРј РёРјРµРЅРµРј РЅРµС‚ РІ Р¶СѓСЂРЅР°Р»Рµ! РҐРѕС‚РёС‚Рµ Р»Рё Р’С‹" + vbCrLf + "Р·Р°РїРёСЃР°С‚СЊ РЅРѕРІСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ РІРјРµСЃС‚Рѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЃС‚Р°СЂРѕР№?", vbYesNo + vbExclamation, "РќРѕРІР°СЏ Р·Р°РїРёСЃСЊ")
             If Result = vbYes Then
                 EditMode = False
                 NewMode = True
@@ -1971,13 +1971,13 @@ Dim i As Long
     WU.NumID = Text1.text
     WU.UnitName = Text2.text
     If Option2(0).Value Then
-        'Отдельные поля -> нужно преобразовывать
+        'РћС‚РґРµР»СЊРЅС‹Рµ РїРѕР»СЏ -> РЅСѓР¶РЅРѕ РїСЂРµРѕР±СЂР°Р·РѕРІС‹РІР°С‚СЊ
         WU.StartRA = EncodeCoor(Text9(0).text, Text10(0).text, Text11(0).text)
         WU.StartDEC = EncodeCoor(Text9(1).text, Text10(1).text, Text11(1).text)
         WU.EndRA = EncodeCoor(Text9(2).text, Text10(2).text, Text11(2).text)
         WU.EndDEC = EncodeCoor(Text9(3).text, Text10(3).text, Text11(3).text)
     Else
-        'Координаты уже представлены в нужном виде
+        'РљРѕРѕСЂРґРёРЅР°С‚С‹ СѓР¶Рµ РїСЂРµРґСЃС‚Р°РІР»РµРЅС‹ РІ РЅСѓР¶РЅРѕРј РІРёРґРµ
         WU.StartRA = Text8(0).text
         WU.StartDEC = Text8(1).text
         WU.EndRA = Text8(2).text
@@ -2017,8 +2017,8 @@ Dim i As Long
         .Reserve3 = Text16.text
     End With
     If Not (WU.NumPositions = "") Then
-        'Этот параметр неизменяемый. Если все-таки это поле пусто, то присвоить ему
-        'значение по-умолчанию
+        'Р­С‚РѕС‚ РїР°СЂР°РјРµС‚СЂ РЅРµРёР·РјРµРЅСЏРµРјС‹Р№. Р•СЃР»Рё РІСЃРµ-С‚Р°РєРё СЌС‚Рѕ РїРѕР»Рµ РїСѓСЃС‚Рѕ, С‚Рѕ РїСЂРёСЃРІРѕРёС‚СЊ РµРјСѓ
+        'Р·РЅР°С‡РµРЅРёРµ РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
         WU.NumPositions = "22"
     End If
     For i = 0 To 21
@@ -2028,38 +2028,38 @@ Dim i As Long
     Next i
     'Saving results
     If EditMode Then
-    'TO DO  сделать refresh для DataGrid1, а, может даже Rebind
+    'TO DO  СЃРґРµР»Р°С‚СЊ refresh РґР»СЏ DataGrid1, Р°, РјРѕР¶РµС‚ РґР°Р¶Рµ Rebind
         If Not (WU.WriteHistory(WU.EncodeWU, 0)) Then
-            Result = MsgBox("Ошибка записи в журнал!", vbOKOnly, "Ошибка")
+            Result = MsgBox("РћС€РёР±РєР° Р·Р°РїРёСЃРё РІ Р¶СѓСЂРЅР°Р»!", vbOKOnly, "РћС€РёР±РєР°")
         End If
-        'Нужно восстановить испорченные номер и имя блока
+        'РќСѓР¶РЅРѕ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РёСЃРїРѕСЂС‡РµРЅРЅС‹Рµ РЅРѕРјРµСЂ Рё РёРјСЏ Р±Р»РѕРєР°
         WU.NumID = Text1.text
         WU.UnitName = Text2.text
         WU.AddRecord 2, CLng(Val(WU.NumID))
-    'Это не совсем то, что имелось в виду чуть выше (не Rebind)
+    'Р­С‚Рѕ РЅРµ СЃРѕРІСЃРµРј С‚Рѕ, С‡С‚Рѕ РёРјРµР»РѕСЃСЊ РІ РІРёРґСѓ С‡СѓС‚СЊ РІС‹С€Рµ (РЅРµ Rebind)
     ''frmHistory.DataGrid1.ReBind
     ''frmHistory.DataGrid1.Refresh
     Else
-    'Новая запись
+    'РќРѕРІР°СЏ Р·Р°РїРёСЃСЊ
         i = WU.GetLastNum
-        'Нужно восстановить испорченные номер и имя блока
+        'РќСѓР¶РЅРѕ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РёСЃРїРѕСЂС‡РµРЅРЅС‹Рµ РЅРѕРјРµСЂ Рё РёРјСЏ Р±Р»РѕРєР°
         WU.NumID = Text1.text
         WU.UnitName = Text2.text
         If CDbl(Val(WU.NumID)) > i Then
-            'В конец файла
+            'Р’ РєРѕРЅРµС† С„Р°Р№Р»Р°
             If Not (WU.WriteHistory(WU.EncodeWU, 1)) Then
-                Result = MsgBox("Ошибка записи в журнал!", vbOKOnly, "Ошибка")
-                'WriteHistory сам знает когда изменять значения RegRecords и LastRecordNum
+                Result = MsgBox("РћС€РёР±РєР° Р·Р°РїРёСЃРё РІ Р¶СѓСЂРЅР°Р»!", vbOKOnly, "РћС€РёР±РєР°")
+                'WriteHistory СЃР°Рј Р·РЅР°РµС‚ РєРѕРіРґР° РёР·РјРµРЅСЏС‚СЊ Р·РЅР°С‡РµРЅРёСЏ RegRecords Рё LastRecordNum
                 ''LastRecordNum = LastRecordNum + 1
             End If
         Else
-            'Вставка в середину журнала
+            'Р’СЃС‚Р°РІРєР° РІ СЃРµСЂРµРґРёРЅСѓ Р¶СѓСЂРЅР°Р»Р°
             If Not (WU.WriteHistory(WU.EncodeWU, 0)) Then
-                Result = MsgBox("Ошибка записи в журнал!", vbOKOnly, "Ошибка")
+                Result = MsgBox("РћС€РёР±РєР° Р·Р°РїРёСЃРё РІ Р¶СѓСЂРЅР°Р»!", vbOKOnly, "РћС€РёР±РєР°")
             End If
         End If
         WU.AddRecord 1, CLng(Val(Text1.text))
-        'WriteHistory сам знает когда изменять значения RegRecords и LastRecordNum
+        'WriteHistory СЃР°Рј Р·РЅР°РµС‚ РєРѕРіРґР° РёР·РјРµРЅСЏС‚СЊ Р·РЅР°С‡РµРЅРёСЏ RegRecords Рё LastRecordNum
         ''RegRecords = RegRecords + 1
         frmHistory.DataGrid1.Refresh
     End If
@@ -2098,20 +2098,20 @@ End Sub
 Private Sub Form_Load()
 Dim fColor As Long, bColor As Long
 Dim i As Long
-'Если EditMode=True, то все известные поля уже заполнены
-'Если же нет, то известны только ID и Name
+'Р•СЃР»Рё EditMode=True, С‚Рѕ РІСЃРµ РёР·РІРµСЃС‚РЅС‹Рµ РїРѕР»СЏ СѓР¶Рµ Р·Р°РїРѕР»РЅРµРЅС‹
+'Р•СЃР»Рё Р¶Рµ РЅРµС‚, С‚Рѕ РёР·РІРµСЃС‚РЅС‹ С‚РѕР»СЊРєРѕ ID Рё Name
     fColor = Label1.ForeColor
     bColor = Label1.BackColor
     Label1.ForeColor = vbYellow
     Label1.BackColor = vbBlack
-    Label1.Caption = "ВНИМАНИЕ! Программа НЕ ОСУЩЕСТВЛЯЕТ контроль за соответствием вводимой информации приведенным образцам! Последствия ошибки могут быть необратимы!"
+    Label1.Caption = "Р’РќРРњРђРќРР•! РџСЂРѕРіСЂР°РјРјР° РќР• РћРЎРЈР©Р•РЎРўР’Р›РЇР•Рў РєРѕРЅС‚СЂРѕР»СЊ Р·Р° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµРј РІРІРѕРґРёРјРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РїСЂРёРІРµРґРµРЅРЅС‹Рј РѕР±СЂР°Р·С†Р°Рј! РџРѕСЃР»РµРґСЃС‚РІРёСЏ РѕС€РёР±РєРё РјРѕРіСѓС‚ Р±С‹С‚СЊ РЅРµРѕР±СЂР°С‚РёРјС‹!"
     ''Label1.ForeColor = fColor
     ''Label1.BackColor = bColor
     
     Text1.text = WU.NumID
     Text2.text = WU.UnitName
-    'ВСЕ! На этом кончается ТОЧНО известная информация!
-    'Есть ли что-то еще - не известно! По мере сил можно будет довесить проверки...
+    'Р’РЎР•! РќР° СЌС‚РѕРј РєРѕРЅС‡Р°РµС‚СЃСЏ РўРћР§РќРћ РёР·РІРµСЃС‚РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ!
+    'Р•СЃС‚СЊ Р»Рё С‡С‚Рѕ-С‚Рѕ РµС‰Рµ - РЅРµ РёР·РІРµСЃС‚РЅРѕ! РџРѕ РјРµСЂРµ СЃРёР» РјРѕР¶РЅРѕ Р±СѓРґРµС‚ РґРѕРІРµСЃРёС‚СЊ РїСЂРѕРІРµСЂРєРё...
     'TO DO
     
 If EditMode Then
@@ -2131,7 +2131,7 @@ If EditMode Then
     Text9(1).text = GetHourStr(CDbl(Val(WU.StartDEC)))
     Text10(1).text = GetMinStr(CDbl(Val(WU.StartDEC)))
     Text11(1).text = GetSecStr(CDbl(Val(WU.StartDEC)))
-    ''См. Option2_click
+    ''РЎРј. Option2_click
     ''Text8(0).text = WU.StartRA
     ''Text8(1).text = WU.StartDEC
     If Not (WU.EndRA = "") Then
@@ -2158,7 +2158,7 @@ If EditMode Then
     If Not (WU.SubbandNum = "") Then
         Text8(7).text = WU.SubbandNum
     End If
-'Закладка 4
+'Р—Р°РєР»Р°РґРєР° 4
     If Not (WU.Type_of_unit = "") Then
         Text12(0).text = WU.Type_of_unit
     End If
@@ -2229,7 +2229,7 @@ End Sub
 Private Sub Option2_Click(Index As Integer)
 Dim i As Long
     Select Case Index
-        Case 0: 'Отдельные поля для градусов, минут, секунд
+        Case 0: 'РћС‚РґРµР»СЊРЅС‹Рµ РїРѕР»СЏ РґР»СЏ РіСЂР°РґСѓСЃРѕРІ, РјРёРЅСѓС‚, СЃРµРєСѓРЅРґ
             For i = 0 To 3
                 Text8(i).Visible = False
                 Text9(i).Visible = True
