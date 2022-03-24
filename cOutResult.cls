@@ -26,9 +26,9 @@ Option Explicit
 #End If
 
 Private Type tGaussRec
-    WUID As Long    'Номер блока
-    'ID As Long      'Номер записи для одного и того же блока
-    Label As Long     'Идентификация источника информации
+    WUID As Long    'РќРѕРјРµСЂ Р±Р»РѕРєР°
+    'ID As Long      'РќРѕРјРµСЂ Р·Р°РїРёСЃРё РґР»СЏ РѕРґРЅРѕРіРѕ Рё С‚РѕРіРѕ Р¶Рµ Р±Р»РѕРєР°
+    Label As Long     'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
     peak As Single
     mean As Single
     ra As Single
@@ -45,9 +45,9 @@ Private Type tGaussRec
 End Type
 
 Private Type tSpikeRec
-    WUID As Long    'Номер блока
-    'ID As Long      'Номер записи для одного и того же блока
-    Label As Long     'Идентификация источника информации
+    WUID As Long    'РќРѕРјРµСЂ Р±Р»РѕРєР°
+    'ID As Long      'РќРѕРјРµСЂ Р·Р°РїРёСЃРё РґР»СЏ РѕРґРЅРѕРіРѕ Рё С‚РѕРіРѕ Р¶Рµ Р±Р»РѕРєР°
+    Label As Long     'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
     power As Single
     ra As Single
     dec As Single
@@ -60,9 +60,9 @@ Private Type tSpikeRec
 End Type
 
 Private Type tPulseRec
-    WUID As Long    'Номер блока
-    'ID As Long      'Номер записи для одного и того же блока
-    Label As Long     'Идентификация источника информации
+    WUID As Long    'РќРѕРјРµСЂ Р±Р»РѕРєР°
+    'ID As Long      'РќРѕРјРµСЂ Р·Р°РїРёСЃРё РґР»СЏ РѕРґРЅРѕРіРѕ Рё С‚РѕРіРѕ Р¶Рµ Р±Р»РѕРєР°
+    Label As Long     'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
     power As Single
     mean As Single
     period As Single
@@ -80,9 +80,9 @@ Private Type tPulseRec
 End Type
 
 Private Type tTripletRec
-    WUID As Long    'Номер блока
-    'ID As Long      'Номер записи для одного и того же блока
-    Label As Long     'Идентификация источника информации
+    WUID As Long    'РќРѕРјРµСЂ Р±Р»РѕРєР°
+    'ID As Long      'РќРѕРјРµСЂ Р·Р°РїРёСЃРё РґР»СЏ РѕРґРЅРѕРіРѕ Рё С‚РѕРіРѕ Р¶Рµ Р±Р»РѕРєР°
+    Label As Long     'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
     power As Single
     mean As Single
     period As Single
@@ -96,7 +96,7 @@ Private Type tTripletRec
     Reserve2 As Long
 End Type
 
-Private Const HistoryMode = 2   'Режим работы с журналами
+Private Const HistoryMode = 2   'Р РµР¶РёРј СЂР°Р±РѕС‚С‹ СЃ Р¶СѓСЂРЅР°Р»Р°РјРё
 
 Private mvartime As Double 'local copy
 Private mvarfreq As Double 'local copy
@@ -124,12 +124,12 @@ Private mvarhPFile As Long 'local copy -> Pulses file handler
 Private mvarhTFile As Long 'local copy -> Triplets file handler
 Private mvarhFile As Long 'local copy  -> Universal file handler
 
-Private VerifyMode As Boolean   'Флаг осуществления проверки при записи,
-                                'показывает, что при записи нужно будет просмотреть содержимое файла данных
-Private GaussRec As tGaussRec   'Запись для работы с файлом данных (SETIgaus.dat)
-Private SpikeRec As tSpikeRec   'Запись для работы с файлом данных (SETIspik.dat)
-Private PulseRec As tPulseRec   'Запись для работы с файлом данных (SETIpuls.dat)
-Private TripletRec As tTripletRec 'Запись для работы с файлом данных (SETItrip.dat)
+Private VerifyMode As Boolean   'Р¤Р»Р°Рі РѕСЃСѓС‰РµСЃС‚РІР»РµРЅРёСЏ РїСЂРѕРІРµСЂРєРё РїСЂРё Р·Р°РїРёСЃРё,
+                                'РїРѕРєР°Р·С‹РІР°РµС‚, С‡С‚Рѕ РїСЂРё Р·Р°РїРёСЃРё РЅСѓР¶РЅРѕ Р±СѓРґРµС‚ РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ СЃРѕРґРµСЂР¶РёРјРѕРµ С„Р°Р№Р»Р° РґР°РЅРЅС‹С…
+Private GaussRec As tGaussRec   'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РґР°РЅРЅС‹С… (SETIgaus.dat)
+Private SpikeRec As tSpikeRec   'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РґР°РЅРЅС‹С… (SETIspik.dat)
+Private PulseRec As tPulseRec   'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РґР°РЅРЅС‹С… (SETIpuls.dat)
+Private TripletRec As tTripletRec 'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РґР°РЅРЅС‹С… (SETItrip.dat)
 
 Public Property Let len_prof(ByVal vData As Long)
 'used when assigning a value to the property, on the left side of an assignment.
@@ -491,16 +491,16 @@ End Property
 
 'LINUX compatible
 '**********************************************************
-'*           Проверить существование файла                *
-'*  Mode=0: клиент для Windows                            *
-'*  Mode=1: клиент для Linux                              *
-'*  Mode=2: работа с журналом                             *
-'* Target=0: Проверить существование файла Outfile.sah    *
-'* Target=1: Проверить существование файла Result.sah     *
-'* Target=2: Проверить существование файла SETIgaus.dat   *
-'* Target=3: Проверить существование файла SETIspik.dat   *
-'* Target=4: Проверить существование файла SETIpuls.dat   *
-'* Target=5: Проверить существование файла SETItrip.dat   *
+'*           РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р°                *
+'*  Mode=0: РєР»РёРµРЅС‚ РґР»СЏ Windows                            *
+'*  Mode=1: РєР»РёРµРЅС‚ РґР»СЏ Linux                              *
+'*  Mode=2: СЂР°Р±РѕС‚Р° СЃ Р¶СѓСЂРЅР°Р»РѕРј                             *
+'* Target=0: РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р° Outfile.sah    *
+'* Target=1: РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р° Result.sah     *
+'* Target=2: РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р° SETIgaus.dat   *
+'* Target=3: РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р° SETIspik.dat   *
+'* Target=4: РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р° SETIpuls.dat   *
+'* Target=5: РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р° SETItrip.dat   *
 '**********************************************************
 Public Function CheckFile(ByVal Mode As Long, ByVal Target As Long) As Boolean
 Dim CheckResult As Boolean
@@ -519,15 +519,15 @@ CheckFileErr:
 End Function
 
 '**********************************************************
-'*     Проверяет существование записи в журнале           *
-'*    Mode=0: Проверка существования конкретной записи    *
-'*            блока WUID                                  *
-'*    Mode=1: Проверка определенного параметра записи     *
-'*            для блока WUID (будущее использование)      *
-'* Target=2: Получить расположение файла типа SETIgaus.dat*
-'* Target=3: Получить расположение файла типа SETIspik.dat*
-'* Target=4: Получить расположение файла типа SETIpuls.dat*
-'* Target=5: Получить расположение файла типа SETItrip.dat*
+'*     РџСЂРѕРІРµСЂСЏРµС‚ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ Р·Р°РїРёСЃРё РІ Р¶СѓСЂРЅР°Р»Рµ           *
+'*    Mode=0: РџСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ РєРѕРЅРєСЂРµС‚РЅРѕР№ Р·Р°РїРёСЃРё    *
+'*            Р±Р»РѕРєР° WUID                                  *
+'*    Mode=1: РџСЂРѕРІРµСЂРєР° РѕРїСЂРµРґРµР»РµРЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР° Р·Р°РїРёСЃРё     *
+'*            РґР»СЏ Р±Р»РѕРєР° WUID (Р±СѓРґСѓС‰РµРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ)      *
+'* Target=2: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIgaus.dat*
+'* Target=3: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIspik.dat*
+'* Target=4: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIpuls.dat*
+'* Target=5: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETItrip.dat*
 '**********************************************************
 Public Function CheckRecord(Mode As Long, Target As Long, Optional WUID As Long = -1, Optional ID As Long = -1) As Boolean
 Dim LastRecNum As Long
@@ -535,8 +535,8 @@ Dim i As Long
     On Error GoTo CheckRecordErr
 
     CheckRecord = False
-    If CheckFile(HistoryMode, Target) Then 'Файл существует - открываем его
-'ВНИМАНИЕ! Здесь могут быть проблемы с указателями (файл уже может быть открыт)!!!
+    If CheckFile(HistoryMode, Target) Then 'Р¤Р°Р№Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚ - РѕС‚РєСЂС‹РІР°РµРј РµРіРѕ
+'Р’РќРРњРђРќРР•! Р—РґРµСЃСЊ РјРѕРіСѓС‚ Р±С‹С‚СЊ РїСЂРѕР±Р»РµРјС‹ СЃ СѓРєР°Р·Р°С‚РµР»СЏРјРё (С„Р°Р№Р» СѓР¶Рµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚РєСЂС‹С‚)!!!
 'TO DO
         Select Case Target
             Case 2:
@@ -545,15 +545,15 @@ Dim i As Long
                 Open GetFileName(HistoryMode, Target) For Random As hFile Len = Len(TMPgaussrec)
                 LastRecNum = LOF(hFile) \ Len(TMPgaussrec)
                     If Not LastRecNum = 0 Then
-                        Seek hFile, 1   'переместиться в начало
-                        Select Case Mode    'Выбрать режим проверки
+                        Seek hFile, 1   'РїРµСЂРµРјРµСЃС‚РёС‚СЊСЃСЏ РІ РЅР°С‡Р°Р»Рѕ
+                        Select Case Mode    'Р’С‹Р±СЂР°С‚СЊ СЂРµР¶РёРј РїСЂРѕРІРµСЂРєРё
                             Case 0:
-                                If Not WUID = -1 Then   'Задан ли номер блока?
-                                    For i = 1 To LastRecNum     'Проверить все записи
-                                        Get hFile, , TMPgaussrec    'Читать запись
-                                        If TMPgaussrec.WUID = WUID Then 'Да, есть запись для этого блока
+                                If Not WUID = -1 Then   'Р—Р°РґР°РЅ Р»Рё РЅРѕРјРµСЂ Р±Р»РѕРєР°?
+                                    For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                                        Get hFile, , TMPgaussrec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                                        If TMPgaussrec.WUID = WUID Then 'Р”Р°, РµСЃС‚СЊ Р·Р°РїРёСЃСЊ РґР»СЏ СЌС‚РѕРіРѕ Р±Р»РѕРєР°
                                             CheckRecord = True
-                                            i = LastRecNum      'Остановить проверку
+                                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ
                                         End If
                                     Next i
                                 End If
@@ -565,15 +565,15 @@ Dim i As Long
                 Open GetFileName(HistoryMode, Target) For Random As hFile Len = Len(TMPspikerec)
                 LastRecNum = LOF(hFile) \ Len(TMPspikerec)
                     If Not LastRecNum = 0 Then
-                        Seek hFile, 1   'переместиться в начало
-                        Select Case Mode    'Выбрать режим проверки
+                        Seek hFile, 1   'РїРµСЂРµРјРµСЃС‚РёС‚СЊСЃСЏ РІ РЅР°С‡Р°Р»Рѕ
+                        Select Case Mode    'Р’С‹Р±СЂР°С‚СЊ СЂРµР¶РёРј РїСЂРѕРІРµСЂРєРё
                             Case 0:
-                                If Not WUID = -1 Then   'Задан ли номер блока?
-                                    For i = 1 To LastRecNum     'Проверить все записи
-                                        Get hFile, , TMPspikerec    'Читать запись
-                                        If TMPspikerec.WUID = WUID Then 'Да, есть запись для этого блока
+                                If Not WUID = -1 Then   'Р—Р°РґР°РЅ Р»Рё РЅРѕРјРµСЂ Р±Р»РѕРєР°?
+                                    For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                                        Get hFile, , TMPspikerec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                                        If TMPspikerec.WUID = WUID Then 'Р”Р°, РµСЃС‚СЊ Р·Р°РїРёСЃСЊ РґР»СЏ СЌС‚РѕРіРѕ Р±Р»РѕРєР°
                                             CheckRecord = True
-                                            i = LastRecNum      'Остановить проверку
+                                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ
                                         End If
                                     Next i
                                 End If
@@ -585,15 +585,15 @@ Dim i As Long
                 Open GetFileName(HistoryMode, Target) For Random As hFile Len = Len(TMPpulserec)
                 LastRecNum = LOF(hFile) \ Len(TMPpulserec)
                     If Not LastRecNum = 0 Then
-                        Seek hFile, 1   'переместиться в начало
-                        Select Case Mode    'Выбрать режим проверки
+                        Seek hFile, 1   'РїРµСЂРµРјРµСЃС‚РёС‚СЊСЃСЏ РІ РЅР°С‡Р°Р»Рѕ
+                        Select Case Mode    'Р’С‹Р±СЂР°С‚СЊ СЂРµР¶РёРј РїСЂРѕРІРµСЂРєРё
                             Case 0:
-                                If Not WUID = -1 Then   'Задан ли номер блока?
-                                    For i = 1 To LastRecNum     'Проверить все записи
-                                        Get hFile, , TMPpulserec    'Читать запись
-                                        If TMPpulserec.WUID = WUID Then 'Да, есть запись для этого блока
+                                If Not WUID = -1 Then   'Р—Р°РґР°РЅ Р»Рё РЅРѕРјРµСЂ Р±Р»РѕРєР°?
+                                    For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                                        Get hFile, , TMPpulserec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                                        If TMPpulserec.WUID = WUID Then 'Р”Р°, РµСЃС‚СЊ Р·Р°РїРёСЃСЊ РґР»СЏ СЌС‚РѕРіРѕ Р±Р»РѕРєР°
                                             CheckRecord = True
-                                            i = LastRecNum      'Остановить проверку
+                                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ
                                         End If
                                     Next i
                                 End If
@@ -605,15 +605,15 @@ Dim i As Long
                 Open GetFileName(HistoryMode, Target) For Random As hFile Len = Len(TMPtripletrec)
                 LastRecNum = LOF(hFile) \ Len(TMPtripletrec)
                     If Not LastRecNum = 0 Then
-                        Seek hFile, 1   'переместиться в начало
-                        Select Case Mode    'Выбрать режим проверки
+                        Seek hFile, 1   'РїРµСЂРµРјРµСЃС‚РёС‚СЊСЃСЏ РІ РЅР°С‡Р°Р»Рѕ
+                        Select Case Mode    'Р’С‹Р±СЂР°С‚СЊ СЂРµР¶РёРј РїСЂРѕРІРµСЂРєРё
                             Case 0:
-                                If Not WUID = -1 Then   'Задан ли номер блока?
-                                    For i = 1 To LastRecNum     'Проверить все записи
-                                        Get hFile, , TMPtripletrec    'Читать запись
-                                        If TMPtripletrec.WUID = WUID Then 'Да, есть запись для этого блока
+                                If Not WUID = -1 Then   'Р—Р°РґР°РЅ Р»Рё РЅРѕРјРµСЂ Р±Р»РѕРєР°?
+                                    For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                                        Get hFile, , TMPtripletrec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                                        If TMPtripletrec.WUID = WUID Then 'Р”Р°, РµСЃС‚СЊ Р·Р°РїРёСЃСЊ РґР»СЏ СЌС‚РѕРіРѕ Р±Р»РѕРєР°
                                             CheckRecord = True
-                                            i = LastRecNum      'Остановить проверку
+                                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ
                                         End If
                                     Next i
                                 End If
@@ -630,33 +630,33 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*             Получить имя файла данных                  *
-'*    Mode=0: Работа с клиентом для Windows               *
-'*    Mode=1: Работа с клиентом для Linux                 *
-'*    Mode=2: Работа с журналами                          *
-'* Target=0: Получить расположение файла типа Outfile.sah *
-'* Target=1: Получить расположение файла типа Result.sah  *
-'* Target=2: Получить расположение файла типа SETIgaus.dat*
-'* Target=3: Получить расположение файла типа SETIspik.dat*
-'* Target=4: Получить расположение файла типа SETIpuls.dat*
-'* Target=5: Получить расположение файла типа SETItrip.dat*
-'* Имена файлов не фиксированы, что можно использовать    *
-'* для обращения к сохраненным ранее файлам результатов,  *
-'* задавая необязательный параметр path или изменив       *
-'* глобальные константы стандартных имен файлов в Module1 *
+'*             РџРѕР»СѓС‡РёС‚СЊ РёРјСЏ С„Р°Р№Р»Р° РґР°РЅРЅС‹С…                  *
+'*    Mode=0: Р Р°Р±РѕС‚Р° СЃ РєР»РёРµРЅС‚РѕРј РґР»СЏ Windows               *
+'*    Mode=1: Р Р°Р±РѕС‚Р° СЃ РєР»РёРµРЅС‚РѕРј РґР»СЏ Linux                 *
+'*    Mode=2: Р Р°Р±РѕС‚Р° СЃ Р¶СѓСЂРЅР°Р»Р°РјРё                          *
+'* Target=0: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° Outfile.sah *
+'* Target=1: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° Result.sah  *
+'* Target=2: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIgaus.dat*
+'* Target=3: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIspik.dat*
+'* Target=4: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIpuls.dat*
+'* Target=5: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETItrip.dat*
+'* РРјРµРЅР° С„Р°Р№Р»РѕРІ РЅРµ С„РёРєСЃРёСЂРѕРІР°РЅС‹, С‡С‚Рѕ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ    *
+'* РґР»СЏ РѕР±СЂР°С‰РµРЅРёСЏ Рє СЃРѕС…СЂР°РЅРµРЅРЅС‹Рј СЂР°РЅРµРµ С„Р°Р№Р»Р°Рј СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ,  *
+'* Р·Р°РґР°РІР°СЏ РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ path РёР»Рё РёР·РјРµРЅРёРІ       *
+'* РіР»РѕР±Р°Р»СЊРЅС‹Рµ РєРѕРЅСЃС‚Р°РЅС‚С‹ СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… РёРјРµРЅ С„Р°Р№Р»РѕРІ РІ Module1 *
 '**********************************************************
 Public Function GetFileName(ByVal Mode As Long, ByVal Target As Long, Optional path As String = "missing") As String
     On Error GoTo GetFileNameErr
-Dim sfile As String     'Временная переменная для хранения результата
-Dim Success As Boolean  'Флаг успешного выполнения операции
+Dim sfile As String     'Р’СЂРµРјРµРЅРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+Dim Success As Boolean  'Р¤Р»Р°Рі СѓСЃРїРµС€РЅРѕРіРѕ РІС‹РїРѕР»РЅРµРЅРёСЏ РѕРїРµСЂР°С†РёРё
 
     sfile = ""
     Success = False
-    'Для начала проверим наличие необязательного параметра
+    'Р”Р»СЏ РЅР°С‡Р°Р»Р° РїСЂРѕРІРµСЂРёРј РЅР°Р»РёС‡РёРµ РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР°
     If Not (path = "missing") Then
-        'Параметр path задан - используем его!
+        'РџР°СЂР°РјРµС‚СЂ path Р·Р°РґР°РЅ - РёСЃРїРѕР»СЊР·СѓРµРј РµРіРѕ!
         sfile = path
-        'Стираем пробелы в конце и слэш (если есть)
+        'РЎС‚РёСЂР°РµРј РїСЂРѕР±РµР»С‹ РІ РєРѕРЅС†Рµ Рё СЃР»СЌС€ (РµСЃР»Рё РµСЃС‚СЊ)
         Do While (Right(sfile, 1) Like " ")
             sfile = Left(sfile, Len(sfile) - 1)
         Loop
@@ -667,37 +667,37 @@ Dim Success As Boolean  'Флаг успешного выполнения операции
             sfile = Left(sfile, Len(sfile) - 1)
         End If
         If (Dir(sfile, vbNormal) <> "") Then
-            'Да, такой файл существует (его содержание не проверяется)
+            'Р”Р°, С‚Р°РєРѕР№ С„Р°Р№Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚ (РµРіРѕ СЃРѕРґРµСЂР¶Р°РЅРёРµ РЅРµ РїСЂРѕРІРµСЂСЏРµС‚СЃСЏ)
             Success = True
         End If
     End If
-    'Если path не задан или в нем указана неверная информация, то...
+    'Р•СЃР»Рё path РЅРµ Р·Р°РґР°РЅ РёР»Рё РІ РЅРµРј СѓРєР°Р·Р°РЅР° РЅРµРІРµСЂРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ, С‚Рѕ...
     If Not Success Then
-        'Будем использовать стандартные имена и расположение файлов
+        'Р‘СѓРґРµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РёРјРµРЅР° Рё СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»РѕРІ
         Select Case Mode
-            Case 0: 'Mode=0: Работа с клиентом для Windows
+            Case 0: 'Mode=0: Р Р°Р±РѕС‚Р° СЃ РєР»РёРµРЅС‚РѕРј РґР»СЏ Windows
                 sfile = SETIpath & BackSlash
-            Case 1: 'Mode=1: Работа с клиентом для Linux
+            Case 1: 'Mode=1: Р Р°Р±РѕС‚Р° СЃ РєР»РёРµРЅС‚РѕРј РґР»СЏ Linux
                 sfile = LinuxPath & BackSlash
-            Case 2: 'Mode=2: Работа с журналами
+            Case 2: 'Mode=2: Р Р°Р±РѕС‚Р° СЃ Р¶СѓСЂРЅР°Р»Р°РјРё
                 sfile = App.path & BackSlash
         End Select
         Select Case Target
-            Case 0: 'Mode=0: Получить расположение файла типа Outfile.txt
+            Case 0: 'Mode=0: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° Outfile.txt
                 sfile = sfile & FileOut
-            Case 1: 'Mode=1: Получить расположение файла типа Result.txt
+            Case 1: 'Mode=1: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° Result.txt
                 sfile = sfile & FileRes
-            Case 2: 'Mode=2: Получить расположение файла типа SETIgaus.txt
+            Case 2: 'Mode=2: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIgaus.txt
                 sfile = sfile & GaussFile
-            Case 3: 'Mode=3: Получить расположение файла типа SETIspik.txt
+            Case 3: 'Mode=3: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIspik.txt
                 sfile = sfile & SpikeFile
-            Case 4: 'Mode=4: Получить расположение файла типа SETIpuls.txt
+            Case 4: 'Mode=4: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETIpuls.txt
                 sfile = sfile & PulseFile
-            Case 5: 'Mode=5: Получить расположение файла типа SETItrip.txt
+            Case 5: 'Mode=5: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° SETItrip.txt
                 sfile = sfile & TripletFile
         End Select
     End If
-    GetFileName = sfile 'Выдать полученный результат вызывающей функции
+    GetFileName = sfile 'Р’С‹РґР°С‚СЊ РїРѕР»СѓС‡РµРЅРЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹Р·С‹РІР°СЋС‰РµР№ С„СѓРЅРєС†РёРё
     
     Exit Function
 GetFileNameErr:
@@ -718,16 +718,16 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*        Определяет имя блока данных по записи в         *
-'*                    файле Result.sah                    *
+'*        РћРїСЂРµРґРµР»СЏРµС‚ РёРјСЏ Р±Р»РѕРєР° РґР°РЅРЅС‹С… РїРѕ Р·Р°РїРёСЃРё РІ         *
+'*                    С„Р°Р№Р»Рµ Result.sah                    *
 '**********************************************************
 Public Function DetectWU(sfile As String) As String
 Dim stopper As String
     On Error GoTo DetectWUErr
     
-    'Определить разделитель
+    'РћРїСЂРµРґРµР»РёС‚СЊ СЂР°Р·РґРµР»РёС‚РµР»СЊ
     stopper = "*"
-    'Определить имя блока, для которого записан этот файл
+    'РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ Р±Р»РѕРєР°, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РїРёСЃР°РЅ СЌС‚РѕС‚ С„Р°Р№Р»
     DetectWU = GetToken("name=", sfile, stopper)
     
     Exit Function
@@ -737,77 +737,77 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*      Разделяет информацию, полученную от ReadFile      *
-'*     и поочередно передает их на обработку в Decode     *
-'*                     sfile - строка                     *
-'*  Mode=0: клиент для Windows                            *
-'*  Mode=1: клиент для Linux                              *
-'*  ProcMode=0: не производить запись в журнал            *
-'*  ProcMode=1: записывать результаты в журнал            *
+'*      Р Р°Р·РґРµР»СЏРµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ, РїРѕР»СѓС‡РµРЅРЅСѓСЋ РѕС‚ ReadFile      *
+'*     Рё РїРѕРѕС‡РµСЂРµРґРЅРѕ РїРµСЂРµРґР°РµС‚ РёС… РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РІ Decode     *
+'*                     sfile - СЃС‚СЂРѕРєР°                     *
+'*  Mode=0: РєР»РёРµРЅС‚ РґР»СЏ Windows                            *
+'*  Mode=1: РєР»РёРµРЅС‚ РґР»СЏ Linux                              *
+'*  ProcMode=0: РЅРµ РїСЂРѕРёР·РІРѕРґРёС‚СЊ Р·Р°РїРёСЃСЊ РІ Р¶СѓСЂРЅР°Р»            *
+'*  ProcMode=1: Р·Р°РїРёСЃС‹РІР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚С‹ РІ Р¶СѓСЂРЅР°Р»            *
 '**********************************************************
 Public Function Splitter(Mode As Long, sfile As String, ProcMode As Long, WUID As Long) As Boolean
 Dim stopper As String
-Dim psfile As String    'Часть строки, передаваемая декодеру
+Dim psfile As String    'Р§Р°СЃС‚СЊ СЃС‚СЂРѕРєРё, РїРµСЂРµРґР°РІР°РµРјР°СЏ РґРµРєРѕРґРµСЂСѓ
 Dim StartPos As Long, EndPos As Long
-Dim Seeker As Long      'Содержит позицию, с которой идет обработка строки
+Dim Seeker As Long      'РЎРѕРґРµСЂР¶РёС‚ РїРѕР·РёС†РёСЋ, СЃ РєРѕС‚РѕСЂРѕР№ РёРґРµС‚ РѕР±СЂР°Р±РѕС‚РєР° СЃС‚СЂРѕРєРё
     On Error GoTo SplitterErr
     
     Splitter = True
-    'Разделитель параметров - звездочка
+    'Р Р°Р·РґРµР»РёС‚РµР»СЊ РїР°СЂР°РјРµС‚СЂРѕРІ - Р·РІРµР·РґРѕС‡РєР°
     stopper = "*"
-    'Заголовок не нужен - отрезаем его, чтобы не гонять туда-сюда лишние строки
-    StartPos = InStr(1, sfile, "end_seti_header", vbTextCompare)  'Найти положение "end_seti_header" в строке
+    'Р—Р°РіРѕР»РѕРІРѕРє РЅРµ РЅСѓР¶РµРЅ - РѕС‚СЂРµР·Р°РµРј РµРіРѕ, С‡С‚РѕР±С‹ РЅРµ РіРѕРЅСЏС‚СЊ С‚СѓРґР°-СЃСЋРґР° Р»РёС€РЅРёРµ СЃС‚СЂРѕРєРё
+    StartPos = InStr(1, sfile, "end_seti_header", vbTextCompare)  'РќР°Р№С‚Рё РїРѕР»РѕР¶РµРЅРёРµ "end_seti_header" РІ СЃС‚СЂРѕРєРµ
     If StartPos <> 0 Then
-        StartPos = StartPos - 1  'Шаг назад, чтобы не отрезать букву "e" в слове "end_seti_header"
+        StartPos = StartPos - 1  'РЁР°Рі РЅР°Р·Р°Рґ, С‡С‚РѕР±С‹ РЅРµ РѕС‚СЂРµР·Р°С‚СЊ Р±СѓРєРІСѓ "e" РІ СЃР»РѕРІРµ "end_seti_header"
         sfile = Right(sfile, Len(sfile) - StartPos)
     End If
-    If Not ProcMode Then    'Подготовка к записи
-    'Организовать проверку индекса: если данные по этому блоку уже есть,
-    'то организовать проверку каждой новой записи, иначе простой цикл записи
+    If Not ProcMode Then    'РџРѕРґРіРѕС‚РѕРІРєР° Рє Р·Р°РїРёСЃРё
+    'РћСЂРіР°РЅРёР·РѕРІР°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РёРЅРґРµРєСЃР°: РµСЃР»Рё РґР°РЅРЅС‹Рµ РїРѕ СЌС‚РѕРјСѓ Р±Р»РѕРєСѓ СѓР¶Рµ РµСЃС‚СЊ,
+    'С‚Рѕ РѕСЂРіР°РЅРёР·РѕРІР°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РєР°Р¶РґРѕР№ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё, РёРЅР°С‡Рµ РїСЂРѕСЃС‚РѕР№ С†РёРєР» Р·Р°РїРёСЃРё
         If CheckRecord(0, 2, WUID) Then
-            VerifyMode = True    'Нужна проверка при записи
+            VerifyMode = True    'РќСѓР¶РЅР° РїСЂРѕРІРµСЂРєР° РїСЂРё Р·Р°РїРёСЃРё
         ElseIf CheckRecord(0, 3, WUID) Then
-            VerifyMode = True    'Нужна проверка при записи
+            VerifyMode = True    'РќСѓР¶РЅР° РїСЂРѕРІРµСЂРєР° РїСЂРё Р·Р°РїРёСЃРё
         End If
     End If
     StartPos = 1
-    'Начинаем разделение строки
-    Seeker = InStr(StartPos, sfile, "spike:", vbTextCompare)    'Инициализация
+    'РќР°С‡РёРЅР°РµРј СЂР°Р·РґРµР»РµРЅРёРµ СЃС‚СЂРѕРєРё
+    Seeker = InStr(StartPos, sfile, "spike:", vbTextCompare)    'РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
     Do While Seeker <> 0
-        'Получить одну spike-запись
-        psfile = Right(sfile, Len(sfile) - Seeker + 1) 'Отрезать все, что ДО текущей позиции
-        psfile = GetToken("spike:", psfile, stopper) & " "   'Закрывающий пробел
+        'РџРѕР»СѓС‡РёС‚СЊ РѕРґРЅСѓ spike-Р·Р°РїРёСЃСЊ
+        psfile = Right(sfile, Len(sfile) - Seeker + 1) 'РћС‚СЂРµР·Р°С‚СЊ РІСЃРµ, С‡С‚Рѕ Р”Рћ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё
+        psfile = GetToken("spike:", psfile, stopper) & " "   'Р—Р°РєСЂС‹РІР°СЋС‰РёР№ РїСЂРѕР±РµР»
         StartPos = Seeker + Len(psfile)
         Seeker = InStr(StartPos, sfile, "spike:", vbTextCompare)
         If Not (Decode(Mode, 3, psfile, WUID)) Then
-            'Ошибка декодера - выходим из функции
+            'РћС€РёР±РєР° РґРµРєРѕРґРµСЂР° - РІС‹С…РѕРґРёРј РёР· С„СѓРЅРєС†РёРё
             StartPos = Len(sfile)
             Splitter = False
         Else
             If ProcMode Then
-                If Not (WriteHistory(SplitterOverwr, 3, WUID)) Then 'Первый параметр был 0
+                If Not (WriteHistory(SplitterOverwr, 3, WUID)) Then 'РџРµСЂРІС‹Р№ РїР°СЂР°РјРµС‚СЂ Р±С‹Р» 0
                     Splitter = False
                 End If
             End If
         End If
     Loop
     If Splitter Then
-        'Возвращаемся к началу
+        'Р’РѕР·РІСЂР°С‰Р°РµРјСЃСЏ Рє РЅР°С‡Р°Р»Сѓ
         StartPos = 1
         Seeker = InStr(StartPos, sfile, "gaussian:", vbTextCompare)
         Do While Seeker <> 0
-            'Получить одну gaussian-запись
-            psfile = Right(sfile, Len(sfile) - Seeker + 1) 'Отрезать все, что ДО текущей позиции
-            psfile = GetToken("gaussian:", psfile, stopper) & " "    'Закрывающий пробел
-            StartPos = Seeker + Len(psfile) 'учесть пробел
+            'РџРѕР»СѓС‡РёС‚СЊ РѕРґРЅСѓ gaussian-Р·Р°РїРёСЃСЊ
+            psfile = Right(sfile, Len(sfile) - Seeker + 1) 'РћС‚СЂРµР·Р°С‚СЊ РІСЃРµ, С‡С‚Рѕ Р”Рћ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё
+            psfile = GetToken("gaussian:", psfile, stopper) & " "    'Р—Р°РєСЂС‹РІР°СЋС‰РёР№ РїСЂРѕР±РµР»
+            StartPos = Seeker + Len(psfile) 'СѓС‡РµСЃС‚СЊ РїСЂРѕР±РµР»
             Seeker = InStr(StartPos, sfile, "gaussian:", vbTextCompare)
             If Not (Decode(Mode, 2, psfile, WUID)) Then
-                'Ошибка декодера - выходим из функции
+                'РћС€РёР±РєР° РґРµРєРѕРґРµСЂР° - РІС‹С…РѕРґРёРј РёР· С„СѓРЅРєС†РёРё
                 StartPos = Len(sfile)
                 Splitter = False
             Else
                 If ProcMode Then
-                    If Not (WriteHistory(SplitterOverwr, 2, WUID)) Then 'Первый параметр был 0
+                    If Not (WriteHistory(SplitterOverwr, 2, WUID)) Then 'РџРµСЂРІС‹Р№ РїР°СЂР°РјРµС‚СЂ Р±С‹Р» 0
                         Splitter = False
                     End If
                 End If
@@ -815,22 +815,22 @@ Dim Seeker As Long      'Содержит позицию, с которой идет обработка строки
         Loop
     End If
     If Splitter Then
-        'Возвращаемся к началу
+        'Р’РѕР·РІСЂР°С‰Р°РµРјСЃСЏ Рє РЅР°С‡Р°Р»Сѓ
         StartPos = 1
         Seeker = InStr(StartPos, sfile, "pulse:", vbTextCompare)
         Do While Seeker <> 0
-            'Получить одну pulse-запись
-            psfile = Right(sfile, Len(sfile) - Seeker + 1) 'Отрезать все, что ДО текущей позиции
-            psfile = GetToken("pulse:", psfile, stopper) & " "    'Закрывающий пробел
-            StartPos = Seeker + Len(psfile) 'учесть пробел
+            'РџРѕР»СѓС‡РёС‚СЊ РѕРґРЅСѓ pulse-Р·Р°РїРёСЃСЊ
+            psfile = Right(sfile, Len(sfile) - Seeker + 1) 'РћС‚СЂРµР·Р°С‚СЊ РІСЃРµ, С‡С‚Рѕ Р”Рћ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё
+            psfile = GetToken("pulse:", psfile, stopper) & " "    'Р—Р°РєСЂС‹РІР°СЋС‰РёР№ РїСЂРѕР±РµР»
+            StartPos = Seeker + Len(psfile) 'СѓС‡РµСЃС‚СЊ РїСЂРѕР±РµР»
             Seeker = InStr(StartPos, sfile, "pulse:", vbTextCompare)
             If Not (Decode(Mode, 4, psfile, WUID)) Then
-                'Ошибка декодера - выходим из функции
+                'РћС€РёР±РєР° РґРµРєРѕРґРµСЂР° - РІС‹С…РѕРґРёРј РёР· С„СѓРЅРєС†РёРё
                 StartPos = Len(sfile)
                 Splitter = False
             Else
                 If ProcMode Then
-                    If Not (WriteHistory(SplitterOverwr, 4, WUID)) Then 'Первый параметр был 0
+                    If Not (WriteHistory(SplitterOverwr, 4, WUID)) Then 'РџРµСЂРІС‹Р№ РїР°СЂР°РјРµС‚СЂ Р±С‹Р» 0
                         Splitter = False
                     End If
                 End If
@@ -838,22 +838,22 @@ Dim Seeker As Long      'Содержит позицию, с которой идет обработка строки
         Loop
     End If
     If Splitter Then
-        'Возвращаемся к началу
+        'Р’РѕР·РІСЂР°С‰Р°РµРјСЃСЏ Рє РЅР°С‡Р°Р»Сѓ
         StartPos = 1
         Seeker = InStr(StartPos, sfile, "triplet:", vbTextCompare)
         Do While Seeker <> 0
-            'Получить одну triplet-запись
-            psfile = Right(sfile, Len(sfile) - Seeker + 1) 'Отрезать все, что ДО текущей позиции
-            psfile = GetToken("triplet:", psfile, stopper) & " "    'Закрывающий пробел
-            StartPos = Seeker + Len(psfile) 'учесть пробел
+            'РџРѕР»СѓС‡РёС‚СЊ РѕРґРЅСѓ triplet-Р·Р°РїРёСЃСЊ
+            psfile = Right(sfile, Len(sfile) - Seeker + 1) 'РћС‚СЂРµР·Р°С‚СЊ РІСЃРµ, С‡С‚Рѕ Р”Рћ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё
+            psfile = GetToken("triplet:", psfile, stopper) & " "    'Р—Р°РєСЂС‹РІР°СЋС‰РёР№ РїСЂРѕР±РµР»
+            StartPos = Seeker + Len(psfile) 'СѓС‡РµСЃС‚СЊ РїСЂРѕР±РµР»
             Seeker = InStr(StartPos, sfile, "triplet:", vbTextCompare)
             If Not (Decode(Mode, 5, psfile, WUID)) Then
-                'Ошибка декодера - выходим из функции
+                'РћС€РёР±РєР° РґРµРєРѕРґРµСЂР° - РІС‹С…РѕРґРёРј РёР· С„СѓРЅРєС†РёРё
                 StartPos = Len(sfile)
                 Splitter = False
             Else
                 If ProcMode Then
-                    If Not (WriteHistory(SplitterOverwr, 5, WUID)) Then 'Первый параметр был 0
+                    If Not (WriteHistory(SplitterOverwr, 5, WUID)) Then 'РџРµСЂРІС‹Р№ РїР°СЂР°РјРµС‚СЂ Р±С‹Р» 0
                         Splitter = False
                     End If
                 End If
@@ -868,24 +868,24 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*   Дешифрует текстовую строку, полученную от Splitter   *
-'*                     sfile - строка                     *
-'*  Mode=0: клиент для Windows                            *
-'*  Mode=1: клиент для Linux                              *
-'*     Target=2: Для записи в файл SETIgaus.dat           *
-'*     Target=3: Для записи в файл SETIspik.dat           *
-'*     Target=4: Для записи в файл SETIpuls.dat           *
-'*     Target=5: Для записи в файл SETItrip.dat           *
+'*   Р”РµС€РёС„СЂСѓРµС‚ С‚РµРєСЃС‚РѕРІСѓСЋ СЃС‚СЂРѕРєСѓ, РїРѕР»СѓС‡РµРЅРЅСѓСЋ РѕС‚ Splitter   *
+'*                     sfile - СЃС‚СЂРѕРєР°                     *
+'*  Mode=0: РєР»РёРµРЅС‚ РґР»СЏ Windows                            *
+'*  Mode=1: РєР»РёРµРЅС‚ РґР»СЏ Linux                              *
+'*     Target=2: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIgaus.dat           *
+'*     Target=3: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIspik.dat           *
+'*     Target=4: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIpuls.dat           *
+'*     Target=5: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETItrip.dat           *
 '**********************************************************
 Public Function Decode(ByVal Mode As Long, ByVal Target As Long, sfile As String, WUID As Long) As Boolean
 Dim stopper As String
     On Error GoTo DecodeErr
     
-    'Разделитель параметров - пробел
+    'Р Р°Р·РґРµР»РёС‚РµР»СЊ РїР°СЂР°РјРµС‚СЂРѕРІ - РїСЂРѕР±РµР»
     'stopper = Chr(10)
     stopper = "space"
     Select Case Target
-        Case 2: 'Gauss-информация
+        Case 2: 'Gauss-РёРЅС„РѕСЂРјР°С†РёСЏ
             peak = CSng(Val(GetToken("peak=", sfile, stopper)))
             mean = CSng(Val(GetToken("mean=", sfile, stopper)))
             ra = CSng(Val(GetToken("ra=", sfile, stopper)))
@@ -902,7 +902,7 @@ Dim stopper As String
             Else
                 Decode = False
             End If
-        Case 3: 'Spike-информация
+        Case 3: 'Spike-РёРЅС„РѕСЂРјР°С†РёСЏ
             power = CSng(Val(GetToken("power=", sfile, stopper)))
             ra = CSng(Val(GetToken("ra=", sfile, stopper)))
             dec = CSng(Val(GetToken("dec=", sfile, stopper)))
@@ -915,7 +915,7 @@ Dim stopper As String
             Else
                 Decode = False
             End If
-        Case 4: 'Pulse-информация
+        Case 4: 'Pulse-РёРЅС„РѕСЂРјР°С†РёСЏ
             power = CSng(Val(GetToken("power=", sfile, stopper)))
             mean = CSng(Val(GetToken("mean=", sfile, stopper)))
             period = CSng(Val(GetToken("period=", sfile, stopper)))
@@ -933,7 +933,7 @@ Dim stopper As String
             Else
                 Decode = False
             End If
-        Case 5: 'Triplet-информация
+        Case 5: 'Triplet-РёРЅС„РѕСЂРјР°С†РёСЏ
             power = CSng(Val(GetToken("power=", sfile, stopper)))
             mean = CSng(Val(GetToken("mean=", sfile, stopper)))
             period = CSng(Val(GetToken("period=", sfile, stopper)))
@@ -958,26 +958,26 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*        Заполнить поля записи переменной журнала        *
-'*  Mode=0: клиент для Windows                            *
-'*  Mode=1: клиент для Linux                              *
-'*     Target=2: Для записи в файл SETIgaus.dat           *
-'*     Target=3: Для записи в файл SETIspik.dat           *
-'*     Target=4: Для записи в файл SETIpuls.dat           *
-'*     Target=5: Для записи в файл SETItrip.dat           *
+'*        Р—Р°РїРѕР»РЅРёС‚СЊ РїРѕР»СЏ Р·Р°РїРёСЃРё РїРµСЂРµРјРµРЅРЅРѕР№ Р¶СѓСЂРЅР°Р»Р°        *
+'*  Mode=0: РєР»РёРµРЅС‚ РґР»СЏ Windows                            *
+'*  Mode=1: РєР»РёРµРЅС‚ РґР»СЏ Linux                              *
+'*     Target=2: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIgaus.dat           *
+'*     Target=3: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIspik.dat           *
+'*     Target=4: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIpuls.dat           *
+'*     Target=5: Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETItrip.dat           *
 '**********************************************************
 Public Function EncodeHistory(ByVal Mode As Long, ByVal Target As Long, WUID As Long) As Boolean
     On Error GoTo EncodeHistoryErr
 
     EncodeHistory = False
     Select Case Target
-        Case 2:     'Для записи в файл SETIgaus.dat
+        Case 2:     'Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIgaus.dat
             With GaussRec
                 Select Case Mode
-                    Case 0:     'клиент для Windows
-                        .Label = 1  'Идентификация источника информации
-                    Case 1:     'клиент для Linux
-                        .Label = 2  'Идентификация источника информации
+                    Case 0:     'РєР»РёРµРЅС‚ РґР»СЏ Windows
+                        .Label = 1  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
+                    Case 1:     'РєР»РёРµРЅС‚ РґР»СЏ Linux
+                        .Label = 2  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
                 End Select
                 .WUID = WUID
                 '.ID = RecordID
@@ -992,17 +992,17 @@ Public Function EncodeHistory(ByVal Mode As Long, ByVal Target As Long, WUID As 
                 .fft_len = fft_len
                 .chirp_rate = chirp_rate
                 .maxpow = maxpow
-                .Reserve1 = -123    'Признак отсутствия информации
+                .Reserve1 = -123    'РџСЂРёР·РЅР°Рє РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РёРЅС„РѕСЂРјР°С†РёРё
                 .Reserve2 = -123
             End With
             EncodeHistory = True
-        Case 3:     'Для записи в файл SETIspik.dat
+        Case 3:     'Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIspik.dat
             With SpikeRec
                 Select Case Mode
-                    Case 0:     'клиент для Windows
-                        .Label = 1  'Идентификация источника информации
-                    Case 1:     'клиент для Linux
-                        .Label = 2  'Идентификация источника информации
+                    Case 0:     'РєР»РёРµРЅС‚ РґР»СЏ Windows
+                        .Label = 1  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
+                    Case 1:     'РєР»РёРµРЅС‚ РґР»СЏ Linux
+                        .Label = 2  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
                 End Select
                 .WUID = WUID
                 '.ID = RecordID
@@ -1013,17 +1013,17 @@ Public Function EncodeHistory(ByVal Mode As Long, ByVal Target As Long, WUID As 
                 .freq = freq
                 .fft_len = fft_len
                 .chirp_rate = chirp_rate
-                .Reserve1 = -123    'Признак отсутствия информации
+                .Reserve1 = -123    'РџСЂРёР·РЅР°Рє РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РёРЅС„РѕСЂРјР°С†РёРё
                 .Reserve2 = -123
             End With
             EncodeHistory = True
-        Case 4:     'Для записи в файл SETIpuls.dat
+        Case 4:     'Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETIpuls.dat
             With PulseRec
                 Select Case Mode
-                    Case 0:     'клиент для Windows
-                        .Label = 1  'Идентификация источника информации
-                    Case 1:     'клиент для Linux
-                        .Label = 2  'Идентификация источника информации
+                    Case 0:     'РєР»РёРµРЅС‚ РґР»СЏ Windows
+                        .Label = 1  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
+                    Case 1:     'РєР»РёРµРЅС‚ РґР»СЏ Linux
+                        .Label = 2  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
                 End Select
                 .WUID = WUID
                 '.ID = RecordID
@@ -1039,17 +1039,17 @@ Public Function EncodeHistory(ByVal Mode As Long, ByVal Target As Long, WUID As 
                 .snr = snr
                 .thresh = thresh
                 .len_prof = len_prof
-                .Reserve1 = -123    'Признак отсутствия информации
+                .Reserve1 = -123    'РџСЂРёР·РЅР°Рє РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РёРЅС„РѕСЂРјР°С†РёРё
                 .Reserve2 = -123
             End With
             EncodeHistory = True
-        Case 5:     'Для записи в файл SETItrip.dat
+        Case 5:     'Р”Р»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р» SETItrip.dat
             With TripletRec
                 Select Case Mode
-                    Case 0:     'клиент для Windows
-                        .Label = 1  'Идентификация источника информации
-                    Case 1:     'клиент для Linux
-                        .Label = 2  'Идентификация источника информации
+                    Case 0:     'РєР»РёРµРЅС‚ РґР»СЏ Windows
+                        .Label = 1  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
+                    Case 1:     'РєР»РёРµРЅС‚ РґР»СЏ Linux
+                        .Label = 2  'РРґРµРЅС‚РёС„РёРєР°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° РёРЅС„РѕСЂРјР°С†РёРё
                 End Select
                 .WUID = WUID
                 '.ID = RecordID
@@ -1062,7 +1062,7 @@ Public Function EncodeHistory(ByVal Mode As Long, ByVal Target As Long, WUID As 
                 .freq = freq
                 .fft_len = fft_len
                 .chirp_rate = chirp_rate
-                .Reserve1 = -123    'Признак отсутствия информации
+                .Reserve1 = -123    'РџСЂРёР·РЅР°Рє РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РёРЅС„РѕСЂРјР°С†РёРё
                 .Reserve2 = -123
             End With
             EncodeHistory = True
@@ -1075,21 +1075,21 @@ EncodeHistoryErr:
 End Function
 
 '**********************************************************
-'*         Произвести запись в файл данных SETImap        *
-'*    Mode=0: Не производить перезаписи совпадений        *
-'*    Mode=1: Производить перезапись совпадений           *
-'*    Target=2: Произвести запись в файл SETIgaus.dat     *
-'*    Target=3: Произвести запись в файл SETIspik.dat     *
-'*    Target=4: Произвести запись в файл SETIpuls.dat     *
-'*    Target=5: Произвести запись в файл SETItrip.dat     *
+'*         РџСЂРѕРёР·РІРµСЃС‚Рё Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» РґР°РЅРЅС‹С… SETImap        *
+'*    Mode=0: РќРµ РїСЂРѕРёР·РІРѕРґРёС‚СЊ РїРµСЂРµР·Р°РїРёСЃРё СЃРѕРІРїР°РґРµРЅРёР№        *
+'*    Mode=1: РџСЂРѕРёР·РІРѕРґРёС‚СЊ РїРµСЂРµР·Р°РїРёСЃСЊ СЃРѕРІРїР°РґРµРЅРёР№           *
+'*    Target=2: РџСЂРѕРёР·РІРµСЃС‚Рё Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» SETIgaus.dat     *
+'*    Target=3: РџСЂРѕРёР·РІРµСЃС‚Рё Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» SETIspik.dat     *
+'*    Target=4: РџСЂРѕРёР·РІРµСЃС‚Рё Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» SETIpuls.dat     *
+'*    Target=5: РџСЂРѕРёР·РІРµСЃС‚Рё Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» SETItrip.dat     *
 '**********************************************************
-'ВНИМАНИЕ!!! Если существует несколько записей на одной частоте, то в журнал
-'записывается ПЕРВАЯ из них. Считается, что последняя будет записана в
-'State.sah (как более сильный сигнал) и сохранена в журнале
+'Р’РќРРњРђРќРР•!!! Р•СЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚ РЅРµСЃРєРѕР»СЊРєРѕ Р·Р°РїРёСЃРµР№ РЅР° РѕРґРЅРѕР№ С‡Р°СЃС‚РѕС‚Рµ, С‚Рѕ РІ Р¶СѓСЂРЅР°Р»
+'Р·Р°РїРёСЃС‹РІР°РµС‚СЃСЏ РџР•Р Р’РђРЇ РёР· РЅРёС…. РЎС‡РёС‚Р°РµС‚СЃСЏ, С‡С‚Рѕ РїРѕСЃР»РµРґРЅСЏСЏ Р±СѓРґРµС‚ Р·Р°РїРёСЃР°РЅР° РІ
+'State.sah (РєР°Рє Р±РѕР»РµРµ СЃРёР»СЊРЅС‹Р№ СЃРёРіРЅР°Р») Рё СЃРѕС…СЂР°РЅРµРЅР° РІ Р¶СѓСЂРЅР°Р»Рµ
 Public Function WriteHistory(ByVal Mode As Long, ByVal Target As Long, WUID As Long) As Boolean
 Dim LastRecNum As Long
 Dim i As Long
-Dim Match As Boolean   'Эта запись была найдена при проверке (уже существует)
+Dim Match As Boolean   'Р­С‚Р° Р·Р°РїРёСЃСЊ Р±С‹Р»Р° РЅР°Р№РґРµРЅР° РїСЂРё РїСЂРѕРІРµСЂРєРµ (СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚)
     On Error GoTo WriteHistoryErr
 
     WriteHistory = False
@@ -1102,30 +1102,30 @@ Dim Match As Boolean   'Эта запись была найдена при проверке (уже существует)
             LastRecNum = LOF(hFile) \ Len(GaussRec)
             If ((Not (LastRecNum = 0)) Or (VerifyMode)) Then
                 Dim TMPgaussrec As tGaussRec
-                For i = 1 To LastRecNum     'Проверить все записи
-                    Get hFile, , TMPgaussrec    'Читать запись
-                    If TMPgaussrec.WUID = WUID Then 'Текущий блок - начать проверку
+                For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                    Get hFile, , TMPgaussrec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                    If TMPgaussrec.WUID = WUID Then 'РўРµРєСѓС‰РёР№ Р±Р»РѕРє - РЅР°С‡Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ
                         ''If CLng(Trunc(CDbl(TMPgaussrec.chirp_rate * 10000))) = CLng(Trunc(CDbl(GaussRec.chirp_rate * 10000))) Then
-                        'Изменение критерия проверки
+                        'РР·РјРµРЅРµРЅРёРµ РєСЂРёС‚РµСЂРёСЏ РїСЂРѕРІРµСЂРєРё
                         If CLng(Trunc(CDbl(TMPgaussrec.peak * 10000))) = CLng(Trunc(CDbl(GaussRec.peak * 10000))) Then
                             Debug.Print "Gauss record has been founded in Gauss datafile."
                             Match = True
-                            If Mode Then    'Разрешена перезапись
+                            If Mode Then    'Р Р°Р·СЂРµС€РµРЅР° РїРµСЂРµР·Р°РїРёСЃСЊ
                                 Seek hFile, i
                                 Put hFile, , GaussRec
                                 Debug.Print "Overwrite mode: OutResultHistory -> Gauss record has been overwritten"
                             End If
-                            i = LastRecNum      'Остановить проверку, позиция совпала
+                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ, РїРѕР·РёС†РёСЏ СЃРѕРІРїР°Р»Р°
                             WriteHistory = True
                         End If
                     End If
                 Next i
             End If
-            'Следующая ветка выполняется только в следующих случаях
-            '   -Файл пуст
-            '   -Не производится проверка существования записи
-            '   -В процессе проверки запись не была найдена
-            'Во всех этих случаях (Match=False) производится запись в конец файла
+            'РЎР»РµРґСѓСЋС‰Р°СЏ РІРµС‚РєР° РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РІ СЃР»РµРґСѓСЋС‰РёС… СЃР»СѓС‡Р°СЏС…
+            '   -Р¤Р°Р№Р» РїСѓСЃС‚
+            '   -РќРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРё
+            '   -Р’ РїСЂРѕС†РµСЃСЃРµ РїСЂРѕРІРµСЂРєРё Р·Р°РїРёСЃСЊ РЅРµ Р±С‹Р»Р° РЅР°Р№РґРµРЅР°
+            'Р’Рѕ РІСЃРµС… СЌС‚РёС… СЃР»СѓС‡Р°СЏС… (Match=False) РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ Р·Р°РїРёСЃСЊ РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
             If Not Match Then
                 Seek hFile, LastRecNum + 1
                 Put hFile, , GaussRec
@@ -1140,30 +1140,30 @@ Dim Match As Boolean   'Эта запись была найдена при проверке (уже существует)
             LastRecNum = LOF(hFile) \ Len(SpikeRec)
             If ((Not (LastRecNum = 0)) Or (VerifyMode)) Then
                 Dim TMPspikerec As tSpikeRec
-                For i = 1 To LastRecNum     'Проверить все записи
-                    Get hFile, , TMPspikerec    'Читать запись
-                    If TMPspikerec.WUID = WUID Then 'Текущий блок - начать проверку
+                For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                    Get hFile, , TMPspikerec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                    If TMPspikerec.WUID = WUID Then 'РўРµРєСѓС‰РёР№ Р±Р»РѕРє - РЅР°С‡Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ
                         ''If CLng(Trunc(CDbl(TMPspikerec.chirp_rate * 10000))) = CLng(Trunc(CDbl(SpikeRec.chirp_rate * 10000))) Then
-                        'Изменение критерия проверки
+                        'РР·РјРµРЅРµРЅРёРµ РєСЂРёС‚РµСЂРёСЏ РїСЂРѕРІРµСЂРєРё
                         If CLng(Trunc(CDbl(TMPspikerec.power * 10000))) = CLng(Trunc(CDbl(SpikeRec.power * 10000))) Then
                             Debug.Print "Spike record has been founded in Spike datafile."
                             Match = True
-                            If Mode Then    'Разрешена перезапись
+                            If Mode Then    'Р Р°Р·СЂРµС€РµРЅР° РїРµСЂРµР·Р°РїРёСЃСЊ
                                 Seek hFile, i
                                 Put hFile, , SpikeRec
                                 Debug.Print "Overwrite mode: OutResultHistory -> Spike record has been overwritten"
                             End If
-                            i = LastRecNum      'Остановить проверку, позиция совпала
+                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ, РїРѕР·РёС†РёСЏ СЃРѕРІРїР°Р»Р°
                             WriteHistory = True
                         End If
                     End If
                 Next i
             End If
-            'Следующая ветка выполняется только в следующих случаях
-            '   -Файл пуст
-            '   -Не производится проверка существования записи
-            '   -В процессе проверки запись не была найдена
-            'Во всех этих случаях (Match=False) производится запись в конец файла
+            'РЎР»РµРґСѓСЋС‰Р°СЏ РІРµС‚РєР° РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РІ СЃР»РµРґСѓСЋС‰РёС… СЃР»СѓС‡Р°СЏС…
+            '   -Р¤Р°Р№Р» РїСѓСЃС‚
+            '   -РќРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРё
+            '   -Р’ РїСЂРѕС†РµСЃСЃРµ РїСЂРѕРІРµСЂРєРё Р·Р°РїРёСЃСЊ РЅРµ Р±С‹Р»Р° РЅР°Р№РґРµРЅР°
+            'Р’Рѕ РІСЃРµС… СЌС‚РёС… СЃР»СѓС‡Р°СЏС… (Match=False) РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ Р·Р°РїРёСЃСЊ РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
             If Not Match Then
                 Seek hFile, LastRecNum + 1
                 Put hFile, , SpikeRec
@@ -1178,30 +1178,30 @@ Dim Match As Boolean   'Эта запись была найдена при проверке (уже существует)
             LastRecNum = LOF(hFile) \ Len(PulseRec)
             If ((Not (LastRecNum = 0)) Or (VerifyMode)) Then
                 Dim TMPpulserec As tPulseRec
-                For i = 1 To LastRecNum     'Проверить все записи
-                    Get hFile, , TMPpulserec    'Читать запись
-                    If TMPpulserec.WUID = WUID Then 'Текущий блок - начать проверку
+                For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                    Get hFile, , TMPpulserec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                    If TMPpulserec.WUID = WUID Then 'РўРµРєСѓС‰РёР№ Р±Р»РѕРє - РЅР°С‡Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ
                         ''If CLng(Trunc(CDbl(TMPpulserec.chirp_rate * 10000))) = CLng(Trunc(CDbl(PulseRec.chirp_rate * 10000))) Then
-                        'Изменение критерия проверки
+                        'РР·РјРµРЅРµРЅРёРµ РєСЂРёС‚РµСЂРёСЏ РїСЂРѕРІРµСЂРєРё
                         If CLng(Trunc(CDbl(TMPpulserec.power * 10000))) = CLng(Trunc(CDbl(PulseRec.power * 10000))) Then
                             Debug.Print "Pulse record has been founded in Pulses datafile."
                             Match = True
-                            If Mode Then    'Разрешена перезапись
+                            If Mode Then    'Р Р°Р·СЂРµС€РµРЅР° РїРµСЂРµР·Р°РїРёСЃСЊ
                                 Seek hFile, i
                                 Put hFile, , PulseRec
                                 Debug.Print "Overwrite mode: OutResultHistory -> Pulse record has been overwritten"
                             End If
-                            i = LastRecNum      'Остановить проверку, позиция совпала
+                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ, РїРѕР·РёС†РёСЏ СЃРѕРІРїР°Р»Р°
                             WriteHistory = True
                         End If
                     End If
                 Next i
             End If
-            'Следующая ветка выполняется только в следующих случаях
-            '   -Файл пуст
-            '   -Не производится проверка существования записи
-            '   -В процессе проверки запись не была найдена
-            'Во всех этих случаях (Match=False) производится запись в конец файла
+            'РЎР»РµРґСѓСЋС‰Р°СЏ РІРµС‚РєР° РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РІ СЃР»РµРґСѓСЋС‰РёС… СЃР»СѓС‡Р°СЏС…
+            '   -Р¤Р°Р№Р» РїСѓСЃС‚
+            '   -РќРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРё
+            '   -Р’ РїСЂРѕС†РµСЃСЃРµ РїСЂРѕРІРµСЂРєРё Р·Р°РїРёСЃСЊ РЅРµ Р±С‹Р»Р° РЅР°Р№РґРµРЅР°
+            'Р’Рѕ РІСЃРµС… СЌС‚РёС… СЃР»СѓС‡Р°СЏС… (Match=False) РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ Р·Р°РїРёСЃСЊ РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
             If Not Match Then
                 Seek hFile, LastRecNum + 1
                 Put hFile, , PulseRec
@@ -1216,30 +1216,30 @@ Dim Match As Boolean   'Эта запись была найдена при проверке (уже существует)
             LastRecNum = LOF(hFile) \ Len(TripletRec)
             If ((Not (LastRecNum = 0)) Or (VerifyMode)) Then
                 Dim TMPtripletrec As tTripletRec
-                For i = 1 To LastRecNum     'Проверить все записи
-                    Get hFile, , TMPtripletrec    'Читать запись
-                    If TMPtripletrec.WUID = WUID Then 'Текущий блок - начать проверку
+                For i = 1 To LastRecNum     'РџСЂРѕРІРµСЂРёС‚СЊ РІСЃРµ Р·Р°РїРёСЃРё
+                    Get hFile, , TMPtripletrec    'Р§РёС‚Р°С‚СЊ Р·Р°РїРёСЃСЊ
+                    If TMPtripletrec.WUID = WUID Then 'РўРµРєСѓС‰РёР№ Р±Р»РѕРє - РЅР°С‡Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ
                         ''If CLng(Trunc(CDbl(TMPtripletrec.chirp_rate * 10000))) = CLng(Trunc(CDbl(TripletRec.chirp_rate * 10000))) Then
-                        'Изменение критерия проверки
+                        'РР·РјРµРЅРµРЅРёРµ РєСЂРёС‚РµСЂРёСЏ РїСЂРѕРІРµСЂРєРё
                         If CLng(Trunc(CDbl(TMPtripletrec.power * 10000))) = CLng(Trunc(CDbl(TripletRec.power * 10000))) Then
                             Debug.Print "Triplet record has been founded in Triplet datafile."
                             Match = True
-                            If Mode Then    'Разрешена перезапись
+                            If Mode Then    'Р Р°Р·СЂРµС€РµРЅР° РїРµСЂРµР·Р°РїРёСЃСЊ
                                 Seek hFile, i
                                 Put hFile, , TripletRec
                                 Debug.Print "Overwrite mode: OutResultHistory -> Triplet record has been overwritten"
                             End If
-                            i = LastRecNum      'Остановить проверку, позиция совпала
+                            i = LastRecNum      'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ, РїРѕР·РёС†РёСЏ СЃРѕРІРїР°Р»Р°
                             WriteHistory = True
                         End If
                     End If
                 Next i
             End If
-            'Следующая ветка выполняется только в следующих случаях
-            '   -Файл пуст
-            '   -Не производится проверка существования записи
-            '   -В процессе проверки запись не была найдена
-            'Во всех этих случаях (Match=False) производится запись в конец файла
+            'РЎР»РµРґСѓСЋС‰Р°СЏ РІРµС‚РєР° РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РІ СЃР»РµРґСѓСЋС‰РёС… СЃР»СѓС‡Р°СЏС…
+            '   -Р¤Р°Р№Р» РїСѓСЃС‚
+            '   -РќРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРё
+            '   -Р’ РїСЂРѕС†РµСЃСЃРµ РїСЂРѕРІРµСЂРєРё Р·Р°РїРёСЃСЊ РЅРµ Р±С‹Р»Р° РЅР°Р№РґРµРЅР°
+            'Р’Рѕ РІСЃРµС… СЌС‚РёС… СЃР»СѓС‡Р°СЏС… (Match=False) РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ Р·Р°РїРёСЃСЊ РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
             If Not Match Then
                 Seek hFile, LastRecNum + 1
                 Put hFile, , TripletRec
@@ -1256,11 +1256,11 @@ WriteHistoryErr:
 End Function
 
 '**********************************************************
-'*             Прочитать файл данных SETImap              *
-'*           Target=2: Читать файл SETIgaus.dat           *
-'*           Target=3: Читать файл SETIspik.dat           *
-'*           Target=4: Читать файл SETIpuls.dat           *
-'*           Target=5: Читать файл SETItrip.dat           *
+'*             РџСЂРѕС‡РёС‚Р°С‚СЊ С„Р°Р№Р» РґР°РЅРЅС‹С… SETImap              *
+'*           Target=2: Р§РёС‚Р°С‚СЊ С„Р°Р№Р» SETIgaus.dat           *
+'*           Target=3: Р§РёС‚Р°С‚СЊ С„Р°Р№Р» SETIspik.dat           *
+'*           Target=4: Р§РёС‚Р°С‚СЊ С„Р°Р№Р» SETIpuls.dat           *
+'*           Target=5: Р§РёС‚Р°С‚СЊ С„Р°Р№Р» SETItrip.dat           *
 '**********************************************************
 Public Function ReadDataFile(Target As Long, Optional ID As Long = 0) As Boolean
     On Error GoTo ReadDataFileErr
@@ -1276,11 +1276,11 @@ End Function
 
 'LINUX compatible
 '**********************************************************
-'*                    Прочитать файл                      *
-'*    Mode=0: Работа с клиентом для Windows               *
-'*    Mode=1: Работа с клиентом для Linux                 *
-'* Source=0: Получить расположение файла типа Outfile.sah *
-'* Source=1: Получить расположение файла типа Result.sah  *
+'*                    РџСЂРѕС‡РёС‚Р°С‚СЊ С„Р°Р№Р»                      *
+'*    Mode=0: Р Р°Р±РѕС‚Р° СЃ РєР»РёРµРЅС‚РѕРј РґР»СЏ Windows               *
+'*    Mode=1: Р Р°Р±РѕС‚Р° СЃ РєР»РёРµРЅС‚РѕРј РґР»СЏ Linux                 *
+'* Source=0: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° Outfile.sah *
+'* Source=1: РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ С„Р°Р№Р»Р° С‚РёРїР° Result.sah  *
 '**********************************************************
 Public Function ReadFile(ByVal Mode As Long, ByVal Source As Long) As String
 Attribute ReadFile.VB_Description = "This method read OUTFILE  (mode=0) or RESULT (mode=1) files. Name of file returned by GetFileName method"
@@ -1290,17 +1290,17 @@ Dim nextchar As String
 
     sfile = ""
     If CheckFile(Mode, Source) Then   'OK, file exist
-        hFile = FreeFile                        'Получить свободный указатель
+        hFile = FreeFile                        'РџРѕР»СѓС‡РёС‚СЊ СЃРІРѕР±РѕРґРЅС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ
         Open GetFileName(Mode, Source) For Input As hFile
         Debug.Print "Success file open (OutResult.ReadFile Method)"
         Do Until EOF(hFile)
             nextchar = Input(1, #1)
             If nextchar = Chr(10) Or nextchar = Chr(13) Then
-                nextchar = "*"  'Заменить перевод строки звездочкой
+                nextchar = "*"  'Р—Р°РјРµРЅРёС‚СЊ РїРµСЂРµРІРѕРґ СЃС‚СЂРѕРєРё Р·РІРµР·РґРѕС‡РєРѕР№
             End If
             sfile = sfile + nextchar
         Loop
-        sfile = sfile & "*"     'Закрыть строку звездочкой
+        sfile = sfile & "*"     'Р—Р°РєСЂС‹С‚СЊ СЃС‚СЂРѕРєСѓ Р·РІРµР·РґРѕС‡РєРѕР№
         Close hFile
         ReadFile = sfile
     End If
