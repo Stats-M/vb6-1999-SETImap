@@ -35,7 +35,7 @@ Begin VB.Form frmMain
       Width           =   14475
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Показать!"
+      Caption         =   "РџРѕРєР°Р·Р°С‚СЊ!"
       Height          =   345
       Left            =   210
       TabIndex        =   2
@@ -201,36 +201,36 @@ Begin VB.Form frmMain
       Width           =   10935
    End
    Begin VB.Menu mnuFile 
-      Caption         =   "Файл"
+      Caption         =   "Р¤Р°Р№Р»"
       Begin VB.Menu mnuSave 
-         Caption         =   "Сохранить картинку..."
+         Caption         =   "РЎРѕС…СЂР°РЅРёС‚СЊ РєР°СЂС‚РёРЅРєСѓ..."
          Enabled         =   0   'False
       End
       Begin VB.Menu mnuExit 
-         Caption         =   "Выход"
+         Caption         =   "Р’С‹С…РѕРґ"
       End
    End
    Begin VB.Menu mnuView 
-      Caption         =   "Вид"
+      Caption         =   "Р’РёРґ"
       Begin VB.Menu mnuCurrentWU 
-         Caption         =   "Показывать текущий блок"
+         Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ С‚РµРєСѓС‰РёР№ Р±Р»РѕРє"
          Checked         =   -1  'True
          Enabled         =   0   'False
          Shortcut        =   {F3}
       End
       Begin VB.Menu mnuPrevWU 
-         Caption         =   "Показывать предыдущие блоки"
+         Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ РїСЂРµРґС‹РґСѓС‰РёРµ Р±Р»РѕРєРё"
          Checked         =   -1  'True
          Enabled         =   0   'False
          Shortcut        =   {F4}
       End
       Begin VB.Menu mnuWUNumber 
-         Caption         =   "Показывать номер блока"
+         Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ РЅРѕРјРµСЂ Р±Р»РѕРєР°"
          Enabled         =   0   'False
          Shortcut        =   {F5}
       End
       Begin VB.Menu mnuWUComment 
-         Caption         =   "Показывать комментарии"
+         Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ РєРѕРјРјРµРЅС‚Р°СЂРёРё"
          Enabled         =   0   'False
          Shortcut        =   {F6}
       End
@@ -238,141 +238,141 @@ Begin VB.Form frmMain
          Caption         =   "-"
       End
       Begin VB.Menu mnuShowAllWU 
-         Caption         =   "Показать координаты блоков"
+         Caption         =   "РџРѕРєР°Р·Р°С‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹ Р±Р»РѕРєРѕРІ"
       End
       Begin VB.Menu mnuShowBorders 
-         Caption         =   "Показать границы"
+         Caption         =   "РџРѕРєР°Р·Р°С‚СЊ РіСЂР°РЅРёС†С‹"
          Shortcut        =   {F7}
       End
       Begin VB.Menu mnuHyp3 
          Caption         =   "-"
       End
       Begin VB.Menu mnuZoom 
-         Caption         =   "Увеличить"
+         Caption         =   "РЈРІРµР»РёС‡РёС‚СЊ"
          Enabled         =   0   'False
       End
       Begin VB.Menu mnuClear 
-         Caption         =   "Очистить"
+         Caption         =   "РћС‡РёСЃС‚РёС‚СЊ"
          Shortcut        =   {F8}
       End
       Begin VB.Menu mnuHyp10 
          Caption         =   "-"
       End
       Begin VB.Menu mnuWhereGaussians 
-         Caption         =   "Источники лучших гауссиан"
+         Caption         =   "РСЃС‚РѕС‡РЅРёРєРё Р»СѓС‡С€РёС… РіР°СѓСЃСЃРёР°РЅ"
          Shortcut        =   {F9}
       End
       Begin VB.Menu mnuWhereSpikes 
-         Caption         =   "Источники лучших пиков"
+         Caption         =   "РСЃС‚РѕС‡РЅРёРєРё Р»СѓС‡С€РёС… РїРёРєРѕРІ"
          Shortcut        =   {F11}
       End
       Begin VB.Menu mnuHyp9 
          Caption         =   "-"
       End
       Begin VB.Menu mnuRange 
-         Caption         =   "Калибровка..."
+         Caption         =   "РљР°Р»РёР±СЂРѕРІРєР°..."
          Enabled         =   0   'False
       End
       Begin VB.Menu mnuVisuals 
-         Caption         =   "Настройки..."
+         Caption         =   "РќР°СЃС‚СЂРѕР№РєРё..."
       End
    End
    Begin VB.Menu mnuInfo 
-      Caption         =   "Информация"
+      Caption         =   "РРЅС„РѕСЂРјР°С†РёСЏ"
       Begin VB.Menu mnuHistory 
-         Caption         =   "Журнал блоков"
+         Caption         =   "Р–СѓСЂРЅР°Р» Р±Р»РѕРєРѕРІ"
       End
       Begin VB.Menu mnuHistoryState 
-         Caption         =   "Журнал результатов"
+         Caption         =   "Р–СѓСЂРЅР°Р» СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ"
       End
       Begin VB.Menu mnuHyp2 
          Caption         =   "-"
       End
       Begin VB.Menu mnuUserInfo 
-         Caption         =   "О пользователе"
+         Caption         =   "Рћ РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ"
       End
       Begin VB.Menu mnuWUInfo 
-         Caption         =   "О текущем блоке"
+         Caption         =   "Рћ С‚РµРєСѓС‰РµРј Р±Р»РѕРєРµ"
       End
    End
    Begin VB.Menu mnuStats 
-      Caption         =   "Статистика"
+      Caption         =   "РЎС‚Р°С‚РёСЃС‚РёРєР°"
       Begin VB.Menu mnuTopSpikes 
-         Caption         =   "Лучшие пики..."
+         Caption         =   "Р›СѓС‡С€РёРµ РїРёРєРё..."
       End
       Begin VB.Menu mnuTopGauss 
-         Caption         =   "Лучшие гауссианы..."
+         Caption         =   "Р›СѓС‡С€РёРµ РіР°СѓСЃСЃРёР°РЅС‹..."
       End
       Begin VB.Menu mnuHyp1 
          Caption         =   "-"
       End
       Begin VB.Menu mnuGraphs 
-         Caption         =   "Графики..."
+         Caption         =   "Р“СЂР°С„РёРєРё..."
       End
       Begin VB.Menu mnuTheory 
-         Caption         =   "Теория..."
+         Caption         =   "РўРµРѕСЂРёСЏ..."
       End
    End
    Begin VB.Menu mnuHelp 
-      Caption         =   "Справка"
+      Caption         =   "РЎРїСЂР°РІРєР°"
       Begin VB.Menu mnuContents 
-         Caption         =   "Вызов справки"
+         Caption         =   "Р’С‹Р·РѕРІ СЃРїСЂР°РІРєРё"
          Shortcut        =   {F1}
       End
       Begin VB.Menu mnuHelpOnHelp 
-         Caption         =   "Как пользоваться справкой"
+         Caption         =   "РљР°Рє РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ СЃРїСЂР°РІРєРѕР№"
       End
       Begin VB.Menu mnuHyp8 
          Caption         =   "-"
       End
       Begin VB.Menu mnuAbout 
-         Caption         =   "О программе"
+         Caption         =   "Рћ РїСЂРѕРіСЂР°РјРјРµ"
       End
    End
    Begin VB.Menu mnuHideOnMap 
-      Caption         =   "НаКарте"
+      Caption         =   "РќР°РљР°СЂС‚Рµ"
       Visible         =   0   'False
       Begin VB.Menu mnuHTopSpikes 
-         Caption         =   "Лучшие пики..."
+         Caption         =   "Р›СѓС‡С€РёРµ РїРёРєРё..."
       End
       Begin VB.Menu mnuHTopGauss 
-         Caption         =   "Лучшие гауссианы..."
+         Caption         =   "Р›СѓС‡С€РёРµ РіР°СѓСЃСЃРёР°РЅС‹..."
       End
       Begin VB.Menu mnuHyp4 
          Caption         =   "-"
       End
       Begin VB.Menu mnuHGraphs 
-         Caption         =   "Графики..."
+         Caption         =   "Р“СЂР°С„РёРєРё..."
       End
       Begin VB.Menu mnuHTheory 
-         Caption         =   "Теория..."
+         Caption         =   "РўРµРѕСЂРёСЏ..."
       End
       Begin VB.Menu mnuHyp5 
          Caption         =   "-"
       End
       Begin VB.Menu mnuHHistory 
-         Caption         =   "Журнал блоков"
+         Caption         =   "Р–СѓСЂРЅР°Р» Р±Р»РѕРєРѕРІ"
       End
       Begin VB.Menu mnuHHistoryState 
-         Caption         =   "Журнал результатов"
+         Caption         =   "Р–СѓСЂРЅР°Р» СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ"
       End
       Begin VB.Menu mnuHyp6 
          Caption         =   "-"
       End
       Begin VB.Menu mnuHUserInfo 
-         Caption         =   "О пользователе"
+         Caption         =   "Рћ РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ"
       End
       Begin VB.Menu mnuHWUInfo 
-         Caption         =   "О текущем блоке"
+         Caption         =   "Рћ С‚РµРєСѓС‰РµРј Р±Р»РѕРєРµ"
       End
       Begin VB.Menu mnuHyp7 
          Caption         =   "-"
       End
       Begin VB.Menu mnuHZoom 
-         Caption         =   "Увеличить"
+         Caption         =   "РЈРІРµР»РёС‡РёС‚СЊ"
       End
       Begin VB.Menu mnuHClear 
-         Caption         =   "Очистить"
+         Caption         =   "РћС‡РёСЃС‚РёС‚СЊ"
       End
    End
 End
@@ -395,10 +395,10 @@ Dim i As Long
         WU.ClearAll (0)
         WU.DecodeHistory (WU.ReadHistory(i, 0))
         ShowPosition WU.StartRA, WU.StartDEC, "", "", False, 1
-        StatusStr.Caption = "Выполнено (%) " + Str((i * 100) \ RegRecords) + " (" + Str(i) + " блоков)"
+        StatusStr.Caption = "Р’С‹РїРѕР»РЅРµРЅРѕ (%) " + Str((i * 100) \ RegRecords) + " (" + Str(i) + " Р±Р»РѕРєРѕРІ)"
         StatusStr.Refresh
     Next i
-'Последний блок - отдельно, чтобы не проводить постоянно проверки в цикле
+'РџРѕСЃР»РµРґРЅРёР№ Р±Р»РѕРє - РѕС‚РґРµР»СЊРЅРѕ, С‡С‚РѕР±С‹ РЅРµ РїСЂРѕРІРѕРґРёС‚СЊ РїРѕСЃС‚РѕСЏРЅРЅРѕ РїСЂРѕРІРµСЂРєРё РІ С†РёРєР»Рµ
     WU.ClearAll (0)
     WU.DecodeHistory (WU.ReadHistory(RegRecords, 0))
     If LastInColor = 1 Then
@@ -406,7 +406,7 @@ Dim i As Long
     Else
         ShowPosition WU.StartRA, WU.StartDEC, "", "", False, 1
     End If
-    StatusStr.Caption = "Выполнено 100%"
+    StatusStr.Caption = "Р’С‹РїРѕР»РЅРµРЅРѕ 100%"
     StatusStr.Refresh
     
     frmMain.Refresh
@@ -471,10 +471,10 @@ Private Sub Form_Load()
     'Me.Top = GetSetting(App.Title, "Settings", "MainTop", 1000)
     'Me.Width = GetSetting(App.Title, "Settings", "MainWidth", 6500)
     'Me.Height = GetSetting(App.Title, "Settings", "MainHeight", 6500)
-    Command1.ToolTipText = "Показать на карте координаты обработанных блоков"
-    Command2.ToolTipText = "Показать информацию о текущем рабочем блоке"
-    Label1.Caption = "Используйте ПРАВУЮ кнопку мыши на карте для вызова меню, ЛЕВУЮ - для получения краткой информации о звезде." + vbCrLf
-    Label1.Caption = Label1.Caption & "Используйте Shift+ЛЕВУЮ кнопку мыши на карте для подсветки звезд, для которых можно вывести краткую справку."
+    Command1.ToolTipText = "РџРѕРєР°Р·Р°С‚СЊ РЅР° РєР°СЂС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РѕР±СЂР°Р±РѕС‚Р°РЅРЅС‹С… Р±Р»РѕРєРѕРІ"
+    Command2.ToolTipText = "РџРѕРєР°Р·Р°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ С‚РµРєСѓС‰РµРј СЂР°Р±РѕС‡РµРј Р±Р»РѕРєРµ"
+    Label1.Caption = "РСЃРїРѕР»СЊР·СѓР№С‚Рµ РџР РђР’РЈР® РєРЅРѕРїРєСѓ РјС‹С€Рё РЅР° РєР°СЂС‚Рµ РґР»СЏ РІС‹Р·РѕРІР° РјРµРЅСЋ, Р›Р•Р’РЈР® - РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РєСЂР°С‚РєРѕР№ РёРЅС„РѕСЂРјР°С†РёРё Рѕ Р·РІРµР·РґРµ." + vbCrLf
+    Label1.Caption = Label1.Caption & "РСЃРїРѕР»СЊР·СѓР№С‚Рµ Shift+Р›Р•Р’РЈР® РєРЅРѕРїРєСѓ РјС‹С€Рё РЅР° РєР°СЂС‚Рµ РґР»СЏ РїРѕРґСЃРІРµС‚РєРё Р·РІРµР·Рґ, РґР»СЏ РєРѕС‚РѕСЂС‹С… РјРѕР¶РЅРѕ РІС‹РІРµСЃС‚Рё РєСЂР°С‚РєСѓСЋ СЃРїСЂР°РІРєСѓ."
     
     Form_Resize
 End Sub
@@ -502,20 +502,20 @@ Dim NewFrmHeight As Long    'Same thing!
     Line6.X2 = NewFrmWidth - 100
     Label2.Width = (NewFrmWidth - 100) - Line5.X1 - 100
     
-    'Загрузка карты неба
+    'Р—Р°РіСЂСѓР·РєР° РєР°СЂС‚С‹ РЅРµР±Р°
     If (Dir(App.path & "\skymap.bmp") <> "") Then
         Set Picture1.Picture = LoadPicture(App.path & "\skymap.bmp")
     Else
-        Result = MsgBox("Файл звездного неба (skymap.bmp) не обнаружен." + vbCrLf + "Возможно, он находится в другой папке и/или диске" + vbCrLf + "Хотите чтобы SETImap поискала этот файл на Вашем компьютере?", vbYesNo + vbExclamation, "Файл не найден")
-        'TO DO Здесь провести поиск и если не найдено ничего, установить Result=vbNo
+        Result = MsgBox("Р¤Р°Р№Р» Р·РІРµР·РґРЅРѕРіРѕ РЅРµР±Р° (skymap.bmp) РЅРµ РѕР±РЅР°СЂСѓР¶РµРЅ." + vbCrLf + "Р’РѕР·РјРѕР¶РЅРѕ, РѕРЅ РЅР°С…РѕРґРёС‚СЃСЏ РІ РґСЂСѓРіРѕР№ РїР°РїРєРµ Рё/РёР»Рё РґРёСЃРєРµ" + vbCrLf + "РҐРѕС‚РёС‚Рµ С‡С‚РѕР±С‹ SETImap РїРѕРёСЃРєР°Р»Р° СЌС‚РѕС‚ С„Р°Р№Р» РЅР° Р’Р°С€РµРј РєРѕРјРїСЊСЋС‚РµСЂРµ?", vbYesNo + vbExclamation, "Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ")
+        'TO DO Р—РґРµСЃСЊ РїСЂРѕРІРµСЃС‚Рё РїРѕРёСЃРє Рё РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ РЅРёС‡РµРіРѕ, СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Result=vbNo
         If Result = vbNo Then
-            Result = MsgBox("SETImap может открыть страницу на сервере SETI@home, " + vbCrLf + "на которой находится необходимый файл." + vbCrLf + "Хотите чтобы SETImap подключилась к Интернету?", vbYesNo + vbQuestion, "Файл не найден")
+            Result = MsgBox("SETImap РјРѕР¶РµС‚ РѕС‚РєСЂС‹С‚СЊ СЃС‚СЂР°РЅРёС†Сѓ РЅР° СЃРµСЂРІРµСЂРµ SETI@home, " + vbCrLf + "РЅР° РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РЅРµРѕР±С…РѕРґРёРјС‹Р№ С„Р°Р№Р»." + vbCrLf + "РҐРѕС‚РёС‚Рµ С‡С‚РѕР±С‹ SETImap РїРѕРґРєР»СЋС‡РёР»Р°СЃСЊ Рє РРЅС‚РµСЂРЅРµС‚Сѓ?", vbYesNo + vbQuestion, "Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ")
                 If Result = vbYes Then
-                    Result = MsgBox("Пожалуйста, сохраните загруженную карту как файл с именем" + vbCrLf + """skymap.bmp"" (Bitmap filetype) в папке SETImap", vbOKOnly + vbInformation, "Файл не найден")
+                    Result = MsgBox("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃРѕС…СЂР°РЅРёС‚Рµ Р·Р°РіСЂСѓР¶РµРЅРЅСѓСЋ РєР°СЂС‚Сѓ РєР°Рє С„Р°Р№Р» СЃ РёРјРµРЅРµРј" + vbCrLf + """skymap.bmp"" (Bitmap filetype) РІ РїР°РїРєРµ SETImap", vbOKOnly + vbInformation, "Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ")
                     Dim RetVal As Double
                     RetVal = Shell("Start http://www.setiathome.com", vbMaximizedFocus)
                 Else
-                    Result = MsgBox("Старт SETImap без карты звездного неба.", vbOKOnly + vbInformation, "Файл не найден")
+                    Result = MsgBox("РЎС‚Р°СЂС‚ SETImap Р±РµР· РєР°СЂС‚С‹ Р·РІРµР·РґРЅРѕРіРѕ РЅРµР±Р°.", vbOKOnly + vbInformation, "Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ")
                 End If
         End If
     End If
@@ -600,7 +600,7 @@ Private Sub mnuHHistoryState_Click()
 End Sub
 
 Private Sub mnuHistory_Click()
-    StatusStr.Caption = "Пожалуйста, подождите. Загрузка журнала может занять несколько секунд..."
+    StatusStr.Caption = "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРґРѕР¶РґРёС‚Рµ. Р—Р°РіСЂСѓР·РєР° Р¶СѓСЂРЅР°Р»Р° РјРѕР¶РµС‚ Р·Р°РЅСЏС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ СЃРµРєСѓРЅРґ..."
     StatusStr.Refresh
     showWU = True
     Load frmHistory
@@ -608,7 +608,7 @@ Private Sub mnuHistory_Click()
 End Sub
 
 Private Sub mnuHistoryState_Click()
-    StatusStr.Caption = "Пожалуйста, подождите. Загрузка журнала может занять несколько секунд..."
+    StatusStr.Caption = "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРґРѕР¶РґРёС‚Рµ. Р—Р°РіСЂСѓР·РєР° Р¶СѓСЂРЅР°Р»Р° РјРѕР¶РµС‚ Р·Р°РЅСЏС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ СЃРµРєСѓРЅРґ..."
     StatusStr.Refresh
     showWU = False
     Load frmHistory
@@ -645,7 +645,7 @@ End Sub
 
 Private Sub mnuRange_Click()
     'TO DO Menu...
-    'MsgBox "Открыть окно калибровки приборов"
+    'MsgBox "РћС‚РєСЂС‹С‚СЊ РѕРєРЅРѕ РєР°Р»РёР±СЂРѕРІРєРё РїСЂРёР±РѕСЂРѕРІ"
 End Sub
 
 Private Sub mnuShowAllWU_Click()
@@ -686,20 +686,20 @@ Private Sub mnuVisuals_Click()
 End Sub
 
 '**********************************************************
-'*    Показывает на карте места, сигналы из которых       *
-'*           несли в себе лучшие гауссианы                *
+'*    РџРѕРєР°Р·С‹РІР°РµС‚ РЅР° РєР°СЂС‚Рµ РјРµСЃС‚Р°, СЃРёРіРЅР°Р»С‹ РёР· РєРѕС‚РѕСЂС‹С…       *
+'*           РЅРµСЃР»Рё РІ СЃРµР±Рµ Р»СѓС‡С€РёРµ РіР°СѓСЃСЃРёР°РЅС‹                *
 '**********************************************************
 Private Sub mnuWhereGaussians_Click()
 Dim i As Long
 Dim strTmp As String
-Dim Total As Long           'Всего сигналов
-Dim Matched As Long         'Из них обработано лучших
+Dim Total As Long           'Р’СЃРµРіРѕ СЃРёРіРЅР°Р»РѕРІ
+Dim Matched As Long         'РР· РЅРёС… РѕР±СЂР°Р±РѕС‚Р°РЅРѕ Р»СѓС‡С€РёС…
 
     Total = State.GetLastRecNum(3)
     Matched = 0
     'For i = 1 To Total
     For i = Total To 1 Step -1
-        If State.ReadIndex(1, i) Then   'Target=1 - гауссианы
+        If State.ReadIndex(1, i) Then   'Target=1 - РіР°СѓСЃСЃРёР°РЅС‹
             strTmp = Format((TopG.average * 10), "0.0000000")
             If Val(Left(strTmp, 1)) > 2 Then
                 WU.ClearAll (0)
@@ -709,27 +709,27 @@ Dim Matched As Long         'Из них обработано лучших
                 Matched = Matched + 1
             End If
         End If
-    StatusStr.Caption = "Обработано " + Str(Total - i) + " результатов (" + Str(((Total - i) * 100) \ Total) + " %), из них лучших " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " %)"
+    StatusStr.Caption = "РћР±СЂР°Р±РѕС‚Р°РЅРѕ " + Str(Total - i) + " СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ (" + Str(((Total - i) * 100) \ Total) + " %), РёР· РЅРёС… Р»СѓС‡С€РёС… " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " %)"
     StatusStr.Refresh
     Next i
-    StatusStr.Caption = "Показать источники лучших гауссиан: выполнено 100%. Показано всего источников: " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " % от общего числа результатов)."
+    StatusStr.Caption = "РџРѕРєР°Р·Р°С‚СЊ РёСЃС‚РѕС‡РЅРёРєРё Р»СѓС‡С€РёС… РіР°СѓСЃСЃРёР°РЅ: РІС‹РїРѕР»РЅРµРЅРѕ 100%. РџРѕРєР°Р·Р°РЅРѕ РІСЃРµРіРѕ РёСЃС‚РѕС‡РЅРёРєРѕРІ: " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " % РѕС‚ РѕР±С‰РµРіРѕ С‡РёСЃР»Р° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ)."
     StatusStr.Refresh
 End Sub
 
 '**********************************************************
-'*    Показывает на карте места, сигналы из которых       *
-'*         несли в себе лучшие пиковые сигналы            *
+'*    РџРѕРєР°Р·С‹РІР°РµС‚ РЅР° РєР°СЂС‚Рµ РјРµСЃС‚Р°, СЃРёРіРЅР°Р»С‹ РёР· РєРѕС‚РѕСЂС‹С…       *
+'*         РЅРµСЃР»Рё РІ СЃРµР±Рµ Р»СѓС‡С€РёРµ РїРёРєРѕРІС‹Рµ СЃРёРіРЅР°Р»С‹            *
 '**********************************************************
 Private Sub mnuWhereSpikes_Click()
 Dim i As Long
-Dim Total As Long           'Всего сигналов
-Dim Matched As Long         'Из них обработано лучших
+Dim Total As Long           'Р’СЃРµРіРѕ СЃРёРіРЅР°Р»РѕРІ
+Dim Matched As Long         'РР· РЅРёС… РѕР±СЂР°Р±РѕС‚Р°РЅРѕ Р»СѓС‡С€РёС…
     
     Total = State.GetLastRecNum(4)
     Matched = 0
     ''For i = 1 To Total
     For i = Total To 1 Step -1
-        If State.ReadIndex(0, i) Then   'Target=0 - пики
+        If State.ReadIndex(0, i) Then   'Target=0 - РїРёРєРё
             If Int(TopS.power) > 200 Then
                 WU.ClearAll (0)
                 WU.DecodeHistory (WU.ReadHistory(TopS.ID, 0))
@@ -738,10 +738,10 @@ Dim Matched As Long         'Из них обработано лучших
                 Matched = Matched + 1
             End If
         End If
-    StatusStr.Caption = "Обработано " + Str(Total - i) + " результатов (" + Str(((Total - i) * 100) \ Total) + " %), из них лучших " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " %)"
+    StatusStr.Caption = "РћР±СЂР°Р±РѕС‚Р°РЅРѕ " + Str(Total - i) + " СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ (" + Str(((Total - i) * 100) \ Total) + " %), РёР· РЅРёС… Р»СѓС‡С€РёС… " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " %)"
     StatusStr.Refresh
     Next i
-    StatusStr.Caption = "Показать источники лучших пиков: выполнено 100%. Показано всего источников: " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " % от общего числа результатов)."
+    StatusStr.Caption = "РџРѕРєР°Р·Р°С‚СЊ РёСЃС‚РѕС‡РЅРёРєРё Р»СѓС‡С€РёС… РїРёРєРѕРІ: РІС‹РїРѕР»РЅРµРЅРѕ 100%. РџРѕРєР°Р·Р°РЅРѕ РІСЃРµРіРѕ РёСЃС‚РѕС‡РЅРёРєРѕРІ: " + Str(Matched) + " (" + Str((Matched * 100) \ Total) + " % РѕС‚ РѕР±С‰РµРіРѕ С‡РёСЃР»Р° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ)."
     StatusStr.Refresh
 End Sub
 
@@ -752,16 +752,16 @@ End Sub
 
 Private Sub mnuZoom_Click()
     'TO DO Menu...
-    'MsgBox "Сделать zoom"
+    'MsgBox "РЎРґРµР»Р°С‚СЊ zoom"
 End Sub
 
 Private Sub mWU_WriteComplete()
-    Result = MsgBox("Операция записи журнала успешно завершена!", vbOKOnly, "Запись журнала")
+    Result = MsgBox("РћРїРµСЂР°С†РёСЏ Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅР°!", vbOKOnly, "Р—Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р°")
 End Sub
 
 Private Sub Picture1_MouseMove(Button As Integer, Shift As Integer, x As Single, Y As Single)
-Dim TwipsPerGrad As Double      'Число твипсов в одном градусе
-Dim TwipsPerDEC As Double       'Число твипсов в одном градусе склонения
+Dim TwipsPerGrad As Double      'Р§РёСЃР»Рѕ С‚РІРёРїСЃРѕРІ РІ РѕРґРЅРѕРј РіСЂР°РґСѓСЃРµ
+Dim TwipsPerDEC As Double       'Р§РёСЃР»Рѕ С‚РІРёРїСЃРѕРІ РІ РѕРґРЅРѕРј РіСЂР°РґСѓСЃРµ СЃРєР»РѕРЅРµРЅРёСЏ
 Dim dec As Double, ra As Double
     TwipsPerGrad = Picture1.ScaleWidth / 24
     TwipsPerDEC = Picture1.ScaleHeight / 180
@@ -771,7 +771,7 @@ Dim dec As Double, ra As Double
     Else
         ra = 36 - x / TwipsPerGrad
     End If
-    StatusStr.Caption = "Угол " & DecodeRA(ra) & "| Склонение " & DecodeDEC(dec)
+    StatusStr.Caption = "РЈРіРѕР» " & DecodeRA(ra) & "| РЎРєР»РѕРЅРµРЅРёРµ " & DecodeDEC(dec)
 End Sub
 
 Private Sub Picture1_MouseUp(Button As Integer, Shift As Integer, x As Single, Y As Single)
@@ -781,10 +781,10 @@ Dim message As String
     End If
     If Button = 1 Then
         If Shift = 0 Then
-            'Result = MsgBox("Левая кнопка! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "Ого! Shift=0")
+            'Result = MsgBox("Р›РµРІР°СЏ РєРЅРѕРїРєР°! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "РћРіРѕ! Shift=0")
         Else
-            'Подсветка звезд
-            'Result = MsgBox("Левая кнопка! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "Ого! Shift= " & Str(Shift))
+            'РџРѕРґСЃРІРµС‚РєР° Р·РІРµР·Рґ
+            'Result = MsgBox("Р›РµРІР°СЏ РєРЅРѕРїРєР°! " & "X=" & Str(X) & " Y=" & Str(Y), vbOKOnly, "РћРіРѕ! Shift= " & Str(Shift))
             Picture1.ForeColor = vbRed
             Picture1.Circle (3690, 3315), 100
             Picture1.Circle (3690, 3315), 75
@@ -795,21 +795,21 @@ Dim message As String
         End If
         If x > 3640 And x < 3740 Then
             If Y > 3265 And Y < 3365 Then
-            message = "Правое плечо Ориона образует звезда Бетельгейзе (от арабского ""Beit Algueze"")," + vbCrLf
-            message = message & "что означает ""armpit of the giant"". Звезда находится на расстоянии" + vbCrLf
-            message = message & "520 световых лет от Земли, а ее свет начал свой путь незадолго до" + vbCrLf
-            message = message & "путешествия Колумба. Диаметр звезды по оценкам составляет 480...800 миль," + vbCrLf
-            message = message & "делая ее одной из самых больших звезд, видимых невооруженным глазом." + vbCrLf
-            message = message & "Если поместить Бетельгейзе на место нашего Солнца, то внешние слои звезды" + vbCrLf
-            message = message & "находились бы за орбитой Марса."
-            Result = MsgBox(message, vbOKOnly, "Звезда - информация")
+            message = "РџСЂР°РІРѕРµ РїР»РµС‡Рѕ РћСЂРёРѕРЅР° РѕР±СЂР°Р·СѓРµС‚ Р·РІРµР·РґР° Р‘РµС‚РµР»СЊРіРµР№Р·Рµ (РѕС‚ Р°СЂР°Р±СЃРєРѕРіРѕ ""Beit Algueze"")," + vbCrLf
+            message = message & "С‡С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ ""armpit of the giant"". Р—РІРµР·РґР° РЅР°С…РѕРґРёС‚СЃСЏ РЅР° СЂР°СЃСЃС‚РѕСЏРЅРёРё" + vbCrLf
+            message = message & "520 СЃРІРµС‚РѕРІС‹С… Р»РµС‚ РѕС‚ Р—РµРјР»Рё, Р° РµРµ СЃРІРµС‚ РЅР°С‡Р°Р» СЃРІРѕР№ РїСѓС‚СЊ РЅРµР·Р°РґРѕР»РіРѕ РґРѕ" + vbCrLf
+            message = message & "РїСѓС‚РµС€РµСЃС‚РІРёСЏ РљРѕР»СѓРјР±Р°. Р”РёР°РјРµС‚СЂ Р·РІРµР·РґС‹ РїРѕ РѕС†РµРЅРєР°Рј СЃРѕСЃС‚Р°РІР»СЏРµС‚ 480...800 РјРёР»СЊ," + vbCrLf
+            message = message & "РґРµР»Р°СЏ РµРµ РѕРґРЅРѕР№ РёР· СЃР°РјС‹С… Р±РѕР»СЊС€РёС… Р·РІРµР·Рґ, РІРёРґРёРјС‹С… РЅРµРІРѕРѕСЂСѓР¶РµРЅРЅС‹Рј РіР»Р°Р·РѕРј." + vbCrLf
+            message = message & "Р•СЃР»Рё РїРѕРјРµСЃС‚РёС‚СЊ Р‘РµС‚РµР»СЊРіРµР№Р·Рµ РЅР° РјРµСЃС‚Рѕ РЅР°С€РµРіРѕ РЎРѕР»РЅС†Р°, С‚Рѕ РІРЅРµС€РЅРёРµ СЃР»РѕРё Р·РІРµР·РґС‹" + vbCrLf
+            message = message & "РЅР°С…РѕРґРёР»РёСЃСЊ Р±С‹ Р·Р° РѕСЂР±РёС‚РѕР№ РњР°СЂСЃР°."
+            Result = MsgBox(message, vbOKOnly, "Р—РІРµР·РґР° - РёРЅС„РѕСЂРјР°С†РёСЏ")
             End If
         End If
         If x > 7075 And x < 7175 Then
             If Y > 2965 And Y < 3065 Then
-            message = "Algenib созвездия Пегаса" + vbCrLf
-            message = message & "Расстояние - 479 световых лет."
-            Result = MsgBox(message, vbOKOnly, "Звезда - информация")
+            message = "Algenib СЃРѕР·РІРµР·РґРёСЏ РџРµРіР°СЃР°" + vbCrLf
+            message = message & "Р Р°СЃСЃС‚РѕСЏРЅРёРµ - 479 СЃРІРµС‚РѕРІС‹С… Р»РµС‚."
+            Result = MsgBox(message, vbOKOnly, "Р—РІРµР·РґР° - РёРЅС„РѕСЂРјР°С†РёСЏ")
             End If
         End If
     End If
@@ -842,8 +842,8 @@ End Sub
 Function ShowPosition(pstart_ra As String, pstart_dec As String, p_cmt As String, comment As String, pcurr As Boolean, Mode As Long) As Boolean
 Dim ix As Integer, iy As Integer
 Dim ra As Double, dec As Double
-Dim TwipsPerGrad As Double      'Число твипсов в одном градусе
-Dim TwipsPerDEC As Double      'Число твипсов в одном градусе склонения
+Dim TwipsPerGrad As Double      'Р§РёСЃР»Рѕ С‚РІРёРїСЃРѕРІ РІ РѕРґРЅРѕРј РіСЂР°РґСѓСЃРµ
+Dim TwipsPerDEC As Double      'Р§РёСЃР»Рѕ С‚РІРёРїСЃРѕРІ РІ РѕРґРЅРѕРј РіСЂР°РґСѓСЃРµ СЃРєР»РѕРЅРµРЅРёСЏ
 Dim text As String
 Dim i As Long
 
@@ -857,10 +857,10 @@ Dim iii As Long
     Select Case Mode
         Case 1:
             If ra < 12 Then
-                'Точка на левой половине карты
+                'РўРѕС‡РєР° РЅР° Р»РµРІРѕР№ РїРѕР»РѕРІРёРЅРµ РєР°СЂС‚С‹
                 ix = (Picture1.ScaleWidth) / 2 - Trunc(ra * TwipsPerGrad)
             Else
-                'Точка на правой половине карты
+                'РўРѕС‡РєР° РЅР° РїСЂР°РІРѕР№ РїРѕР»РѕРІРёРЅРµ РєР°СЂС‚С‹
                 ix = (Picture1.ScaleWidth) / 2 + Trunc((24 - ra) * TwipsPerGrad)
             End If
             iy = (Picture1.ScaleHeight) / 2 - Trunc(dec * TwipsPerDEC)
@@ -874,22 +874,22 @@ Dim iii As Long
             iy = iy
             
             Select Case MarkerType
-                Case 0: 'Крест
+                Case 0: 'РљСЂРµСЃС‚
                     Picture1.Line (ix - 100 - 50 * MarkerSize, iy)-(ix + 100 + 50 * MarkerSize, iy)
                     Picture1.Line (ix, iy - 100 - 50 * MarkerSize)-(ix, iy + 100 + 50 * MarkerSize)
-                Case 1: 'Окружность
+                Case 1: 'РћРєСЂСѓР¶РЅРѕСЃС‚СЊ
                     Picture1.Circle (CInt(ix), CInt(iy)), 50 + 50 * MarkerSize
-                Case 2: 'Треугольник
+                Case 2: 'РўСЂРµСѓРіРѕР»СЊРЅРёРє
                     Picture1.Line (ix - 50 - 50 * MarkerSize, iy + 75 + 50 * MarkerSize)-(ix, iy - 60 - 50 * MarkerSize)
                     Picture1.Line (ix, iy - 60 - 50 * MarkerSize)-(ix + 50 + 50 * MarkerSize, iy + 75 + 50 * MarkerSize)
                     Picture1.Line (ix + 50 + 50 * MarkerSize, iy + 75 + 50 * MarkerSize)-(ix - 50 - 50 * MarkerSize, iy + 75 + 50 * MarkerSize)
             End Select
         Case 2:
             If ra < 12 Then
-                'Точка на левой половине карты
+                'РўРѕС‡РєР° РЅР° Р»РµРІРѕР№ РїРѕР»РѕРІРёРЅРµ РєР°СЂС‚С‹
                 ix = (Picture1.ScaleWidth) / 2 - Trunc(ra * TwipsPerGrad)
             Else
-                'Точка на правой половине карты
+                'РўРѕС‡РєР° РЅР° РїСЂР°РІРѕР№ РїРѕР»РѕРІРёРЅРµ РєР°СЂС‚С‹
                 ix = (Picture1.ScaleWidth) / 2 + Trunc((24 - ra) * TwipsPerGrad)
             End If
             iy = (Picture1.ScaleHeight) / 2 - Trunc(dec * TwipsPerDEC)
@@ -905,10 +905,10 @@ Picture1.ForeColor = RGB(82 + iii * 5 - Int(i / 2), 82 + iii * 5 - Int(i / 2), 2
             Next i
         Case 3:
             If ra < 12 Then
-                'Точка на левой половине карты
+                'РўРѕС‡РєР° РЅР° Р»РµРІРѕР№ РїРѕР»РѕРІРёРЅРµ РєР°СЂС‚С‹
                 ix = (Picture1.ScaleWidth) / 2 - Trunc(ra * TwipsPerGrad)
             Else
-                'Точка на правой половине карты
+                'РўРѕС‡РєР° РЅР° РїСЂР°РІРѕР№ РїРѕР»РѕРІРёРЅРµ РєР°СЂС‚С‹
                 ix = (Picture1.ScaleWidth) / 2 + Trunc((24 - ra) * TwipsPerGrad)
             End If
             iy = (Picture1.ScaleHeight) / 2 - Trunc(dec * TwipsPerDEC)
