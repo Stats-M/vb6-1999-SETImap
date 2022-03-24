@@ -3,7 +3,7 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
 Begin VB.Form frmOptions 
    BorderStyle     =   3  'Fixed Dialog
-   Caption         =   "Настройки"
+   Caption         =   "РќР°СЃС‚СЂРѕР№РєРё"
    ClientHeight    =   5040
    ClientLeft      =   45
    ClientTop       =   330
@@ -26,7 +26,7 @@ Begin VB.Form frmOptions
       _Version        =   393216
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Справка"
+      Caption         =   "РЎРїСЂР°РІРєР°"
       Height          =   375
       Left            =   105
       TabIndex        =   18
@@ -74,7 +74,7 @@ Begin VB.Form frmOptions
       Top             =   480
       Width           =   5685
       Begin VB.Frame Frame2 
-         Caption         =   "Файлы отчетов"
+         Caption         =   "Р¤Р°Р№Р»С‹ РѕС‚С‡РµС‚РѕРІ"
          Height          =   1380
          Left            =   210
          TabIndex        =   19
@@ -96,7 +96,7 @@ Begin VB.Form frmOptions
             Width           =   4320
          End
          Begin VB.Label Label5 
-            Caption         =   "По-умолчанию используется файл sreport.txt в папке SETImap"
+            Caption         =   "РџРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С„Р°Р№Р» sreport.txt РІ РїР°РїРєРµ SETImap"
             Height          =   225
             Left            =   210
             TabIndex        =   25
@@ -104,7 +104,7 @@ Begin VB.Form frmOptions
             Width           =   4845
          End
          Begin VB.Label Label4 
-            Caption         =   "Файл краткого отчета о текущих результатах:"
+            Caption         =   "Р¤Р°Р№Р» РєСЂР°С‚РєРѕРіРѕ РѕС‚С‡РµС‚Р° Рѕ С‚РµРєСѓС‰РёС… СЂРµР·СѓР»СЊС‚Р°С‚Р°С…:"
             Height          =   225
             Left            =   210
             TabIndex        =   20
@@ -113,7 +113,7 @@ Begin VB.Form frmOptions
          End
       End
       Begin VB.Frame fraSample4 
-         Caption         =   "Файлы данных"
+         Caption         =   "Р¤Р°Р№Р»С‹ РґР°РЅРЅС‹С…"
          Height          =   1815
          Left            =   210
          TabIndex        =   10
@@ -121,7 +121,7 @@ Begin VB.Form frmOptions
          Top             =   180
          Width           =   5265
          Begin VB.CheckBox Check7 
-            Caption         =   "Производить импорт журналов при отсутствии текущего рабочего блока"
+            Caption         =   "РџСЂРѕРёР·РІРѕРґРёС‚СЊ РёРјРїРѕСЂС‚ Р¶СѓСЂРЅР°Р»РѕРІ РїСЂРё РѕС‚СЃСѓС‚СЃС‚РІРёРё С‚РµРєСѓС‰РµРіРѕ СЂР°Р±РѕС‡РµРіРѕ Р±Р»РѕРєР°"
             Height          =   435
             Left            =   210
             TabIndex        =   36
@@ -143,7 +143,7 @@ Begin VB.Form frmOptions
       Top             =   480
       Width           =   5685
       Begin VB.Frame fraSample3 
-         Caption         =   "Установки обработки рабочих блоков"
+         Caption         =   "РЈСЃС‚Р°РЅРѕРІРєРё РѕР±СЂР°Р±РѕС‚РєРё СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ"
          Height          =   3390
          Left            =   210
          TabIndex        =   29
@@ -151,7 +151,7 @@ Begin VB.Form frmOptions
          Top             =   210
          Width           =   5190
          Begin VB.OptionButton Option1 
-            Caption         =   "Только по команде пользователя"
+            Caption         =   "РўРѕР»СЊРєРѕ РїРѕ РєРѕРјР°РЅРґРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ"
             Height          =   330
             Index           =   0
             Left            =   525
@@ -161,7 +161,7 @@ Begin VB.Form frmOptions
             Width           =   3060
          End
          Begin VB.OptionButton Option1 
-            Caption         =   "Автоматически при старте"
+            Caption         =   "РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїСЂРё СЃС‚Р°СЂС‚Рµ"
             Height          =   330
             Index           =   1
             Left            =   525
@@ -170,14 +170,14 @@ Begin VB.Form frmOptions
             Width           =   3060
          End
          Begin VB.Frame Frame1 
-            Caption         =   "Повторные результаты"
+            Caption         =   "РџРѕРІС‚РѕСЂРЅС‹Рµ СЂРµР·СѓР»СЊС‚Р°С‚С‹"
             Height          =   1065
             Left            =   315
             TabIndex        =   30
             Top             =   1470
             Width           =   4530
             Begin VB.OptionButton Option2 
-               Caption         =   "Пропускать"
+               Caption         =   "РџСЂРѕРїСѓСЃРєР°С‚СЊ"
                Height          =   225
                Index           =   0
                Left            =   210
@@ -187,7 +187,7 @@ Begin VB.Form frmOptions
                Width           =   3480
             End
             Begin VB.OptionButton Option2 
-               Caption         =   "Перезаписывать поверх старых"
+               Caption         =   "РџРµСЂРµР·Р°РїРёСЃС‹РІР°С‚СЊ РїРѕРІРµСЂС… СЃС‚Р°СЂС‹С…"
                Height          =   225
                Index           =   1
                Left            =   210
@@ -197,7 +197,7 @@ Begin VB.Form frmOptions
             End
          End
          Begin VB.Frame Frame3 
-            Caption         =   "Обработка результатов"
+            Caption         =   "РћР±СЂР°Р±РѕС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ"
             Height          =   1065
             Left            =   315
             TabIndex        =   35
@@ -219,7 +219,7 @@ Begin VB.Form frmOptions
       Top             =   480
       Width           =   5685
       Begin VB.Frame fraSample2 
-         Caption         =   "Настройки карты звездного неба"
+         Caption         =   "РќР°СЃС‚СЂРѕР№РєРё РєР°СЂС‚С‹ Р·РІРµР·РґРЅРѕРіРѕ РЅРµР±Р°"
          Height          =   3390
          Left            =   210
          TabIndex        =   8
@@ -251,7 +251,7 @@ Begin VB.Form frmOptions
             Max             =   2
          End
          Begin VB.CheckBox Check3 
-            Caption         =   "Выделять последний блок цветом"
+            Caption         =   "Р’С‹РґРµР»СЏС‚СЊ РїРѕСЃР»РµРґРЅРёР№ Р±Р»РѕРє С†РІРµС‚РѕРј"
             Height          =   330
             Left            =   210
             TabIndex        =   13
@@ -259,7 +259,7 @@ Begin VB.Form frmOptions
             Width           =   4845
          End
          Begin VB.CheckBox Check2 
-            Caption         =   "Автоматически перерисовывать (падение скорости)"
+            Caption         =   "РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµСЂРёСЃРѕРІС‹РІР°С‚СЊ (РїР°РґРµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё)"
             Height          =   330
             Left            =   210
             TabIndex        =   12
@@ -267,7 +267,7 @@ Begin VB.Form frmOptions
             Width           =   4845
          End
          Begin VB.Label Label2 
-            Caption         =   "Размер маркера"
+            Caption         =   "Р Р°Р·РјРµСЂ РјР°СЂРєРµСЂР°"
             Height          =   225
             Left            =   315
             TabIndex        =   17
@@ -275,7 +275,7 @@ Begin VB.Form frmOptions
             Width           =   1695
          End
          Begin VB.Label Label1 
-            Caption         =   "Вид маркера"
+            Caption         =   "Р’РёРґ РјР°СЂРєРµСЂР°"
             Height          =   225
             Left            =   315
             TabIndex        =   15
@@ -303,7 +303,7 @@ Begin VB.Form frmOptions
       Top             =   480
       Width           =   5685
       Begin VB.Frame fraSample1 
-         Caption         =   "Настройки SETImap"
+         Caption         =   "РќР°СЃС‚СЂРѕР№РєРё SETImap"
          Height          =   3390
          Left            =   208
          TabIndex        =   4
@@ -311,7 +311,7 @@ Begin VB.Form frmOptions
          Top             =   207
          Width           =   5295
          Begin VB.CheckBox Check8 
-            Caption         =   "Отключить проверку Linux-клиента при старте SETImap"
+            Caption         =   "РћС‚РєР»СЋС‡РёС‚СЊ РїСЂРѕРІРµСЂРєСѓ Linux-РєР»РёРµРЅС‚Р° РїСЂРё СЃС‚Р°СЂС‚Рµ SETImap"
             Height          =   330
             Left            =   315
             TabIndex        =   37
@@ -319,7 +319,7 @@ Begin VB.Form frmOptions
             Width           =   4740
          End
          Begin VB.CheckBox Check6 
-            Caption         =   "Анимация"
+            Caption         =   "РђРЅРёРјР°С†РёСЏ"
             Height          =   330
             Left            =   315
             TabIndex        =   27
@@ -339,7 +339,7 @@ Begin VB.Form frmOptions
             Max             =   4
          End
          Begin VB.CheckBox Check5 
-            Caption         =   "Обновлять текущие результаты только при старте"
+            Caption         =   "РћР±РЅРѕРІР»СЏС‚СЊ С‚РµРєСѓС‰РёРµ СЂРµР·СѓР»СЊС‚Р°С‚С‹ С‚РѕР»СЊРєРѕ РїСЂРё СЃС‚Р°СЂС‚Рµ"
             Height          =   330
             Left            =   315
             TabIndex        =   22
@@ -347,7 +347,7 @@ Begin VB.Form frmOptions
             Width           =   4635
          End
          Begin VB.CheckBox Check4 
-            Caption         =   "Сохранять результаты автокалибровки (рекомендуется)"
+            Caption         =   "РЎРѕС…СЂР°РЅСЏС‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚С‹ Р°РІС‚РѕРєР°Р»РёР±СЂРѕРІРєРё (СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ)"
             Height          =   330
             Left            =   315
             TabIndex        =   21
@@ -355,7 +355,7 @@ Begin VB.Form frmOptions
             Width           =   4635
          End
          Begin VB.CheckBox Check1 
-            Caption         =   "Показывать информационные сообщения"
+            Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ"
             Enabled         =   0   'False
             Height          =   330
             Left            =   315
@@ -386,19 +386,19 @@ Begin VB.Form frmOptions
       BeginProperty Tabs {1EFB6598-857C-11D1-B16A-00C0F0283628} 
          NumTabs         =   4
          BeginProperty Tab1 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Общие"
+            Caption         =   "РћР±С‰РёРµ"
             ImageVarType    =   2
          EndProperty
          BeginProperty Tab2 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Карта"
+            Caption         =   "РљР°СЂС‚Р°"
             ImageVarType    =   2
          EndProperty
          BeginProperty Tab3 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Результаты"
+            Caption         =   "Р РµР·СѓР»СЊС‚Р°С‚С‹"
             ImageVarType    =   2
          EndProperty
          BeginProperty Tab4 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Файлы"
+            Caption         =   "Р¤Р°Р№Р»С‹"
             ImageVarType    =   2
          EndProperty
       EndProperty
@@ -460,18 +460,18 @@ Private Sub cmdApply_Click()
     SaveSetting App.Title, "Settings", "DoLinux", DoLinux
     SaveSetting App.Title, "Settings", "DoImport", DoImport
     If AllowAnim = 1 Then
-        'Время показа кадра сохраняем только если анимация разрешена
+        'Р’СЂРµРјСЏ РїРѕРєР°Р·Р° РєР°РґСЂР° СЃРѕС…СЂР°РЅСЏРµРј С‚РѕР»СЊРєРѕ РµСЃР»Рё Р°РЅРёРјР°С†РёСЏ СЂР°Р·СЂРµС€РµРЅР°
         SaveSetting App.Title, "Settings", "AnimationTick", AnimTick
     End If
     If Text1.text = "" Then
-        'Файл по-умолчанию
-        UseDefaultRF = 1    'Да, использовать
+        'Р¤Р°Р№Р» РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
+        UseDefaultRF = 1    'Р”Р°, РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ
         SaveSetting App.Title, "Settings", "UseDefaultReportFile", UseDefaultRF
         DeleteSetting App.Title, "Settings", "ReportFile"
     Else
-        'Файл указан
-        'Заодно заполним переменную на тот случай, если пользователь сразу
-        'захочет создать отчет без предварительного рестарта программы
+        'Р¤Р°Р№Р» СѓРєР°Р·Р°РЅ
+        'Р—Р°РѕРґРЅРѕ Р·Р°РїРѕР»РЅРёРј РїРµСЂРµРјРµРЅРЅСѓСЋ РЅР° С‚РѕС‚ СЃР»СѓС‡Р°Р№, РµСЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃСЂР°Р·Сѓ
+        'Р·Р°С…РѕС‡РµС‚ СЃРѕР·РґР°С‚СЊ РѕС‚С‡РµС‚ Р±РµР· РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРіРѕ СЂРµСЃС‚Р°СЂС‚Р° РїСЂРѕРіСЂР°РјРјС‹
         ReportFileReg = Text1.text
         UseDefaultRF = 0
         SaveSetting App.Title, "Settings", "UseDefaultReportFile", UseDefaultRF
@@ -494,32 +494,32 @@ Private Sub Command1_Click()
 End Sub
 
 '************************************************
-'*  Показать окно Open для выбора файла отчета  *
+'*  РџРѕРєР°Р·Р°С‚СЊ РѕРєРЅРѕ Open РґР»СЏ РІС‹Р±РѕСЂР° С„Р°Р№Р»Р° РѕС‚С‡РµС‚Р°  *
 '************************************************
 Private Sub Command2_Click()
     On Error GoTo ErrHandler
-    'CancelError is True. Нажатие Cancel в диалоговом окне вызовет ошибку,
-    'что позволит отследить это действие пользователя (отмену открытия файла).
+    'CancelError is True. РќР°Р¶Р°С‚РёРµ Cancel РІ РґРёР°Р»РѕРіРѕРІРѕРј РѕРєРЅРµ РІС‹Р·РѕРІРµС‚ РѕС€РёР±РєСѓ,
+    'С‡С‚Рѕ РїРѕР·РІРѕР»РёС‚ РѕС‚СЃР»РµРґРёС‚СЊ СЌС‚Рѕ РґРµР№СЃС‚РІРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (РѕС‚РјРµРЅСѓ РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°).
     With CommonDialog1
-        'Остлеживание нажатия Cancel
+        'РћСЃС‚Р»РµР¶РёРІР°РЅРёРµ РЅР°Р¶Р°С‚РёСЏ Cancel
         .CancelError = True
-        'Заголовок окна
-        .DialogTitle = "Файл краткого отчета..."
-        'Установка фильтров
-        .Filter = "Все файлы (*.*)|*.*|Текстовые файлы (*.txt)|*.txt|Файлы документов (*.doc)|*.doc"
-        'Выбрать по-умолчанию тип файлов TXT
+        'Р—Р°РіРѕР»РѕРІРѕРє РѕРєРЅР°
+        .DialogTitle = "Р¤Р°Р№Р» РєСЂР°С‚РєРѕРіРѕ РѕС‚С‡РµС‚Р°..."
+        'РЈСЃС‚Р°РЅРѕРІРєР° С„РёР»СЊС‚СЂРѕРІ
+        .Filter = "Р’СЃРµ С„Р°Р№Р»С‹ (*.*)|*.*|РўРµРєСЃС‚РѕРІС‹Рµ С„Р°Р№Р»С‹ (*.txt)|*.txt|Р¤Р°Р№Р»С‹ РґРѕРєСѓРјРµРЅС‚РѕРІ (*.doc)|*.doc"
+        'Р’С‹Р±СЂР°С‚СЊ РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ С‚РёРї С„Р°Р№Р»РѕРІ TXT
         .FilterIndex = 1
-        'Показать окно
+        'РџРѕРєР°Р·Р°С‚СЊ РѕРєРЅРѕ
         .ShowOpen
     End With
 ''''    CommonDialog1.ShowOpen
-''''    'Заполнить поле именем файла
+''''    'Р—Р°РїРѕР»РЅРёС‚СЊ РїРѕР»Рµ РёРјРµРЅРµРј С„Р°Р№Р»Р°
     Text1.text = CommonDialog1.FileName
-    'TO DO Запомнить это имя!
+    'TO DO Р—Р°РїРѕРјРЅРёС‚СЊ СЌС‚Рѕ РёРјСЏ!
     Exit Sub
 
 ErrHandler:
-    'Была нажата кнопка Cancel.
+    'Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° Cancel.
     Exit Sub
 
 End Sub
@@ -561,9 +561,9 @@ Private Sub Form_Load()
     Select Case AnimTick
         Case 10:
             Slider3.Value = 0
-            'Slider по-умолчанию тут стоит, поэтому при загрузке и таких настройках
-            'текст не выводился. Теперь все должно быть ОК.
-            Label6.Caption = "Скорость анимации: очень быстро"
+            'Slider РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ С‚СѓС‚ СЃС‚РѕРёС‚, РїРѕСЌС‚РѕРјСѓ РїСЂРё Р·Р°РіСЂСѓР·РєРµ Рё С‚Р°РєРёС… РЅР°СЃС‚СЂРѕР№РєР°С…
+            'С‚РµРєСЃС‚ РЅРµ РІС‹РІРѕРґРёР»СЃСЏ. РўРµРїРµСЂСЊ РІСЃРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РћРљ.
+            Label6.Caption = "РЎРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё: РѕС‡РµРЅСЊ Р±С‹СЃС‚СЂРѕ"
         Case 25:    Slider3.Value = 1
         Case 50:    Slider3.Value = 2
         Case 100:   Slider3.Value = 3
@@ -577,7 +577,7 @@ Private Sub Form_Load()
         Label6.Enabled = False
     End If
     Option1(AutoShowWU).Value = True
-    Option2(SplitterOverwr).Value = True 'При SplittterOverwr=0 (нет) Opt2(0)=True ("Пропускать")
+    Option2(SplitterOverwr).Value = True 'РџСЂРё SplittterOverwr=0 (РЅРµС‚) Opt2(0)=True ("РџСЂРѕРїСѓСЃРєР°С‚СЊ")
     Command2.Picture = LoadResPicture(180, vbResBitmap)
     If Not (UseDefaultRF) Then
         Text1.text = ReportFileReg
@@ -604,23 +604,23 @@ Private Sub Slider2_Change()
 End Sub
 
 Private Sub Slider3_Change()
-    Label6.Caption = "Скорость анимации: "
+    Label6.Caption = "РЎРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё: "
     Select Case Slider3.Value
         Case 0:
             AnimTick = 10
-            Label6.Caption = Label6.Caption & "очень быстро"
+            Label6.Caption = Label6.Caption & "РѕС‡РµРЅСЊ Р±С‹СЃС‚СЂРѕ"
         Case 1:
             AnimTick = 25
-            Label6.Caption = Label6.Caption & "быстро"
+            Label6.Caption = Label6.Caption & "Р±С‹СЃС‚СЂРѕ"
         Case 2:
             AnimTick = 50
-            Label6.Caption = Label6.Caption & "средне"
+            Label6.Caption = Label6.Caption & "СЃСЂРµРґРЅРµ"
         Case 3:
             AnimTick = 100
-            Label6.Caption = Label6.Caption & "медленно"
+            Label6.Caption = Label6.Caption & "РјРµРґР»РµРЅРЅРѕ"
         Case 4:
             AnimTick = 250
-            Label6.Caption = Label6.Caption & "очень медленно"
+            Label6.Caption = Label6.Caption & "РѕС‡РµРЅСЊ РјРµРґР»РµРЅРЅРѕ"
     End Select
 End Sub
 
