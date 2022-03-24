@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmStats 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Статистика"
+   Caption         =   "РЎС‚Р°С‚РёСЃС‚РёРєР°"
    ClientHeight    =   3915
    ClientLeft      =   45
    ClientTop       =   330
@@ -13,14 +13,14 @@ Begin VB.Form frmStats
    ScaleWidth      =   9375
    StartUpPosition =   3  'Windows Default
    Begin VB.Frame Frame1 
-      Caption         =   "Показывать:"
+      Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ:"
       Height          =   1065
       Left            =   7770
       TabIndex        =   5
       Top             =   1155
       Width           =   1485
       Begin VB.OptionButton Option1 
-         Caption         =   "Гауссианы"
+         Caption         =   "Р“Р°СѓСЃСЃРёР°РЅС‹"
          Height          =   330
          Index           =   1
          Left            =   105
@@ -30,7 +30,7 @@ Begin VB.Form frmStats
          Width           =   1275
       End
       Begin VB.OptionButton Option1 
-         Caption         =   "Пики"
+         Caption         =   "РџРёРєРё"
          Height          =   330
          Index           =   0
          Left            =   105
@@ -40,7 +40,7 @@ Begin VB.Form frmStats
       End
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Показать"
+      Caption         =   "РџРѕРєР°Р·Р°С‚СЊ"
       Default         =   -1  'True
       Height          =   345
       Left            =   7770
@@ -50,7 +50,7 @@ Begin VB.Form frmStats
    End
    Begin VB.CommandButton Command2 
       Cancel          =   -1  'True
-      Caption         =   "Закрыть"
+      Caption         =   "Р—Р°РєСЂС‹С‚СЊ"
       Height          =   345
       Left            =   7770
       TabIndex        =   3
@@ -58,7 +58,7 @@ Begin VB.Form frmStats
       Width           =   1467
    End
    Begin VB.CheckBox Check1 
-      Caption         =   "Построить индекс заново"
+      Caption         =   "РџРѕСЃС‚СЂРѕРёС‚СЊ РёРЅРґРµРєСЃ Р·Р°РЅРѕРІРѕ"
       Height          =   540
       Left            =   7770
       TabIndex        =   2
@@ -107,27 +107,27 @@ Dim OneStr  As String
 
     ErrTrap = False
     If Option1(0).Value Then
-    'Показать индекс пиков
-        Label1.Caption = "Мощность сигнала - номер блока - рейтинг"
+    'РџРѕРєР°Р·Р°С‚СЊ РёРЅРґРµРєСЃ РїРёРєРѕРІ
+        Label1.Caption = "РњРѕС‰РЅРѕСЃС‚СЊ СЃРёРіРЅР°Р»Р° - РЅРѕРјРµСЂ Р±Р»РѕРєР° - СЂРµР№С‚РёРЅРі"
         If Check1.Value = vbChecked Then
-            'Построить индекс пиков заново
+            'РџРѕСЃС‚СЂРѕРёС‚СЊ РёРЅРґРµРєСЃ РїРёРєРѕРІ Р·Р°РЅРѕРІРѕ
             bResult = State.RebuildIndex(1, 0)
         Else
-            'Обновить в индексе пиков только запись для текущего блока
+            'РћР±РЅРѕРІРёС‚СЊ РІ РёРЅРґРµРєСЃРµ РїРёРєРѕРІ С‚РѕР»СЊРєРѕ Р·Р°РїРёСЃСЊ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ Р±Р»РѕРєР°
             bResult = State.RebuildIndex(0, 0, State.GetLastRecNum(2))
         End If
         If bResult Then
             Text1.text = ""
             For i = 1 To State.GetLastRecNum(4)
-                If State.ReadIndex(0, i) Then   'Target=0 - пики
+                If State.ReadIndex(0, i) Then   'Target=0 - РїРёРєРё
                     OneStr = Format(TopS.power, "####.0000") & "   "
-                    'Выравниваем номера блоков
+                    'Р’С‹СЂР°РІРЅРёРІР°РµРј РЅРѕРјРµСЂР° Р±Р»РѕРєРѕРІ
                     j = Len(Str(TopS.ID))
                     For j = j To 4
                         OneStr = OneStr & " "
                     Next j
                     OneStr = OneStr & Format(TopS.ID, "#####")
-                    'Выравниваем порядковые номера
+                    'Р’С‹СЂР°РІРЅРёРІР°РµРј РїРѕСЂСЏРґРєРѕРІС‹Рµ РЅРѕРјРµСЂР°
                     j = Len(Str(i))
                     For j = j To 5
                         OneStr = OneStr & " "
@@ -141,35 +141,35 @@ Dim OneStr  As String
                 End If
             Next i
             If ErrTrap Then
-                'Ошибка при чтении записи файла индекса пиков
+                'РћС€РёР±РєР° РїСЂРё С‡С‚РµРЅРёРё Р·Р°РїРёСЃРё С„Р°Р№Р»Р° РёРЅРґРµРєСЃР° РїРёРєРѕРІ
                 Call RaiseErrMsg(1207, StandartErrHeader)
             End If
         Else
-            'Ошибка при построении индекса пиков
+            'РћС€РёР±РєР° РїСЂРё РїРѕСЃС‚СЂРѕРµРЅРёРё РёРЅРґРµРєСЃР° РїРёРєРѕРІ
             Call RaiseErrMsg(1208, StandartErrHeader)
         End If
     Else
-    'Показать индекс гауссиан
-        Label1.Caption = "Интегральный показатель - номер блока - рейтинг"
+    'РџРѕРєР°Р·Р°С‚СЊ РёРЅРґРµРєСЃ РіР°СѓСЃСЃРёР°РЅ
+        Label1.Caption = "РРЅС‚РµРіСЂР°Р»СЊРЅС‹Р№ РїРѕРєР°Р·Р°С‚РµР»СЊ - РЅРѕРјРµСЂ Р±Р»РѕРєР° - СЂРµР№С‚РёРЅРі"
         If Check1.Value = vbChecked Then
-            'Построить индекс гауссиан заново
+            'РџРѕСЃС‚СЂРѕРёС‚СЊ РёРЅРґРµРєСЃ РіР°СѓСЃСЃРёР°РЅ Р·Р°РЅРѕРІРѕ
             bResult = State.RebuildIndex(1, 1)
         Else
-            'Обновить в индексе гауссиан только запись для текущего блока
+            'РћР±РЅРѕРІРёС‚СЊ РІ РёРЅРґРµРєСЃРµ РіР°СѓСЃСЃРёР°РЅ С‚РѕР»СЊРєРѕ Р·Р°РїРёСЃСЊ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ Р±Р»РѕРєР°
             bResult = State.RebuildIndex(0, 1, State.GetLastRecNum(2))
         End If
         If bResult Then
             Text1.text = ""
             For i = 1 To State.GetLastRecNum(3)
-                If State.ReadIndex(1, i) Then   'Target=1 - гауссианы
+                If State.ReadIndex(1, i) Then   'Target=1 - РіР°СѓСЃСЃРёР°РЅС‹
                     OneStr = Format(TopG.average, "0.0000000") & "   "
-                    'Выравниваем номера блоков
+                    'Р’С‹СЂР°РІРЅРёРІР°РµРј РЅРѕРјРµСЂР° Р±Р»РѕРєРѕРІ
                     j = Len(Str(TopG.ID))
                     For j = j To 4
                         OneStr = OneStr & " "
                     Next j
                     OneStr = OneStr & Format(TopG.ID, "#####")
-                    'Выравниваем порядковые номера
+                    'Р’С‹СЂР°РІРЅРёРІР°РµРј РїРѕСЂСЏРґРєРѕРІС‹Рµ РЅРѕРјРµСЂР°
                     j = Len(Str(i))
                     For j = j To 5
                         OneStr = OneStr & " "
@@ -183,11 +183,11 @@ Dim OneStr  As String
                 End If
             Next i
             If ErrTrap Then
-                'Ошибка при чтении записи файла индекса гауссиан
+                'РћС€РёР±РєР° РїСЂРё С‡С‚РµРЅРёРё Р·Р°РїРёСЃРё С„Р°Р№Р»Р° РёРЅРґРµРєСЃР° РіР°СѓСЃСЃРёР°РЅ
                 Call RaiseErrMsg(1200, StandartErrHeader)
             End If
         Else
-            'Ошибка при построении индекса гауссиан
+            'РћС€РёР±РєР° РїСЂРё РїРѕСЃС‚СЂРѕРµРЅРёРё РёРЅРґРµРєСЃР° РіР°СѓСЃСЃРёР°РЅ
             Call RaiseErrMsg(1201, StandartErrHeader)
         End If
     End If
@@ -199,19 +199,19 @@ End Sub
 
 Private Sub Form_Load()
     Me.Icon = LoadResPicture(101, vbResIcon)
-    ''Me.Caption = "Статистика - лучшие гауссианы"
-    Me.Caption = "Статистика"
+    ''Me.Caption = "РЎС‚Р°С‚РёСЃС‚РёРєР° - Р»СѓС‡С€РёРµ РіР°СѓСЃСЃРёР°РЅС‹"
+    Me.Caption = "РЎС‚Р°С‚РёСЃС‚РёРєР°"
 End Sub
 
 Private Sub Option1_Click(Index As Integer)
     Select Case Index
         Case 0:
-            Me.Caption = "Статистика - лучшие пики"
-            Option1(0).Value = True 'Показывать пики
+            Me.Caption = "РЎС‚Р°С‚РёСЃС‚РёРєР° - Р»СѓС‡С€РёРµ РїРёРєРё"
+            Option1(0).Value = True 'РџРѕРєР°Р·С‹РІР°С‚СЊ РїРёРєРё
             Check1.Value = vbUnchecked
         Case 1:
-            Me.Caption = "Статистика - лучшие гауссианы"
-            Option1(1).Value = True 'Показывать гауссианы
+            Me.Caption = "РЎС‚Р°С‚РёСЃС‚РёРєР° - Р»СѓС‡С€РёРµ РіР°СѓСЃСЃРёР°РЅС‹"
+            Option1(1).Value = True 'РџРѕРєР°Р·С‹РІР°С‚СЊ РіР°СѓСЃСЃРёР°РЅС‹
             Check1.Value = vbUnchecked
     End Select
 End Sub
