@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmInput 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Добавить пропущенную запись"
+   Caption         =   "Р”РѕР±Р°РІРёС‚СЊ РїСЂРѕРїСѓС‰РµРЅРЅСѓСЋ Р·Р°РїРёСЃСЊ"
    ClientHeight    =   2940
    ClientLeft      =   45
    ClientTop       =   330
@@ -48,7 +48,7 @@ Begin VB.Form frmInput
       Width           =   1800
    End
    Begin VB.Label Label3 
-      Caption         =   "Порядковый номер блока"
+      Caption         =   "РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ Р±Р»РѕРєР°"
       Height          =   225
       Left            =   525
       TabIndex        =   6
@@ -56,7 +56,7 @@ Begin VB.Form frmInput
       Width           =   2220
    End
    Begin VB.Label Label4 
-      Caption         =   "Имя блока"
+      Caption         =   "РРјСЏ Р±Р»РѕРєР°"
       Height          =   225
       Left            =   525
       TabIndex        =   2
@@ -65,7 +65,7 @@ Begin VB.Form frmInput
    End
    Begin VB.Label Label2 
       Alignment       =   2  'Center
-      Caption         =   "Эти данные программа использует для идентификации блока и проверит их наличие в базе данных"
+      Caption         =   "Р­С‚Рё РґР°РЅРЅС‹Рµ РїСЂРѕРіСЂР°РјРјР° РёСЃРїРѕР»СЊР·СѓРµС‚ РґР»СЏ РёРґРµРЅС‚РёС„РёРєР°С†РёРё Р±Р»РѕРєР° Рё РїСЂРѕРІРµСЂРёС‚ РёС… РЅР°Р»РёС‡РёРµ РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…"
       Height          =   435
       Left            =   105
       TabIndex        =   1
@@ -74,7 +74,7 @@ Begin VB.Form frmInput
    End
    Begin VB.Label Label1 
       Alignment       =   2  'Center
-      Caption         =   "Пожалуйста, введите номер записи и ее уникальное имя"
+      Caption         =   "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё Рё РµРµ СѓРЅРёРєР°Р»СЊРЅРѕРµ РёРјСЏ"
       Height          =   225
       Left            =   105
       TabIndex        =   0
@@ -97,29 +97,29 @@ Private Sub Command1_Click()
     WU.UnitName = Text1(1).text
     EditMode = False
     If WU.NumID = "" Then
-        Result = MsgBox("Идентификационный номер блока не указан." + vbCrLf + "Пожалуйста, заполните эти поле.", vbOKOnly, "Номер записи не указан")
+        Result = MsgBox("РРґРµРЅС‚РёС„РёРєР°С†РёРѕРЅРЅС‹Р№ РЅРѕРјРµСЂ Р±Р»РѕРєР° РЅРµ СѓРєР°Р·Р°РЅ." + vbCrLf + "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, Р·Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рё РїРѕР»Рµ.", vbOKOnly, "РќРѕРјРµСЂ Р·Р°РїРёСЃРё РЅРµ СѓРєР°Р·Р°РЅ")
         Text1(0).SetFocus
         Exit Sub
     End If
     If WU.UnitName = "" Then
-        Result = MsgBox("Уникальное имя блока не указано." + vbCrLf + "Пожалуйста, заполните эти поле.", vbOKOnly, "Имя блока не указано")
+        Result = MsgBox("РЈРЅРёРєР°Р»СЊРЅРѕРµ РёРјСЏ Р±Р»РѕРєР° РЅРµ СѓРєР°Р·Р°РЅРѕ." + vbCrLf + "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, Р·Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рё РїРѕР»Рµ.", vbOKOnly, "РРјСЏ Р±Р»РѕРєР° РЅРµ СѓРєР°Р·Р°РЅРѕ")
         Text1(1).SetFocus
         Exit Sub
     End If
-    'Проверка вхождения в режим редактирования
+    'РџСЂРѕРІРµСЂРєР° РІС…РѕР¶РґРµРЅРёСЏ РІ СЂРµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
     If WU.CheckUnit(2, WU.NumID, WU.UnitName) Then
-        Result = MsgBox("Эта запись уже существует! Хотите ли Вы" + vbCrLf + "редактировать ее параметры?", vbYesNo + vbExclamation, "Запись уже существует")
+        Result = MsgBox("Р­С‚Р° Р·Р°РїРёСЃСЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚! РҐРѕС‚РёС‚Рµ Р»Рё Р’С‹" + vbCrLf + "СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РµРµ РїР°СЂР°РјРµС‚СЂС‹?", vbYesNo + vbExclamation, "Р—Р°РїРёСЃСЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚")
         If Result = vbYes Then
             EditMode = True
             Debug.Print EditMode & " Edit mode"
             If Not (WU.DecodeHistory(WU.ReadHistory(WU.NumID, 1))) Then
-                Result = MsgBox("Ошибка при попытке прочитать информацию о блоке" + vbCrLf + "Редактирование невозможно.", vbOKOnly, "Ошибка чтения файла")
+                Result = MsgBox("РћС€РёР±РєР° РїСЂРё РїРѕРїС‹С‚РєРµ РїСЂРѕС‡РёС‚Р°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ Р±Р»РѕРєРµ" + vbCrLf + "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ.", vbOKOnly, "РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р°")
                 EditMode = False
             End If
             Unload Me
             Exit Sub
         Else
-            Result = MsgBox("Пожалуйста, укажите другие данные.", vbOKOnly + vbExclamation, "Запись уже существует")
+            Result = MsgBox("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, СѓРєР°Р¶РёС‚Рµ РґСЂСѓРіРёРµ РґР°РЅРЅС‹Рµ.", vbOKOnly + vbExclamation, "Р—Р°РїРёСЃСЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚")
             Text1(1).text = ""
             Text1(0).text = ""
             Text1(0).SetFocus
@@ -128,14 +128,14 @@ Private Sub Command1_Click()
         End If
     ElseIf WU.CheckUnit(0, WU.NumID) Then
         'UnitID already exist
-        Result = MsgBox("Блок с этим номером уже существует!" + vbCrLf + "Пожалуйста, уточните эту информацию", vbOKOnly, "Номер блока уже существует")
+        Result = MsgBox("Р‘Р»РѕРє СЃ СЌС‚РёРј РЅРѕРјРµСЂРѕРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!" + vbCrLf + "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, СѓС‚РѕС‡РЅРёС‚Рµ СЌС‚Сѓ РёРЅС„РѕСЂРјР°С†РёСЋ", vbOKOnly, "РќРѕРјРµСЂ Р±Р»РѕРєР° СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚")
         Text1(0).SetFocus
         SendKeys "{Home}+{End}"
         Debug.Print "Block ID already exist!"
         Exit Sub
     ElseIf WU.CheckUnit(1, WU.UnitName) Then
         'Unit already exist
-        Result = MsgBox("Блок с этим именем уже существует!" + vbCrLf + "Пожалуйста, уточните эту информацию", vbOKOnly, "Имя блока уже существует")
+        Result = MsgBox("Р‘Р»РѕРє СЃ СЌС‚РёРј РёРјРµРЅРµРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!" + vbCrLf + "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, СѓС‚РѕС‡РЅРёС‚Рµ СЌС‚Сѓ РёРЅС„РѕСЂРјР°С†РёСЋ", vbOKOnly, "РРјСЏ Р±Р»РѕРєР° СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚")
         Text1(1).SetFocus
         SendKeys "{Home}+{End}"
         Debug.Print "Block name already exist!"
