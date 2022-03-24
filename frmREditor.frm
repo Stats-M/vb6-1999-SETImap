@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmREditor 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Результаты"
+   Caption         =   "Р РµР·СѓР»СЊС‚Р°С‚С‹"
    ClientHeight    =   6330
    ClientLeft      =   45
    ClientTop       =   330
@@ -125,7 +125,7 @@ Begin VB.Form frmREditor
       Width           =   1380
    End
    Begin VB.CommandButton Command3 
-      Caption         =   "Из файла..."
+      Caption         =   "РР· С„Р°Р№Р»Р°..."
       Enabled         =   0   'False
       Height          =   345
       Left            =   105
@@ -202,7 +202,7 @@ Begin VB.Form frmREditor
       Width           =   750
    End
    Begin VB.Label Label27 
-      Caption         =   "Мощность (power)"
+      Caption         =   "РњРѕС‰РЅРѕСЃС‚СЊ (power)"
       Height          =   225
       Left            =   3990
       TabIndex        =   49
@@ -210,7 +210,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label26 
-      Caption         =   "Форма сигнала (score)"
+      Caption         =   "Р¤РѕСЂРјР° СЃРёРіРЅР°Р»Р° (score)"
       Height          =   225
       Left            =   3990
       TabIndex        =   48
@@ -218,7 +218,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label25 
-      Caption         =   "Смещение (chirp rate)"
+      Caption         =   "РЎРјРµС‰РµРЅРёРµ (chirp rate)"
       Height          =   225
       Left            =   3990
       TabIndex        =   47
@@ -226,7 +226,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label24 
-      Caption         =   "Мощность (power)"
+      Caption         =   "РњРѕС‰РЅРѕСЃС‚СЊ (power)"
       Height          =   225
       Left            =   210
       TabIndex        =   43
@@ -234,7 +234,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label23 
-      Caption         =   "Форма сигнала (score)"
+      Caption         =   "Р¤РѕСЂРјР° СЃРёРіРЅР°Р»Р° (score)"
       Height          =   225
       Left            =   210
       TabIndex        =   42
@@ -242,7 +242,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label22 
-      Caption         =   "Смещение (chirp rate)"
+      Caption         =   "РЎРјРµС‰РµРЅРёРµ (chirp rate)"
       Height          =   225
       Left            =   210
       TabIndex        =   41
@@ -250,7 +250,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label21 
-      Caption         =   "Триплеты"
+      Caption         =   "РўСЂРёРїР»РµС‚С‹"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -267,7 +267,7 @@ Begin VB.Form frmREditor
       Width           =   1485
    End
    Begin VB.Label Label20 
-      Caption         =   "Импульсы"
+      Caption         =   "РРјРїСѓР»СЊСЃС‹"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -360,7 +360,7 @@ Begin VB.Form frmREditor
       Y2              =   5670
    End
    Begin VB.Label Label11 
-      Caption         =   "Гауссианы"
+      Caption         =   "Р“Р°СѓСЃСЃРёР°РЅС‹"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -377,7 +377,7 @@ Begin VB.Form frmREditor
       Width           =   960
    End
    Begin VB.Label Label10 
-      Caption         =   "Пики"
+      Caption         =   "РџРёРєРё"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -406,7 +406,7 @@ Begin VB.Form frmREditor
       Y2              =   3675
    End
    Begin VB.Label Label9 
-      Caption         =   "Необязательные параметры"
+      Caption         =   "РќРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -423,7 +423,7 @@ Begin VB.Form frmREditor
       Width           =   2640
    End
    Begin VB.Label Label8 
-      Caption         =   "Смещение (chirp rate)"
+      Caption         =   "РЎРјРµС‰РµРЅРёРµ (chirp rate)"
       Height          =   225
       Left            =   3990
       TabIndex        =   7
@@ -431,7 +431,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label7 
-      Caption         =   "Форма сигнала (fit)"
+      Caption         =   "Р¤РѕСЂРјР° СЃРёРіРЅР°Р»Р° (fit)"
       Height          =   225
       Left            =   3990
       TabIndex        =   6
@@ -439,7 +439,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label6 
-      Caption         =   "Мощность (power)"
+      Caption         =   "РњРѕС‰РЅРѕСЃС‚СЊ (power)"
       Height          =   225
       Left            =   3990
       TabIndex        =   5
@@ -447,7 +447,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label5 
-      Caption         =   "Смещение (chirp rate)"
+      Caption         =   "РЎРјРµС‰РµРЅРёРµ (chirp rate)"
       Height          =   225
       Left            =   210
       TabIndex        =   4
@@ -455,7 +455,7 @@ Begin VB.Form frmREditor
       Width           =   1800
    End
    Begin VB.Label Label4 
-      Caption         =   "Мощность (power)"
+      Caption         =   "РњРѕС‰РЅРѕСЃС‚СЊ (power)"
       Height          =   225
       Left            =   210
       TabIndex        =   3
@@ -475,7 +475,7 @@ Begin VB.Form frmREditor
       Y2              =   3570
    End
    Begin VB.Label Label3 
-      Caption         =   "Номер рабочего блока"
+      Caption         =   "РќРѕРјРµСЂ СЂР°Р±РѕС‡РµРіРѕ Р±Р»РѕРєР°"
       Height          =   225
       Left            =   525
       TabIndex        =   2
@@ -484,7 +484,7 @@ Begin VB.Form frmREditor
    End
    Begin VB.Label Label2 
       Alignment       =   2  'Center
-      Caption         =   "Если какая-либо величина неизвестна, оставьте соответствующее поле НЕЗАПОЛНЕННЫМ."
+      Caption         =   "Р•СЃР»Рё РєР°РєР°СЏ-Р»РёР±Рѕ РІРµР»РёС‡РёРЅР° РЅРµРёР·РІРµСЃС‚РЅР°, РѕСЃС‚Р°РІСЊС‚Рµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРµ РїРѕР»Рµ РќР•Р—РђРџРћР›РќР•РќРќР«Рњ."
       Height          =   225
       Left            =   210
       TabIndex        =   1
@@ -493,7 +493,7 @@ Begin VB.Form frmREditor
    End
    Begin VB.Label Label1 
       Alignment       =   2  'Center
-      Caption         =   "Пожалуйста, среди необязательных параметров укажите ТОЛЬКО ТЕ, которые Вам известны."
+      Caption         =   "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃСЂРµРґРё РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ СѓРєР°Р¶РёС‚Рµ РўРћР›Р¬РљРћ РўР•, РєРѕС‚РѕСЂС‹Рµ Р’Р°Рј РёР·РІРµСЃС‚РЅС‹."
       Height          =   225
       Left            =   105
       TabIndex        =   0
@@ -617,12 +617,12 @@ End Sub
 
 Private Sub Form_Load()
     Me.Icon = LoadResPicture(101, vbResIcon)
-    Me.Caption = "Редактор результатов"
+    Me.Caption = "Р РµРґР°РєС‚РѕСЂ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ"
     Text1.text = Str(EditID)
     If State.ReadHistory(EditID) = 0 Then
         If State.DecodeHistory Then
             If State.Status = 1 Then
-            'Флаг игнорирования информации опущен - обрабатываем ее.
+            'Р¤Р»Р°Рі РёРіРЅРѕСЂРёСЂРѕРІР°РЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё РѕРїСѓС‰РµРЅ - РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РµРµ.
                 Text2.text = Str(State.bs_power)
                 Text3.text = Str(State.bs_rate)
                 Text4.text = Str(State.bg_power)
