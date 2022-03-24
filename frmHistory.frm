@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "MSDATGRD.OCX"
 Begin VB.Form frmHistory 
-   Caption         =   "Журнал"
+   Caption         =   "Р–СѓСЂРЅР°Р»"
    ClientHeight    =   6240
    ClientLeft      =   60
    ClientTop       =   345
@@ -80,7 +80,7 @@ Begin VB.Form frmHistory
       EndProperty
    End
    Begin VB.CommandButton Command4 
-      Caption         =   "Закрыть"
+      Caption         =   "Р—Р°РєСЂС‹С‚СЊ"
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   9
@@ -97,7 +97,7 @@ Begin VB.Form frmHistory
       Width           =   1485
    End
    Begin VB.CommandButton Command3 
-      Caption         =   "Редактировать"
+      Caption         =   "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ"
       Enabled         =   0   'False
       Height          =   435
       Left            =   5670
@@ -106,7 +106,7 @@ Begin VB.Form frmHistory
       Width           =   2745
    End
    Begin VB.CommandButton Command2 
-      Caption         =   "Добавить пропущенную запись"
+      Caption         =   "Р”РѕР±Р°РІРёС‚СЊ РїСЂРѕРїСѓС‰РµРЅРЅСѓСЋ Р·Р°РїРёСЃСЊ"
       Height          =   435
       Left            =   2310
       TabIndex        =   1
@@ -114,7 +114,7 @@ Begin VB.Form frmHistory
       Width           =   2745
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Показ"
+      Caption         =   "РџРѕРєР°Р·"
       Height          =   435
       Left            =   210
       TabIndex        =   0
@@ -130,7 +130,7 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub Command1_Click()
-    'Привязывает к DataGrid другому источнику (более полному) и наоборот
+    'РџСЂРёРІСЏР·С‹РІР°РµС‚ Рє DataGrid РґСЂСѓРіРѕРјСѓ РёСЃС‚РѕС‡РЅРёРєСѓ (Р±РѕР»РµРµ РїРѕР»РЅРѕРјСѓ) Рё РЅР°РѕР±РѕСЂРѕС‚
     showWU = Not (showWU)
     Command1.Enabled = False
     Command2.Enabled = False
@@ -140,12 +140,12 @@ Private Sub Command1_Click()
     Command1.Enabled = True
     Command4.Enabled = True
     If showWU Then
-        Me.Caption = "Журнал учета блоков"
-        Command1.Caption = "Показ результатов"
+        Me.Caption = "Р–СѓСЂРЅР°Р» СѓС‡РµС‚Р° Р±Р»РѕРєРѕРІ"
+        Command1.Caption = "РџРѕРєР°Р· СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ"
         Command2.Enabled = True
     Else
-        Me.Caption = "Журнал результатов обработки блоков"
-        Command1.Caption = "Показ блоков"
+        Me.Caption = "Р–СѓСЂРЅР°Р» СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РѕР±СЂР°Р±РѕС‚РєРё Р±Р»РѕРєРѕРІ"
+        Command1.Caption = "РџРѕРєР°Р· Р±Р»РѕРєРѕРІ"
     End If
 End Sub
 
@@ -157,39 +157,39 @@ Private Sub Command2_Click()
         frmEdit.Show vbModal, Me
         frmHistory.DataGrid1.ReBind
         frmHistory.DataGrid1.Refresh
-        'TO DO Зачем это писать дважды?
+        'TO DO Р—Р°С‡РµРј СЌС‚Рѕ РїРёСЃР°С‚СЊ РґРІР°Р¶РґС‹?
         ''frmHistory.DataGrid1.ReBind
         ''frmHistory.DataGrid1.Refresh
-        InitForm (0)    'Сейчас режим показа рабочих блоков
+        InitForm (0)    'РЎРµР№С‡Р°СЃ СЂРµР¶РёРј РїРѕРєР°Р·Р° СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ
     End If
 End Sub
 
-'Нажата кнопка "РЕДАКТИРОВАТЬ"
+'РќР°Р¶Р°С‚Р° РєРЅРѕРїРєР° "Р Р•Р”РђРљРўРР РћР’РђРўР¬"
 Private Sub Command3_Click()
     If showWU Then
-        'Загрузка редактора рабочих блоков
-        WU.ClearAll (0)     'Стереть все, чтобы нормально инициировать окно редактора
+        'Р—Р°РіСЂСѓР·РєР° СЂРµРґР°РєС‚РѕСЂР° СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ
+        WU.ClearAll (0)     'РЎС‚РµСЂРµС‚СЊ РІСЃРµ, С‡С‚РѕР±С‹ РЅРѕСЂРјР°Р»СЊРЅРѕ РёРЅРёС†РёРёСЂРѕРІР°С‚СЊ РѕРєРЅРѕ СЂРµРґР°РєС‚РѕСЂР°
         If Not (WU.DecodeHistory(WU.ReadHistory(EditID, 1))) Then
-            Result = MsgBox("Ошибка чтения журнала. Операция отменена.", vbOKOnly, "Ошибка")
+            Result = MsgBox("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ Р¶СѓСЂРЅР°Р»Р°. РћРїРµСЂР°С†РёСЏ РѕС‚РјРµРЅРµРЅР°.", vbOKOnly, "РћС€РёР±РєР°")
             Debug.Print "EditID" & EditID
         Else
             EditMode = True
             Load frmEdit
             frmEdit.Show vbModal, Me
-            'Обновить привязку. Надо ли это делать?
+            'РћР±РЅРѕРІРёС‚СЊ РїСЂРёРІСЏР·РєСѓ. РќР°РґРѕ Р»Рё СЌС‚Рѕ РґРµР»Р°С‚СЊ?
             frmHistory.DataGrid1.ReBind
             frmHistory.DataGrid1.Refresh
-            InitForm (0)   'Сейчас режим показа рабочих блоков
+            InitForm (0)   'РЎРµР№С‡Р°СЃ СЂРµР¶РёРј РїРѕРєР°Р·Р° СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ
         End If
     Else
-        'загрузка редактора результатов
+        'Р·Р°РіСЂСѓР·РєР° СЂРµРґР°РєС‚РѕСЂР° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
         If State.ReadHistory(EditID) = 0 Then
             Load frmREditor
             frmREditor.Show vbModal, Me
-            'Обновить привязку. Надо ли это делать?
+            'РћР±РЅРѕРІРёС‚СЊ РїСЂРёРІСЏР·РєСѓ. РќР°РґРѕ Р»Рё СЌС‚Рѕ РґРµР»Р°С‚СЊ?
             frmHistory.DataGrid1.ReBind
             frmHistory.DataGrid1.Refresh
-            InitForm (1)   'Сейчас режим показа результатов
+            InitForm (1)   'РЎРµР№С‡Р°СЃ СЂРµР¶РёРј РїРѕРєР°Р·Р° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
         End If
     End If
 End Sub
@@ -197,7 +197,7 @@ End Sub
 Private Sub DataGrid1_RowColChange(LastRow As Variant, ByVal LastCol As Integer)
     ' Print the Text, row, and column of the cell the user clicked.
     Debug.Print DataGrid1.text; DataGrid1.Row; DataGrid1.Col; LastRow; LastCol
-    'получить номер выделенной стороки и ID
+    'РїРѕР»СѓС‡РёС‚СЊ РЅРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ СЃС‚РѕСЂРѕРєРё Рё ID
     EditRowNum = DataGrid1.Row
     DataGrid1.Col = 0
     EditID = CLng(Val(DataGrid1.text))
@@ -210,14 +210,14 @@ Private Sub Command4_Click()
 End Sub
 
 '**********************************************************
-'*                 Инициализация колонок                  *
-'*  Mode=0: режим показа журнала рабочих блоков           *
-'*  Mode=1: режим показа журнала результатов (State)      *
+'*                 РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєРѕР»РѕРЅРѕРє                  *
+'*  Mode=0: СЂРµР¶РёРј РїРѕРєР°Р·Р° Р¶СѓСЂРЅР°Р»Р° СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ           *
+'*  Mode=1: СЂРµР¶РёРј РїРѕРєР°Р·Р° Р¶СѓСЂРЅР°Р»Р° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ (State)      *
 '**********************************************************
 Private Sub InitForm(ByVal Mode As Long)
-' TO DO сделать чтение ширины из реестра и обязательно присваивать эти значения переменным
+' TO DO СЃРґРµР»Р°С‚СЊ С‡С‚РµРЅРёРµ С€РёСЂРёРЅС‹ РёР· СЂРµРµСЃС‚СЂР° Рё РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїСЂРёСЃРІР°РёРІР°С‚СЊ СЌС‚Рё Р·РЅР°С‡РµРЅРёСЏ РїРµСЂРµРјРµРЅРЅС‹Рј
     Select Case Mode
-        Case 0:    'Сейчас режим показа рабочих блоков
+        Case 0:    'РЎРµР№С‡Р°СЃ СЂРµР¶РёРј РїРѕРєР°Р·Р° СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ
             DataGrid1.Columns(0).Width = 500
             DataGrid1.Columns(1).Width = 1500
             DataGrid1.Columns(2).Width = 3000
@@ -248,35 +248,35 @@ End Sub
 
 Private Sub BindDataSource()
     If showWU Then
-        Me.Caption = "Журнал учета блоков"
-        Command1.Caption = "Показ результатов"
+        Me.Caption = "Р–СѓСЂРЅР°Р» СѓС‡РµС‚Р° Р±Р»РѕРєРѕРІ"
+        Command1.Caption = "РџРѕРєР°Р· СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ"
         If Not (WUbind) Then
-            WUbind = Not (WUbind)   'Поднять флаг запрещения повторной привязки (для исключения дублирования записей)
-            WU.AddRecord 0  'Загрузить ВСЕ Сведения из журнала
+            WUbind = Not (WUbind)   'РџРѕРґРЅСЏС‚СЊ С„Р»Р°Рі Р·Р°РїСЂРµС‰РµРЅРёСЏ РїРѕРІС‚РѕСЂРЅРѕР№ РїСЂРёРІСЏР·РєРё (РґР»СЏ РёСЃРєР»СЋС‡РµРЅРёСЏ РґСѓР±Р»РёСЂРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРµР№)
+            WU.AddRecord 0  'Р—Р°РіСЂСѓР·РёС‚СЊ Р’РЎР• РЎРІРµРґРµРЅРёСЏ РёР· Р¶СѓСЂРЅР°Р»Р°
         End If
         Set DataGrid1.DataSource = WU
-        Call InitForm(0)    'Сейчас режим показа рабочих блоков
+        Call InitForm(0)    'РЎРµР№С‡Р°СЃ СЂРµР¶РёРј РїРѕРєР°Р·Р° СЂР°Р±РѕС‡РёС… Р±Р»РѕРєРѕРІ
     Else
-        Me.Caption = "Журнал результатов обработки блоков"
-        Command1.Caption = "Показ блоков"
+        Me.Caption = "Р–СѓСЂРЅР°Р» СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РѕР±СЂР°Р±РѕС‚РєРё Р±Р»РѕРєРѕРІ"
+        Command1.Caption = "РџРѕРєР°Р· Р±Р»РѕРєРѕРІ"
         Command2.Enabled = False
         If Not (Sbind) Then
-            Sbind = Not (Sbind)     'Поднять флаг запрещения повторной привязки (для исключения дублирования записей)
-            State.AddRecord 0  'Загрузить ВСЕ Сведения из журнала
+            Sbind = Not (Sbind)     'РџРѕРґРЅСЏС‚СЊ С„Р»Р°Рі Р·Р°РїСЂРµС‰РµРЅРёСЏ РїРѕРІС‚РѕСЂРЅРѕР№ РїСЂРёРІСЏР·РєРё (РґР»СЏ РёСЃРєР»СЋС‡РµРЅРёСЏ РґСѓР±Р»РёСЂРѕРІР°РЅРёСЏ Р·Р°РїРёСЃРµР№)
+            State.AddRecord 0  'Р—Р°РіСЂСѓР·РёС‚СЊ Р’РЎР• РЎРІРµРґРµРЅРёСЏ РёР· Р¶СѓСЂРЅР°Р»Р°
         End If
         Set DataGrid1.DataSource = State
-        Call InitForm(1)    'Сейчас режим показа результатов
+        Call InitForm(1)    'РЎРµР№С‡Р°СЃ СЂРµР¶РёРј РїРѕРєР°Р·Р° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
     End If
 End Sub
 
 Private Sub Form_Load()
     '' ' Create a new NamesData Object
     ''Set datNames = New NamesData
-    ''Нам это не надо, т.к. классы инициализируются в модуле при старте программы!
+    ''РќР°Рј СЌС‚Рѕ РЅРµ РЅР°РґРѕ, С‚.Рє. РєР»Р°СЃСЃС‹ РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‚СЃСЏ РІ РјРѕРґСѓР»Рµ РїСЂРё СЃС‚Р°СЂС‚Рµ РїСЂРѕРіСЂР°РјРјС‹!
     
     ' Bind the DataGrid to the new DataSource datNames
     BindDataSource
-    StatusStr.Caption = "Журнал загружен."
+    StatusStr.Caption = "Р–СѓСЂРЅР°Р» Р·Р°РіСЂСѓР¶РµРЅ."
     StatusStr.Refresh
 End Sub
 
