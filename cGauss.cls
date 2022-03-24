@@ -50,7 +50,7 @@ Private mvarchisqr As Single 'local copy
 Private mvarncfft As Long 'local copy
 Private mvarhFile As Long 'local copy
 
-GaussRec As tGaussRec   'Запись для работы с файлом данных (SETIgaus.txt)
+GaussRec As tGaussRec   'Р—Р°РїРёСЃСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј РґР°РЅРЅС‹С… (SETIgaus.txt)
 
 Public Property Let ncfft(ByVal vData As Long)
 'used when assigning a value to the property, on the left side of an assignment.
