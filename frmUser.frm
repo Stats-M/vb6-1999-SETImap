@@ -13,7 +13,7 @@ Begin VB.Form frmUser
    ScaleWidth      =   8295
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton Command1 
-      Caption         =   "Закрыть"
+      Caption         =   "Р—Р°РєСЂС‹С‚СЊ"
       Default         =   -1  'True
       Height          =   345
       Left            =   6615
@@ -160,7 +160,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label15 
       Alignment       =   1  'Right Justify
-      Caption         =   "Количество отправленных результатов (N Results)"
+      Caption         =   "РљРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚РїСЂР°РІР»РµРЅРЅС‹С… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ (N Results)"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -180,7 +180,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label16 
       Alignment       =   1  'Right Justify
-      Caption         =   "Суммарное процессорное время"
+      Caption         =   "РЎСѓРјРјР°СЂРЅРѕРµ РїСЂРѕС†РµСЃСЃРѕСЂРЅРѕРµ РІСЂРµРјСЏ"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -209,7 +209,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label13 
       Alignment       =   1  'Right Justify
-      Caption         =   "Дата последней отправки результатов"
+      Caption         =   "Р”Р°С‚Р° РїРѕСЃР»РµРґРЅРµР№ РѕС‚РїСЂР°РІРєРё СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -229,7 +229,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label11 
       Alignment       =   1  'Right Justify
-      Caption         =   "Дата регистрации"
+      Caption         =   "Р”Р°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -249,7 +249,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label9 
       Alignment       =   1  'Right Justify
-      Caption         =   "Показывать e-mail"
+      Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ e-mail"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -259,7 +259,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label8 
       Alignment       =   1  'Right Justify
-      Caption         =   "Показывать имя"
+      Caption         =   "РџРѕРєР°Р·С‹РІР°С‚СЊ РёРјСЏ"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -275,7 +275,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label7 
       Alignment       =   1  'Right Justify
-      Caption         =   "Почтовый индекс"
+      Caption         =   "РџРѕС‡С‚РѕРІС‹Р№ РёРЅРґРµРєСЃ"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -285,7 +285,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label6 
       Alignment       =   1  'Right Justify
-      Caption         =   "Страна"
+      Caption         =   "РЎС‚СЂР°РЅР°"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -305,7 +305,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label4 
       Alignment       =   1  'Right Justify
-      Caption         =   "Имя участника"
+      Caption         =   "РРјСЏ СѓС‡Р°СЃС‚РЅРёРєР°"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -325,7 +325,7 @@ Begin VB.Form frmUser
    End
    Begin VB.Label Label2 
       Alignment       =   1  'Right Justify
-      Caption         =   "Ключ"
+      Caption         =   "РљР»СЋС‡"
       Height          =   225
       Index           =   0
       Left            =   105
@@ -349,7 +349,7 @@ Private Sub Form_Load()
 Dim TMPstr As String
 Dim TMPDbl As Double
     Me.Icon = LoadResPicture(101, vbResIcon)
-    Me.Caption = "Информация о пользователе"
+    Me.Caption = "РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ"
     bResult = UserInfo.DecodeInfo(UserInfo.ReadFile(0))
     Label1(1).Caption = UserInfo.ID
     Label2(1).Caption = UserInfo.Key
