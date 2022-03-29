@@ -1,6 +1,6 @@
 # vb6-1999-SETImap
-(C) 1999
-(MS Visual Basic 6) Learning project of my youth. Hail to spaghetti code!
+Rade (C) 1999
+(MS Visual Basic 6) Learning project of my youth. Hail to spaghetti code and a lot of emotional comments!
 
 SETImap - tracks Seti@home datafiles and locate it on a skymap
 ==============================================================
